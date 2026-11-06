@@ -56,7 +56,7 @@ impl Process {
             // Observe thread completion before loading its error notification.
             // Otherwise a just-finished writer could be mistaken for success.
             let done = finished();
-            self.io_exit = io_exit.load(Ordering::Relaxed);
+            self.io_exit = io_exit.load(Ordering::Acquire);
             if self.stopping.is_none() && (self.signals.received().is_some() || self.io_exit != 0) {
                 self.stopping = Some(Instant::now());
                 self.terminate(self.signals.received().unwrap_or(15));
@@ -84,13 +84,16 @@ impl Process {
         self.signals.received().is_some()
     }
 
-    pub fn exit_code(&self) -> i32 {
+    pub fn exit_code(&self, io_exit: &AtomicI32) -> i32 {
         if let Some(signal) = self.signals.received() {
             128 + signal
-        } else if self.io_exit != 0 {
-            self.io_exit
         } else {
-            self.status.map(status_code).unwrap_or(1)
+            // An IO thread can finish just after the supervisor's last poll.
+            // Read its current notification instead of returning a cached zero.
+            match io_exit.load(Ordering::Acquire) {
+                0 => self.status.map(status_code).unwrap_or(1),
+                code => code,
+            }
         }
     }
 

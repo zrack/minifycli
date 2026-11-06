@@ -2,7 +2,7 @@
 
 use std::fs::{self, File};
 use std::io::Write;
-use std::os::unix::fs::PermissionsExt;
+use std::os::unix::fs::symlink;
 use std::os::unix::io::AsRawFd;
 use std::os::unix::process::CommandExt;
 use std::path::{Path, PathBuf};
@@ -20,7 +20,11 @@ const FIXTURE_DIR: &str = "MINIFYCLI_CANCELLATION_DIR";
 const FIXTURE_IGNORE: &str = "MINIFYCLI_CANCELLATION_IGNORE";
 const FIXTURE_EARLY_EXIT: &str = "MINIFYCLI_CANCELLATION_EARLY_EXIT";
 const FIXTURE_EMIT: &str = "MINIFYCLI_CANCELLATION_EMIT";
-const TEST_TIMEOUT: Duration = Duration::from_secs(6);
+// Executable loading and fixture readiness are separate from the behavior
+// under test. A cold parallel launch must not consume cancellation's budget.
+const STARTUP_TIMEOUT: Duration = Duration::from_secs(30);
+const EXIT_TIMEOUT: Duration = Duration::from_secs(6);
+const FIXTURE_WATCHDOG: Duration = Duration::from_secs(60);
 static NEXT_DIRECTORY: AtomicUsize = AtomicUsize::new(0);
 static RECEIVED_SIGNAL: AtomicI32 = AtomicI32::new(0);
 
@@ -70,7 +74,7 @@ struct Harness {
     directory: PathBuf,
     child: Child,
     stdout_reader: Option<ChildStdout>,
-    deadline: Instant,
+    startup_deadline: Instant,
 }
 
 impl Harness {
@@ -97,9 +101,10 @@ impl Harness {
         // A libtest executable can act as a std-only subprocess fixture. Its
         // basename selects the real Cargo capture path; `test --exact` runs
         // only the worker function below, rather than these cancellation tests.
+        // Reuse the already built executable instead of copying a new Mach-O
+        // per parallel case, avoiding redundant cold executable validation.
         let fixture = directory.join("cargo");
-        fs::copy(std::env::current_exe().unwrap(), &fixture).unwrap();
-        fs::set_permissions(&fixture, fs::Permissions::from_mode(0o755)).unwrap();
+        symlink(std::env::current_exe().unwrap(), &fixture).unwrap();
 
         let stdout = File::create(directory.join("stdout.log")).unwrap();
         let stderr = File::create(directory.join("stderr.log")).unwrap();
@@ -132,13 +137,21 @@ impl Harness {
             directory,
             child,
             stdout_reader,
-            deadline: Instant::now() + TEST_TIMEOUT,
+            startup_deadline: Instant::now() + STARTUP_TIMEOUT,
         }
     }
 
     fn logs(&self) -> String {
+        let mut markers: Vec<_> = fs::read_dir(&self.directory)
+            .unwrap()
+            .map(|entry| entry.unwrap().file_name())
+            .collect();
+        markers.sort();
         format!(
-            "stdout:\n{}\nstderr:\n{}",
+            "mini={} parent={:?} descendant={:?} markers={markers:?}\nstdout:\n{}\nstderr:\n{}",
+            self.child.id(),
+            fixture_pid(&self.directory, "parent"),
+            fixture_pid(&self.directory, "descendant"),
             fs::read_to_string(self.directory.join("stdout.log")).unwrap_or_default(),
             fs::read_to_string(self.directory.join("stderr.log")).unwrap_or_default()
         )
@@ -157,7 +170,7 @@ impl Harness {
                 self.logs()
             );
             assert!(
-                Instant::now() < self.deadline,
+                Instant::now() < self.startup_deadline,
                 "fixture readiness timed out; {}",
                 self.logs()
             );
@@ -166,12 +179,13 @@ impl Harness {
     }
 
     fn wait_exit(&mut self) -> ExitStatus {
+        let deadline = Instant::now() + EXIT_TIMEOUT;
         loop {
             if let Some(status) = self.child.try_wait().unwrap() {
                 return status;
             }
             assert!(
-                Instant::now() < self.deadline,
+                Instant::now() < deadline,
                 "mini did not exit within the watchdog deadline; {}",
                 self.logs()
             );
@@ -202,8 +216,9 @@ impl Harness {
                 self.logs()
             );
             assert!(
-                Instant::now() < self.deadline,
-                "emitter readiness timed out"
+                Instant::now() < self.startup_deadline,
+                "emitter readiness timed out; {}",
+                self.logs()
             );
             thread::sleep(Duration::from_millis(10));
         }
@@ -375,7 +390,7 @@ fn closing_downstream_pipe_stops_infinite_emitter_without_external_signal() {
 }
 
 /// Subprocess entry point: it is a no-op in the ordinary test run. The harness
-/// copies this executable to `cargo` and invokes exactly this one test.
+/// symlinks this executable as `cargo` and invokes exactly this one test.
 #[test]
 fn test() {
     let Ok(role) = std::env::var(FIXTURE_ROLE) else {
@@ -405,7 +420,7 @@ fn test() {
             .env(FIXTURE_ROLE, "descendant")
             .spawn()
             .unwrap();
-        let deadline = Instant::now() + Duration::from_secs(3);
+        let deadline = Instant::now() + STARTUP_TIMEOUT;
         while !directory.join("descendant.ready").exists() {
             assert!(
                 Instant::now() < deadline,
@@ -432,7 +447,7 @@ fn test() {
         std::process::exit(0);
     }
 
-    let watchdog = Instant::now() + Duration::from_secs(15);
+    let watchdog = Instant::now() + FIXTURE_WATCHDOG;
     let chunk = if emit {
         vec![b'x'; 16 * 1024 * 1024]
     } else {

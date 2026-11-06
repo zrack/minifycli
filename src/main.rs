@@ -189,10 +189,10 @@ fn run(options: Options) -> io::Result<i32> {
     )? {
         // Dropping a JoinHandle detaches it. Process exit closes blocked pipes;
         // joining here could hang forever on a descendant or a stalled consumer.
-        return Ok(child.exit_code());
+        return Ok(child.exit_code(&io_exit));
     }
     if io_exit.load(Ordering::Relaxed) != 0 {
-        return Ok(child.exit_code());
+        return Ok(child.exit_code(&io_exit));
     }
     let stdout = out_thread
         .join()
@@ -256,7 +256,7 @@ fn run(options: Options) -> io::Result<i32> {
         &io_exit,
     )? {
         if child.cancelled() || io_exit.load(Ordering::Relaxed) != 0 {
-            return Ok(child.exit_code());
+            return Ok(child.exit_code(&io_exit));
         }
         out_thread
             .join()
@@ -265,7 +265,7 @@ fn run(options: Options) -> io::Result<i32> {
             .join()
             .map_err(|_| io::Error::other("stderr writer panicked"))??;
     }
-    Ok(child.exit_code())
+    Ok(child.exit_code(&io_exit))
 }
 
 fn report_io<T>(result: io::Result<T>, exit: &AtomicI32) -> io::Result<T> {
@@ -275,7 +275,7 @@ fn report_io<T>(result: io::Result<T>, exit: &AtomicI32) -> io::Result<T> {
         } else {
             1
         };
-        let _ = exit.compare_exchange(0, code, Ordering::Relaxed, Ordering::Relaxed);
+        let _ = exit.compare_exchange(0, code, Ordering::Release, Ordering::Relaxed);
     }
     result
 }
