@@ -1,0 +1,56 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install Rust stable
+        run: rustup toolchain install stable --profile minimal
+      - name: Test and build
+        run: |
+          cargo +stable test --locked
+          cargo +stable build --release --locked
+          test "v$(target/release/mini --version | cut -d ' ' -f 2)" = "$GITHUB_REF_NAME"
+      - name: Package native binary
+        run: |
+          host=$(rustc +stable -vV | sed -n 's/^host: //p')
+          mkdir -p package artifacts
+          cp target/release/mini LICENSE README.md package/
+          tar -czf "artifacts/mini-${host}.tar.gz" -C package mini LICENSE README.md
+      - uses: actions/upload-artifact@v7
+        with:
+          name: mini-${{ matrix.os }}
+          path: artifacts/*.tar.gz
+          if-no-files-found: error
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: mini-*
+          merge-multiple: true
+          path: artifacts
+      - name: Publish release and checksums
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          (cd artifacts && sha256sum mini-*.tar.gz > SHA256SUMS)
+          gh release create "$GITHUB_REF_NAME" artifacts/mini-*.tar.gz artifacts/SHA256SUMS \
+            --verify-tag --title "MinifyCLI $GITHUB_REF_NAME" --notes-file docs/release-notes.md

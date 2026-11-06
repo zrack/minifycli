@@ -1,0 +1,71 @@
+> account-service@0.1.0 test
+> jest --verbose
+
+PASS tests/billing.test.js
+  billing
+    ✓ calculates invoice scenario 01 (1 ms)
+    ✓ calculates invoice scenario 02 (1 ms)
+    ✓ calculates invoice scenario 03 (1 ms)
+    ✓ calculates invoice scenario 04 (1 ms)
+    ✓ calculates invoice scenario 05 (1 ms)
+    ✓ calculates invoice scenario 06 (1 ms)
+    ✓ calculates invoice scenario 07 (1 ms)
+    ✓ calculates invoice scenario 08 (1 ms)
+    ✓ calculates invoice scenario 09 (1 ms)
+    ✓ calculates invoice scenario 10 (1 ms)
+    ✓ calculates invoice scenario 11 (1 ms)
+    ✓ calculates invoice scenario 12 (1 ms)
+    ✓ calculates invoice scenario 13 (1 ms)
+    ✓ calculates invoice scenario 14 (1 ms)
+    ✓ calculates invoice scenario 15 (1 ms)
+    ✓ calculates invoice scenario 16 (1 ms)
+    ✓ calculates invoice scenario 17 (1 ms)
+    ✓ calculates invoice scenario 18 (1 ms)
+    ✓ calculates invoice scenario 19 (1 ms)
+    ✓ calculates invoice scenario 20 (1 ms)
+PASS tests/users.test.js
+  users
+    ✓ validates account scenario 01 (1 ms)
+    ✓ validates account scenario 02 (1 ms)
+    ✓ validates account scenario 03 (1 ms)
+    ✓ validates account scenario 04 (1 ms)
+    ✓ validates account scenario 05 (1 ms)
+    ✓ validates account scenario 06 (1 ms)
+    ✓ validates account scenario 07 (1 ms)
+    ✓ validates account scenario 08 (1 ms)
+    ✓ validates account scenario 09 (1 ms)
+    ✓ validates account scenario 10 (1 ms)
+    ✓ validates account scenario 11 (1 ms)
+    ✓ validates account scenario 12 (1 ms)
+    ✓ validates account scenario 13 (1 ms)
+    ✓ validates account scenario 14 (1 ms)
+    ✓ validates account scenario 15 (1 ms)
+    ✓ validates account scenario 16 (1 ms)
+    ✓ validates account scenario 17 (1 ms)
+    ✓ validates account scenario 18 (1 ms)
+    ✓ validates account scenario 19 (1 ms)
+    ✓ validates account scenario 20 (1 ms)
+FAIL tests/auth.test.js
+  authentication
+    ✕ returns a successful response before the timeout (25 ms)
+
+  ● authentication › returns a successful response before the timeout
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 504
+
+      40 |   const result = await login(credentials);
+      41 |   expect(result.elapsedMs).toBeLessThan(1000);
+    > 42 |   expect(result.status).toBe(200);
+         |                         ^
+      43 | });
+
+      at Object.toBe (tests/auth.test.js:42:25)
+
+Test Suites: 1 failed, 2 passed, 3 total
+Tests:       1 failed, 40 passed, 41 total
+Snapshots:   0 total
+Time:        0.621 s
+Ran all test suites.

@@ -1,0 +1,18 @@
+[package]
+name = "minifycli"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+description = "Conservative terminal output compression for coding agents"
+license = "MIT"
+
+[[bin]]
+name = "mini"
+path = "src/main.rs"
+
+[dependencies]
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

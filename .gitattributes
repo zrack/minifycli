@@ -1,0 +1,2 @@
+# Unified diff fixtures retain the required single-space context prefix.
+benchmarks/fixtures/*.patch whitespace=-blank-at-eol

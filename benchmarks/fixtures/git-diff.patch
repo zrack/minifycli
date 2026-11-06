@@ -1,0 +1,33 @@
+diff --git a/src/auth.rs b/src/auth.rs
+index 0123abc..4567def 100644
+--- a/src/auth.rs
++++ b/src/auth.rs
+@@ -1,5 +1,5 @@
+ pub fn timeout_seconds() -> u64 {
+-    30
++    45
+ }
+ 
+ // Keep authentication timeout in seconds.
+diff --git a/src/billing.rs b/src/billing.rs
+index 89ab012..cdef345 100644
+--- a/src/billing.rs
++++ b/src/billing.rs
+@@ -1,4 +1,5 @@
+ pub fn invoice_total(subtotal: u64, discount: u64) -> u64 {
+-    subtotal - discount
++    // An oversized discount must not underflow.
++    subtotal.saturating_sub(discount)
+ }
+ 
+diff --git a/tests/account_service.rs b/tests/account_service.rs
+index aa11bb2..cc33dd4 100644
+--- a/tests/account_service.rs
++++ b/tests/account_service.rs
+@@ -1,4 +1,5 @@
+ #[test]
+ fn login_uses_configured_timeout() {
+-    assert_eq!(timeout_seconds(), 30);
++    assert_eq!(timeout_seconds(), 45);
++    assert_eq!(invoice_total(100, 150), 0);
+ }
