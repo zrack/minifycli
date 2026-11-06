@@ -58,3 +58,9 @@ Use compressed output to inspect a completed test run, a textual diff, or number
 Recognized commands buffer stdout and stderr independently. A known stream that exceeds the configured buffer limit switches to original output. Unknown commands run without compression. For commands that must remain interactive or stream continuously, select `--raw` explicitly.
 
 `--stats` reports byte reduction to stderr. These figures describe the command's output only; they do not measure model tokens, reasoning quality, or API cost.
+
+## Cancellation on macOS and Linux
+
+For buffered commands, send SIGINT or SIGTERM to `mini` to cancel the command's process group. MinifyCLI forwards the signal, allows 500 ms for cleanup, then kills remaining group members and returns 130 or 143. It continues handling cancellation when a descendant retains stdout/stderr after the main command exits. Descendants that deliberately move to another group or session are outside this cleanup boundary. SIGKILL sent to `mini` cannot be intercepted.
+
+If cancellation is detected before filtering, completed captures are emitted without filtering where the output sink accepts them. Output already filtered or written before the signal cannot be recovered. If pipes remain blocked, MinifyCLI bounds the final drain rather than waiting forever; a cancelled transcript can be partial. A closed downstream output pipe also triggers process-group cleanup and exit status 141. Use `--raw` for terminal interaction: buffered commands use a separate process group and are intended for finite, noninteractive commands.

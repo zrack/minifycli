@@ -1,0 +1,13 @@
+PASS src/good.test.js
+  console.log
+    ✓ migration completed (2 ms)
+FAIL src/broken.test.js
+  ● validates the imported record
+    Expected diagnostic:
+      ✓ record accepted (1 ms)
+      ✔ cache warmed
+      √ all fields verified
+    PASS src/diagnostic.test.js
+    at Object.toEqual (src/broken.test.js:12:7)
+Test Suites: 1 failed, 1 passed, 2 total
+Tests: 1 failed, 1 passed, 2 total

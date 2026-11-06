@@ -1,0 +1,40 @@
+[
+  {
+    "command": [
+      "cargo",
+      "test",
+      "--",
+      "--test-threads=1"
+    ],
+    "raw_exit": 101,
+    "mini_exit": 101,
+    "raw_stdout_bytes": 1706,
+    "raw_stderr_bytes": 207,
+    "mini_stdout_bytes": 1486,
+    "mini_stderr_bytes_without_stats": 207,
+    "stats": [
+      "[mini] matcher=cargo input=1913B output=1693B saved=11.5% passthrough_streams=0"
+    ],
+    "marker_retained": true,
+    "summary_retained": true,
+    "entire_failure_tail_equal_except_runtime_and_thread_id": true
+  },
+  {
+    "command": [
+      "npm",
+      "test"
+    ],
+    "raw_exit": 1,
+    "mini_exit": 1,
+    "raw_stdout_bytes": 1919,
+    "raw_stderr_bytes": 0,
+    "mini_stdout_bytes": 1035,
+    "mini_stderr_bytes_without_stats": 0,
+    "stats": [
+      "[mini] matcher=npm-test input=1923B output=1035B saved=46.2% passthrough_streams=0"
+    ],
+    "marker_retained": true,
+    "summary_retained": true,
+    "assertion_stack_and_totals_retained": true
+  }
+]

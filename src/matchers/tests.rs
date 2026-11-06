@@ -174,7 +174,7 @@ fn npm(input: &str, failed: bool) -> Option<String> {
                 continue;
             }
         }
-        if (jest || vitest) && npm_pass(line) {
+        if jest && jest_pass_header(line) {
             index += 1;
             continue;
         }
@@ -210,15 +210,26 @@ fn npm_failure_boundary(line: &str) -> bool {
             .is_some_and(|(kind, _)| kind.ends_with("Error") && !kind.contains(' '))
 }
 
-fn npm_pass(line: &str) -> bool {
-    if let Some(path) = line.strip_prefix("PASS ") {
-        return !path.trim().is_empty();
+/// Individual success markers, including timing-looking ones, can be ordinary
+/// application logs. Keep all of them. Only a column-zero Jest file header with
+/// an ordinary test-file path is eligible for removal; unfamiliar headers stay.
+fn jest_pass_header(line: &str) -> bool {
+    let Some(path) = line.strip_prefix("PASS ") else {
+        return false;
+    };
+    let path = path.trim_start_matches(' ');
+    if path.is_empty() || path.chars().any(char::is_whitespace) || path.contains(['\u{1b}', '\0']) {
+        return false;
     }
-    let line = line.trim_start();
-    ["✓ ", "✔ ", "√ "].iter().any(|prefix| {
-        line.strip_prefix(prefix)
-            .is_some_and(|rest| !rest.is_empty())
-    })
+    let filename = path.rsplit('/').next().unwrap_or(path);
+    let test_location = filename.contains(".test.")
+        || filename.contains(".spec.")
+        || path.starts_with("__tests__/")
+        || path.contains("/__tests__/");
+    test_location
+        && [".js", ".jsx", ".ts", ".tsx", ".mjs", ".cjs", ".mts", ".cts"]
+            .iter()
+            .any(|extension| filename.ends_with(extension))
 }
 
 /// Consume only a top-level TAP pass with optional *timing-only* YAML.
@@ -340,28 +351,47 @@ mod unit_tests {
     }
 
     #[test]
-    fn jest_removes_passes_and_keeps_all_failure_output() {
+    fn jest_removes_file_headers_and_keeps_individual_success_and_failure_output() {
         let tail = "FAIL src/bad.test.js\n  ● bad\n    Expected: 1\n    Received: 2\n    ✓ this line is part of the assertion\n    at src/bad.test.js:3:4\nTest Suites: 1 failed, 1 passed, 2 total\nTests: 1 failed, 3 passed, 4 total\n";
         let input = format!("PASS src/good.test.js\n  suite\n    ✓ works (2 ms)\n{tail}");
         let result = minify(&input, TestKind::Npm, true).unwrap();
-        assert_eq!(result, format!("  suite\n{tail}"));
+        assert_eq!(result, format!("  suite\n    ✓ works (2 ms)\n{tail}"));
     }
 
     #[test]
-    fn vitest_retains_summaries_and_user_logs() {
+    fn vitest_keeps_ambiguous_success_lines_and_user_logs() {
         let input = " RUN  v2.0.0 /tmp/project\n ✓ test/a.test.ts (4 tests) 3ms\nlog from the application\n Test Files  1 passed (1)\n      Tests  4 passed (4)\n   Duration  100ms\n";
-        let result = minify(input, TestKind::Npm, false).unwrap();
-        assert!(!result.contains("✓"));
-        assert!(result.contains("log from the application\n"));
-        assert!(result.contains("      Tests  4 passed (4)\n"));
+        assert_eq!(minify(input, TestKind::Npm, false), None);
     }
 
     #[test]
     fn vitest_failure_assertion_is_never_filtered() {
         let input = " ✓ test/a.test.ts (1 test) 3ms\n FAIL  test/b.test.ts > bad\nAssertionError: expected true\n ✓ assertion text\n Test Files  1 failed | 1 passed (2)\n      Tests  1 failed | 1 passed (2)\n";
-        let result = minify(input, TestKind::Npm, true).unwrap();
-        assert!(result.contains(" ✓ assertion text\n"));
-        assert!(!result.contains(" ✓ test/a.test.ts"));
+        assert_eq!(minify(input, TestKind::Npm, true), None);
+    }
+
+    #[test]
+    fn jest_keeps_application_success_messages_even_with_timings() {
+        let input = "PASS src/good.test.js\n  console.log\n    ✓ migration completed\n    ✔ cache warmed (2 ms)\n    √ result verified\nPASS database migration completed\nTest Suites: 1 passed, 1 total\nTests: 1 passed, 1 total\n";
+        assert_eq!(
+            minify(input, TestKind::Npm, false).unwrap(),
+            input.strip_prefix("PASS src/good.test.js\n").unwrap()
+        );
+    }
+
+    #[test]
+    fn jest_keeps_indented_or_unfamiliar_pass_headers() {
+        for header in [
+            "    PASS src/good.test.js",
+            "PASS database migration completed",
+            "PASS src/good.test.js (2 s)",
+            "PASS src/path with spaces/good.test.js",
+            "PASS src/custom-runner.file",
+        ] {
+            let input =
+                format!("{header}\nTest Suites: 1 passed, 1 total\nTests: 1 passed, 1 total\n");
+            assert_eq!(minify(&input, TestKind::Npm, false), None, "{header}");
+        }
     }
 
     #[test]

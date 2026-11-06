@@ -1,0 +1,9 @@
+  console.log
+    ✓ migration completed
+    ✔ cache warmed
+    √ result verified
+    ✓ migration completed (2 ms)
+    ✔ rebuilt 4 files (1 ms)
+PASS database migration completed
+Test Suites: 1 passed, 1 total
+Tests: 1 passed, 1 total

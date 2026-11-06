@@ -68,7 +68,7 @@ Arguments after `COMMAND` belong to that command. MinifyCLI inherits the working
 | Command | Compression |
 | --- | --- |
 | `cargo test`, `cargo check`, `cargo build` | Remove recognized progress and passing test lines; retain summaries, diagnostics, and failure details. |
-| `npm test`, `npm run test` | Reduce recognized Jest, Vitest, and Node test output; unfamiliar formats pass through. |
+| `npm test`, `npm run test` | Remove narrowly recognized Jest file headers and Node TAP pass records; retain ambiguous checkmark lines, including Vitest output. |
 | `git diff` | Remove redundant metadata in recognized unified diffs; retain file paths, hunks, and source whitespace. |
 | `rg -n`, `grep -n` | Group recognized numbered matches by file; preserve line numbers and match text. |
 
@@ -99,7 +99,9 @@ This is an explicit command wrapper. Installing it does not automatically interc
 - Recognized commands buffer stdout and stderr separately until they finish. Their original interleaving is not preserved.
 - `--stats` also captures otherwise unrecognized commands so it can count bytes. Use `--raw` without `--stats` for live terminal behavior.
 - The default capture limit is 4 MiB per stream. When a stream exceeds the limit, its original buffered bytes and subsequent output pass through without compression.
-- Use `--raw` for interactive programs, watch mode, servers, or any command whose output you need to see immediately. MinifyCLI is not a PTY or process supervisor.
+- Use `--raw` for interactive programs, watch mode, servers, or any command whose output you need to see immediately. Buffered mode targets finite, noninteractive commands.
+- On macOS and Linux, buffered commands run in a separate process group. Sending SIGINT or SIGTERM to `mini` forwards that signal to the group, allows 500 ms for cleanup, then kills remaining group members. Exit status is 130 or 143 respectively. Descendants that create another group or session can escape group cleanup; SIGKILL sent to `mini` cannot be handled.
+- When cancellation is detected before filtering, completed captures are emitted unfiltered where they can drain. Cleanup takes priority over complete output when a downstream reader stalls. Closed output pipes stop the buffered command group and return status 141. Interactive terminal input requires `--raw`.
 - `--stats` measures bytes, not tokens, API charges, or total context savings. A tokenizer and representative workloads are needed for token-cost claims.
 - MinifyCLI runs commands with your existing permissions. It is not a sandbox.
 
@@ -110,12 +112,14 @@ These are **handcrafted fixtures**, measured in bytes with truncation disabled. 
 | Fixture | Original bytes | Output bytes | Reduction |
 | --- | ---: | ---: | ---: |
 | Cargo: 40 passing tests, one failure | 2,714 | 972 | 64.2% |
-| npm/Jest: passes and a failure | 2,622 | 750 | 71.4% |
+| npm/Jest: passes and a failure | 2,622 | 2,570 | 2.0% |
 | Git: three-file unified diff | 882 | 643 | 27.1% |
 | Repeated numbered search results | 2,496 | 1,560 | 37.5% |
 | Unknown command | 142 | 142 | 0.0% |
 
 Run `cargo run --locked --release --example benchmark` to reproduce the measurements. The benchmark also checks retained failure details and source locations. See [benchmark method and fixtures](benchmarks/README.md).
+
+Since v0.1.1, individual checkmark-prefixed JavaScript test lines are retained because they cannot reliably be distinguished from application logs. This deliberately reduces compression in favor of retaining diagnostics. See [release history](CHANGELOG.md).
 
 ## Development
 

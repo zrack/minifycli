@@ -1,0 +1,13 @@
+const test = require('node:test');
+const assert = require('node:assert/strict');
+test('a pass 00', () => assert.equal(0+1, 1));
+test('a pass 01', () => assert.equal(1+1, 2));
+test('a pass 02', () => assert.equal(2+1, 3));
+test('a pass 03', () => assert.equal(3+1, 4));
+test('a pass 04', () => assert.equal(4+1, 5));
+test('a pass 05', () => assert.equal(5+1, 6));
+test('a pass 06', () => assert.equal(6+1, 7));
+test('a pass 07', () => assert.equal(7+1, 8));
+test('a pass 08', () => assert.equal(8+1, 9));
+test('a pass 09', () => assert.equal(9+1, 10));
+test('z failure', () => assert.equal(2+2, 5, 'MINIFYCLI_NODE_ASSERTION'));

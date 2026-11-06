@@ -31,6 +31,13 @@ context utilization, or API bills. Byte reduction is not token reduction.
 Observed savings depend on output format, order, path lengths, and failure
 position. In particular, test output after the first failure is preserved.
 
+Version 0.1.1 retains all individual JavaScript checkmark lines, including
+timing-looking records, because they can be application output. The unchanged
+Jest fixture therefore now measures 2.0% byte reduction (2,622 to 2,570 bytes),
+rather than the 71.4% reported by v0.1.0. This is an intentional retention fix,
+not a change to the fixture. Additional diagnostic regression fixtures live
+under `tests/fixtures/` and are separate from these synthetic savings examples.
+
 To evaluate real logs reproducibly, add captured output as a local fixture,
 select its matcher in the example, and inspect the resulting text. For a live,
 repeatable command, `mini --stats <command>` reports observed byte savings.

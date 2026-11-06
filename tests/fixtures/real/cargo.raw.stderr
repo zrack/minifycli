@@ -1,0 +1,3 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.01s
+     Running unittests src/lib.rs (target/debug/deps/minifycli_live_probe-fbcd9b3ff60d290b)
+error: test failed, to rerun pass `--lib`

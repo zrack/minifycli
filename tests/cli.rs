@@ -292,7 +292,10 @@ fn help_version_and_usage_errors_are_available_without_a_child() {
 
     let version = mini().arg("--version").output().unwrap();
     code(&version, 0);
-    assert_eq!(version.stdout, b"mini 0.1.0\n");
+    assert_eq!(
+        version.stdout,
+        format!("mini {}\n", env!("CARGO_PKG_VERSION")).as_bytes()
+    );
 
     for arguments in [
         vec![],

@@ -12,6 +12,12 @@ cargo test --locked
 
 The project uses Rust's standard library only. Please discuss a proposed third-party dependency before adding it.
 
+Integration tests need Git and `ps` on macOS/Linux. Cancellation tests start
+their own bounded subprocess fixtures and inspect them to verify group cleanup.
+Captured Cargo/Node output is replayed from `tests/fixtures/real/`; Node is not
+required to run those regression tests. See each fixture directory's README for
+capture provenance and synthetic edge cases.
+
 ## Add or change a matcher
 
 1. Add a small, representative fixture or unit test for the output format.

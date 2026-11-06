@@ -1,0 +1,76 @@
+{
+  "capture_date": "2026-11-06",
+  "capture_kind": "real tool output from intentionally constructed local test probes; not production project logs",
+  "versions": {
+    "rustc": "1.99.1",
+    "cargo": "1.99.1",
+    "node": "26.12.1",
+    "npm": "11.20.0"
+  },
+  "version_provenance": "Versions recorded in the original capture session; original-capture-report.json does not include version fields.",
+  "cases": [
+    {
+      "matcher": "Cargo",
+      "command": [
+        "cargo",
+        "test",
+        "--",
+        "--test-threads=1"
+      ],
+      "raw_exit_status": 101,
+      "passing_tests": 10,
+      "intentional_failing_tests": 1,
+      "stdout": "cargo.raw.stdout",
+      "stderr": "cargo.raw.stderr"
+    },
+    {
+      "matcher": "NpmTest",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "package_script": "node --test --test-reporter=tap test.js",
+      "raw_exit_status": 1,
+      "passing_tests": 10,
+      "intentional_failing_tests": 1,
+      "stdout": "npm-node-tap.raw.stdout",
+      "stderr": "npm-node-tap.raw.stderr"
+    }
+  ],
+  "sanitization": "Only the original absolute temporary workspace root was replaced by <WORKSPACE>. Source paths, line numbers, timings, thread IDs, and remaining bytes were preserved.",
+  "historical_report_note": "The original report compares independently executed raw and mini commands. Timing and process/thread IDs can differ between those runs; its byte statistics are historical and are not current benchmark assertions.",
+  "files": [
+    {
+      "file": "cargo.raw.stdout",
+      "original_bytes": 1706,
+      "fixture_bytes": 1706,
+      "original_sha256": "9f114d2d5c8d2106ca27c3ab5b4354ec7cbfc77ac9a44c4d6f365b067c8a05df",
+      "fixture_sha256": "9f114d2d5c8d2106ca27c3ab5b4354ec7cbfc77ac9a44c4d6f365b067c8a05df",
+      "workspace_root_replacements": 0
+    },
+    {
+      "file": "cargo.raw.stderr",
+      "original_bytes": 207,
+      "fixture_bytes": 207,
+      "original_sha256": "85d76c77b2cbefff48833909519cf7423e8260ba1ca15bc29e721d514ca69dfc",
+      "fixture_sha256": "85d76c77b2cbefff48833909519cf7423e8260ba1ca15bc29e721d514ca69dfc",
+      "workspace_root_replacements": 0
+    },
+    {
+      "file": "npm-node-tap.raw.stdout",
+      "original_bytes": 1919,
+      "fixture_bytes": 1869,
+      "original_sha256": "b7c36fe68e88cbbb251704efaa7d3f3e33e39de7577d759ed584673411028b02",
+      "fixture_sha256": "d4d9f91794709a360ab4fa2351ef7ff5260c399e200dc361062191abcda8e03f",
+      "workspace_root_replacements": 2
+    },
+    {
+      "file": "npm-node-tap.raw.stderr",
+      "original_bytes": 0,
+      "fixture_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "fixture_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "workspace_root_replacements": 0
+    }
+  ]
+}

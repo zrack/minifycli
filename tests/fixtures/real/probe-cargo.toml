@@ -1,0 +1,4 @@
+[package]
+name="minifycli_live_probe"
+version="0.1.0"
+edition="2021"

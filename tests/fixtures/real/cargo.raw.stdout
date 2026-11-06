@@ -1,0 +1,46 @@
+
+running 11 tests
+test a_pass_00 ... ok
+test a_pass_01 ... ok
+test a_pass_02 ... ok
+test a_pass_03 ... ok
+test a_pass_04 ... ok
+test a_pass_05 ... ok
+test a_pass_06 ... ok
+test a_pass_07 ... ok
+test a_pass_08 ... ok
+test a_pass_09 ... ok
+test z_failure ... FAILED
+
+failures:
+
+---- z_failure stdout ----
+
+thread 'z_failure' (8785822) panicked at src/lib.rs:22:18:
+assertion `left == right` failed: MINIFYCLI_CARGO_ASSERTION
+  left: 4
+ right: 5
+stack backtrace:
+   0: __rustc::rust_begin_unwind
+             at /rustc/58cf8f9c35b355199727627d07ae34a4e2846d67/library/std/src/panicking.rs:679:5
+   1: core::panicking::panic_fmt
+             at /rustc/58cf8f9c35b355199727627d07ae34a4e2846d67/library/core/src/panicking.rs:80:14
+   2: core::panicking::assert_failed_inner
+   3: core::panicking::assert_failed::<i32, i32>
+             at /rustc/58cf8f9c35b355199727627d07ae34a4e2846d67/library/core/src/panicking.rs:407:5
+   4: minifycli_live_probe::z_failure
+             at ./src/lib.rs:22:18
+   5: minifycli_live_probe::z_failure::{closure#0}
+             at ./src/lib.rs:22:15
+   6: <minifycli_live_probe::z_failure::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+             at /rustc/58cf8f9c35b355199727627d07ae34a4e2846d67/library/core/src/ops/function.rs:250:5
+   7: <fn() -> core::result::Result<(), alloc::string::String> as core::ops::function::FnOnce<()>>::call_once
+             at /rustc/58cf8f9c35b355199727627d07ae34a4e2846d67/library/core/src/ops/function.rs:250:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+
+
+failures:
+    z_failure
+
+test result: FAILED. 10 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+

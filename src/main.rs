@@ -2,9 +2,14 @@ use minifycli::{minify, select_matcher, Matcher};
 use std::env;
 use std::ffi::OsString;
 use std::io::{self, Read, Write};
-use std::process::{Command, ExitStatus, Stdio};
+#[cfg(not(unix))]
+use std::process::ExitStatus;
+use std::process::{Command, Stdio};
+use std::sync::atomic::{AtomicI32, Ordering};
+use std::sync::Arc;
 use std::thread;
 
+mod process;
 const HELP: &str = "mini — terminal output compression for coding agents
 
 Usage: mini [OPTIONS] [--] COMMAND [ARGS...]
@@ -135,19 +140,9 @@ fn capture(mut reader: impl Read, mut writer: impl Write, limit: usize) -> io::R
     Ok(captured)
 }
 
+#[cfg(not(unix))]
 fn code(status: ExitStatus) -> i32 {
-    if let Some(code) = status.code() {
-        return code;
-    }
-    #[cfg(unix)]
-    {
-        use std::os::unix::process::ExitStatusExt;
-        128 + status.signal().unwrap_or(1)
-    }
-    #[cfg(not(unix))]
-    {
-        1
-    }
+    status.code().unwrap_or(1)
 }
 
 fn passthrough(mut command: Command) -> io::Result<i32> {
@@ -173,17 +168,32 @@ fn run(options: Options) -> io::Result<i32> {
     if matcher == Matcher::Passthrough && !options.stats {
         return passthrough(command);
     }
-    let mut child = command
+    command
         .stdin(Stdio::inherit())
         .stdout(Stdio::piped())
-        .stderr(Stdio::piped())
-        .spawn()?;
-    let stdout = child.stdout.take().expect("piped stdout");
-    let stderr = child.stderr.take().expect("piped stderr");
+        .stderr(Stdio::piped());
+    let mut child = process::Process::spawn(&mut command)?;
+    let stdout = child.stdout();
+    let stderr = child.stderr();
     let limit = options.max_buffer;
-    let out_thread = thread::spawn(move || capture(stdout, io::stdout(), limit));
-    let err_thread = thread::spawn(move || capture(stderr, io::stderr(), limit));
-    let status = child.wait()?;
+    let io_exit = Arc::new(AtomicI32::new(0));
+    let out_error = Arc::clone(&io_exit);
+    let err_error = Arc::clone(&io_exit);
+    let out_thread =
+        thread::spawn(move || report_io(capture(stdout, io::stdout(), limit), &out_error));
+    let err_thread =
+        thread::spawn(move || report_io(capture(stderr, io::stderr(), limit), &err_error));
+    if !child.wait_until(
+        || out_thread.is_finished() && err_thread.is_finished(),
+        &io_exit,
+    )? {
+        // Dropping a JoinHandle detaches it. Process exit closes blocked pipes;
+        // joining here could hang forever on a descendant or a stalled consumer.
+        return Ok(child.exit_code());
+    }
+    if io_exit.load(Ordering::Relaxed) != 0 {
+        return Ok(child.exit_code());
+    }
     let stdout = out_thread
         .join()
         .map_err(|_| io::Error::other("stdout reader panicked"))??;
@@ -193,7 +203,8 @@ fn run(options: Options) -> io::Result<i32> {
     let mut input_bytes = 0;
     let mut output_bytes = 0;
     let mut spills = 0;
-    for (captured, is_stderr) in [(stdout, false), (stderr, true)] {
+    let mut outputs = [Vec::new(), Vec::new()];
+    for (index, captured) in [stdout, stderr].into_iter().enumerate() {
         input_bytes += captured.total;
         if captured.spilled {
             output_bytes += captured.total;
@@ -202,7 +213,9 @@ fn run(options: Options) -> io::Result<i32> {
         }
         // Search errors are not match data. Test runners may write their reports
         // to either stream. Never group or clip stderr for grep/rg or git.
-        let stream_matcher = if is_stderr && matches!(matcher, Matcher::Search | Matcher::GitDiff) {
+        let stream_matcher = if child.cancelled()
+            || (index == 1 && matches!(matcher, Matcher::Search | Matcher::GitDiff))
+        {
             Matcher::Passthrough
         } else {
             matcher
@@ -210,23 +223,19 @@ fn run(options: Options) -> io::Result<i32> {
         let output = minify(
             &captured.bytes,
             stream_matcher,
-            !status.success(),
+            child.failed(),
             options.max_line_chars,
         );
         output_bytes += output.len() as u64;
-        if is_stderr {
-            io::stderr().write_all(&output)?;
-        } else {
-            io::stdout().write_all(&output)?;
-        }
+        outputs[index] = output;
     }
-    if options.stats {
+    if options.stats && !child.cancelled() {
         let reduction = if input_bytes == 0 {
             0.0
         } else {
             100.0 * (input_bytes - output_bytes) as f64 / input_bytes as f64
         };
-        eprintln!(
+        let stats = format!(
             "[mini] matcher={} input={}B output={}B saved={:.1}% passthrough_streams={}",
             matcher.name(),
             input_bytes,
@@ -234,15 +243,48 @@ fn run(options: Options) -> io::Result<i32> {
             reduction,
             spills
         );
+        outputs[1].extend_from_slice(stats.as_bytes());
+        outputs[1].push(b'\n');
     }
-    Ok(code(status))
+    let [stdout, stderr] = outputs;
+    let out_error = Arc::clone(&io_exit);
+    let err_error = Arc::clone(&io_exit);
+    let out_thread = thread::spawn(move || report_io(io::stdout().write_all(&stdout), &out_error));
+    let err_thread = thread::spawn(move || report_io(io::stderr().write_all(&stderr), &err_error));
+    if child.wait_until(
+        || out_thread.is_finished() && err_thread.is_finished(),
+        &io_exit,
+    )? {
+        if child.cancelled() || io_exit.load(Ordering::Relaxed) != 0 {
+            return Ok(child.exit_code());
+        }
+        out_thread
+            .join()
+            .map_err(|_| io::Error::other("stdout writer panicked"))??;
+        err_thread
+            .join()
+            .map_err(|_| io::Error::other("stderr writer panicked"))??;
+    }
+    Ok(child.exit_code())
+}
+
+fn report_io<T>(result: io::Result<T>, exit: &AtomicI32) -> io::Result<T> {
+    if let Err(error) = &result {
+        let code = if error.kind() == io::ErrorKind::BrokenPipe {
+            141
+        } else {
+            1
+        };
+        let _ = exit.compare_exchange(0, code, Ordering::Relaxed, Ordering::Relaxed);
+    }
+    result
 }
 
 fn main() {
     let action = match parse(env::args_os().skip(1)) {
         Ok(action) => action,
         Err(error) => {
-            eprintln!("mini: {error}");
+            let _ = writeln!(io::stderr(), "mini: {error}");
             std::process::exit(2);
         }
     };
@@ -255,7 +297,7 @@ fn main() {
         Ok(code) => code,
         Err(error) if error.kind() == io::ErrorKind::BrokenPipe => 141,
         Err(error) => {
-            eprintln!("mini: {error}");
+            let _ = writeln!(io::stderr(), "mini: {error}");
             match error.kind() {
                 io::ErrorKind::NotFound => 127,
                 io::ErrorKind::PermissionDenied => 126,

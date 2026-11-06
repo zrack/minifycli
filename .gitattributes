@@ -1,2 +1,5 @@
 # Unified diff fixtures retain the required single-space context prefix.
 benchmarks/fixtures/*.patch whitespace=-blank-at-eol
+# Regression logs deliberately retain whitespace and CRLF bytes.
+tests/fixtures/**/*.log -text whitespace=-blank-at-eol
+tests/fixtures/real/*.raw.* -text whitespace=-blank-at-eol,-blank-at-eof
