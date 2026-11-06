@@ -1,0 +1,3128 @@
+{
+  "audit": {
+    "assertion_count": 13957,
+    "coverage_counts": {
+      "assertions": 13957,
+      "captured_files": 718,
+      "mini_record_files": 440,
+      "stream_values": 957
+    },
+    "failure_count": 0,
+    "failures": [],
+    "passed": true
+  },
+  "checked_utc": "2026-11-06T22:06:38.197423+00:00",
+  "checker_sha256": "9679198a13c00cae76014fc8050fa993171659d7e7a5fb2ad4592cf22e1e819a",
+  "coverage": {
+    "arms": 3,
+    "repetitions": 2,
+    "sessions": 36,
+    "tasks": 6,
+    "within_triple_position_counts": {
+      "1": {
+        "mini": 4,
+        "raw": 4,
+        "rtk": 4
+      },
+      "2": {
+        "mini": 4,
+        "raw": 4,
+        "rtk": 4
+      },
+      "3": {
+        "mini": 4,
+        "raw": 4,
+        "rtk": 4
+      }
+    }
+  },
+  "decisions": {
+    "consistent_mini_win_tasks": [],
+    "consistent_rtk_win_tasks": [],
+    "continue_compressor": true,
+    "correct_repairs": {
+      "mini": 12,
+      "raw": 12,
+      "rtk": 12
+    },
+    "correct_repairs_by_language": {
+      "javascript": {
+        "mini": 6,
+        "raw": 6,
+        "rtk": 6
+      },
+      "rust": {
+        "mini": 6,
+        "raw": 6,
+        "rtk": 6
+      }
+    },
+    "eligible_without_audit_failures": true,
+    "resource_advantage_gate": true,
+    "task_advantage_gate": false
+  },
+  "graded_trials": 36,
+  "plan_sha256": "4878a80b6b723648c76312ab5b09d61e72ab9ed2c60d8dc0077a1e24af2ac44b",
+  "resource_reduction_mini_vs_rtk": {
+    "all": 0.23169207953886484,
+    "javascript": 0.3441149422740266,
+    "rust": 0.07424344795704274
+  },
+  "runtime_versions": {
+    "cargo": {
+      "matches": true,
+      "registered": "cargo 1.99.1 (5f94df478 2026-08-27)"
+    },
+    "codex": {
+      "matches": true,
+      "registered": "codex-cli 0.166.0-alpha.6"
+    },
+    "node": {
+      "matches": true,
+      "registered": "v26.12.1"
+    },
+    "npm": {
+      "matches": true,
+      "registered": "11.20.0"
+    },
+    "rustc": {
+      "matches": true,
+      "registered": "rustc 1.99.1 (58cf8f9c3 2026-10-13)"
+    }
+  },
+  "schema": 1,
+  "totals": {
+    "mini": {
+      "all": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 2373760,
+        "input_tokens": 2803737,
+        "output_tokens": 48799,
+        "read_calls": 77,
+        "reasoning_output_tokens": 20499,
+        "recovery_calls": 0,
+        "sessions": 12,
+        "terminal_calls": 110,
+        "tool_calls": 249,
+        "total_input_plus_output": 2852536,
+        "uncached_input_plus_output": 478776,
+        "wall_seconds_median": 114.32368058350403,
+        "wall_seconds_total": 1387.808791418036
+      },
+      "javascript": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1189760,
+        "input_tokens": 1396173,
+        "output_tokens": 24537,
+        "read_calls": 44,
+        "reasoning_output_tokens": 10836,
+        "recovery_calls": 0,
+        "sessions": 6,
+        "terminal_calls": 51,
+        "tool_calls": 124,
+        "total_input_plus_output": 1420710,
+        "uncached_input_plus_output": 230950,
+        "wall_seconds_median": 91.90227683348348,
+        "wall_seconds_total": 637.5752920010127
+      },
+      "rust": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1184000,
+        "input_tokens": 1407564,
+        "output_tokens": 24262,
+        "read_calls": 33,
+        "reasoning_output_tokens": 9663,
+        "recovery_calls": 0,
+        "sessions": 6,
+        "terminal_calls": 59,
+        "tool_calls": 125,
+        "total_input_plus_output": 1431826,
+        "uncached_input_plus_output": 247826,
+        "wall_seconds_median": 121.19458091701381,
+        "wall_seconds_total": 750.2334994170233
+      }
+    },
+    "raw": {
+      "all": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 2759424,
+        "input_tokens": 3179375,
+        "output_tokens": 52116,
+        "read_calls": 78,
+        "reasoning_output_tokens": 22544,
+        "recovery_calls": 0,
+        "sessions": 12,
+        "terminal_calls": 117,
+        "tool_calls": 266,
+        "total_input_plus_output": 3231491,
+        "uncached_input_plus_output": 472067,
+        "wall_seconds_median": 105.37392710449058,
+        "wall_seconds_total": 1405.9533141248976
+      },
+      "javascript": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1602176,
+        "input_tokens": 1821032,
+        "output_tokens": 26594,
+        "read_calls": 43,
+        "reasoning_output_tokens": 11672,
+        "recovery_calls": 0,
+        "sessions": 6,
+        "terminal_calls": 62,
+        "tool_calls": 143,
+        "total_input_plus_output": 1847626,
+        "uncached_input_plus_output": 245450,
+        "wall_seconds_median": 98.76538793797954,
+        "wall_seconds_total": 707.836871583946
+      },
+      "rust": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1157248,
+        "input_tokens": 1358343,
+        "output_tokens": 25522,
+        "read_calls": 35,
+        "reasoning_output_tokens": 10872,
+        "recovery_calls": 0,
+        "sessions": 6,
+        "terminal_calls": 55,
+        "tool_calls": 123,
+        "total_input_plus_output": 1383865,
+        "uncached_input_plus_output": 226617,
+        "wall_seconds_median": 113.1570446039841,
+        "wall_seconds_total": 698.1164425409515
+      }
+    },
+    "rtk": {
+      "all": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 3273216,
+        "input_tokens": 3660716,
+        "output_tokens": 52035,
+        "read_calls": 84,
+        "reasoning_output_tokens": 21968,
+        "recovery_calls": 0,
+        "sessions": 12,
+        "terminal_calls": 133,
+        "tool_calls": 291,
+        "total_input_plus_output": 3712751,
+        "uncached_input_plus_output": 439535,
+        "wall_seconds_median": 114.92320902098436,
+        "wall_seconds_total": 1424.1869502930786
+      },
+      "javascript": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1940992,
+        "input_tokens": 2137996,
+        "output_tokens": 28100,
+        "read_calls": 52,
+        "reasoning_output_tokens": 12597,
+        "recovery_calls": 0,
+        "sessions": 6,
+        "terminal_calls": 68,
+        "tool_calls": 161,
+        "total_input_plus_output": 2166096,
+        "uncached_input_plus_output": 225104,
+        "wall_seconds_median": 125.59748593749828,
+        "wall_seconds_total": 775.6864839590271
+      },
+      "rust": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1332224,
+        "input_tokens": 1522720,
+        "output_tokens": 23935,
+        "read_calls": 32,
+        "reasoning_output_tokens": 9371,
+        "recovery_calls": 0,
+        "sessions": 6,
+        "terminal_calls": 65,
+        "tool_calls": 130,
+        "total_input_plus_output": 1546655,
+        "uncached_input_plus_output": 214431,
+        "wall_seconds_median": 108.98272931299289,
+        "wall_seconds_total": 648.5004663340515
+      }
+    }
+  },
+  "trials": [
+    {
+      "capture_counts": {
+        "commands": 13,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_raw": 13,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 21
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 6
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 19
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-001",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 230912,
+        "input_tokens": 280914,
+        "output_tokens": 4444,
+        "read_calls": 5,
+        "reasoning_output_tokens": 1831,
+        "recovery_calls": 0,
+        "terminal_calls": 13,
+        "tool_calls": 24,
+        "total_input_plus_output": 285358,
+        "uncached_input_plus_output": 54446
+      },
+      "patch_sha256": "3c8138f47cf1d48610c6d7dcb11efa94479bdcf92038e628d4f879c6dd57c3db",
+      "repetition": 1,
+      "task_id": "R2",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 5,
+        "replace_text": 5,
+        "terminal": 13,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 230912,
+        "input_tokens": 280914,
+        "output_tokens": 4444,
+        "reasoning_output_tokens": 1831
+      },
+      "variant": "raw",
+      "wall_seconds": 120.67759508296149,
+      "workspace_manifest_sha256": "0eb5d054dee46d3d38115eef67ffb18ee8d1dc60c86e19ab36d2d922077f8c02"
+    },
+    {
+      "capture_counts": {
+        "commands": 10,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_mini-record": 10,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 21
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 6
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 19
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-002",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 226944,
+        "input_tokens": 265634,
+        "output_tokens": 4335,
+        "read_calls": 5,
+        "reasoning_output_tokens": 1706,
+        "recovery_calls": 0,
+        "terminal_calls": 10,
+        "tool_calls": 21,
+        "total_input_plus_output": 269969,
+        "uncached_input_plus_output": 43025
+      },
+      "patch_sha256": "f4f5ad23e941d2acf813e25735d0d79ce8f1e614201f7beaff0ff15410fcaa37",
+      "repetition": 1,
+      "task_id": "R2",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 5,
+        "replace_text": 5,
+        "terminal": 10,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 226944,
+        "input_tokens": 265634,
+        "output_tokens": 4335,
+        "reasoning_output_tokens": 1706
+      },
+      "variant": "mini",
+      "wall_seconds": 121.49424404202728,
+      "workspace_manifest_sha256": "e109a5c4de2ff5f9ba5b47edd37f5b39c236b71c2ffbba042c0f451ac1748737"
+    },
+    {
+      "capture_counts": {
+        "commands": 12,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_native": 10,
+        "route_passthrough": 2,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 21
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 6
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 19
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-003",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 293632,
+        "input_tokens": 322944,
+        "output_tokens": 3687,
+        "read_calls": 6,
+        "reasoning_output_tokens": 998,
+        "recovery_calls": 0,
+        "terminal_calls": 12,
+        "tool_calls": 24,
+        "total_input_plus_output": 326631,
+        "uncached_input_plus_output": 32999
+      },
+      "patch_sha256": "d60c24550f9723fb6a574a05f877e76d6b9d28c2550592f50a2ab1911acf1150",
+      "repetition": 1,
+      "task_id": "R2",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 6,
+        "replace_text": 5,
+        "terminal": 12,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 293632,
+        "input_tokens": 322944,
+        "output_tokens": 3687,
+        "reasoning_output_tokens": 998
+      },
+      "variant": "rtk",
+      "wall_seconds": 103.49080795899499,
+      "workspace_manifest_sha256": "0a0f9ca0218b238f7288816215914addde7ac74d12841a5e5ec01f7213fe8d6f"
+    },
+    {
+      "capture_counts": {
+        "commands": 12,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_mini-record": 12,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 21
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 6
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 19
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-004",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 212608,
+        "input_tokens": 238565,
+        "output_tokens": 3785,
+        "read_calls": 6,
+        "reasoning_output_tokens": 1240,
+        "recovery_calls": 0,
+        "terminal_calls": 12,
+        "tool_calls": 23,
+        "total_input_plus_output": 242350,
+        "uncached_input_plus_output": 29742
+      },
+      "patch_sha256": "31222d71842352311da0a5beb909e1ab58e7c6cd762a7cc8adc7db363fcd1fe3",
+      "repetition": 2,
+      "task_id": "R2",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 6,
+        "replace_text": 4,
+        "terminal": 12,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 212608,
+        "input_tokens": 238565,
+        "output_tokens": 3785,
+        "reasoning_output_tokens": 1240
+      },
+      "variant": "mini",
+      "wall_seconds": 107.75244337500772,
+      "workspace_manifest_sha256": "a3418b1f3b25129e53ad9e2d654d7a930a10324218eacab425024db0a83485d7"
+    },
+    {
+      "capture_counts": {
+        "commands": 14,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_native": 12,
+        "route_passthrough": 2,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 21
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 6
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 19
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-005",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 197120,
+        "input_tokens": 225237,
+        "output_tokens": 4358,
+        "read_calls": 6,
+        "reasoning_output_tokens": 1779,
+        "recovery_calls": 0,
+        "terminal_calls": 14,
+        "tool_calls": 26,
+        "total_input_plus_output": 229595,
+        "uncached_input_plus_output": 32475
+      },
+      "patch_sha256": "6638a87328a3b85e2469600a936b2fa177b93cce51554f2cda3678972649bf0f",
+      "repetition": 2,
+      "task_id": "R2",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 6,
+        "replace_text": 5,
+        "terminal": 14,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 197120,
+        "input_tokens": 225237,
+        "output_tokens": 4358,
+        "reasoning_output_tokens": 1779
+      },
+      "variant": "rtk",
+      "wall_seconds": 114.47465066699078,
+      "workspace_manifest_sha256": "e6a56abee0701634637adfe0c0a23e23360e119198a3d49177120858d86afe09"
+    },
+    {
+      "capture_counts": {
+        "commands": 9,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_raw": 9,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 21
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 6
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 19
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-006",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 187136,
+        "input_tokens": 244381,
+        "output_tokens": 3954,
+        "read_calls": 5,
+        "reasoning_output_tokens": 1614,
+        "recovery_calls": 0,
+        "terminal_calls": 9,
+        "tool_calls": 19,
+        "total_input_plus_output": 248335,
+        "uncached_input_plus_output": 61199
+      },
+      "patch_sha256": "5131c583970e5e16be35a8a93c02b156521fb6480125d6906e552f804feb6563",
+      "repetition": 2,
+      "task_id": "R2",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 5,
+        "replace_text": 4,
+        "terminal": 9,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 187136,
+        "input_tokens": 244381,
+        "output_tokens": 3954,
+        "reasoning_output_tokens": 1614
+      },
+      "variant": "raw",
+      "wall_seconds": 105.63649412500672,
+      "workspace_manifest_sha256": "b209e916e3ce624029534717ba937183d712549c788b745ce938e356a96c099f"
+    },
+    {
+      "capture_counts": {
+        "commands": 9,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_mini-record": 9,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 41
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 6
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 38
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-007",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 177920,
+        "input_tokens": 220990,
+        "output_tokens": 2516,
+        "read_calls": 4,
+        "reasoning_output_tokens": 830,
+        "recovery_calls": 0,
+        "terminal_calls": 9,
+        "tool_calls": 17,
+        "total_input_plus_output": 223506,
+        "uncached_input_plus_output": 45586
+      },
+      "patch_sha256": "1402546891f573c21c0c2d4949d2044acfdfdc8c307053337b3a09604401f566",
+      "repetition": 1,
+      "task_id": "R3",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 4,
+        "replace_text": 3,
+        "terminal": 9,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 177920,
+        "input_tokens": 220990,
+        "output_tokens": 2516,
+        "reasoning_output_tokens": 830
+      },
+      "variant": "mini",
+      "wall_seconds": 154.6250870830263,
+      "workspace_manifest_sha256": "df4d1167cf5f2b122c6031149b4314be1f6aea1ccd4c12965393881e33b87302"
+    },
+    {
+      "capture_counts": {
+        "commands": 8,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_native": 8,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 41
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 6
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 38
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-008",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 156416,
+        "input_tokens": 190345,
+        "output_tokens": 2161,
+        "read_calls": 3,
+        "reasoning_output_tokens": 607,
+        "recovery_calls": 0,
+        "terminal_calls": 8,
+        "tool_calls": 14,
+        "total_input_plus_output": 192506,
+        "uncached_input_plus_output": 36090
+      },
+      "patch_sha256": "0695e099d1ab401f9420287945deaa31829f08d2cdfb0c965e363050eb50786a",
+      "repetition": 1,
+      "task_id": "R3",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 3,
+        "replace_text": 2,
+        "terminal": 8,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 156416,
+        "input_tokens": 190345,
+        "output_tokens": 2161,
+        "reasoning_output_tokens": 607
+      },
+      "variant": "rtk",
+      "wall_seconds": 66.02982429100666,
+      "workspace_manifest_sha256": "6cfef11785baf9dec90e226f15575c37b7a8d33e33193944e3d971802dd4b316"
+    },
+    {
+      "capture_counts": {
+        "commands": 9,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_raw": 9,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 41
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 6
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 38
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-009",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 136448,
+        "input_tokens": 161511,
+        "output_tokens": 2092,
+        "read_calls": 5,
+        "reasoning_output_tokens": 588,
+        "recovery_calls": 0,
+        "terminal_calls": 9,
+        "tool_calls": 17,
+        "total_input_plus_output": 163603,
+        "uncached_input_plus_output": 27155
+      },
+      "patch_sha256": "c919af979f548a56bb283f88f6d896a89fa3e40c597dcb404b0144e078e196d3",
+      "repetition": 1,
+      "task_id": "R3",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 5,
+        "replace_text": 2,
+        "terminal": 9,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 136448,
+        "input_tokens": 161511,
+        "output_tokens": 2092,
+        "reasoning_output_tokens": 588
+      },
+      "variant": "raw",
+      "wall_seconds": 65.9211823749938,
+      "workspace_manifest_sha256": "8e4c17fb164c667acc3cdd67e24cb7f77e90601354ce61c8320d2f3a9b971488"
+    },
+    {
+      "capture_counts": {
+        "commands": 12,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_native": 10,
+        "route_passthrough": 2,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 41
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 6
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 38
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-010",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 187264,
+        "input_tokens": 230893,
+        "output_tokens": 2454,
+        "read_calls": 4,
+        "reasoning_output_tokens": 866,
+        "recovery_calls": 0,
+        "terminal_calls": 12,
+        "tool_calls": 20,
+        "total_input_plus_output": 233347,
+        "uncached_input_plus_output": 46083
+      },
+      "patch_sha256": "a95da6628303728934598844cade00118b536d7acad9a816cba60a36ca4dcdd7",
+      "repetition": 2,
+      "task_id": "R3",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 4,
+        "replace_text": 3,
+        "terminal": 12,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 187264,
+        "input_tokens": 230893,
+        "output_tokens": 2454,
+        "reasoning_output_tokens": 866
+      },
+      "variant": "rtk",
+      "wall_seconds": 77.46203362499364,
+      "workspace_manifest_sha256": "8e81b26a5550452c515e8b8adad8b0d3ed08019284178c168e04a7afe2549495"
+    },
+    {
+      "capture_counts": {
+        "commands": 8,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_raw": 8,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 41
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 6
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 38
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-011",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 191872,
+        "input_tokens": 212489,
+        "output_tokens": 2317,
+        "read_calls": 4,
+        "reasoning_output_tokens": 914,
+        "recovery_calls": 0,
+        "terminal_calls": 8,
+        "tool_calls": 15,
+        "total_input_plus_output": 214806,
+        "uncached_input_plus_output": 22934
+      },
+      "patch_sha256": "1e2ecc1ecceac82b6644dca318d0e7d19477e1bcea457c36536bad48f8502c41",
+      "repetition": 2,
+      "task_id": "R3",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 4,
+        "replace_text": 2,
+        "terminal": 8,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 191872,
+        "input_tokens": 212489,
+        "output_tokens": 2317,
+        "reasoning_output_tokens": 914
+      },
+      "variant": "raw",
+      "wall_seconds": 76.69804316700902,
+      "workspace_manifest_sha256": "0682905baea03007349855b69f1bce8be472ab22d827f4e52213663ea7d50a20"
+    },
+    {
+      "capture_counts": {
+        "commands": 8,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_mini-record": 8,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 41
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 6
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 38
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-012",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 107264,
+        "input_tokens": 155650,
+        "output_tokens": 2137,
+        "read_calls": 5,
+        "reasoning_output_tokens": 695,
+        "recovery_calls": 0,
+        "terminal_calls": 8,
+        "tool_calls": 16,
+        "total_input_plus_output": 157787,
+        "uncached_input_plus_output": 50523
+      },
+      "patch_sha256": "af2b4720d4d3225d6dd1894b8777a79ed4d2a0514c1450a4c4f04ba7c08a4b17",
+      "repetition": 2,
+      "task_id": "R3",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 5,
+        "replace_text": 2,
+        "terminal": 8,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 107264,
+        "input_tokens": 155650,
+        "output_tokens": 2137,
+        "reasoning_output_tokens": 695
+      },
+      "variant": "mini",
+      "wall_seconds": 71.74272574996576,
+      "workspace_manifest_sha256": "b47e539a5dd80cb1edc47381485600f1e6fd1f518c202eb2f1b0b8f4b5205d83"
+    },
+    {
+      "capture_counts": {
+        "commands": 9,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_native": 9,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1981
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1977
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-013",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 153088,
+        "input_tokens": 180064,
+        "output_tokens": 3348,
+        "read_calls": 7,
+        "reasoning_output_tokens": 1655,
+        "recovery_calls": 0,
+        "terminal_calls": 9,
+        "tool_calls": 19,
+        "total_input_plus_output": 183412,
+        "uncached_input_plus_output": 30324
+      },
+      "patch_sha256": "0c02c521294ac5a5e2e40e6c1f222487de21facd0c3fb7cb5781c04165b5f29f",
+      "repetition": 1,
+      "task_id": "J1",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 7,
+        "replace_text": 1,
+        "terminal": 9,
+        "visible_errors": 0,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 153088,
+        "input_tokens": 180064,
+        "output_tokens": 3348,
+        "reasoning_output_tokens": 1655
+      },
+      "variant": "rtk",
+      "wall_seconds": 90.62500512500992,
+      "workspace_manifest_sha256": "b89cbcd3947758df4c8fdcfee42337fa2e2d8e05e9a4a1d500dfbe747bdb51a8"
+    },
+    {
+      "capture_counts": {
+        "commands": 8,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_raw": 8,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1980
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1977
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-014",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 210176,
+        "input_tokens": 233075,
+        "output_tokens": 2764,
+        "read_calls": 6,
+        "reasoning_output_tokens": 1111,
+        "recovery_calls": 0,
+        "terminal_calls": 8,
+        "tool_calls": 17,
+        "total_input_plus_output": 235839,
+        "uncached_input_plus_output": 25663
+      },
+      "patch_sha256": "cb0c1cca6350a99c179682a8779bf9cdc3569bd43a2909836b5bb3ef2cac77e7",
+      "repetition": 1,
+      "task_id": "J1",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 6,
+        "replace_text": 2,
+        "terminal": 8,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 210176,
+        "input_tokens": 233075,
+        "output_tokens": 2764,
+        "reasoning_output_tokens": 1111
+      },
+      "variant": "raw",
+      "wall_seconds": 82.77711675001774,
+      "workspace_manifest_sha256": "56d36633332b3f67812c0a859b2a57638764b8a89607541f57656d9d6e9bc639"
+    },
+    {
+      "capture_counts": {
+        "commands": 9,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_mini-record": 9,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1983
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1977
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-015",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 157312,
+        "input_tokens": 185641,
+        "output_tokens": 3348,
+        "read_calls": 8,
+        "reasoning_output_tokens": 1369,
+        "recovery_calls": 0,
+        "terminal_calls": 9,
+        "tool_calls": 20,
+        "total_input_plus_output": 188989,
+        "uncached_input_plus_output": 31677
+      },
+      "patch_sha256": "48858ff8a9a03089d759ef01d6bb13686196c81eac5ed728a5a1d96b7b7b655a",
+      "repetition": 1,
+      "task_id": "J1",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 8,
+        "replace_text": 1,
+        "terminal": 9,
+        "visible_errors": 0,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 157312,
+        "input_tokens": 185641,
+        "output_tokens": 3348,
+        "reasoning_output_tokens": 1369
+      },
+      "variant": "mini",
+      "wall_seconds": 91.40788304200396,
+      "workspace_manifest_sha256": "ebf1fd4f6a08e3a1478f16a54d066f832745524899059fc27c397e4c52033b30"
+    },
+    {
+      "capture_counts": {
+        "commands": 11,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_raw": 11,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1981
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1977
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-016",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 206336,
+        "input_tokens": 243122,
+        "output_tokens": 3976,
+        "read_calls": 9,
+        "reasoning_output_tokens": 1937,
+        "recovery_calls": 0,
+        "terminal_calls": 11,
+        "tool_calls": 25,
+        "total_input_plus_output": 247098,
+        "uncached_input_plus_output": 40762
+      },
+      "patch_sha256": "18ec3103383cd7179edc8a28f2b170e6162a3aeef6315a1d9fb2941ce049fec3",
+      "repetition": 2,
+      "task_id": "J1",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 9,
+        "replace_text": 2,
+        "terminal": 11,
+        "visible_errors": 0,
+        "write_file": 2
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 206336,
+        "input_tokens": 243122,
+        "output_tokens": 3976,
+        "reasoning_output_tokens": 1937
+      },
+      "variant": "raw",
+      "wall_seconds": 105.11136008397443,
+      "workspace_manifest_sha256": "751ec34b368ee061a72416b56ee5ebc099cb097b4e4c5410af9969fc0a0efe5c"
+    },
+    {
+      "capture_counts": {
+        "commands": 9,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_mini-record": 9,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1982
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1977
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-017",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 210432,
+        "input_tokens": 244530,
+        "output_tokens": 3466,
+        "read_calls": 8,
+        "reasoning_output_tokens": 1544,
+        "recovery_calls": 0,
+        "terminal_calls": 9,
+        "tool_calls": 21,
+        "total_input_plus_output": 247996,
+        "uncached_input_plus_output": 37564
+      },
+      "patch_sha256": "4106a486f3a863e351b1f6b0d4cc8955cfe8bcccf9d92dcb82f39a2bfd3f3de7",
+      "repetition": 2,
+      "task_id": "J1",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 8,
+        "replace_text": 2,
+        "terminal": 9,
+        "visible_errors": 0,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 210432,
+        "input_tokens": 244530,
+        "output_tokens": 3466,
+        "reasoning_output_tokens": 1544
+      },
+      "variant": "mini",
+      "wall_seconds": 92.39667062496301,
+      "workspace_manifest_sha256": "0b1caa9224a105cf718a891be12a83132310fc7ce02a989919c76c958c553fab"
+    },
+    {
+      "capture_counts": {
+        "commands": 10,
+        "incomplete": 0,
+        "nonzero_exit": 3,
+        "output_limit": 0,
+        "route_native": 10,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1982
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1977
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-018",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 224384,
+        "input_tokens": 249407,
+        "output_tokens": 4387,
+        "read_calls": 9,
+        "reasoning_output_tokens": 2073,
+        "recovery_calls": 0,
+        "terminal_calls": 10,
+        "tool_calls": 26,
+        "total_input_plus_output": 253794,
+        "uncached_input_plus_output": 29410
+      },
+      "patch_sha256": "03129630bfe41f17c51b4b6bcb097439a79a709dba501eb8c3d5cfffcd7fcf9e",
+      "repetition": 2,
+      "task_id": "J1",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 9,
+        "replace_text": 5,
+        "terminal": 10,
+        "visible_errors": 0,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 224384,
+        "input_tokens": 249407,
+        "output_tokens": 4387,
+        "reasoning_output_tokens": 2073
+      },
+      "variant": "rtk",
+      "wall_seconds": 115.37176737497794,
+      "workspace_manifest_sha256": "dd73191307f75ff363afe40227082877455dddef4ecca34f5406264c6991ac27"
+    },
+    {
+      "capture_counts": {
+        "commands": 11,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_raw": 11,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 2013
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1977
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-019",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 261504,
+        "input_tokens": 301809,
+        "output_tokens": 7994,
+        "read_calls": 7,
+        "reasoning_output_tokens": 3937,
+        "recovery_calls": 0,
+        "terminal_calls": 11,
+        "tool_calls": 29,
+        "total_input_plus_output": 309803,
+        "uncached_input_plus_output": 48299
+      },
+      "patch_sha256": "04f4758dcb568e82ea22bc364f6c920debe0ab9779ca35928580258be27772b9",
+      "repetition": 1,
+      "task_id": "J2",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 7,
+        "replace_text": 10,
+        "terminal": 11,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 261504,
+        "input_tokens": 301809,
+        "output_tokens": 7994,
+        "reasoning_output_tokens": 3937
+      },
+      "variant": "raw",
+      "wall_seconds": 186.5507412920124,
+      "workspace_manifest_sha256": "7e5fd103da8e288927bbf011fde40f030945d0560bbfa50fb567e8e97f784645"
+    },
+    {
+      "capture_counts": {
+        "commands": 9,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_mini-record": 9,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1990
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1977
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-020",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 212736,
+        "input_tokens": 268507,
+        "output_tokens": 6482,
+        "read_calls": 4,
+        "reasoning_output_tokens": 3328,
+        "recovery_calls": 0,
+        "terminal_calls": 9,
+        "tool_calls": 21,
+        "total_input_plus_output": 274989,
+        "uncached_input_plus_output": 62253
+      },
+      "patch_sha256": "e146acafbaa6572d0be8df57dbb06fd051867d8c944c12e921ae3206d61aa1c7",
+      "repetition": 1,
+      "task_id": "J2",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 4,
+        "replace_text": 7,
+        "terminal": 9,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 212736,
+        "input_tokens": 268507,
+        "output_tokens": 6482,
+        "reasoning_output_tokens": 3328
+      },
+      "variant": "mini",
+      "wall_seconds": 156.25118337501772,
+      "workspace_manifest_sha256": "9c0525d91b2d068de214fcf6b20c43b5569d027fa8913b029f2badc62305c7d1"
+    },
+    {
+      "capture_counts": {
+        "commands": 13,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_native": 13,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 2074
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1977
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-021",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 516096,
+        "input_tokens": 561972,
+        "output_tokens": 7837,
+        "read_calls": 10,
+        "reasoning_output_tokens": 3778,
+        "recovery_calls": 0,
+        "terminal_calls": 13,
+        "tool_calls": 37,
+        "total_input_plus_output": 569809,
+        "uncached_input_plus_output": 53713
+      },
+      "patch_sha256": "4189b8777ce1564940b90512a012070c3d84c94508a27da949eeac59238cf8e5",
+      "repetition": 1,
+      "task_id": "J2",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 10,
+        "replace_text": 13,
+        "terminal": 13,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 516096,
+        "input_tokens": 561972,
+        "output_tokens": 7837,
+        "reasoning_output_tokens": 3778
+      },
+      "variant": "rtk",
+      "wall_seconds": 202.7780844999943,
+      "workspace_manifest_sha256": "22f5955300873a0ac4589202d1ca626e3afe6f255508fca0b1e8afeb608f340c"
+    },
+    {
+      "capture_counts": {
+        "commands": 8,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_mini-record": 8,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 2076
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1977
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-022",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 215424,
+        "input_tokens": 252472,
+        "output_tokens": 5894,
+        "read_calls": 6,
+        "reasoning_output_tokens": 2772,
+        "recovery_calls": 0,
+        "terminal_calls": 8,
+        "tool_calls": 22,
+        "total_input_plus_output": 258366,
+        "uncached_input_plus_output": 42942
+      },
+      "patch_sha256": "d9ccd9d8c8f06cf44258243c655616d1c3e59b31e1358bb96fdef9ba9352206b",
+      "repetition": 2,
+      "task_id": "J2",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 6,
+        "replace_text": 6,
+        "terminal": 8,
+        "visible_errors": 0,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 215424,
+        "input_tokens": 252472,
+        "output_tokens": 5894,
+        "reasoning_output_tokens": 2772
+      },
+      "variant": "mini",
+      "wall_seconds": 143.29659166699275,
+      "workspace_manifest_sha256": "5027df9f650fc9bff4c9766336aeff9ab709455da8fa2d36ea615abc461702ab"
+    },
+    {
+      "capture_counts": {
+        "commands": 10,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_native": 10,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 2047
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1977
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-023",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 345856,
+        "input_tokens": 391793,
+        "output_tokens": 5267,
+        "read_calls": 9,
+        "reasoning_output_tokens": 2240,
+        "recovery_calls": 0,
+        "terminal_calls": 10,
+        "tool_calls": 26,
+        "total_input_plus_output": 397060,
+        "uncached_input_plus_output": 51204
+      },
+      "patch_sha256": "87de9cf1418761d8c814a9db2904a23750bc52b71ac2c9a925532bb04a0a138f",
+      "repetition": 2,
+      "task_id": "J2",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 9,
+        "replace_text": 6,
+        "terminal": 10,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 345856,
+        "input_tokens": 391793,
+        "output_tokens": 5267,
+        "reasoning_output_tokens": 2240
+      },
+      "variant": "rtk",
+      "wall_seconds": 135.82320450001862,
+      "workspace_manifest_sha256": "4e747f30db35a3e46e7ff92e15086004049dfb44734acd8784dd9cd92d8ae1d7"
+    },
+    {
+      "capture_counts": {
+        "commands": 11,
+        "incomplete": 0,
+        "nonzero_exit": 3,
+        "output_limit": 0,
+        "route_raw": 11,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 2060
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1977
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-024",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 406016,
+        "input_tokens": 449325,
+        "output_tokens": 5881,
+        "read_calls": 7,
+        "reasoning_output_tokens": 2543,
+        "recovery_calls": 0,
+        "terminal_calls": 11,
+        "tool_calls": 28,
+        "total_input_plus_output": 455206,
+        "uncached_input_plus_output": 49190
+      },
+      "patch_sha256": "a85197e75e17f9fbb65c362bae62854019c025ea22c58506b5336214be60a8cf",
+      "repetition": 2,
+      "task_id": "J2",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 7,
+        "replace_text": 8,
+        "terminal": 11,
+        "visible_errors": 0,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 406016,
+        "input_tokens": 449325,
+        "output_tokens": 5881,
+        "reasoning_output_tokens": 2543
+      },
+      "variant": "raw",
+      "wall_seconds": 149.77968395798234,
+      "workspace_manifest_sha256": "4079c118809fb27cae6b99e8a4631d4de8a1d098fda2ffe26d7aedc0e00e9206"
+    },
+    {
+      "capture_counts": {
+        "commands": 10,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_mini-record": 10,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 22
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 5
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 19
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-025",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 204672,
+        "input_tokens": 228711,
+        "output_tokens": 4503,
+        "read_calls": 5,
+        "reasoning_output_tokens": 1726,
+        "recovery_calls": 0,
+        "terminal_calls": 10,
+        "tool_calls": 22,
+        "total_input_plus_output": 233214,
+        "uncached_input_plus_output": 28542
+      },
+      "patch_sha256": "0b69179e6c33ad660f7c116574d46cda50e2c972a4c7defc79d90c8f0dfdb3bf",
+      "repetition": 1,
+      "task_id": "R1",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 5,
+        "replace_text": 6,
+        "terminal": 10,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 204672,
+        "input_tokens": 228711,
+        "output_tokens": 4503,
+        "reasoning_output_tokens": 1726
+      },
+      "variant": "mini",
+      "wall_seconds": 120.89491779200034,
+      "workspace_manifest_sha256": "2af1cb59b28ec8a30cfc6d1e7f8b57ca95269c441dcf42bdeca6a14303a17ad6"
+    },
+    {
+      "capture_counts": {
+        "commands": 10,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_native": 9,
+        "route_passthrough": 1,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 22
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 5
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 19
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-026",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 265344,
+        "input_tokens": 293306,
+        "output_tokens": 6597,
+        "read_calls": 7,
+        "reasoning_output_tokens": 3183,
+        "recovery_calls": 0,
+        "terminal_calls": 10,
+        "tool_calls": 24,
+        "total_input_plus_output": 299903,
+        "uncached_input_plus_output": 34559
+      },
+      "patch_sha256": "3af144bc66e7f75e218a0d41e95acb1c0e323b7203e4f4c7b64d1829430cb291",
+      "repetition": 1,
+      "task_id": "R1",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 7,
+        "replace_text": 6,
+        "terminal": 10,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 265344,
+        "input_tokens": 293306,
+        "output_tokens": 6597,
+        "reasoning_output_tokens": 3183
+      },
+      "variant": "rtk",
+      "wall_seconds": 162.50783270801185,
+      "workspace_manifest_sha256": "790da13416ef9288d32fb10aa5f8a55dffda0a81d36022b85ed870a3f3850d8c"
+    },
+    {
+      "capture_counts": {
+        "commands": 8,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_raw": 8,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 21
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 5
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 19
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-027",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 168192,
+        "input_tokens": 191180,
+        "output_tokens": 5956,
+        "read_calls": 8,
+        "reasoning_output_tokens": 2337,
+        "recovery_calls": 0,
+        "terminal_calls": 8,
+        "tool_calls": 24,
+        "total_input_plus_output": 197136,
+        "uncached_input_plus_output": 28944
+      },
+      "patch_sha256": "1829de4b199be26992b8c3f38af24e33f574b6ddfc891c4ecbb5801bad924dc3",
+      "repetition": 1,
+      "task_id": "R1",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 8,
+        "replace_text": 7,
+        "terminal": 8,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 168192,
+        "input_tokens": 191180,
+        "output_tokens": 5956,
+        "reasoning_output_tokens": 2337
+      },
+      "variant": "raw",
+      "wall_seconds": 161.17336025001714,
+      "workspace_manifest_sha256": "cc0c71de116721345bf06dd83ed8a06d420406671e940f638f052cf67bb878a7"
+    },
+    {
+      "capture_counts": {
+        "commands": 9,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_native": 8,
+        "route_passthrough": 1,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 21
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 5
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 19
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-028",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 232448,
+        "input_tokens": 259995,
+        "output_tokens": 4678,
+        "read_calls": 6,
+        "reasoning_output_tokens": 1938,
+        "recovery_calls": 0,
+        "terminal_calls": 9,
+        "tool_calls": 22,
+        "total_input_plus_output": 264673,
+        "uncached_input_plus_output": 32225
+      },
+      "patch_sha256": "c7a61b24f0ecc82b0d1b26e37ff62cd960f17b75ef2f11efde3f12096470e738",
+      "repetition": 2,
+      "task_id": "R1",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 6,
+        "replace_text": 6,
+        "terminal": 9,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 232448,
+        "input_tokens": 259995,
+        "output_tokens": 4678,
+        "reasoning_output_tokens": 1938
+      },
+      "variant": "rtk",
+      "wall_seconds": 124.53531708405353,
+      "workspace_manifest_sha256": "ee56561487c87b1aa5fe95478b8c7aadf8123862bf2856d5f1d7e1bc2f097f67"
+    },
+    {
+      "capture_counts": {
+        "commands": 8,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_raw": 8,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 23
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 5
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 19
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-029",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 242688,
+        "input_tokens": 267868,
+        "output_tokens": 6759,
+        "read_calls": 8,
+        "reasoning_output_tokens": 3588,
+        "recovery_calls": 0,
+        "terminal_calls": 8,
+        "tool_calls": 24,
+        "total_input_plus_output": 274627,
+        "uncached_input_plus_output": 31939
+      },
+      "patch_sha256": "e6c9af8cfadf7e02b77364eb74c4d58d477bad5c24f83ef528fa7c45c0fa3ef8",
+      "repetition": 2,
+      "task_id": "R1",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 8,
+        "replace_text": 7,
+        "terminal": 8,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 242688,
+        "input_tokens": 267868,
+        "output_tokens": 6759,
+        "reasoning_output_tokens": 3588
+      },
+      "variant": "raw",
+      "wall_seconds": 168.00976754096337,
+      "workspace_manifest_sha256": "e2bef6d196d60c81bc433ac370beb9fc46cb3b31a7975bcffb137ccfa93536c2"
+    },
+    {
+      "capture_counts": {
+        "commands": 10,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_mini-record": 10,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 23
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 5
+              }
+            ]
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 19
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-030",
+      "language": "rust",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 254592,
+        "input_tokens": 298014,
+        "output_tokens": 6986,
+        "read_calls": 8,
+        "reasoning_output_tokens": 3466,
+        "recovery_calls": 0,
+        "terminal_calls": 10,
+        "tool_calls": 26,
+        "total_input_plus_output": 305000,
+        "uncached_input_plus_output": 50408
+      },
+      "patch_sha256": "3ce7aa7fc8e5280d671dd1f3d01067641e96fe14592c0d16b1f0669fb4f8954d",
+      "repetition": 2,
+      "task_id": "R1",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 8,
+        "replace_text": 7,
+        "terminal": 10,
+        "visible_errors": 0
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 254592,
+        "input_tokens": 298014,
+        "output_tokens": 6986,
+        "reasoning_output_tokens": 3466
+      },
+      "variant": "mini",
+      "wall_seconds": 173.72408137499588,
+      "workspace_manifest_sha256": "88ccae996ee6cd001a4c66282c94aab8640c6eaf158a75c4bba45bd8e83cfe25"
+    },
+    {
+      "capture_counts": {
+        "commands": 16,
+        "incomplete": 0,
+        "nonzero_exit": 4,
+        "output_limit": 0,
+        "route_native": 16,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1982
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1975
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-031",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 470016,
+        "input_tokens": 495990,
+        "output_tokens": 4305,
+        "read_calls": 8,
+        "reasoning_output_tokens": 1985,
+        "recovery_calls": 0,
+        "terminal_calls": 16,
+        "tool_calls": 31,
+        "total_input_plus_output": 500295,
+        "uncached_input_plus_output": 30279
+      },
+      "patch_sha256": "9da5f3326b4235c9971348f950809df574072b2ff2c599eccaa3caa7601b04f5",
+      "repetition": 1,
+      "task_id": "J3",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 8,
+        "replace_text": 5,
+        "terminal": 16,
+        "visible_errors": 0,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 470016,
+        "input_tokens": 495990,
+        "output_tokens": 4305,
+        "reasoning_output_tokens": 1985
+      },
+      "variant": "rtk",
+      "wall_seconds": 141.31382025004132,
+      "workspace_manifest_sha256": "f899ac1d35cd3efcd3148679189df39509e0404b1ecea82e62ee40c0bccfda69"
+    },
+    {
+      "capture_counts": {
+        "commands": 11,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_raw": 11,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1984
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1975
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-032",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 288896,
+        "input_tokens": 333537,
+        "output_tokens": 3219,
+        "read_calls": 6,
+        "reasoning_output_tokens": 1140,
+        "recovery_calls": 0,
+        "terminal_calls": 12,
+        "tool_calls": 24,
+        "total_input_plus_output": 336756,
+        "uncached_input_plus_output": 47860
+      },
+      "patch_sha256": "d8f829985d526066bb50743c3e73b2f9197a7f110e836a01bc66be186eff7822",
+      "repetition": 1,
+      "task_id": "J3",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 6,
+        "replace_text": 4,
+        "terminal": 12,
+        "visible_errors": 1,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 288896,
+        "input_tokens": 333537,
+        "output_tokens": 3219,
+        "reasoning_output_tokens": 1140
+      },
+      "variant": "raw",
+      "wall_seconds": 91.1985537079745,
+      "workspace_manifest_sha256": "c7d60658a6035dd784e8ec958973b7980067ebdd157d2762cf7dc6404fe92298"
+    },
+    {
+      "capture_counts": {
+        "commands": 7,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_mini-record": 7,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1984
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1975
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-033",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 225280,
+        "input_tokens": 250222,
+        "output_tokens": 2408,
+        "read_calls": 8,
+        "reasoning_output_tokens": 762,
+        "recovery_calls": 0,
+        "terminal_calls": 7,
+        "tool_calls": 18,
+        "total_input_plus_output": 252630,
+        "uncached_input_plus_output": 27350
+      },
+      "patch_sha256": "6820a57496fc47310f8029f286fac48cd7247197cd2555bf1a078618898cee9c",
+      "repetition": 1,
+      "task_id": "J3",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 8,
+        "replace_text": 1,
+        "terminal": 7,
+        "visible_errors": 0,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 225280,
+        "input_tokens": 250222,
+        "output_tokens": 2408,
+        "reasoning_output_tokens": 762
+      },
+      "variant": "mini",
+      "wall_seconds": 70.31086983403657,
+      "workspace_manifest_sha256": "9d6f0e66fc0bbc265b3f39ee7fceedb6a595d1886924a7687a15e6c75db9f501"
+    },
+    {
+      "capture_counts": {
+        "commands": 9,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_raw": 9,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1981
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1975
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-034",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 229248,
+        "input_tokens": 260164,
+        "output_tokens": 2760,
+        "read_calls": 8,
+        "reasoning_output_tokens": 1004,
+        "recovery_calls": 0,
+        "terminal_calls": 9,
+        "tool_calls": 20,
+        "total_input_plus_output": 262924,
+        "uncached_input_plus_output": 33676
+      },
+      "patch_sha256": "f252c13c1a027e9d76d354fd9b6d27dfab12ad6ef147bc9e1305d2f04d7b5e8c",
+      "repetition": 2,
+      "task_id": "J3",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 8,
+        "replace_text": 1,
+        "terminal": 9,
+        "visible_errors": 0,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 229248,
+        "input_tokens": 260164,
+        "output_tokens": 2760,
+        "reasoning_output_tokens": 1004
+      },
+      "variant": "raw",
+      "wall_seconds": 92.41941579198465,
+      "workspace_manifest_sha256": "ae766cc84ee17d8d28603e59cec833238af261fb18a2184e7bc3ac427a507ea8"
+    },
+    {
+      "capture_counts": {
+        "commands": 9,
+        "incomplete": 0,
+        "nonzero_exit": 1,
+        "output_limit": 0,
+        "route_mini-record": 9,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1985
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1975
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-035",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 168576,
+        "input_tokens": 194801,
+        "output_tokens": 2939,
+        "read_calls": 10,
+        "reasoning_output_tokens": 1061,
+        "recovery_calls": 0,
+        "terminal_calls": 9,
+        "tool_calls": 22,
+        "total_input_plus_output": 197740,
+        "uncached_input_plus_output": 29164
+      },
+      "patch_sha256": "01b4f8998a7858dca4ec416b10fb09a8460f18e0372ff5ef5702061a8705b50e",
+      "repetition": 2,
+      "task_id": "J3",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 10,
+        "replace_text": 1,
+        "terminal": 9,
+        "visible_errors": 0,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 168576,
+        "input_tokens": 194801,
+        "output_tokens": 2939,
+        "reasoning_output_tokens": 1061
+      },
+      "variant": "mini",
+      "wall_seconds": 83.91209345799871,
+      "workspace_manifest_sha256": "0961c1c0078d00278d72cd6356eac999c0e298670b2346268c6a4f932b82fc09"
+    },
+    {
+      "capture_counts": {
+        "commands": 10,
+        "incomplete": 0,
+        "nonzero_exit": 2,
+        "output_limit": 0,
+        "route_native": 10,
+        "timed_out": 0
+      },
+      "evaluation": {
+        "checks": {
+          "candidate_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1985
+              }
+            ]
+          },
+          "hidden": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": []
+          },
+          "pristine_baseline": {
+            "exit_code": 0,
+            "passed": true,
+            "test_counts": [
+              {
+                "failed": 0,
+                "passed": 1975
+              }
+            ]
+          }
+        },
+        "correct_repair": true,
+        "infrastructure_error_count": 0,
+        "production_changed": true
+      },
+      "id": "trial-036",
+      "language": "javascript",
+      "measured": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 231552,
+        "input_tokens": 258770,
+        "output_tokens": 2956,
+        "read_calls": 9,
+        "reasoning_output_tokens": 866,
+        "recovery_calls": 0,
+        "terminal_calls": 10,
+        "tool_calls": 22,
+        "total_input_plus_output": 261726,
+        "uncached_input_plus_output": 30174
+      },
+      "patch_sha256": "1f9c2f7d9dd117af525c54ae08e2cfec5af0db0c6236a763fe210a4667e7ab87",
+      "repetition": 2,
+      "task_id": "J3",
+      "tool_counts": {
+        "list_files": 1,
+        "read_file": 9,
+        "replace_text": 1,
+        "terminal": 10,
+        "visible_errors": 0,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 231552,
+        "input_tokens": 258770,
+        "output_tokens": 2956,
+        "reasoning_output_tokens": 866
+      },
+      "variant": "rtk",
+      "wall_seconds": 89.77460220898502,
+      "workspace_manifest_sha256": "e436ac519e27dafc82f6e4e3e37f75d24908c19d43d48dfa5a70d3a9eb73e955"
+    }
+  ]
+}

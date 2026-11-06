@@ -155,6 +155,30 @@ Token measurements use the named `o200k_base` and `cl100k_base` encodings throug
 - [RTK artifact and adapter provenance](docs/evaluation/rtk-provenance.md)
 - [Pilot results and limitations](docs/evaluation/pilot-results.md)
 
+## Independent debugging sprint
+
+The next evaluation ran **36 fresh coding-agent sessions** on six historical bugs
+in Lexopt, Humantime and Picomatch, with two attempts per task and treatment.
+Raw output, Mini and RTK each produced **12/12 correct repairs**, verified against
+pristine original tests and held-out regressions.
+
+Mini used **2,852,536 reported input-plus-output tokens**, compared with
+3,231,491 for raw output and 3,712,751 for RTK. That is **23.17% less than RTK**,
+including cached input. It met the locally registered usage gate, with a lower
+total in both language groups. The decision is a **limited continuation** of
+the compressor experiment.
+
+This does not establish lower bills or a diagnostic advantage. Mini's uncached
+input-plus-output proxy was **8.93% higher** than RTK's; RTK also returned less
+terminal output. The agents took different paths, so this does not isolate
+compression's effect. Broader matcher expansion should wait for confirmation of
+the mechanism and its cost implications.
+
+See the [results and decision](docs/evaluation/debugging-sprint/results.md),
+[method and limits](docs/evaluation/debugging-sprint/method.md), and
+[reproduction tools](evaluation/debugging/README.md). The Rust binary is
+unchanged at v0.2.0; the debugging harness uses existing Codex CLI sign-in.
+
 ## Development
 
 ```sh

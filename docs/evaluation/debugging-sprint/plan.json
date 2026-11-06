@@ -1,0 +1,877 @@
+{
+  "codex": "codex",
+  "codex_version": "codex-cli 0.166.0-alpha.6",
+  "command_timeout_seconds": 90,
+  "dependency_tree_sha256": {
+    "J1": "82e5b5d91a08e645ccb5cc5b45f0f5a663c14a2d36252ceb6718198589f55e9c",
+    "J2": "82e5b5d91a08e645ccb5cc5b45f0f5a663c14a2d36252ceb6718198589f55e9c",
+    "J3": "82e5b5d91a08e645ccb5cc5b45f0f5a663c14a2d36252ceb6718198589f55e9c",
+    "R1": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "R2": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "R3": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  "features_disabled": [
+    "shell_tool",
+    "unified_exec",
+    "apps",
+    "plugins",
+    "memories",
+    "multi_agent",
+    "browser_use",
+    "computer_use",
+    "in_app_browser",
+    "image_generation",
+    "goals"
+  ],
+  "host_platform": "macOS-26.6-arm64-arm-64bit-Mach-O",
+  "implementation_sha256": {
+    "evaluation/debugging/analyze.py": "237f1fcd429fc96f6665f9fe70b79ff3f5feec606441623d0f41d21232e6a806",
+    "evaluation/debugging/evaluate.py": "ca8005c413802948f44a43be6328ebec85ee7e522bbfe540c7ad65ee17537ced",
+    "evaluation/debugging/mcp_server.py": "41e0e38e6883c453b23009d66ddc580dd0731aade9bcb3f90c719a76e1bdc994",
+    "evaluation/debugging/protocol.md": "31a06a087ddd402d10d5ae8abbe25a02ae1f10052c7d552f950093def7f37ebe",
+    "evaluation/debugging/run_sprint.py": "71adaba597b1a8f8692e87194f5190632141c8bb230cbdfcc82c9ea78c3ec5ae",
+    "evaluation/debugging/solver_prompt.txt": "f879fbcc29a0cb42c8a94e3a47328cc1fd3782634f706196635349e3cca76a6c",
+    "evaluation/debugging/tasks/js/J1-hidden.cjs": "4f84f7a3c127ca098dc383ffc95f612c3a00f1d3c9ea494ddf464ac4e6335691",
+    "evaluation/debugging/tasks/js/J1.json": "f9e6129eb0f34e18a2bf2f0aa64d939e3b7c0c3d2e4c39124003c1d0fa18559f",
+    "evaluation/debugging/tasks/js/J2-hidden.cjs": "eb3e5c82ab88ebe399124d594cdd71fc3a700bcb0295c7f4cf1ac76a0c0d35ef",
+    "evaluation/debugging/tasks/js/J2.json": "80e1b7467c1dc4a05832d6dd582ecd991e2ae3f7b4c595483c5227b242e2b171",
+    "evaluation/debugging/tasks/js/J3-hidden.cjs": "a9e682b3b4ebdfae8ad7670fc6bb0375e9a064d69bd136d6ed7237a6b1cb2012",
+    "evaluation/debugging/tasks/js/J3.json": "fef623a14eb546beea72f4d66fb9b6d6506fed219ea0f004820fbe0ebc8792cf",
+    "evaluation/debugging/tasks/js/PICOMATCH-LICENSE": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9",
+    "evaluation/debugging/tasks/js/README.md": "7725b2ab70801869ad94a4001755bdb9c634e01eb792585010344c86404b14a1",
+    "evaluation/debugging/tasks/js/dependencies-lock.json": "b11d2913aa836e68b6f97edb7ab0d717c62e6475c126014d6959967ea3ad36b4",
+    "evaluation/debugging/tasks/js/dependencies.json": "542cebbf8d239f98820488283eb18d26cfe79b8fa321ba1f2341ffade1f2d446",
+    "evaluation/debugging/tasks/js/qualification.json": "028eedd9f57d7aabd7ba9a002d6497a67f819874adce5852d60bf350d15427d9",
+    "evaluation/debugging/tasks/rust/R1-Cargo.lock": "91b0bac47ecfd03a1303c0dbf0ec821d1898d5aaf04855a5668b9ac9feced399",
+    "evaluation/debugging/tasks/rust/R1-hidden.rs": "4d179b0149244e0a43d07dfeefc9a0efba62bd9fad59d38613ed15d63666c160",
+    "evaluation/debugging/tasks/rust/R1.json": "03b91888b7ea6c1c3158d86afc601b731837727bba5502adbbaf56c7875cd912",
+    "evaluation/debugging/tasks/rust/R2-Cargo.lock": "7fb7c31ef3b14c79a233b91f1147694ae19a00f04fac5846c9f885ff81056e04",
+    "evaluation/debugging/tasks/rust/R2-hidden.rs": "5ca623bc4f45b8dea7f473edeac388cc7389e23222ac181c32eb356e755077d7",
+    "evaluation/debugging/tasks/rust/R2.json": "52a885bd15278d15c51627b2b3c261fba3665047b1706bf299fa21677078c3f6",
+    "evaluation/debugging/tasks/rust/R3-Cargo.lock": "008f43c508db50b0802f3b212fd0cbe3737b62ed785cb96c6d5a5b92e3f5d28b",
+    "evaluation/debugging/tasks/rust/R3-hidden.rs": "60eabbfee5482cfca08e611896dbd05c27d261f53d30c48aacba219524b2e6bc",
+    "evaluation/debugging/tasks/rust/R3.json": "7463b191ac25824edf73836b5c1ba870040a1bfe78991c330d35eda22b66a3ed",
+    "evaluation/debugging/tasks/rust/README.md": "85731b6dd857b6bc28b2247d71c106e55fd9809595a11b83420dc820c5dae7b9",
+    "evaluation/debugging/tasks/rust/licenses/humantime-APACHE.txt": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "evaluation/debugging/tasks/rust/licenses/humantime-MIT.txt": "f6deca8261a8f4a3403dc74c725c46051157fd36c27cd4b100277eb1f303ad11",
+    "evaluation/debugging/tasks/rust/licenses/lexopt-MIT.txt": "8d43b7fa3b2f928cd4ea6346853b95f1ca5d883f4eaad3a40f8af202bfb45d6f",
+    "evaluation/debugging/tasks/rust/preflight.json": "2f67a0a1ed5e259d62e74840eb8c0efc6b5ad143d3030b250fe50ad9db31c230",
+    "evaluation/debugging/tasks/rust/run_hidden.py": "5af3240c14d8afc0bf4362dafb8c1d64c26a916a1b101608086004bc2350aeb2",
+    "evaluation/debugging/terminal.py": "d3729a1e14b14534856f4b181f4f8218c522d6814a6def0c77355c2fd008eb10",
+    "evaluation/debugging/tests/test_evaluate.py": "5809079b071cfa5e9ab83969baa2f4e65bfee36cc6f3a216c80ac6f75db03ba3",
+    "evaluation/debugging/tests/test_harness.py": "d3e07cb0e15ba544d1f092184d589528fc3453e9a905155c9ffd3cca24dc4c10"
+  },
+  "machine": "arm64",
+  "max_actions": 60,
+  "mini": "target/release/mini",
+  "mini_sha256": "31548331c875e38dc37cb7d7b385a86a81a5eda3200225db5760bb5037dedb64",
+  "model": "gpt-6.1-sol",
+  "model_source": "existing user CLI configuration; same values in every session",
+  "protocol_sha256": "31a06a087ddd402d10d5ae8abbe25a02ae1f10052c7d552f950093def7f37ebe",
+  "python": "python3",
+  "reasoning_effort": "ultra",
+  "recovery_enabled": true,
+  "registered_utc": "2026-11-06T21:34:06.223444+00:00",
+  "repetitions": 2,
+  "rtk": ".tools/rtk-1.1.0/bin/rtk",
+  "rtk_sha256": "f79cb2b5c49a58cb746d7478cc0e7eb5aebad593519df5d74ce7dbc1929737db",
+  "schema": 1,
+  "seed": 20261106,
+  "session_timeout_seconds": 600,
+  "source_files": {
+    "J1": {
+      ".editorconfig": "c1896fd7a004fda217bf18dc343514ab03461f06d77c6d4e1357e972be148e5d",
+      ".eslintrc.json": "1b4f177a316025dcecc1ba4f2a3b94580c11529b6af81fc39823f165a9aba0fe",
+      ".gitattributes": "207ce78763e0a12909d851809776aa6b263690fb93abcac4156b81722bf4567b",
+      ".github/contributing.md": "a30b750cd0250a0a4041046b389d55d175201b36c8ff0435bbf8f0a18c6a2bc5",
+      ".github/workflows/test.yml": "d1c698bb4140cdf8e20164eece481d3398fc112a435224851870a96a47369c29",
+      ".gitignore": "b972da1b2a11bad873992559e1a0bd442bf5b57ebbc821035eb49f8e77de55bc",
+      ".npmrc": "f3fc23758ab91be5f94a8c5eaff433d1ccd6a206cf1d381d332eb63716009337",
+      ".verb.md": "62570d64fa9070c410aced6ed0782982bc070bda38e684756690eecf409aa6e2",
+      "CHANGELOG.md": "b40b2d9334d913e3a4327f63a802e0f2a62a625cd7412fe8971d87dfc679f713",
+      "LICENSE": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9",
+      "README.md": "a69b87120fe2b9cb8f9057eaef6b9f9887f803e02185ca2f431e8162f6312220",
+      "bench/.npmrc": "f3fc23758ab91be5f94a8c5eaff433d1ccd6a206cf1d381d332eb63716009337",
+      "bench/first-match-minimatch.js": "56c2cabd07be2919f18e86489f09441c7c13432f15ddafb47ec4b8b861b1e550",
+      "bench/first-match-picomatch.js": "6630d2faa5404fbb526a9abd9b27beb1da0f91a7776c50ee2b6fa9d3ab84e664",
+      "bench/glob-parent.js": "ffbb94a1ec95d866b8f7cb5fe85e6cdcf70a3460199f7d652425333d276b3ec5",
+      "bench/index.js": "eec1b9d449cdcee95851bdb840b44a2f619f6578c3a328a68d0490cd9873bed3",
+      "bench/load-time.js": "8b955e0c10759466938af71c9b7c23bc631fc0df8e5ece543b4cb57299cfedda",
+      "bench/package.json": "f17b7b12c048a6daa6cc1a96fafff0d13c392103d80bbf65fec23766528f5872",
+      "examples/extglob-negated.js": "27e43ed552826e6a4895d05f140ecdf10af990aea7865791295942498ec74bc9",
+      "examples/extglob.js": "533db86c17d0fd26fd6d5dff52a7f07ab1f4bedfcfb940f86d4aadc429aa49cd",
+      "examples/makeRe.js": "1a5c0de54886c4d0db538db9d6743f39f9b5374cd1c40ab83ea9711900ef75a0",
+      "examples/match.js": "464d6e3fb6bb56257836c3d2b18d322f6381843e309c3fa0b80f9ede5613f11c",
+      "examples/option-expandRange.js": "0fd93d9164712ee303876f8d3c422fdba709fe919e3d2bd1cb191b03cc96bc1b",
+      "examples/option-ignore.js": "8352cf3011fb04d9ff9e97fb9685bd7bfc30dda5375822728a118c4527c0c4b6",
+      "examples/option-onIgnore.js": "1e9d6da7d24f0825713f6b464a9e22856ff276f7fd73bb1569b9479b0b0cca70",
+      "examples/option-onMatch.js": "68fab151a3bc69e22dcb6a4cb893512d7e6d8231681b0aa0e9512eb49dc72913",
+      "examples/option-onResult.js": "da5e53355ea9b18f61be803874be3bcd70bb23a65c51e93ab59b1a957a1d18dc",
+      "examples/regex-quantifier.js": "35b1e85544ef9d82fb459c24af614d4fce9f6d4b95d552d63ec5e1151f7ec100",
+      "examples/scan.js": "82be74fd1626f438b31080dde01ea16e755a735b5c6a5f10b8531bf30b8031c4",
+      "examples/test.js": "bf2fb716873d0eb0723741fbd6117177eb29727516b861090783d36c071eb3a9",
+      "examples/windows.js": "265f10a2de85942a0641851383dc26601ed511328fc4f181136739b904869532",
+      "index.js": "02ae26406508e28f9ba0865be16cf77f0b33de6c4d4d49c212c4176df1d5625a",
+      "lib/constants.js": "c28f952d2758261fe5428a121add485cc25b03e0193633f649de903dc0e5e222",
+      "lib/parse.js": "73211a8ba85ce257b827abd8960e52c9750385b3fd18e8ef1080b114d774eb23",
+      "lib/picomatch.js": "fdd249d7ffff853f3bb1c77eafc8baa1a437bea85a94c35877b83c6a40d9ca94",
+      "lib/scan.js": "227fcc994a477ea95c5a0435d32783566334c6bd0dcc4a103029735ad8c9c535",
+      "lib/utils.js": "f04604f70cd1a3f6ace80b84766468674ff38b4bb83818d2ef1d81fc6355f935",
+      "package.json": "fb7766f5f9c724e13e075760a95d16f87cdb327143d153a913135fde267ec615",
+      "posix.js": "5695ff5dfcd5a338a40630bd506056f2950bcb08fe1cc068519cbbfe60add480",
+      "renovate.json": "c884087184972e139aa96a9f744105ebffe59071a7a245bec2b09d8ead39b53d",
+      "test/.eslintrc.json": "b530a222c1f1b5d3396a65cfd9737a37dc143619f400f7a9f5b4d6cee9fef980",
+      "test/api.picomatch.js": "7f0058ce7bff774c89861e5e0aff629a330f4ad95f0ae4aa80155852d8cb8dea",
+      "test/api.posix.js": "3bd37c2b5d71e23b9cf5752a31f7227b048311b7a238bb5708f0ca5db2a1e09c",
+      "test/api.scan.js": "8abd94a2d7040911017d125bada4e5aaf5ee166bf5b37cd377d0378cb7174f36",
+      "test/bash.js": "ddc5406fd7aa316d78e4177d5a7c5acd0f4b9d63b47aeae62e9622cb432dfbe5",
+      "test/bash.spec.js": "07292aa1f6eb22d17594f9b80ac0e8fe66f7676e39bdd0d1dba2f5d674c27c5c",
+      "test/braces.js": "4ac042b7e1877dd0deb695365f3f68095c82aa32628c3e211047b2ed7d1a25b2",
+      "test/brackets.js": "9e1226dff735d61a45bd59212909063944fd7a3f84ee36a87b080bdd40767b7a",
+      "test/dotfiles.js": "2091cd79c09fe4e312d9a0bec06f322201f280674bc9f10a729807de713d21a2",
+      "test/dots-invalid.js": "6793f76f3faf379ad9b152e733ddf1b12c8017db256469b647235697e0894e92",
+      "test/extglobs-bash.js": "a341b5ad988e30f9aa31202b4b87b09079368ba82ac8be30359d40c645def487",
+      "test/extglobs-minimatch.js": "17ed0573396a983a0f08fdbf301ba996808c2cdc653d2ae2a2a843091e896567",
+      "test/extglobs-temp.js": "b23617bba6f6d7f9d9e3235d438d18eab3edf5187705254f826562d79adceee1",
+      "test/extglobs.js": "5b8906c1320a21ceb9c69ad2b1bb6caf7c1baaeb5e85c37a3a743cf3a75a0404",
+      "test/globstars.js": "6faadeffee58a69f7496b43f33b14bd1c66f4c8e722d061596997f84bae048c3",
+      "test/issue-related.js": "409f23cc6f8242850da80235736851cbbc6506758a47f1c7c9f79999ad906664",
+      "test/malicious.js": "ff6107260702c7207c18e1c035965811cb794316f9ccb3dd8a8228f21855043d",
+      "test/minimatch.js": "feecc05d5591a0e9cc5d515b6f4d32a65e3cdf654c5d850d377ba892385dbc03",
+      "test/negation.js": "94a4f31ad3bc428c9fe0b1eb58758e6ef64fa374f2ec60fe918d594dbb903dbb",
+      "test/non-globs.js": "5598cb0820c429b51265708c81a3ba32f7c9439302ed047f27fe05dac6920f76",
+      "test/options.expandRange.js": "2474f1ce9bad0167f000c84a8b9af9d3714ebfc35c9a571a6d072d0f0ad1f998",
+      "test/options.format.js": "8de912d8d5b8469cc3409403996ba26dc8ed547677ce1ac9add1c99600cc7f82",
+      "test/options.ignore.js": "ee3e39d00bee69b580eaac2bbe1bd320ee5f77568e4158e1905c1601f78da5c2",
+      "test/options.js": "5dc4c01b20207f2b508ad160a7c5fc26b392d164c43fcc89d74053de89b51b36",
+      "test/options.maxExtglobRecursion.js": "5f327500924b9c6563b1ddf3b48b17f65632ee14abdab9a49c29d80b77b1db2a",
+      "test/options.noextglob.js": "4d41527fe33da043793d4203aa51e8c982e62bfab8854f57b84002ad1b42eee7",
+      "test/options.noglobstar.js": "df13306418071b591e1da8b15b36cc2023d7f24b887a2add7b7d5d14dca84b6a",
+      "test/options.onMatch.js": "14a04a823029defe7aaf04b1f003686fe575c749c02db89b2ece72374043977b",
+      "test/parens.js": "3829504c0489a29f6fc8e4a5e5e8baa7049d44bbba92f1f3b65eeabf6e60ab04",
+      "test/posix-classes.js": "d1f0d65d9549efe881678695a4fc05d050c39b3daccaeb6d1ef871eccb240b61",
+      "test/qmarks.js": "e55a86ffe7d01cd8bc79c9b127e76fc7ee6b2886c5b103a929e2d256afde1445",
+      "test/regex-features.js": "cb5e72d62f9a2311258466d7b952194993b9cf3e37152c3f5ae971629f0a3410",
+      "test/slashes-posix.js": "0487e0113526ed50d162297b588e8b5f8dc8a6eb24e23545b62300eba9c79b88",
+      "test/slashes-windows.js": "6da7d92f49808951c03419d485a6b83501c2e153ea8636a3b70faad77518b7ca",
+      "test/special-characters.js": "040f77e29c4c721b851af8f49877ac3ea9e5fcff68c574fccf52ec86a9ffdd06",
+      "test/stars.js": "becc99f23f94af4a31a8efd32d0996f66b0ca7064a466c9525aad44eed61f93b",
+      "test/support/match.js": "ac73ee77ba942ca326764ba467c0a1b425142da918dd4a72b39d61b7b36d0d1d",
+      "test/wildmat.js": "18f1d6dd5818e56c59da1264c2f1df0e5e1b1ba9127c465b2111dbbb6ba78eff"
+    },
+    "J2": {
+      ".editorconfig": "c1896fd7a004fda217bf18dc343514ab03461f06d77c6d4e1357e972be148e5d",
+      ".eslintrc.json": "1b4f177a316025dcecc1ba4f2a3b94580c11529b6af81fc39823f165a9aba0fe",
+      ".gitattributes": "207ce78763e0a12909d851809776aa6b263690fb93abcac4156b81722bf4567b",
+      ".github/contributing.md": "a30b750cd0250a0a4041046b389d55d175201b36c8ff0435bbf8f0a18c6a2bc5",
+      ".github/workflows/test.yml": "d1c698bb4140cdf8e20164eece481d3398fc112a435224851870a96a47369c29",
+      ".gitignore": "b972da1b2a11bad873992559e1a0bd442bf5b57ebbc821035eb49f8e77de55bc",
+      ".npmrc": "f3fc23758ab91be5f94a8c5eaff433d1ccd6a206cf1d381d332eb63716009337",
+      ".verb.md": "62570d64fa9070c410aced6ed0782982bc070bda38e684756690eecf409aa6e2",
+      "CHANGELOG.md": "b40b2d9334d913e3a4327f63a802e0f2a62a625cd7412fe8971d87dfc679f713",
+      "LICENSE": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9",
+      "README.md": "a69b87120fe2b9cb8f9057eaef6b9f9887f803e02185ca2f431e8162f6312220",
+      "bench/.npmrc": "f3fc23758ab91be5f94a8c5eaff433d1ccd6a206cf1d381d332eb63716009337",
+      "bench/first-match-minimatch.js": "56c2cabd07be2919f18e86489f09441c7c13432f15ddafb47ec4b8b861b1e550",
+      "bench/first-match-picomatch.js": "6630d2faa5404fbb526a9abd9b27beb1da0f91a7776c50ee2b6fa9d3ab84e664",
+      "bench/glob-parent.js": "ffbb94a1ec95d866b8f7cb5fe85e6cdcf70a3460199f7d652425333d276b3ec5",
+      "bench/index.js": "eec1b9d449cdcee95851bdb840b44a2f619f6578c3a328a68d0490cd9873bed3",
+      "bench/load-time.js": "8b955e0c10759466938af71c9b7c23bc631fc0df8e5ece543b4cb57299cfedda",
+      "bench/package.json": "f17b7b12c048a6daa6cc1a96fafff0d13c392103d80bbf65fec23766528f5872",
+      "examples/extglob-negated.js": "27e43ed552826e6a4895d05f140ecdf10af990aea7865791295942498ec74bc9",
+      "examples/extglob.js": "533db86c17d0fd26fd6d5dff52a7f07ab1f4bedfcfb940f86d4aadc429aa49cd",
+      "examples/makeRe.js": "1a5c0de54886c4d0db538db9d6743f39f9b5374cd1c40ab83ea9711900ef75a0",
+      "examples/match.js": "464d6e3fb6bb56257836c3d2b18d322f6381843e309c3fa0b80f9ede5613f11c",
+      "examples/option-expandRange.js": "0fd93d9164712ee303876f8d3c422fdba709fe919e3d2bd1cb191b03cc96bc1b",
+      "examples/option-ignore.js": "8352cf3011fb04d9ff9e97fb9685bd7bfc30dda5375822728a118c4527c0c4b6",
+      "examples/option-onIgnore.js": "1e9d6da7d24f0825713f6b464a9e22856ff276f7fd73bb1569b9479b0b0cca70",
+      "examples/option-onMatch.js": "68fab151a3bc69e22dcb6a4cb893512d7e6d8231681b0aa0e9512eb49dc72913",
+      "examples/option-onResult.js": "da5e53355ea9b18f61be803874be3bcd70bb23a65c51e93ab59b1a957a1d18dc",
+      "examples/regex-quantifier.js": "35b1e85544ef9d82fb459c24af614d4fce9f6d4b95d552d63ec5e1151f7ec100",
+      "examples/scan.js": "82be74fd1626f438b31080dde01ea16e755a735b5c6a5f10b8531bf30b8031c4",
+      "examples/test.js": "bf2fb716873d0eb0723741fbd6117177eb29727516b861090783d36c071eb3a9",
+      "examples/windows.js": "265f10a2de85942a0641851383dc26601ed511328fc4f181136739b904869532",
+      "index.js": "02ae26406508e28f9ba0865be16cf77f0b33de6c4d4d49c212c4176df1d5625a",
+      "lib/constants.js": "c28f952d2758261fe5428a121add485cc25b03e0193633f649de903dc0e5e222",
+      "lib/parse.js": "73211a8ba85ce257b827abd8960e52c9750385b3fd18e8ef1080b114d774eb23",
+      "lib/picomatch.js": "fdd249d7ffff853f3bb1c77eafc8baa1a437bea85a94c35877b83c6a40d9ca94",
+      "lib/scan.js": "227fcc994a477ea95c5a0435d32783566334c6bd0dcc4a103029735ad8c9c535",
+      "lib/utils.js": "f04604f70cd1a3f6ace80b84766468674ff38b4bb83818d2ef1d81fc6355f935",
+      "package.json": "fb7766f5f9c724e13e075760a95d16f87cdb327143d153a913135fde267ec615",
+      "posix.js": "5695ff5dfcd5a338a40630bd506056f2950bcb08fe1cc068519cbbfe60add480",
+      "renovate.json": "c884087184972e139aa96a9f744105ebffe59071a7a245bec2b09d8ead39b53d",
+      "test/.eslintrc.json": "b530a222c1f1b5d3396a65cfd9737a37dc143619f400f7a9f5b4d6cee9fef980",
+      "test/api.picomatch.js": "7f0058ce7bff774c89861e5e0aff629a330f4ad95f0ae4aa80155852d8cb8dea",
+      "test/api.posix.js": "3bd37c2b5d71e23b9cf5752a31f7227b048311b7a238bb5708f0ca5db2a1e09c",
+      "test/api.scan.js": "8abd94a2d7040911017d125bada4e5aaf5ee166bf5b37cd377d0378cb7174f36",
+      "test/bash.js": "ddc5406fd7aa316d78e4177d5a7c5acd0f4b9d63b47aeae62e9622cb432dfbe5",
+      "test/bash.spec.js": "07292aa1f6eb22d17594f9b80ac0e8fe66f7676e39bdd0d1dba2f5d674c27c5c",
+      "test/braces.js": "4ac042b7e1877dd0deb695365f3f68095c82aa32628c3e211047b2ed7d1a25b2",
+      "test/brackets.js": "9e1226dff735d61a45bd59212909063944fd7a3f84ee36a87b080bdd40767b7a",
+      "test/dotfiles.js": "2091cd79c09fe4e312d9a0bec06f322201f280674bc9f10a729807de713d21a2",
+      "test/dots-invalid.js": "6793f76f3faf379ad9b152e733ddf1b12c8017db256469b647235697e0894e92",
+      "test/extglobs-bash.js": "a341b5ad988e30f9aa31202b4b87b09079368ba82ac8be30359d40c645def487",
+      "test/extglobs-minimatch.js": "17ed0573396a983a0f08fdbf301ba996808c2cdc653d2ae2a2a843091e896567",
+      "test/extglobs-temp.js": "b23617bba6f6d7f9d9e3235d438d18eab3edf5187705254f826562d79adceee1",
+      "test/extglobs.js": "5b8906c1320a21ceb9c69ad2b1bb6caf7c1baaeb5e85c37a3a743cf3a75a0404",
+      "test/globstars.js": "6faadeffee58a69f7496b43f33b14bd1c66f4c8e722d061596997f84bae048c3",
+      "test/issue-related.js": "409f23cc6f8242850da80235736851cbbc6506758a47f1c7c9f79999ad906664",
+      "test/malicious.js": "ff6107260702c7207c18e1c035965811cb794316f9ccb3dd8a8228f21855043d",
+      "test/minimatch.js": "feecc05d5591a0e9cc5d515b6f4d32a65e3cdf654c5d850d377ba892385dbc03",
+      "test/negation.js": "94a4f31ad3bc428c9fe0b1eb58758e6ef64fa374f2ec60fe918d594dbb903dbb",
+      "test/non-globs.js": "5598cb0820c429b51265708c81a3ba32f7c9439302ed047f27fe05dac6920f76",
+      "test/options.expandRange.js": "2474f1ce9bad0167f000c84a8b9af9d3714ebfc35c9a571a6d072d0f0ad1f998",
+      "test/options.format.js": "8de912d8d5b8469cc3409403996ba26dc8ed547677ce1ac9add1c99600cc7f82",
+      "test/options.ignore.js": "ee3e39d00bee69b580eaac2bbe1bd320ee5f77568e4158e1905c1601f78da5c2",
+      "test/options.js": "5dc4c01b20207f2b508ad160a7c5fc26b392d164c43fcc89d74053de89b51b36",
+      "test/options.maxExtglobRecursion.js": "5f327500924b9c6563b1ddf3b48b17f65632ee14abdab9a49c29d80b77b1db2a",
+      "test/options.noextglob.js": "4d41527fe33da043793d4203aa51e8c982e62bfab8854f57b84002ad1b42eee7",
+      "test/options.noglobstar.js": "df13306418071b591e1da8b15b36cc2023d7f24b887a2add7b7d5d14dca84b6a",
+      "test/options.onMatch.js": "14a04a823029defe7aaf04b1f003686fe575c749c02db89b2ece72374043977b",
+      "test/parens.js": "3829504c0489a29f6fc8e4a5e5e8baa7049d44bbba92f1f3b65eeabf6e60ab04",
+      "test/posix-classes.js": "d1f0d65d9549efe881678695a4fc05d050c39b3daccaeb6d1ef871eccb240b61",
+      "test/qmarks.js": "e55a86ffe7d01cd8bc79c9b127e76fc7ee6b2886c5b103a929e2d256afde1445",
+      "test/regex-features.js": "cb5e72d62f9a2311258466d7b952194993b9cf3e37152c3f5ae971629f0a3410",
+      "test/slashes-posix.js": "0487e0113526ed50d162297b588e8b5f8dc8a6eb24e23545b62300eba9c79b88",
+      "test/slashes-windows.js": "6da7d92f49808951c03419d485a6b83501c2e153ea8636a3b70faad77518b7ca",
+      "test/special-characters.js": "040f77e29c4c721b851af8f49877ac3ea9e5fcff68c574fccf52ec86a9ffdd06",
+      "test/stars.js": "becc99f23f94af4a31a8efd32d0996f66b0ca7064a466c9525aad44eed61f93b",
+      "test/support/match.js": "ac73ee77ba942ca326764ba467c0a1b425142da918dd4a72b39d61b7b36d0d1d",
+      "test/wildmat.js": "18f1d6dd5818e56c59da1264c2f1df0e5e1b1ba9127c465b2111dbbb6ba78eff"
+    },
+    "J3": {
+      ".editorconfig": "c1896fd7a004fda217bf18dc343514ab03461f06d77c6d4e1357e972be148e5d",
+      ".eslintrc.json": "1b4f177a316025dcecc1ba4f2a3b94580c11529b6af81fc39823f165a9aba0fe",
+      ".gitattributes": "207ce78763e0a12909d851809776aa6b263690fb93abcac4156b81722bf4567b",
+      ".github/contributing.md": "a30b750cd0250a0a4041046b389d55d175201b36c8ff0435bbf8f0a18c6a2bc5",
+      ".github/workflows/test.yml": "28a5a2cedecd99a0392633e6ef73bb08edb78493acd5967078bfc9a5c1e099a5",
+      ".gitignore": "b972da1b2a11bad873992559e1a0bd442bf5b57ebbc821035eb49f8e77de55bc",
+      ".npmrc": "f3fc23758ab91be5f94a8c5eaff433d1ccd6a206cf1d381d332eb63716009337",
+      ".verb.md": "2ff4d2d4b56b55364cc365a6405048db97c14f4a9b4f14576334e9d8dd9d6eea",
+      "CHANGELOG.md": "b40b2d9334d913e3a4327f63a802e0f2a62a625cd7412fe8971d87dfc679f713",
+      "LICENSE": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9",
+      "README.md": "fcd6a37d66b26beff3f8881af3cd7432af1d2e18dae5f975a3b28567ea75efa0",
+      "bench/.npmrc": "f3fc23758ab91be5f94a8c5eaff433d1ccd6a206cf1d381d332eb63716009337",
+      "bench/first-match-minimatch.js": "56c2cabd07be2919f18e86489f09441c7c13432f15ddafb47ec4b8b861b1e550",
+      "bench/first-match-picomatch.js": "6630d2faa5404fbb526a9abd9b27beb1da0f91a7776c50ee2b6fa9d3ab84e664",
+      "bench/glob-parent.js": "ffbb94a1ec95d866b8f7cb5fe85e6cdcf70a3460199f7d652425333d276b3ec5",
+      "bench/index.js": "eec1b9d449cdcee95851bdb840b44a2f619f6578c3a328a68d0490cd9873bed3",
+      "bench/load-time.js": "8b955e0c10759466938af71c9b7c23bc631fc0df8e5ece543b4cb57299cfedda",
+      "bench/package.json": "f17b7b12c048a6daa6cc1a96fafff0d13c392103d80bbf65fec23766528f5872",
+      "examples/extglob-negated.js": "27e43ed552826e6a4895d05f140ecdf10af990aea7865791295942498ec74bc9",
+      "examples/extglob.js": "533db86c17d0fd26fd6d5dff52a7f07ab1f4bedfcfb940f86d4aadc429aa49cd",
+      "examples/makeRe.js": "1a5c0de54886c4d0db538db9d6743f39f9b5374cd1c40ab83ea9711900ef75a0",
+      "examples/match.js": "464d6e3fb6bb56257836c3d2b18d322f6381843e309c3fa0b80f9ede5613f11c",
+      "examples/option-expandRange.js": "0fd93d9164712ee303876f8d3c422fdba709fe919e3d2bd1cb191b03cc96bc1b",
+      "examples/option-ignore.js": "8352cf3011fb04d9ff9e97fb9685bd7bfc30dda5375822728a118c4527c0c4b6",
+      "examples/option-onIgnore.js": "1e9d6da7d24f0825713f6b464a9e22856ff276f7fd73bb1569b9479b0b0cca70",
+      "examples/option-onMatch.js": "68fab151a3bc69e22dcb6a4cb893512d7e6d8231681b0aa0e9512eb49dc72913",
+      "examples/option-onResult.js": "da5e53355ea9b18f61be803874be3bcd70bb23a65c51e93ab59b1a957a1d18dc",
+      "examples/regex-quantifier.js": "35b1e85544ef9d82fb459c24af614d4fce9f6d4b95d552d63ec5e1151f7ec100",
+      "examples/scan.js": "82be74fd1626f438b31080dde01ea16e755a735b5c6a5f10b8531bf30b8031c4",
+      "examples/test.js": "bf2fb716873d0eb0723741fbd6117177eb29727516b861090783d36c071eb3a9",
+      "examples/windows.js": "265f10a2de85942a0641851383dc26601ed511328fc4f181136739b904869532",
+      "index.js": "02ae26406508e28f9ba0865be16cf77f0b33de6c4d4d49c212c4176df1d5625a",
+      "lib/constants.js": "c28f952d2758261fe5428a121add485cc25b03e0193633f649de903dc0e5e222",
+      "lib/parse.js": "ce57c04e04994b83e2ca566170fa192e6fe19d710bea6da00ce2f76d01c0dea4",
+      "lib/picomatch.js": "bbe9824eae8210954eac016e1fa1ac6174093557f30a72e91621d74a6c25e170",
+      "lib/scan.js": "227fcc994a477ea95c5a0435d32783566334c6bd0dcc4a103029735ad8c9c535",
+      "lib/utils.js": "f04604f70cd1a3f6ace80b84766468674ff38b4bb83818d2ef1d81fc6355f935",
+      "package.json": "b8deb10b4e1f7cc2fe8236a70995f4c6b5ec3ecf93f02f2b6427a8600d2c1d20",
+      "posix.js": "5695ff5dfcd5a338a40630bd506056f2950bcb08fe1cc068519cbbfe60add480",
+      "renovate.json": "c884087184972e139aa96a9f744105ebffe59071a7a245bec2b09d8ead39b53d",
+      "test/.eslintrc.json": "b530a222c1f1b5d3396a65cfd9737a37dc143619f400f7a9f5b4d6cee9fef980",
+      "test/api.picomatch.js": "7f0058ce7bff774c89861e5e0aff629a330f4ad95f0ae4aa80155852d8cb8dea",
+      "test/api.posix.js": "3bd37c2b5d71e23b9cf5752a31f7227b048311b7a238bb5708f0ca5db2a1e09c",
+      "test/api.scan.js": "8abd94a2d7040911017d125bada4e5aaf5ee166bf5b37cd377d0378cb7174f36",
+      "test/bash.js": "ddc5406fd7aa316d78e4177d5a7c5acd0f4b9d63b47aeae62e9622cb432dfbe5",
+      "test/bash.spec.js": "07292aa1f6eb22d17594f9b80ac0e8fe66f7676e39bdd0d1dba2f5d674c27c5c",
+      "test/braces.js": "4ac042b7e1877dd0deb695365f3f68095c82aa32628c3e211047b2ed7d1a25b2",
+      "test/brackets.js": "9e1226dff735d61a45bd59212909063944fd7a3f84ee36a87b080bdd40767b7a",
+      "test/dotfiles.js": "2091cd79c09fe4e312d9a0bec06f322201f280674bc9f10a729807de713d21a2",
+      "test/dots-invalid.js": "6793f76f3faf379ad9b152e733ddf1b12c8017db256469b647235697e0894e92",
+      "test/extglobs-bash.js": "a341b5ad988e30f9aa31202b4b87b09079368ba82ac8be30359d40c645def487",
+      "test/extglobs-minimatch.js": "17ed0573396a983a0f08fdbf301ba996808c2cdc653d2ae2a2a843091e896567",
+      "test/extglobs-temp.js": "b23617bba6f6d7f9d9e3235d438d18eab3edf5187705254f826562d79adceee1",
+      "test/extglobs.js": "5b8906c1320a21ceb9c69ad2b1bb6caf7c1baaeb5e85c37a3a743cf3a75a0404",
+      "test/globstars.js": "6faadeffee58a69f7496b43f33b14bd1c66f4c8e722d061596997f84bae048c3",
+      "test/issue-related.js": "409f23cc6f8242850da80235736851cbbc6506758a47f1c7c9f79999ad906664",
+      "test/malicious.js": "ff6107260702c7207c18e1c035965811cb794316f9ccb3dd8a8228f21855043d",
+      "test/minimatch.js": "feecc05d5591a0e9cc5d515b6f4d32a65e3cdf654c5d850d377ba892385dbc03",
+      "test/negation.js": "94a4f31ad3bc428c9fe0b1eb58758e6ef64fa374f2ec60fe918d594dbb903dbb",
+      "test/non-globs.js": "5598cb0820c429b51265708c81a3ba32f7c9439302ed047f27fe05dac6920f76",
+      "test/options.expandRange.js": "2474f1ce9bad0167f000c84a8b9af9d3714ebfc35c9a571a6d072d0f0ad1f998",
+      "test/options.format.js": "8de912d8d5b8469cc3409403996ba26dc8ed547677ce1ac9add1c99600cc7f82",
+      "test/options.ignore.js": "ee3e39d00bee69b580eaac2bbe1bd320ee5f77568e4158e1905c1601f78da5c2",
+      "test/options.js": "73d68a9105ef2936b9a0e86ff9f47270dcd627d0f22cf370d5e16e2eb0ba1f96",
+      "test/options.maxExtglobRecursion.js": "e19d89d71069b11cf838518fa98c3245a06eb35d59b9f19c179f2e504cc80a9d",
+      "test/options.noextglob.js": "4d41527fe33da043793d4203aa51e8c982e62bfab8854f57b84002ad1b42eee7",
+      "test/options.noglobstar.js": "df13306418071b591e1da8b15b36cc2023d7f24b887a2add7b7d5d14dca84b6a",
+      "test/options.onMatch.js": "14a04a823029defe7aaf04b1f003686fe575c749c02db89b2ece72374043977b",
+      "test/parens.js": "3829504c0489a29f6fc8e4a5e5e8baa7049d44bbba92f1f3b65eeabf6e60ab04",
+      "test/posix-classes.js": "d1f0d65d9549efe881678695a4fc05d050c39b3daccaeb6d1ef871eccb240b61",
+      "test/qmarks.js": "e55a86ffe7d01cd8bc79c9b127e76fc7ee6b2886c5b103a929e2d256afde1445",
+      "test/regex-features.js": "cb5e72d62f9a2311258466d7b952194993b9cf3e37152c3f5ae971629f0a3410",
+      "test/slashes-posix.js": "0487e0113526ed50d162297b588e8b5f8dc8a6eb24e23545b62300eba9c79b88",
+      "test/slashes-windows.js": "6da7d92f49808951c03419d485a6b83501c2e153ea8636a3b70faad77518b7ca",
+      "test/special-characters.js": "040f77e29c4c721b851af8f49877ac3ea9e5fcff68c574fccf52ec86a9ffdd06",
+      "test/stars.js": "becc99f23f94af4a31a8efd32d0996f66b0ca7064a466c9525aad44eed61f93b",
+      "test/support/match.js": "ac73ee77ba942ca326764ba467c0a1b425142da918dd4a72b39d61b7b36d0d1d",
+      "test/wildmat.js": "18f1d6dd5818e56c59da1264c2f1df0e5e1b1ba9127c465b2111dbbb6ba78eff"
+    },
+    "R1": {
+      ".github/workflows/ci.yaml": "e6c9e5588c9bf6c3e5ce06339dc8c8cca0cd15184257747fb7bf510680d11dcc",
+      ".gitignore": "24794bd6df143ea7f183be7aaa2bb0e47db31099e2743ea2a66377d52713f6bf",
+      "CHANGELOG.md": "fdfa8e3aff85258bb8e31ea448fd90e400583d1a40a579aaad5c306566f681be",
+      "Cargo.lock": "91b0bac47ecfd03a1303c0dbf0ec821d1898d5aaf04855a5668b9ac9feced399",
+      "Cargo.toml": "d7628e6f15c9f0234033956f57fe6e04c1f5141078fa716cce351c3c8df828b8",
+      "DESIGN.md": "25cf00cb5eb35314e11fb0ea6eddeb31aa8e103431a1baef2690ec8306ed61b1",
+      "LICENSE": "8d43b7fa3b2f928cd4ea6346853b95f1ca5d883f4eaad3a40f8af202bfb45d6f",
+      "README.md": "7a664c88fa818dd7d425b2444f60b4c2aa2d755cdda4a7afb1c56d4371510c29",
+      "examples/cargo.rs": "5e3e8bf501d5e9e5a7b79bf97b1b729bd0ce9022f2676e9776d04ea9a46669ac",
+      "examples/hello.rs": "c29e9fe3e863efaa3e634d7ae31c78f5c1efa51350f1bba5701b5bb698f42627",
+      "examples/pico_test_app.rs": "3fc50f1509763cc69fb75f5263c5f8eecef8c2bb20a83fe093acb94650ee0e03",
+      "examples/posixly_correct.rs": "5b5fc829da5e5074010a086ba17d199126878f4a156b66322681ffa52032c255",
+      "fuzz/.gitignore": "254510c2c60d231ec3a5ecf9fe7f0c9fd5152ae7a09e2cebefaee9ec01a4b6c4",
+      "fuzz/Cargo.toml": "adf2996624cf5982618ec8418109d19f433488b2cd6c4b0a4576faee8598ac03",
+      "fuzz/fuzz_targets/fuzz_target_1.rs": "459ce4a0f12bca39a4f16a663292efbdc506827d732965fb6a8badecfd579360",
+      "src/lib.rs": "6678e348aa88dd09d5ed655c1abfc9913d67602df8d843690d07599bcdef8a29",
+      "test_wasm.js": "c538f5389f6695d303c7ac99588d8791e7c126053caadcbec7e2d10a005c1e4a"
+    },
+    "R2": {
+      ".github/workflows/ci.yaml": "ff873d5f2076cd75b46ca3fc8ca1e000ab95b19d9dc450f48e97c66b39b89431",
+      ".gitignore": "24794bd6df143ea7f183be7aaa2bb0e47db31099e2743ea2a66377d52713f6bf",
+      "CHANGELOG.md": "0d246d0237295f6469b8eb8ffb52cfe6db62ad3ba8ac740c44c852b151a7043f",
+      "Cargo.lock": "7fb7c31ef3b14c79a233b91f1147694ae19a00f04fac5846c9f885ff81056e04",
+      "Cargo.toml": "d951930dd9e75561072a00b8ab9ac13d17b0400e8cb3e90eb8e788f7963ccbfb",
+      "DESIGN.md": "7c22a790a34e392c7f7bf801450de253b86b981b3ac85eca00ef0d22a12b32e4",
+      "LICENSE": "8d43b7fa3b2f928cd4ea6346853b95f1ca5d883f4eaad3a40f8af202bfb45d6f",
+      "README.md": "987a8bcdecf0c982a6046dad8b0045df8ee58c2bbb5e7933fdff341e64f98941",
+      "clippy.toml": "7bc14f84d6e752d48fbaf6edaccd1220ef2efc12b0e3e63c949f802a6a1cab2d",
+      "examples/cargo.rs": "5e3e8bf501d5e9e5a7b79bf97b1b729bd0ce9022f2676e9776d04ea9a46669ac",
+      "examples/hello.rs": "c29e9fe3e863efaa3e634d7ae31c78f5c1efa51350f1bba5701b5bb698f42627",
+      "examples/nonstandard.rs": "8afd01a7c50732347a596bf0751409786ffae1594ff8a6cd40e75a266945f4df",
+      "examples/pico_test_app.rs": "3fc50f1509763cc69fb75f5263c5f8eecef8c2bb20a83fe093acb94650ee0e03",
+      "examples/posixly_correct.rs": "5b5fc829da5e5074010a086ba17d199126878f4a156b66322681ffa52032c255",
+      "fuzz/.gitignore": "254510c2c60d231ec3a5ecf9fe7f0c9fd5152ae7a09e2cebefaee9ec01a4b6c4",
+      "fuzz/Cargo.toml": "adf2996624cf5982618ec8418109d19f433488b2cd6c4b0a4576faee8598ac03",
+      "fuzz/fuzz_targets/fuzz_target_1.rs": "459ce4a0f12bca39a4f16a663292efbdc506827d732965fb6a8badecfd579360",
+      "src/lib.rs": "3207db5c9af3593c1598b100cd5aadfe99ba5ee0f5eb9ff06bcdfd69b66a0d57",
+      "test_wasm.js": "c885d7fc36b27d2283c7c76ea1731061ae7b82095642343513cdfc6b2fcbbc71"
+    },
+    "R3": {
+      ".github/dependabot.yml": "a33807ed11da096b3ce53cf549f7e38365a7851a0a12cea8c553054ccd6de8df",
+      ".github/workflows/rust.yml": "f67cac92064aa048696ec19c8bba67c195b40ac4a8cd7a44a330a4bcacd75895",
+      ".gitignore": "3d694d65512d3504d06a6ab96ea422d04355d44dc15bc98819fabbaef9bf4907",
+      "Cargo.lock": "008f43c508db50b0802f3b212fd0cbe3737b62ed785cb96c6d5a5b92e3f5d28b",
+      "Cargo.toml": "b784b3ebbc28a42e92c4be9c5c7a8f5f197a8986c287b0479091ca49a2ab7bed",
+      "LICENSE-APACHE": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+      "LICENSE-MIT": "f6deca8261a8f4a3403dc74c725c46051157fd36c27cd4b100277eb1f303ad11",
+      "README.md": "e4bb65f28ddffb11d7eb337e9585947651f2fc11a5e4290f0ca126e21c582c1e",
+      "benches/datetime_format.rs": "60279202c35bad6b7c7ead9a121ae57bbedf4710c7c1e4bce43d31b95bf99919",
+      "benches/datetime_parse.rs": "ecb1dc0baa5a6ea0280132318596e88c0e10461ba34da5108795b0d32f5099ca",
+      "deny.toml": "d2def0f2e2ea1b55070604900146dd2e65ca0c78d62f363ac8ceb5379eab7ae7",
+      "src/date.rs": "ea15d975083b5ba6490292a7c72f524529e1e4d58f5761efad78c1a72ed269e9",
+      "src/duration.rs": "4266a7510d264492b6053f7244de15b772fb9ea72c1e53d92522e9911d96684c",
+      "src/lib.rs": "41a764c8bc0ace309a1a64ec31ad82b2ebd07f19849c1a2f35dd334561d2fe02",
+      "src/wrapper.rs": "a151d5574ca6c22c6c7a98533a812cde39c748589287c4930478d0ea3a368889"
+    }
+  },
+  "task_order": [
+    "R2",
+    "R3",
+    "J1",
+    "J2",
+    "R1",
+    "J3"
+  ],
+  "tasks": [
+    {
+      "assets": {
+        "baseline_lockfile": "evaluation/debugging/tasks/rust/R1-Cargo.lock",
+        "hidden_runner": "evaluation/debugging/tasks/rust/run_hidden.py",
+        "hidden_test": "evaluation/debugging/tasks/rust/R1-hidden.rs",
+        "licenses": [
+          "evaluation/debugging/tasks/rust/licenses/lexopt-MIT.txt"
+        ]
+      },
+      "base_commit": "c45bd6e5c8c9cb2f1e6d9421109ab0daf7d95150",
+      "base_tree": "8395db10d6eecab11635406cbf4088e186abc62b",
+      "baseline_command": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--lib"
+      ],
+      "difficulty_note": "moderate",
+      "hidden_command": [
+        "python3",
+        "evaluation/debugging/tasks/rust/run_hidden.py",
+        "R1",
+        "WORKSPACE"
+      ],
+      "hidden_test_counts": {
+        "expected_base_failed": 4,
+        "total": 5
+      },
+      "id": "R1",
+      "oracle_commit": "84d7545e4e99a60c046244d3ab9f9778637ac073",
+      "oracle_tree": "dbc7285fbc0ceb05eaa9eb69e157ecb9fda29a76",
+      "prompt": "Creating the iterator returned by Parser::values() and dropping it without reading any values unexpectedly changes later parsing. After reading the option in ['-a', 'b'], checking values().is_ok() should leave 'b' available to value(). Attached values and grouped short options should also remain available when that iterator is unused. Fix this behavior, preserve actual iteration and option-boundary behavior, and add regression coverage.",
+      "reference_source": "https://github.com/blyxxyz/lexopt/commit/84d7545e4e99a60c046244d3ab9f9778637ac073",
+      "regression_provenance": "Upstream commit adds four unused-iterator regression cases and documents the changed behavior in its changelog.",
+      "repository": {
+        "license": "MIT",
+        "url": "https://github.com/blyxxyz/lexopt"
+      },
+      "schema": 1,
+      "setup": {
+        "baseline_lockfile": "Copy assets.baseline_lockfile to the exported source root as Cargo.lock before warming or exposing the solver workspace.",
+        "cargo_target_dir": "Use a distinct target directory for every exported root, including oracle and solver variants. Do not reuse a target directory across copied roots.",
+        "instructions_found": [],
+        "platform": "any supported Rust target",
+        "runtime_dependencies": "none",
+        "solver_export": "Only source at base_commit, public prompt, baseline lockfile, and tool environment; exclude repository history, oracle, hidden tests, and MinifyCLI evaluator files.",
+        "toolchain_tested": "rustc 1.99.1 / cargo 1.99.1"
+      },
+      "title": "Unconsumed option values disappear",
+      "upstream_test_paths": [
+        "src/lib.rs"
+      ]
+    },
+    {
+      "assets": {
+        "baseline_lockfile": "evaluation/debugging/tasks/rust/R2-Cargo.lock",
+        "hidden_runner": "evaluation/debugging/tasks/rust/run_hidden.py",
+        "hidden_test": "evaluation/debugging/tasks/rust/R2-hidden.rs",
+        "licenses": [
+          "evaluation/debugging/tasks/rust/licenses/lexopt-MIT.txt"
+        ]
+      },
+      "base_commit": "72d007510e11263c48c6dc686dd20a5ce35b03be",
+      "base_tree": "cd8f1fda85f10471ef388f51f529408553c00d4e",
+      "baseline_command": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--lib"
+      ],
+      "difficulty_note": "moderate",
+      "hidden_command": [
+        "python3",
+        "evaluation/debugging/tasks/rust/run_hidden.py",
+        "R2",
+        "WORKSPACE"
+      ],
+      "hidden_test_counts": {
+        "expected_base_failed": 3,
+        "total": 6
+      },
+      "id": "R2",
+      "oracle_commit": "f4b0e90dc2a6bdcfb1dd5e65d21d16c7e14f4d50",
+      "oracle_tree": "e43fb7dedd13e1eb8bef350a5cf94877ca152033",
+      "prompt": "On Unix, malformed non-UTF-8 bytes in grouped short options produce too many replacement-character options. For the raw argument bytes [45, 240, 157, 97], parsing should yield Short('\ufffd') followed by Short('a'); the incomplete argument [45, 240, 157] should yield just Short('\ufffd'). Keep valid Unicode, separate invalid sequences, subsequent options, and raw option values intact. Fix the inconsistency and add regression coverage.",
+      "reference_source": "https://github.com/blyxxyz/lexopt/commit/f4b0e90dc2a6bdcfb1dd5e65d21d16c7e14f4d50",
+      "regression_provenance": "Upstream commit adds test_lossy_decode plus byte-boundary assertions and updates the changelog.",
+      "repository": {
+        "license": "MIT",
+        "url": "https://github.com/blyxxyz/lexopt"
+      },
+      "schema": 1,
+      "setup": {
+        "baseline_lockfile": "Copy assets.baseline_lockfile to the exported source root as Cargo.lock before warming or exposing the solver workspace.",
+        "cargo_target_dir": "Use a distinct target directory for every exported root, including oracle and solver variants. Do not reuse a target directory across copied roots.",
+        "instructions_found": [],
+        "platform": "unix",
+        "runtime_dependencies": "none",
+        "solver_export": "Only source at base_commit, public prompt, baseline lockfile, and tool environment; exclude repository history, oracle, hidden tests, and MinifyCLI evaluator files.",
+        "toolchain_tested": "rustc 1.99.1 / cargo 1.99.1"
+      },
+      "title": "Malformed short options emit extra replacement characters",
+      "upstream_test_paths": [
+        "src/lib.rs"
+      ]
+    },
+    {
+      "assets": {
+        "baseline_lockfile": "evaluation/debugging/tasks/rust/R3-Cargo.lock",
+        "hidden_runner": "evaluation/debugging/tasks/rust/run_hidden.py",
+        "hidden_test": "evaluation/debugging/tasks/rust/R3-hidden.rs",
+        "licenses": [
+          "evaluation/debugging/tasks/rust/licenses/humantime-MIT.txt",
+          "evaluation/debugging/tasks/rust/licenses/humantime-APACHE.txt"
+        ]
+      },
+      "base_commit": "fc092817fa8689298eaac28ff49bd8bede4ff605",
+      "base_tree": "ad0da18ca12b62e506fd04bfe1210fa23893869b",
+      "baseline_command": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--lib"
+      ],
+      "difficulty_note": "easy",
+      "hidden_command": [
+        "python3",
+        "evaluation/debugging/tasks/rust/run_hidden.py",
+        "R3",
+        "WORKSPACE"
+      ],
+      "hidden_test_counts": {
+        "expected_base_failed": 2,
+        "total": 6
+      },
+      "id": "R3",
+      "oracle_commit": "ed7cc7dcd2566facfce2a1a6af8087993d1887c3",
+      "oracle_tree": "4514d7ff1cd39bf5878e9e43841f8f1995330ceb",
+      "prompt": "parse_duration panics for the input '18446744073709551615s1000ms', although oversized durations should return DurationError::NumberOverflow. Splitting the extra second into '999999999ns 1ns' has the same problem. Fix this behavior while preserving representable durations near the limit and ordinary duration parsing. Add regression coverage and keep the existing suite passing.",
+      "reference_source": "https://github.com/chronotope/humantime/commit/ed7cc7dcd2566facfce2a1a6af8087993d1887c3",
+      "regression_provenance": "Upstream commit adds the two reported overflow assertions to its existing duration tests.",
+      "repository": {
+        "license": "MIT OR Apache-2.0",
+        "url": "https://github.com/chronotope/humantime"
+      },
+      "schema": 1,
+      "setup": {
+        "baseline_lockfile": "Copy assets.baseline_lockfile to the exported source root as Cargo.lock before warming or exposing the solver workspace.",
+        "cargo_target_dir": "Use a distinct target directory for every exported root, including oracle and solver variants. Do not reuse a target directory across copied roots.",
+        "development_dependencies": "Pinned public test dependencies in the supplied Cargo.lock; fetch once during setup, then run offline.",
+        "instructions_found": [],
+        "platform": "any supported Rust target",
+        "runtime_dependencies": "none",
+        "solver_export": "Only source at base_commit, public prompt, baseline lockfile, and tool environment; exclude repository history, oracle, hidden tests, and MinifyCLI evaluator files.",
+        "toolchain_tested": "rustc 1.99.1 / cargo 1.99.1"
+      },
+      "title": "A valid-looking oversized duration panics instead of returning an error",
+      "upstream_test_paths": [
+        "src/duration.rs"
+      ]
+    },
+    {
+      "assets": {
+        "dependencies_lockfile": "evaluation/debugging/tasks/js/dependencies-lock.json",
+        "dependency_spec": "evaluation/debugging/tasks/js/dependencies.json",
+        "hidden_test": "evaluation/debugging/tasks/js/J1-hidden.cjs"
+      },
+      "base_commit": "4f41a8edade7a5ab19832f7b40ecce46b288767f",
+      "baseline_command": [
+        "npm",
+        "test"
+      ],
+      "hidden_command": [
+        "node",
+        "evaluation/debugging/tasks/js/J1-hidden.cjs",
+        "WORKSPACE"
+      ],
+      "id": "J1",
+      "oracle_commit": "e279bd7f34c4f8b5f9d0490cf7810a1f0c2de178",
+      "prompt": "A recursive glob behaves differently when enclosed in parentheses. For example, picomatch.isMatch('test/utils', 'test(/utils/**)') returns false, while the recursive suffix should allow the directory itself as well as descendants. The optional form 'test?(/utils/**)' should also accept that directory. Fix this inconsistency while preserving strictSlashes, nonterminal patterns, and negated extglob behavior. Add regression coverage and keep the existing suite passing.",
+      "reference_source": "https://github.com/micromatch/picomatch/commit/e279bd7f34c4f8b5f9d0490cf7810a1f0c2de178",
+      "repository": {
+        "license": "MIT",
+        "url": "https://github.com/micromatch/picomatch"
+      },
+      "schema": 1,
+      "title": "Parenthesized recursive patterns omit their parent directory",
+      "upstream_test_paths": [
+        "test/issue-related.js"
+      ]
+    },
+    {
+      "assets": {
+        "dependencies_lockfile": "evaluation/debugging/tasks/js/dependencies-lock.json",
+        "dependency_spec": "evaluation/debugging/tasks/js/dependencies.json",
+        "hidden_test": "evaluation/debugging/tasks/js/J2-hidden.cjs"
+      },
+      "base_commit": "4f41a8edade7a5ab19832f7b40ecce46b288767f",
+      "baseline_command": [
+        "npm",
+        "test"
+      ],
+      "hidden_command": [
+        "node",
+        "evaluation/debugging/tasks/js/J2-hidden.cjs",
+        "WORKSPACE"
+      ],
+      "id": "J2",
+      "oracle_commit": "f2011653e8eaa13bae6dffed7e7016ea8e123485",
+      "prompt": "The scan API does not consistently return all pattern parts. For example, scan('foo', {parts: true}).parts is [] rather than ['foo'], and scan('/a/b/', {parts: true}).parts loses the empty leading/trailing segments. Make parts consistently describe the full pattern after its recognized prefix, including when tokens are requested. Path separators within escaped sequences, bracket expressions, and nested parentheses must not split a part. Preserve the other scan metadata and existing matching behavior. Add regression coverage.",
+      "reference_source": "https://github.com/micromatch/picomatch/commit/f2011653e8eaa13bae6dffed7e7016ea8e123485",
+      "repository": {
+        "license": "MIT",
+        "url": "https://github.com/micromatch/picomatch"
+      },
+      "schema": 1,
+      "title": "scan returns incomplete path parts",
+      "upstream_test_paths": [
+        "test/api.scan.js"
+      ]
+    },
+    {
+      "assets": {
+        "dependencies_lockfile": "evaluation/debugging/tasks/js/dependencies-lock.json",
+        "dependency_spec": "evaluation/debugging/tasks/js/dependencies.json",
+        "hidden_test": "evaluation/debugging/tasks/js/J3-hidden.cjs"
+      },
+      "base_commit": "69a2d181b9c0c7bc5454eb2e188b4763427e9000",
+      "baseline_command": [
+        "npm",
+        "test"
+      ],
+      "hidden_command": [
+        "node",
+        "evaluation/debugging/tasks/js/J3-hidden.cjs",
+        "WORKSPACE"
+      ],
+      "id": "J3",
+      "oracle_commit": "ab8bc4df8141b53ffb5473f301c289c6108eedf7",
+      "prompt": "With Windows mode enabled, basename matching fails for backslash-separated paths. For example, picomatch.isMatch('foo\\\\bar.js', 'bar.js', {basename: true, windows: true}) returns false; it should return true. The same applies to the matchBase option and direct matchBase API calls. Correct this behavior without changing ordinary POSIX matching or treating backslashes as path separators when Windows mode is disabled. Add regression tests and keep the existing suite passing.",
+      "reference_source": "https://github.com/micromatch/picomatch/commit/ab8bc4df8141b53ffb5473f301c289c6108eedf7",
+      "repository": {
+        "license": "MIT",
+        "url": "https://github.com/micromatch/picomatch"
+      },
+      "schema": 1,
+      "title": "Windows basename matching ignores backslash separators",
+      "upstream_test_paths": [
+        "test/options.js"
+      ]
+    }
+  ],
+  "tool_environment": {
+    "CARGO_HOME": "${MINIFYCLI_ROOT}/.tools/cargo",
+    "HOME": "${USER_HOME}",
+    "PATH": "${MINIFYCLI_ROOT}/.tools/cargo/bin:${BASE_PATH}",
+    "RUSTUP_HOME": "${MINIFYCLI_ROOT}/.tools/rustup"
+  },
+  "tool_versions": {
+    "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+    "node": "v26.12.1",
+    "npm": "11.20.0",
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)"
+  },
+  "trials": [
+    {
+      "id": "trial-001",
+      "repetition": 1,
+      "task_id": "R2",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-002",
+      "repetition": 1,
+      "task_id": "R2",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-003",
+      "repetition": 1,
+      "task_id": "R2",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-004",
+      "repetition": 2,
+      "task_id": "R2",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-005",
+      "repetition": 2,
+      "task_id": "R2",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-006",
+      "repetition": 2,
+      "task_id": "R2",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-007",
+      "repetition": 1,
+      "task_id": "R3",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-008",
+      "repetition": 1,
+      "task_id": "R3",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-009",
+      "repetition": 1,
+      "task_id": "R3",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-010",
+      "repetition": 2,
+      "task_id": "R3",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-011",
+      "repetition": 2,
+      "task_id": "R3",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-012",
+      "repetition": 2,
+      "task_id": "R3",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-013",
+      "repetition": 1,
+      "task_id": "J1",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-014",
+      "repetition": 1,
+      "task_id": "J1",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-015",
+      "repetition": 1,
+      "task_id": "J1",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-016",
+      "repetition": 2,
+      "task_id": "J1",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-017",
+      "repetition": 2,
+      "task_id": "J1",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-018",
+      "repetition": 2,
+      "task_id": "J1",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-019",
+      "repetition": 1,
+      "task_id": "J2",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-020",
+      "repetition": 1,
+      "task_id": "J2",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-021",
+      "repetition": 1,
+      "task_id": "J2",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-022",
+      "repetition": 2,
+      "task_id": "J2",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-023",
+      "repetition": 2,
+      "task_id": "J2",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-024",
+      "repetition": 2,
+      "task_id": "J2",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-025",
+      "repetition": 1,
+      "task_id": "R1",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-026",
+      "repetition": 1,
+      "task_id": "R1",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-027",
+      "repetition": 1,
+      "task_id": "R1",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-028",
+      "repetition": 2,
+      "task_id": "R1",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-029",
+      "repetition": 2,
+      "task_id": "R1",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-030",
+      "repetition": 2,
+      "task_id": "R1",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-031",
+      "repetition": 1,
+      "task_id": "J3",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-032",
+      "repetition": 1,
+      "task_id": "J3",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-033",
+      "repetition": 1,
+      "task_id": "J3",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-034",
+      "repetition": 2,
+      "task_id": "J3",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-035",
+      "repetition": 2,
+      "task_id": "J3",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-036",
+      "repetition": 2,
+      "task_id": "J3",
+      "variant": "rtk"
+    }
+  ],
+  "usage_primary": "CLI aggregate input_tokens + output_tokens; cached input included; reasoning subset not double counted",
+  "view_note": "Sanitized view of the canonical private registration; executable and environment paths are parameterized. Registered source, task, binary, implementation, order, budgets and decision fields are unchanged.",
+  "workers": 3
+}

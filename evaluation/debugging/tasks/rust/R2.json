@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "id": "R2",
+  "title": "Malformed short options emit extra replacement characters",
+  "repository": {
+    "url": "https://github.com/blyxxyz/lexopt",
+    "license": "MIT"
+  },
+  "base_commit": "72d007510e11263c48c6dc686dd20a5ce35b03be",
+  "oracle_commit": "f4b0e90dc2a6bdcfb1dd5e65d21d16c7e14f4d50",
+  "prompt": "On Unix, malformed non-UTF-8 bytes in grouped short options produce too many replacement-character options. For the raw argument bytes [45, 240, 157, 97], parsing should yield Short('�') followed by Short('a'); the incomplete argument [45, 240, 157] should yield just Short('�'). Keep valid Unicode, separate invalid sequences, subsequent options, and raw option values intact. Fix the inconsistency and add regression coverage.",
+  "baseline_command": [
+    "cargo",
+    "test",
+    "--offline",
+    "--locked",
+    "--lib"
+  ],
+  "hidden_command": [
+    "python3",
+    "evaluation/debugging/tasks/rust/run_hidden.py",
+    "R2",
+    "WORKSPACE"
+  ],
+  "assets": {
+    "hidden_test": "evaluation/debugging/tasks/rust/R2-hidden.rs",
+    "hidden_runner": "evaluation/debugging/tasks/rust/run_hidden.py",
+    "baseline_lockfile": "evaluation/debugging/tasks/rust/R2-Cargo.lock",
+    "licenses": [
+      "evaluation/debugging/tasks/rust/licenses/lexopt-MIT.txt"
+    ]
+  },
+  "reference_source": "https://github.com/blyxxyz/lexopt/commit/f4b0e90dc2a6bdcfb1dd5e65d21d16c7e14f4d50",
+  "upstream_test_paths": [
+    "src/lib.rs"
+  ],
+  "regression_provenance": "Upstream commit adds test_lossy_decode plus byte-boundary assertions and updates the changelog.",
+  "hidden_test_counts": {
+    "total": 6,
+    "expected_base_failed": 3
+  },
+  "difficulty_note": "moderate",
+  "setup": {
+    "runtime_dependencies": "none",
+    "instructions_found": [],
+    "platform": "unix",
+    "solver_export": "Only source at base_commit, public prompt, baseline lockfile, and tool environment; exclude repository history, oracle, hidden tests, and MinifyCLI evaluator files.",
+    "baseline_lockfile": "Copy assets.baseline_lockfile to the exported source root as Cargo.lock before warming or exposing the solver workspace.",
+    "cargo_target_dir": "Use a distinct target directory for every exported root, including oracle and solver variants. Do not reuse a target directory across copied roots.",
+    "toolchain_tested": "rustc 1.99.1 / cargo 1.99.1"
+  },
+  "base_tree": "cd8f1fda85f10471ef388f51f529408553c00d4e",
+  "oracle_tree": "e43fb7dedd13e1eb8bef350a5cf94877ca152033"
+}

@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "id": "J2",
+  "title": "scan returns incomplete path parts",
+  "repository": {
+    "url": "https://github.com/micromatch/picomatch",
+    "license": "MIT"
+  },
+  "base_commit": "4f41a8edade7a5ab19832f7b40ecce46b288767f",
+  "oracle_commit": "f2011653e8eaa13bae6dffed7e7016ea8e123485",
+  "prompt": "The scan API does not consistently return all pattern parts. For example, scan('foo', {parts: true}).parts is [] rather than ['foo'], and scan('/a/b/', {parts: true}).parts loses the empty leading/trailing segments. Make parts consistently describe the full pattern after its recognized prefix, including when tokens are requested. Path separators within escaped sequences, bracket expressions, and nested parentheses must not split a part. Preserve the other scan metadata and existing matching behavior. Add regression coverage.",
+  "baseline_command": [
+    "npm",
+    "test"
+  ],
+  "hidden_command": [
+    "node",
+    "evaluation/debugging/tasks/js/J2-hidden.cjs",
+    "WORKSPACE"
+  ],
+  "assets": {
+    "hidden_test": "evaluation/debugging/tasks/js/J2-hidden.cjs",
+    "dependencies_lockfile": "evaluation/debugging/tasks/js/dependencies-lock.json",
+    "dependency_spec": "evaluation/debugging/tasks/js/dependencies.json"
+  },
+  "reference_source": "https://github.com/micromatch/picomatch/commit/f2011653e8eaa13bae6dffed7e7016ea8e123485",
+  "upstream_test_paths": [
+    "test/api.scan.js"
+  ]
+}

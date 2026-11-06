@@ -1,0 +1,29 @@
+Repair the reported library bug in this isolated workspace.
+
+{task_prompt}
+
+The original full test command is: {baseline_command}
+
+Use only the sprint MCP tools to inspect, search, edit, and test this workspace.
+Do not use native shell tools, native apply_patch, network, outside sources,
+parent/sibling directories, other agents, Git history, or upstream solutions.
+The tool boundary accepts literal argv, without pipes, shell syntax, or inline
+environment assignments. Available programs are cargo, npm, node, git, rg, ls,
+find, cat, head, tail, wc, and pwd. Node inline eval/preload is unavailable;
+write a small local file when you need a focused reproduction. Dependencies are
+already installed and all test commands must stay offline.
+
+Run the original full test command before changing production code and again
+after the repair. Create and run a focused regression that demonstrates the
+reported problem, then fix production code and keep your regression passing.
+Preserve the existing tests and package/build configuration. Do not refactor
+unrelated code. read_file and list_files are identical across treatments;
+terminal command output may be filtered. If useful details are absent, use
+recover_output with the returned artifact_id and source=original where captured,
+or a native recall_hash offered in the output. Native recall supports list=true,
+full=true, grep, and line selection; it may store formatted/capped content.
+All recovery requests count toward the same task budget.
+
+You have 60 tool actions, at most 90 seconds per command, and ten minutes total.
+Finish with the best patch you can verify. Report what changed, your regression,
+and the test results concisely. Do not commit, publish, or open a pull request.

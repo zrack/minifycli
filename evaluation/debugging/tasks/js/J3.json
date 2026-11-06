@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "id": "J3",
+  "title": "Windows basename matching ignores backslash separators",
+  "repository": {
+    "url": "https://github.com/micromatch/picomatch",
+    "license": "MIT"
+  },
+  "base_commit": "69a2d181b9c0c7bc5454eb2e188b4763427e9000",
+  "oracle_commit": "ab8bc4df8141b53ffb5473f301c289c6108eedf7",
+  "prompt": "With Windows mode enabled, basename matching fails for backslash-separated paths. For example, picomatch.isMatch('foo\\\\bar.js', 'bar.js', {basename: true, windows: true}) returns false; it should return true. The same applies to the matchBase option and direct matchBase API calls. Correct this behavior without changing ordinary POSIX matching or treating backslashes as path separators when Windows mode is disabled. Add regression tests and keep the existing suite passing.",
+  "baseline_command": [
+    "npm",
+    "test"
+  ],
+  "hidden_command": [
+    "node",
+    "evaluation/debugging/tasks/js/J3-hidden.cjs",
+    "WORKSPACE"
+  ],
+  "assets": {
+    "hidden_test": "evaluation/debugging/tasks/js/J3-hidden.cjs",
+    "dependencies_lockfile": "evaluation/debugging/tasks/js/dependencies-lock.json",
+    "dependency_spec": "evaluation/debugging/tasks/js/dependencies.json"
+  },
+  "reference_source": "https://github.com/micromatch/picomatch/commit/ab8bc4df8141b53ffb5473f301c289c6108eedf7",
+  "upstream_test_paths": [
+    "test/options.js"
+  ]
+}

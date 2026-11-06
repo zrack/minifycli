@@ -1,0 +1,250 @@
+{
+  "schema": 1,
+  "prepared_date": "2026-11-06",
+  "purpose": "Historical defect and oracle qualification before comparative solver runs; this is not a tool comparison.",
+  "toolchain": {
+    "rustc": "1.99.1 (58cf8f9c3 2026-10-13)",
+    "cargo": "1.99.1 (5f94df478 2026-08-27)"
+  },
+  "platform": "aarch64-apple-darwin",
+  "network_during_checks": false,
+  "target_isolation": "Separate target directory per task, source snapshot, and check group.",
+  "baseline_selection": "Upstream library unit suite, cargo test --offline --locked --lib.",
+  "hidden_selection": "External std-only crate with path dependency; fixture remains outside subject workspace.",
+  "reference_patches": "Private git diff of each base_commit to oracle_commit, restricted to src.",
+  "log_policy": "Only hashes and aggregate test counts are public; raw preparation logs are private.",
+  "results": [
+    {
+      "task": "R1",
+      "variant": "base",
+      "group": "baseline",
+      "exit_code": 0,
+      "wall_seconds": 3.109,
+      "test_results": [
+        {
+          "status": "ok",
+          "passed": 19,
+          "failed": 0
+        }
+      ],
+      "log_sha256": {
+        "stdout": "6af602f6b1984f2007fe75f99ba9547a3eef10ddc35801c5795c24b81ad821ab",
+        "stderr": "6b4c07f28f7d8825776cfc134b9661b9480847fff5810eb2b890be375225a37c"
+      }
+    },
+    {
+      "task": "R1",
+      "variant": "base",
+      "group": "hidden",
+      "exit_code": 101,
+      "wall_seconds": 1.046,
+      "test_results": [
+        {
+          "status": "FAILED",
+          "passed": 1,
+          "failed": 4
+        }
+      ],
+      "log_sha256": {
+        "stdout": "965138d46e1dd91217644807af547b8ed32034c562251d7f44b8738b25067190",
+        "stderr": "133c0ea8009921f79c0b9f6115a04a27a94b0b26d3c53936db9897a8ceb90951"
+      }
+    },
+    {
+      "task": "R1",
+      "variant": "oracle",
+      "group": "baseline",
+      "exit_code": 0,
+      "wall_seconds": 2.956,
+      "test_results": [
+        {
+          "status": "ok",
+          "passed": 19,
+          "failed": 0
+        }
+      ],
+      "log_sha256": {
+        "stdout": "c3af8b0ff283ec70f155973eec2fe4558c134994723e1db76c51f18770ba8490",
+        "stderr": "9340cc6464cb6f2fadb3d594b352a7ef8c96b036ccb1a913bb58bcf8e810fe09"
+      }
+    },
+    {
+      "task": "R1",
+      "variant": "oracle",
+      "group": "hidden",
+      "exit_code": 0,
+      "wall_seconds": 0.931,
+      "test_results": [
+        {
+          "status": "ok",
+          "passed": 5,
+          "failed": 0
+        }
+      ],
+      "log_sha256": {
+        "stdout": "3609c3580da55e2a333fd60cd1aeda702fde0cf01f958310668410ed22ac6803",
+        "stderr": "310798c8bea6307f0b6b6b7e5c7a1503b9064f15eae49af1fba8e56b720939ca"
+      }
+    },
+    {
+      "task": "R2",
+      "variant": "base",
+      "group": "baseline",
+      "exit_code": 0,
+      "wall_seconds": 1.723,
+      "test_results": [
+        {
+          "status": "ok",
+          "passed": 19,
+          "failed": 0
+        }
+      ],
+      "log_sha256": {
+        "stdout": "30b83a039ef696cf0dc653493e8d7b621137266d0455f5d8312aafe60df44508",
+        "stderr": "aa6c7746ee68c49b37941758c55c23a79982b3010e8fe4e1ecf1f145f2563a45"
+      }
+    },
+    {
+      "task": "R2",
+      "variant": "base",
+      "group": "hidden",
+      "exit_code": 101,
+      "wall_seconds": 0.878,
+      "test_results": [
+        {
+          "status": "FAILED",
+          "passed": 3,
+          "failed": 3
+        }
+      ],
+      "log_sha256": {
+        "stdout": "596f8ee132b6abe1802d942323b3b8738b5b86f72351a94f34e2fa34a8fbc5e1",
+        "stderr": "b478fe0ef05b646370b3aad496030574381240ce30df5bc030955da3c69b6ea4"
+      }
+    },
+    {
+      "task": "R2",
+      "variant": "oracle",
+      "group": "baseline",
+      "exit_code": 0,
+      "wall_seconds": 1.808,
+      "test_results": [
+        {
+          "status": "ok",
+          "passed": 20,
+          "failed": 0
+        }
+      ],
+      "log_sha256": {
+        "stdout": "f3d4ce6237cf9ab1f7d3f0fc5e4acd7fe923fb755bb08809be67125232e8b80e",
+        "stderr": "8176049ddb8c338ea14f4016f5e6993284268cca2377ac3fc0bb53e34c1e804c"
+      }
+    },
+    {
+      "task": "R2",
+      "variant": "oracle",
+      "group": "hidden",
+      "exit_code": 0,
+      "wall_seconds": 0.917,
+      "test_results": [
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0
+        }
+      ],
+      "log_sha256": {
+        "stdout": "7abffc928f48c48c6f7d1430a4f91e3846985cd489f11116c4b4e42021796186",
+        "stderr": "c6304d794f61ccd75c0ad283e5c6f068ac1f10d79dca183778f94ab23c463658"
+      }
+    },
+    {
+      "task": "R3",
+      "variant": "base",
+      "group": "baseline",
+      "exit_code": 0,
+      "wall_seconds": 6.54,
+      "test_results": [
+        {
+          "status": "ok",
+          "passed": 38,
+          "failed": 0
+        }
+      ],
+      "log_sha256": {
+        "stdout": "63420eac45cb8b37335581489af046079177bf503c0e2d0b732c8fcadb7cc19e",
+        "stderr": "e16dc4e5b33cf64e8361706f8e8ba7ec5cd056faada0176dca3841f8e2060c25"
+      }
+    },
+    {
+      "task": "R3",
+      "variant": "base",
+      "group": "hidden",
+      "exit_code": 101,
+      "wall_seconds": 0.779,
+      "test_results": [
+        {
+          "status": "FAILED",
+          "passed": 4,
+          "failed": 2
+        }
+      ],
+      "log_sha256": {
+        "stdout": "ebf6b9bb12b3f816150e95cd13c8e82a1fc9c9c2f3ddf55e05a614a0b81c41d4",
+        "stderr": "7957563b335f03786fb2382c964290100f46e690373bdfabcff60d23c3385423"
+      }
+    },
+    {
+      "task": "R3",
+      "variant": "oracle",
+      "group": "baseline",
+      "exit_code": 0,
+      "wall_seconds": 4.38,
+      "test_results": [
+        {
+          "status": "ok",
+          "passed": 38,
+          "failed": 0
+        }
+      ],
+      "log_sha256": {
+        "stdout": "167716a93af17e10368337dfa8a6c4bc237ba0359a86f00fb67d7769430857bb",
+        "stderr": "a8e0eabcfd198e37924cc7b15c94c8fd7fb28189874b29044dd4751889c8a585"
+      }
+    },
+    {
+      "task": "R3",
+      "variant": "oracle",
+      "group": "hidden",
+      "exit_code": 0,
+      "wall_seconds": 0.775,
+      "test_results": [
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0
+        }
+      ],
+      "log_sha256": {
+        "stdout": "c0d202edbef671b6abcaa5d109a1ebc01368df1f5baf8def0c020ad3fefaee97",
+        "stderr": "a9998def94973e72f0d483e2cfbc456bf410d1e6fb3729403d04571572a5c705"
+      }
+    }
+  ],
+  "assets_sha256": {
+    "R1-Cargo.lock": "91b0bac47ecfd03a1303c0dbf0ec821d1898d5aaf04855a5668b9ac9feced399",
+    "R1-hidden.rs": "4d179b0149244e0a43d07dfeefc9a0efba62bd9fad59d38613ed15d63666c160",
+    "R1.json": "03b91888b7ea6c1c3158d86afc601b731837727bba5502adbbaf56c7875cd912",
+    "R2-Cargo.lock": "7fb7c31ef3b14c79a233b91f1147694ae19a00f04fac5846c9f885ff81056e04",
+    "R2-hidden.rs": "5ca623bc4f45b8dea7f473edeac388cc7389e23222ac181c32eb356e755077d7",
+    "R2.json": "52a885bd15278d15c51627b2b3c261fba3665047b1706bf299fa21677078c3f6",
+    "R3-Cargo.lock": "008f43c508db50b0802f3b212fd0cbe3737b62ed785cb96c6d5a5b92e3f5d28b",
+    "R3-hidden.rs": "60eabbfee5482cfca08e611896dbd05c27d261f53d30c48aacba219524b2e6bc",
+    "R3.json": "7463b191ac25824edf73836b5c1ba870040a1bfe78991c330d35eda22b66a3ed",
+    "README.md": "85731b6dd857b6bc28b2247d71c106e55fd9809595a11b83420dc820c5dae7b9",
+    "licenses/humantime-APACHE.txt": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "licenses/humantime-MIT.txt": "f6deca8261a8f4a3403dc74c725c46051157fd36c27cd4b100277eb1f303ad11",
+    "licenses/lexopt-MIT.txt": "8d43b7fa3b2f928cd4ea6346853b95f1ca5d883f4eaad3a40f8af202bfb45d6f",
+    "run_hidden.py": "5af3240c14d8afc0bf4362dafb8c1d64c26a916a1b101608086004bc2350aeb2"
+  }
+}

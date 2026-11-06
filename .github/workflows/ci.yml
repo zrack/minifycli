@@ -28,7 +28,9 @@ jobs:
       - name: Check evaluation harness invariants
         run: |
           python3 -m py_compile evaluation/*.py
+          python3 -m py_compile evaluation/debugging/*.py
           python3 -m unittest discover -s evaluation/tests -v
+          python3 -m unittest discover -s evaluation/debugging/tests -v
       - name: Build release
         run: cargo +stable build --release --locked
       - name: Validate fixture benchmarks

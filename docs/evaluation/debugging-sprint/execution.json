@@ -1,0 +1,24 @@
+{
+  "grading-complete": {
+    "finished_utc": "2026-11-06T22:01:51.322264+00:00",
+    "graded": 36,
+    "plan_sha256": "4878a80b6b723648c76312ab5b09d61e72ab9ed2c60d8dc0077a1e24af2ac44b",
+    "planned": 36
+  },
+  "grading-started": {
+    "driver_sha256": "727556fa338547843d23d5062db1cab8e78f910eca8d63be3277e0737fa46a56",
+    "plan_sha256": "4878a80b6b723648c76312ab5b09d61e72ab9ed2c60d8dc0077a1e24af2ac44b",
+    "started_utc": "2026-11-06T21:59:40.308141+00:00",
+    "workers": 3
+  },
+  "secondary_helpers_sha256": {
+    "grade_sprint.py": "727556fa338547843d23d5062db1cab8e78f910eca8d63be3277e0737fa46a56",
+    "tokenize_tools.py": "f021ac95c0cdb07e4e374e250880cf7eaf02dc984156324098a038dd1ae29f11"
+  },
+  "sessions-complete": {
+    "completed": 36,
+    "finished_utc": "2026-11-06T21:59:31.371454+00:00",
+    "plan_sha256": "4878a80b6b723648c76312ab5b09d61e72ab9ed2c60d8dc0077a1e24af2ac44b",
+    "planned": 36
+  }
+}

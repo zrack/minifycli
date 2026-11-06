@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "id": "J1",
+  "title": "Parenthesized recursive patterns omit their parent directory",
+  "repository": {
+    "url": "https://github.com/micromatch/picomatch",
+    "license": "MIT"
+  },
+  "base_commit": "4f41a8edade7a5ab19832f7b40ecce46b288767f",
+  "oracle_commit": "e279bd7f34c4f8b5f9d0490cf7810a1f0c2de178",
+  "prompt": "A recursive glob behaves differently when enclosed in parentheses. For example, picomatch.isMatch('test/utils', 'test(/utils/**)') returns false, while the recursive suffix should allow the directory itself as well as descendants. The optional form 'test?(/utils/**)' should also accept that directory. Fix this inconsistency while preserving strictSlashes, nonterminal patterns, and negated extglob behavior. Add regression coverage and keep the existing suite passing.",
+  "baseline_command": [
+    "npm",
+    "test"
+  ],
+  "hidden_command": [
+    "node",
+    "evaluation/debugging/tasks/js/J1-hidden.cjs",
+    "WORKSPACE"
+  ],
+  "assets": {
+    "hidden_test": "evaluation/debugging/tasks/js/J1-hidden.cjs",
+    "dependencies_lockfile": "evaluation/debugging/tasks/js/dependencies-lock.json",
+    "dependency_spec": "evaluation/debugging/tasks/js/dependencies.json"
+  },
+  "reference_source": "https://github.com/micromatch/picomatch/commit/e279bd7f34c4f8b5f9d0490cf7810a1f0c2de178",
+  "upstream_test_paths": [
+    "test/issue-related.js"
+  ]
+}

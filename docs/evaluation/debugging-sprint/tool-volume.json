@@ -1,0 +1,1008 @@
+{
+  "by_variant": {
+    "mini": {
+      "cl100k_base": {
+        "all_responses": 214138,
+        "read_responses": 123715,
+        "recovery_responses": 0,
+        "request_arguments": 21822,
+        "terminal_responses": 86116,
+        "write_and_list_responses": 4307
+      },
+      "o200k_base": {
+        "all_responses": 215523,
+        "read_responses": 124534,
+        "recovery_responses": 0,
+        "request_arguments": 21883,
+        "terminal_responses": 86689,
+        "write_and_list_responses": 4300
+      }
+    },
+    "raw": {
+      "cl100k_base": {
+        "all_responses": 235830,
+        "read_responses": 114050,
+        "recovery_responses": 0,
+        "request_arguments": 22374,
+        "terminal_responses": 117396,
+        "write_and_list_responses": 4384
+      },
+      "o200k_base": {
+        "all_responses": 238325,
+        "read_responses": 114818,
+        "recovery_responses": 0,
+        "request_arguments": 22546,
+        "terminal_responses": 119127,
+        "write_and_list_responses": 4380
+      }
+    },
+    "rtk": {
+      "cl100k_base": {
+        "all_responses": 219555,
+        "read_responses": 141994,
+        "recovery_responses": 0,
+        "request_arguments": 23039,
+        "terminal_responses": 73142,
+        "write_and_list_responses": 4419
+      },
+      "o200k_base": {
+        "all_responses": 221151,
+        "read_responses": 142899,
+        "recovery_responses": 0,
+        "request_arguments": 23160,
+        "terminal_responses": 73839,
+        "write_and_list_responses": 4413
+      }
+    }
+  },
+  "cache_files_sha256": [
+    "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7",
+    "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d"
+  ],
+  "definition": "Encode each exact JSON text string delivered as a tool content block; count request arguments separately. Excludes model instructions, reasoning, model messages, protocol wrappers and repeated context. CLI actual whole-session usage is the primary measure. Different request sets mean these volumes are not matched-command compression ratios.",
+  "encodings": [
+    "o200k_base",
+    "cl100k_base"
+  ],
+  "plan_sha256": "4878a80b6b723648c76312ab5b09d61e72ab9ed2c60d8dc0077a1e24af2ac44b",
+  "schema": 1,
+  "tiktoken_version": "0.14.0",
+  "trials": [
+    {
+      "actions": 24,
+      "id": "trial-001",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 14669,
+          "read_responses": 8632,
+          "recovery_responses": 0,
+          "request_arguments": 2119,
+          "terminal_responses": 5870,
+          "write_and_list_responses": 167
+        },
+        "o200k_base": {
+          "all_responses": 14726,
+          "read_responses": 8626,
+          "recovery_responses": 0,
+          "request_arguments": 2151,
+          "terminal_responses": 5932,
+          "write_and_list_responses": 168
+        }
+      },
+      "repetition": 1,
+      "task_id": "R2",
+      "tool_log_sha256": "34733920f9747912ccdb60fa372df4bf6331e921f87f3c18bbdbd4a0e2cab307",
+      "variant": "raw"
+    },
+    {
+      "actions": 21,
+      "id": "trial-002",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 13189,
+          "read_responses": 8351,
+          "recovery_responses": 0,
+          "request_arguments": 1927,
+          "terminal_responses": 4671,
+          "write_and_list_responses": 167
+        },
+        "o200k_base": {
+          "all_responses": 13208,
+          "read_responses": 8356,
+          "recovery_responses": 0,
+          "request_arguments": 1922,
+          "terminal_responses": 4684,
+          "write_and_list_responses": 168
+        }
+      },
+      "repetition": 1,
+      "task_id": "R2",
+      "tool_log_sha256": "405f0f6acfddea6eb7e3f85284e3055c9eb22756faf9987060eacf5d234bff9a",
+      "variant": "mini"
+    },
+    {
+      "actions": 24,
+      "id": "trial-003",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 16607,
+          "read_responses": 11368,
+          "recovery_responses": 0,
+          "request_arguments": 1930,
+          "terminal_responses": 5072,
+          "write_and_list_responses": 167
+        },
+        "o200k_base": {
+          "all_responses": 16672,
+          "read_responses": 11370,
+          "recovery_responses": 0,
+          "request_arguments": 1968,
+          "terminal_responses": 5134,
+          "write_and_list_responses": 168
+        }
+      },
+      "repetition": 1,
+      "task_id": "R2",
+      "tool_log_sha256": "e6c30f0d4b7cec2ee0832f1eecb80071be9c0fec9145bac726819f267a42ad33",
+      "variant": "rtk"
+    },
+    {
+      "actions": 23,
+      "id": "trial-004",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 13874,
+          "read_responses": 8671,
+          "recovery_responses": 0,
+          "request_arguments": 2014,
+          "terminal_responses": 5044,
+          "write_and_list_responses": 159
+        },
+        "o200k_base": {
+          "all_responses": 13908,
+          "read_responses": 8670,
+          "recovery_responses": 0,
+          "request_arguments": 2037,
+          "terminal_responses": 5078,
+          "write_and_list_responses": 160
+        }
+      },
+      "repetition": 2,
+      "task_id": "R2",
+      "tool_log_sha256": "30edfce476f20e84f3264e0c9175d45b44ad8c920d5af7b8af838e682ea0e262",
+      "variant": "mini"
+    },
+    {
+      "actions": 26,
+      "id": "trial-005",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 14751,
+          "read_responses": 9712,
+          "recovery_responses": 0,
+          "request_arguments": 2042,
+          "terminal_responses": 4872,
+          "write_and_list_responses": 167
+        },
+        "o200k_base": {
+          "all_responses": 14777,
+          "read_responses": 9703,
+          "recovery_responses": 0,
+          "request_arguments": 2057,
+          "terminal_responses": 4906,
+          "write_and_list_responses": 168
+        }
+      },
+      "repetition": 2,
+      "task_id": "R2",
+      "tool_log_sha256": "6bf6bf38d336134a2bc254f5a71a845ed0071e4a5e8fd0fa15aa087478dcbb37",
+      "variant": "rtk"
+    },
+    {
+      "actions": 19,
+      "id": "trial-006",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 15177,
+          "read_responses": 9802,
+          "recovery_responses": 0,
+          "request_arguments": 1937,
+          "terminal_responses": 5216,
+          "write_and_list_responses": 159
+        },
+        "o200k_base": {
+          "all_responses": 15217,
+          "read_responses": 9793,
+          "recovery_responses": 0,
+          "request_arguments": 1966,
+          "terminal_responses": 5264,
+          "write_and_list_responses": 160
+        }
+      },
+      "repetition": 2,
+      "task_id": "R2",
+      "tool_log_sha256": "3b043850351b78442761bb02a14613ce5ec2280c128b2d73960780c7edcee2cf",
+      "variant": "raw"
+    },
+    {
+      "actions": 17,
+      "id": "trial-007",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 11493,
+          "read_responses": 4174,
+          "recovery_responses": 0,
+          "request_arguments": 1024,
+          "terminal_responses": 7195,
+          "write_and_list_responses": 124
+        },
+        "o200k_base": {
+          "all_responses": 11523,
+          "read_responses": 4173,
+          "recovery_responses": 0,
+          "request_arguments": 1032,
+          "terminal_responses": 7227,
+          "write_and_list_responses": 123
+        }
+      },
+      "repetition": 1,
+      "task_id": "R3",
+      "tool_log_sha256": "7f829840b302954ab3dcab79cce28975c7e59d9dfc4db16a0a6c5e8091084249",
+      "variant": "mini"
+    },
+    {
+      "actions": 14,
+      "id": "trial-008",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 12107,
+          "read_responses": 8111,
+          "recovery_responses": 0,
+          "request_arguments": 982,
+          "terminal_responses": 3881,
+          "write_and_list_responses": 115
+        },
+        "o200k_base": {
+          "all_responses": 12130,
+          "read_responses": 8115,
+          "recovery_responses": 0,
+          "request_arguments": 987,
+          "terminal_responses": 3901,
+          "write_and_list_responses": 114
+        }
+      },
+      "repetition": 1,
+      "task_id": "R3",
+      "tool_log_sha256": "c37fe7fed85a0d21486c790690db6ae6196ee92ef5a37b2aa3200435525aa94e",
+      "variant": "rtk"
+    },
+    {
+      "actions": 17,
+      "id": "trial-009",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 13193,
+          "read_responses": 4166,
+          "recovery_responses": 0,
+          "request_arguments": 935,
+          "terminal_responses": 8912,
+          "write_and_list_responses": 115
+        },
+        "o200k_base": {
+          "all_responses": 13234,
+          "read_responses": 4167,
+          "recovery_responses": 0,
+          "request_arguments": 940,
+          "terminal_responses": 8953,
+          "write_and_list_responses": 114
+        }
+      },
+      "repetition": 1,
+      "task_id": "R3",
+      "tool_log_sha256": "6a9ff91f726ff3ad3b4fd5fc8886145449a3e9b326cf18fade78a9a1cb0b18c0",
+      "variant": "raw"
+    },
+    {
+      "actions": 20,
+      "id": "trial-010",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 12084,
+          "read_responses": 8054,
+          "recovery_responses": 0,
+          "request_arguments": 934,
+          "terminal_responses": 3906,
+          "write_and_list_responses": 124
+        },
+        "o200k_base": {
+          "all_responses": 12114,
+          "read_responses": 8066,
+          "recovery_responses": 0,
+          "request_arguments": 938,
+          "terminal_responses": 3925,
+          "write_and_list_responses": 123
+        }
+      },
+      "repetition": 2,
+      "task_id": "R3",
+      "tool_log_sha256": "3436971d927e862085aac07a21e60c3abd2b5462480e0ce8675277700d71ea5d",
+      "variant": "rtk"
+    },
+    {
+      "actions": 15,
+      "id": "trial-011",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 13303,
+          "read_responses": 4346,
+          "recovery_responses": 0,
+          "request_arguments": 922,
+          "terminal_responses": 8842,
+          "write_and_list_responses": 115
+        },
+        "o200k_base": {
+          "all_responses": 13351,
+          "read_responses": 4348,
+          "recovery_responses": 0,
+          "request_arguments": 931,
+          "terminal_responses": 8889,
+          "write_and_list_responses": 114
+        }
+      },
+      "repetition": 2,
+      "task_id": "R3",
+      "tool_log_sha256": "17f480952451224e320b7925cc259bac3e51a99f4f84a6db12c99e94f8af8dfa",
+      "variant": "raw"
+    },
+    {
+      "actions": 16,
+      "id": "trial-012",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 11511,
+          "read_responses": 4444,
+          "recovery_responses": 0,
+          "request_arguments": 873,
+          "terminal_responses": 6952,
+          "write_and_list_responses": 115
+        },
+        "o200k_base": {
+          "all_responses": 11543,
+          "read_responses": 4446,
+          "recovery_responses": 0,
+          "request_arguments": 878,
+          "terminal_responses": 6983,
+          "write_and_list_responses": 114
+        }
+      },
+      "repetition": 2,
+      "task_id": "R3",
+      "tool_log_sha256": "c60e262febb4f347f6b02d708e8615522a74fb3a8e3e1586dd55d781972b4a0e",
+      "variant": "mini"
+    },
+    {
+      "actions": 19,
+      "id": "trial-013",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 15939,
+          "read_responses": 12682,
+          "recovery_responses": 0,
+          "request_arguments": 1079,
+          "terminal_responses": 2703,
+          "write_and_list_responses": 554
+        },
+        "o200k_base": {
+          "all_responses": 16020,
+          "read_responses": 12763,
+          "recovery_responses": 0,
+          "request_arguments": 1076,
+          "terminal_responses": 2705,
+          "write_and_list_responses": 552
+        }
+      },
+      "repetition": 1,
+      "task_id": "J1",
+      "tool_log_sha256": "e165a42dc96296db62403f37cefd5678545b2f2281528d60237c25a87d017c0c",
+      "variant": "rtk"
+    },
+    {
+      "actions": 17,
+      "id": "trial-014",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 15749,
+          "read_responses": 10025,
+          "recovery_responses": 0,
+          "request_arguments": 1144,
+          "terminal_responses": 5180,
+          "write_and_list_responses": 544
+        },
+        "o200k_base": {
+          "all_responses": 15803,
+          "read_responses": 10077,
+          "recovery_responses": 0,
+          "request_arguments": 1147,
+          "terminal_responses": 5183,
+          "write_and_list_responses": 543
+        }
+      },
+      "repetition": 1,
+      "task_id": "J1",
+      "tool_log_sha256": "d57eb99c21699a97c128d4b529f624a2f3888355077df76cab44aa6c31283629",
+      "variant": "raw"
+    },
+    {
+      "actions": 20,
+      "id": "trial-015",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 16800,
+          "read_responses": 13460,
+          "recovery_responses": 0,
+          "request_arguments": 1352,
+          "terminal_responses": 2786,
+          "write_and_list_responses": 554
+        },
+        "o200k_base": {
+          "all_responses": 16856,
+          "read_responses": 13533,
+          "recovery_responses": 0,
+          "request_arguments": 1346,
+          "terminal_responses": 2771,
+          "write_and_list_responses": 552
+        }
+      },
+      "repetition": 1,
+      "task_id": "J1",
+      "tool_log_sha256": "f9d194160c68c5b7c3bf2d64fa19d29b116f41d375656f9dd366f319433d4a03",
+      "variant": "mini"
+    },
+    {
+      "actions": 25,
+      "id": "trial-016",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 16657,
+          "read_responses": 12042,
+          "recovery_responses": 0,
+          "request_arguments": 1374,
+          "terminal_responses": 4032,
+          "write_and_list_responses": 583
+        },
+        "o200k_base": {
+          "all_responses": 16705,
+          "read_responses": 12107,
+          "recovery_responses": 0,
+          "request_arguments": 1367,
+          "terminal_responses": 4018,
+          "write_and_list_responses": 580
+        }
+      },
+      "repetition": 2,
+      "task_id": "J1",
+      "tool_log_sha256": "ccb6a07bd11a86c79900b0ebec5a6d4115594b883b76c9e92fb054103905be46",
+      "variant": "raw"
+    },
+    {
+      "actions": 21,
+      "id": "trial-017",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 34151,
+          "read_responses": 13329,
+          "recovery_responses": 0,
+          "request_arguments": 1284,
+          "terminal_responses": 20255,
+          "write_and_list_responses": 567
+        },
+        "o200k_base": {
+          "all_responses": 34403,
+          "read_responses": 13385,
+          "recovery_responses": 0,
+          "request_arguments": 1277,
+          "terminal_responses": 20454,
+          "write_and_list_responses": 564
+        }
+      },
+      "repetition": 2,
+      "task_id": "J1",
+      "tool_log_sha256": "3a6c890f477c2d3c36149c4c31c5cd2a44b88b172ea9b86d1450d798c25370a6",
+      "variant": "mini"
+    },
+    {
+      "actions": 26,
+      "id": "trial-018",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 17572,
+          "read_responses": 14274,
+          "recovery_responses": 0,
+          "request_arguments": 1646,
+          "terminal_responses": 2692,
+          "write_and_list_responses": 606
+        },
+        "o200k_base": {
+          "all_responses": 17621,
+          "read_responses": 14343,
+          "recovery_responses": 0,
+          "request_arguments": 1635,
+          "terminal_responses": 2678,
+          "write_and_list_responses": 600
+        }
+      },
+      "repetition": 2,
+      "task_id": "J1",
+      "tool_log_sha256": "41bd1b3d049ff2ebfea232a440f4938a71ddde9c8c7b38beb5ca1912ecad82a3",
+      "variant": "rtk"
+    },
+    {
+      "actions": 29,
+      "id": "trial-019",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 25764,
+          "read_responses": 13160,
+          "recovery_responses": 0,
+          "request_arguments": 3395,
+          "terminal_responses": 11989,
+          "write_and_list_responses": 615
+        },
+        "o200k_base": {
+          "all_responses": 26063,
+          "read_responses": 13332,
+          "recovery_responses": 0,
+          "request_arguments": 3438,
+          "terminal_responses": 12117,
+          "write_and_list_responses": 614
+        }
+      },
+      "repetition": 1,
+      "task_id": "J2",
+      "tool_log_sha256": "6e5560dd67b6ca8f4d6cbb7daec3cdacd6683d23a3bf06ecea7087ac57f5a2ec",
+      "variant": "raw"
+    },
+    {
+      "actions": 21,
+      "id": "trial-020",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 21268,
+          "read_responses": 13852,
+          "recovery_responses": 0,
+          "request_arguments": 2780,
+          "terminal_responses": 6828,
+          "write_and_list_responses": 588
+        },
+        "o200k_base": {
+          "all_responses": 21613,
+          "read_responses": 14174,
+          "recovery_responses": 0,
+          "request_arguments": 2806,
+          "terminal_responses": 6852,
+          "write_and_list_responses": 587
+        }
+      },
+      "repetition": 1,
+      "task_id": "J2",
+      "tool_log_sha256": "c42c80b2faf3b9ca725da45414b057aad077c18f91b384b31fc97d9a4c534d7d",
+      "variant": "mini"
+    },
+    {
+      "actions": 37,
+      "id": "trial-021",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 34786,
+          "read_responses": 15184,
+          "recovery_responses": 0,
+          "request_arguments": 3494,
+          "terminal_responses": 18960,
+          "write_and_list_responses": 642
+        },
+        "o200k_base": {
+          "all_responses": 35297,
+          "read_responses": 15430,
+          "recovery_responses": 0,
+          "request_arguments": 3523,
+          "terminal_responses": 19226,
+          "write_and_list_responses": 641
+        }
+      },
+      "repetition": 1,
+      "task_id": "J2",
+      "tool_log_sha256": "f2c80ddd243f1d492c1507ca23611b3d02df79cda5242eb0e0ce6c0e5828c858",
+      "variant": "rtk"
+    },
+    {
+      "actions": 22,
+      "id": "trial-022",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 27388,
+          "read_responses": 10937,
+          "recovery_responses": 0,
+          "request_arguments": 2768,
+          "terminal_responses": 15855,
+          "write_and_list_responses": 596
+        },
+        "o200k_base": {
+          "all_responses": 27728,
+          "read_responses": 11057,
+          "recovery_responses": 0,
+          "request_arguments": 2794,
+          "terminal_responses": 16076,
+          "write_and_list_responses": 595
+        }
+      },
+      "repetition": 2,
+      "task_id": "J2",
+      "tool_log_sha256": "6c025bcade08855ba865fdabee56d4260972d96cffb7919e55cab8064c48d67f",
+      "variant": "mini"
+    },
+    {
+      "actions": 26,
+      "id": "trial-023",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 30614,
+          "read_responses": 16036,
+          "recovery_responses": 0,
+          "request_arguments": 2485,
+          "terminal_responses": 13999,
+          "write_and_list_responses": 579
+        },
+        "o200k_base": {
+          "all_responses": 31082,
+          "read_responses": 16324,
+          "recovery_responses": 0,
+          "request_arguments": 2513,
+          "terminal_responses": 14180,
+          "write_and_list_responses": 578
+        }
+      },
+      "repetition": 2,
+      "task_id": "J2",
+      "tool_log_sha256": "a4f612cacfc8ea0638ca792e93ee8a729337f5ff875c7e73e7ad4cf02fb4f74e",
+      "variant": "rtk"
+    },
+    {
+      "actions": 28,
+      "id": "trial-024",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 32369,
+          "read_responses": 16955,
+          "recovery_responses": 0,
+          "request_arguments": 2534,
+          "terminal_responses": 14799,
+          "write_and_list_responses": 615
+        },
+        "o200k_base": {
+          "all_responses": 32977,
+          "read_responses": 17289,
+          "recovery_responses": 0,
+          "request_arguments": 2568,
+          "terminal_responses": 15072,
+          "write_and_list_responses": 616
+        }
+      },
+      "repetition": 2,
+      "task_id": "J2",
+      "tool_log_sha256": "74bc5fda49a7ad7215d3e73c827c76963ffe86b6a752b352d818b9de719b272f",
+      "variant": "raw"
+    },
+    {
+      "actions": 22,
+      "id": "trial-025",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 16249,
+          "read_responses": 10485,
+          "recovery_responses": 0,
+          "request_arguments": 2483,
+          "terminal_responses": 5601,
+          "write_and_list_responses": 163
+        },
+        "o200k_base": {
+          "all_responses": 16263,
+          "read_responses": 10482,
+          "recovery_responses": 0,
+          "request_arguments": 2479,
+          "terminal_responses": 5617,
+          "write_and_list_responses": 164
+        }
+      },
+      "repetition": 1,
+      "task_id": "R1",
+      "tool_log_sha256": "e62bf62c1c5bfd1edb7e74e63d8fe2f6e22488e91cc6aaee5b06d5358c495104",
+      "variant": "mini"
+    },
+    {
+      "actions": 24,
+      "id": "trial-026",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 19452,
+          "read_responses": 14034,
+          "recovery_responses": 0,
+          "request_arguments": 3108,
+          "terminal_responses": 5255,
+          "write_and_list_responses": 163
+        },
+        "o200k_base": {
+          "all_responses": 19442,
+          "read_responses": 14020,
+          "recovery_responses": 0,
+          "request_arguments": 3104,
+          "terminal_responses": 5258,
+          "write_and_list_responses": 164
+        }
+      },
+      "repetition": 1,
+      "task_id": "R1",
+      "tool_log_sha256": "f0236c98b63993ee6103d23ada5465c25f398db4bff4f6b41d3e0816c0034d0b",
+      "variant": "rtk"
+    },
+    {
+      "actions": 24,
+      "id": "trial-027",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 15358,
+          "read_responses": 9339,
+          "recovery_responses": 0,
+          "request_arguments": 3036,
+          "terminal_responses": 5848,
+          "write_and_list_responses": 171
+        },
+        "o200k_base": {
+          "all_responses": 15365,
+          "read_responses": 9326,
+          "recovery_responses": 0,
+          "request_arguments": 3034,
+          "terminal_responses": 5867,
+          "write_and_list_responses": 172
+        }
+      },
+      "repetition": 1,
+      "task_id": "R1",
+      "tool_log_sha256": "32e08d49b8da3d11b00d82041642dc07c3ef69c9cf2375e4d311d035659cecc8",
+      "variant": "raw"
+    },
+    {
+      "actions": 22,
+      "id": "trial-028",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 15414,
+          "read_responses": 11496,
+          "recovery_responses": 0,
+          "request_arguments": 2342,
+          "terminal_responses": 3755,
+          "write_and_list_responses": 163
+        },
+        "o200k_base": {
+          "all_responses": 15419,
+          "read_responses": 11497,
+          "recovery_responses": 0,
+          "request_arguments": 2343,
+          "terminal_responses": 3758,
+          "write_and_list_responses": 164
+        }
+      },
+      "repetition": 2,
+      "task_id": "R1",
+      "tool_log_sha256": "9157d37395f94b4e59c7260863abc4c6522021e42e143ec4f189c9969be80e9c",
+      "variant": "rtk"
+    },
+    {
+      "actions": 24,
+      "id": "trial-029",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 16873,
+          "read_responses": 9919,
+          "recovery_responses": 0,
+          "request_arguments": 2482,
+          "terminal_responses": 6783,
+          "write_and_list_responses": 171
+        },
+        "o200k_base": {
+          "all_responses": 16891,
+          "read_responses": 9908,
+          "recovery_responses": 0,
+          "request_arguments": 2482,
+          "terminal_responses": 6811,
+          "write_and_list_responses": 172
+        }
+      },
+      "repetition": 2,
+      "task_id": "R1",
+      "tool_log_sha256": "2453bd17f7181dfbd87bafc5ce614f5c073dd0dad66c232468faeb7f11567800",
+      "variant": "raw"
+    },
+    {
+      "actions": 26,
+      "id": "trial-030",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 17145,
+          "read_responses": 11211,
+          "recovery_responses": 0,
+          "request_arguments": 2866,
+          "terminal_responses": 5763,
+          "write_and_list_responses": 171
+        },
+        "o200k_base": {
+          "all_responses": 17129,
+          "read_responses": 11187,
+          "recovery_responses": 0,
+          "request_arguments": 2855,
+          "terminal_responses": 5770,
+          "write_and_list_responses": 172
+        }
+      },
+      "repetition": 2,
+      "task_id": "R1",
+      "tool_log_sha256": "a283dfba48bfc69e2723d6b0940e046a6c4ea3079eb5376239b9041ceeb65994",
+      "variant": "mini"
+    },
+    {
+      "actions": 31,
+      "id": "trial-031",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 16511,
+          "read_responses": 11380,
+          "recovery_responses": 0,
+          "request_arguments": 1571,
+          "terminal_responses": 4543,
+          "write_and_list_responses": 588
+        },
+        "o200k_base": {
+          "all_responses": 16697,
+          "read_responses": 11495,
+          "recovery_responses": 0,
+          "request_arguments": 1584,
+          "terminal_responses": 4611,
+          "write_and_list_responses": 591
+        }
+      },
+      "repetition": 1,
+      "task_id": "J3",
+      "tool_log_sha256": "50c5b7a308af17a878d0ffa316a7c76624fc256068911f165943c82c871c38fd",
+      "variant": "rtk"
+    },
+    {
+      "actions": 24,
+      "id": "trial-032",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 28639,
+          "read_responses": 7601,
+          "recovery_responses": 0,
+          "request_arguments": 1407,
+          "terminal_responses": 20460,
+          "write_and_list_responses": 578
+        },
+        "o200k_base": {
+          "all_responses": 29283,
+          "read_responses": 7695,
+          "recovery_responses": 0,
+          "request_arguments": 1429,
+          "terminal_responses": 21011,
+          "write_and_list_responses": 577
+        }
+      },
+      "repetition": 1,
+      "task_id": "J3",
+      "tool_log_sha256": "f9217c22ead61a8465a3e5f80c1fdf94c20f89ea7eb8093405ddbc15b294980c",
+      "variant": "raw"
+    },
+    {
+      "actions": 18,
+      "id": "trial-033",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 17287,
+          "read_responses": 14199,
+          "recovery_responses": 0,
+          "request_arguments": 1117,
+          "terminal_responses": 2537,
+          "write_and_list_responses": 551
+        },
+        "o200k_base": {
+          "all_responses": 17433,
+          "read_responses": 14340,
+          "recovery_responses": 0,
+          "request_arguments": 1119,
+          "terminal_responses": 2543,
+          "write_and_list_responses": 550
+        }
+      },
+      "repetition": 1,
+      "task_id": "J3",
+      "tool_log_sha256": "d49f5a8b9c006946755243b4412ee3a738888d2be1faca659061a58360f98e1b",
+      "variant": "mini"
+    },
+    {
+      "actions": 20,
+      "id": "trial-034",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 28079,
+          "read_responses": 8063,
+          "recovery_responses": 0,
+          "request_arguments": 1089,
+          "terminal_responses": 19465,
+          "write_and_list_responses": 551
+        },
+        "o200k_base": {
+          "all_responses": 28710,
+          "read_responses": 8150,
+          "recovery_responses": 0,
+          "request_arguments": 1093,
+          "terminal_responses": 20010,
+          "write_and_list_responses": 550
+        }
+      },
+      "repetition": 2,
+      "task_id": "J3",
+      "tool_log_sha256": "0a6816d8b646073d303fc76647635386940d7823bbb3d2c03d25ad78352467f5",
+      "variant": "raw"
+    },
+    {
+      "actions": 22,
+      "id": "trial-035",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 13783,
+          "read_responses": 10602,
+          "recovery_responses": 0,
+          "request_arguments": 1334,
+          "terminal_responses": 2629,
+          "write_and_list_responses": 552
+        },
+        "o200k_base": {
+          "all_responses": 13916,
+          "read_responses": 10731,
+          "recovery_responses": 0,
+          "request_arguments": 1338,
+          "terminal_responses": 2634,
+          "write_and_list_responses": 551
+        }
+      },
+      "repetition": 2,
+      "task_id": "J3",
+      "tool_log_sha256": "7e872ee2189a47dbd45079aada31b3d05118228397e69861e4218360be2769d8",
+      "variant": "mini"
+    },
+    {
+      "actions": 22,
+      "id": "trial-036",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 13718,
+          "read_responses": 9663,
+          "recovery_responses": 0,
+          "request_arguments": 1426,
+          "terminal_responses": 3504,
+          "write_and_list_responses": 551
+        },
+        "o200k_base": {
+          "all_responses": 13880,
+          "read_responses": 9773,
+          "recovery_responses": 0,
+          "request_arguments": 1432,
+          "terminal_responses": 3557,
+          "write_and_list_responses": 550
+        }
+      },
+      "repetition": 2,
+      "task_id": "J3",
+      "tool_log_sha256": "15b0a6c7d800a40c8ae4f5a8fcbca0d4651de90d6a13413934d161dda59236e6",
+      "variant": "rtk"
+    }
+  ]
+}

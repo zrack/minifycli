@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "id": "R3",
+  "title": "A valid-looking oversized duration panics instead of returning an error",
+  "repository": {
+    "url": "https://github.com/chronotope/humantime",
+    "license": "MIT OR Apache-2.0"
+  },
+  "base_commit": "fc092817fa8689298eaac28ff49bd8bede4ff605",
+  "oracle_commit": "ed7cc7dcd2566facfce2a1a6af8087993d1887c3",
+  "prompt": "parse_duration panics for the input '18446744073709551615s1000ms', although oversized durations should return DurationError::NumberOverflow. Splitting the extra second into '999999999ns 1ns' has the same problem. Fix this behavior while preserving representable durations near the limit and ordinary duration parsing. Add regression coverage and keep the existing suite passing.",
+  "baseline_command": [
+    "cargo",
+    "test",
+    "--offline",
+    "--locked",
+    "--lib"
+  ],
+  "hidden_command": [
+    "python3",
+    "evaluation/debugging/tasks/rust/run_hidden.py",
+    "R3",
+    "WORKSPACE"
+  ],
+  "assets": {
+    "hidden_test": "evaluation/debugging/tasks/rust/R3-hidden.rs",
+    "hidden_runner": "evaluation/debugging/tasks/rust/run_hidden.py",
+    "baseline_lockfile": "evaluation/debugging/tasks/rust/R3-Cargo.lock",
+    "licenses": [
+      "evaluation/debugging/tasks/rust/licenses/humantime-MIT.txt",
+      "evaluation/debugging/tasks/rust/licenses/humantime-APACHE.txt"
+    ]
+  },
+  "reference_source": "https://github.com/chronotope/humantime/commit/ed7cc7dcd2566facfce2a1a6af8087993d1887c3",
+  "upstream_test_paths": [
+    "src/duration.rs"
+  ],
+  "regression_provenance": "Upstream commit adds the two reported overflow assertions to its existing duration tests.",
+  "hidden_test_counts": {
+    "total": 6,
+    "expected_base_failed": 2
+  },
+  "difficulty_note": "easy",
+  "setup": {
+    "runtime_dependencies": "none",
+    "instructions_found": [],
+    "platform": "any supported Rust target",
+    "solver_export": "Only source at base_commit, public prompt, baseline lockfile, and tool environment; exclude repository history, oracle, hidden tests, and MinifyCLI evaluator files.",
+    "development_dependencies": "Pinned public test dependencies in the supplied Cargo.lock; fetch once during setup, then run offline.",
+    "baseline_lockfile": "Copy assets.baseline_lockfile to the exported source root as Cargo.lock before warming or exposing the solver workspace.",
+    "cargo_target_dir": "Use a distinct target directory for every exported root, including oracle and solver variants. Do not reuse a target directory across copied roots.",
+    "toolchain_tested": "rustc 1.99.1 / cargo 1.99.1"
+  },
+  "base_tree": "ad0da18ca12b62e506fd04bfe1210fa23893869b",
+  "oracle_tree": "4514d7ff1cd39bf5878e9e43841f8f1995330ceb"
+}

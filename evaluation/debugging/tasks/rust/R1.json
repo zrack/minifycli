@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "id": "R1",
+  "title": "Unconsumed option values disappear",
+  "repository": {
+    "url": "https://github.com/blyxxyz/lexopt",
+    "license": "MIT"
+  },
+  "base_commit": "c45bd6e5c8c9cb2f1e6d9421109ab0daf7d95150",
+  "oracle_commit": "84d7545e4e99a60c046244d3ab9f9778637ac073",
+  "prompt": "Creating the iterator returned by Parser::values() and dropping it without reading any values unexpectedly changes later parsing. After reading the option in ['-a', 'b'], checking values().is_ok() should leave 'b' available to value(). Attached values and grouped short options should also remain available when that iterator is unused. Fix this behavior, preserve actual iteration and option-boundary behavior, and add regression coverage.",
+  "baseline_command": [
+    "cargo",
+    "test",
+    "--offline",
+    "--locked",
+    "--lib"
+  ],
+  "hidden_command": [
+    "python3",
+    "evaluation/debugging/tasks/rust/run_hidden.py",
+    "R1",
+    "WORKSPACE"
+  ],
+  "assets": {
+    "hidden_test": "evaluation/debugging/tasks/rust/R1-hidden.rs",
+    "hidden_runner": "evaluation/debugging/tasks/rust/run_hidden.py",
+    "baseline_lockfile": "evaluation/debugging/tasks/rust/R1-Cargo.lock",
+    "licenses": [
+      "evaluation/debugging/tasks/rust/licenses/lexopt-MIT.txt"
+    ]
+  },
+  "reference_source": "https://github.com/blyxxyz/lexopt/commit/84d7545e4e99a60c046244d3ab9f9778637ac073",
+  "upstream_test_paths": [
+    "src/lib.rs"
+  ],
+  "regression_provenance": "Upstream commit adds four unused-iterator regression cases and documents the changed behavior in its changelog.",
+  "hidden_test_counts": {
+    "total": 5,
+    "expected_base_failed": 4
+  },
+  "difficulty_note": "moderate",
+  "setup": {
+    "runtime_dependencies": "none",
+    "instructions_found": [],
+    "platform": "any supported Rust target",
+    "solver_export": "Only source at base_commit, public prompt, baseline lockfile, and tool environment; exclude repository history, oracle, hidden tests, and MinifyCLI evaluator files.",
+    "baseline_lockfile": "Copy assets.baseline_lockfile to the exported source root as Cargo.lock before warming or exposing the solver workspace.",
+    "cargo_target_dir": "Use a distinct target directory for every exported root, including oracle and solver variants. Do not reuse a target directory across copied roots.",
+    "toolchain_tested": "rustc 1.99.1 / cargo 1.99.1"
+  },
+  "base_tree": "8395db10d6eecab11635406cbf4088e186abc62b",
+  "oracle_tree": "dbc7285fbc0ceb05eaa9eb69e157ecb9fda29a76"
+}
