@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "registered_at_utc": "2026-11-06T20:05:06.265683+00:00",
+  "plan": "pilot-v0.2.json",
+  "plan_sha256": "e1a9385e1516099391a350de41524003f1b969cbca5b7b80d7918134dcde6096",
+  "ordinary_cases": 14,
+  "controlled_cases": 2,
+  "questions": 6,
+  "comparative_pilot_outcomes_observed": false,
+  "note": "Registered before comparative collection. Prior v0.1.1 validation, fixture benchmarks, and isolated RTK adapter setup probes are not this pilot corpus."
+}

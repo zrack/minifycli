@@ -1,0 +1,130 @@
+{
+  "limitations": [
+    "Six questions and one reader per variant, not a coding-task or cost experiment.",
+    "Formatting may reveal tool identity despite withholding labels.",
+    "Raw/Mini use one capture; native RTK is a separate execution.",
+    "One supplied input-file read is allowed; no external fact lookup or repository inspection is allowed.",
+    "Literal fact scoring accepts equivalent surrounding wording but requires registered identifiers."
+  ],
+  "plan_sha256": "e1a9385e1516099391a350de41524003f1b969cbca5b7b80d7918134dcde6096",
+  "protocol": "label-blinded single-reader output comprehension",
+  "protocol_sha256": "eee19dba0251442edd808524baa638ee5709f4802daff54372509d0257783e86",
+  "results_sha256": "5362f2d90e995102ea49a0f1566ffd042f5dc3a5f0f29ed72f74d43508e1cf3b",
+  "schema_version": 1,
+  "variants": {
+    "mini": {
+      "checks": [
+        {
+          "case_id": "R4",
+          "id": "Q1",
+          "passed": true
+        },
+        {
+          "case_id": "R5",
+          "id": "Q2",
+          "passed": true
+        },
+        {
+          "case_id": "R7",
+          "id": "Q3",
+          "passed": true
+        },
+        {
+          "case_id": "R8",
+          "id": "Q4",
+          "passed": true
+        },
+        {
+          "case_id": "J7",
+          "id": "Q5",
+          "passed": true
+        },
+        {
+          "case_id": "J8",
+          "id": "Q6",
+          "passed": true
+        }
+      ],
+      "correct": 6,
+      "input_sha256": "79561b8ba42f896969086ae755096f8f2be1082a61dd05e217e821f8af6ca6f1",
+      "questions": 6,
+      "response_sha256": "373abb393a00af7b06de690dd1d5910609be1e98ef9b8fd9f0a187ce83068589"
+    },
+    "raw": {
+      "checks": [
+        {
+          "case_id": "R4",
+          "id": "Q1",
+          "passed": true
+        },
+        {
+          "case_id": "R5",
+          "id": "Q2",
+          "passed": true
+        },
+        {
+          "case_id": "R7",
+          "id": "Q3",
+          "passed": true
+        },
+        {
+          "case_id": "R8",
+          "id": "Q4",
+          "passed": true
+        },
+        {
+          "case_id": "J7",
+          "id": "Q5",
+          "passed": true
+        },
+        {
+          "case_id": "J8",
+          "id": "Q6",
+          "passed": true
+        }
+      ],
+      "correct": 6,
+      "input_sha256": "757cd29fe8a666d1b3d817913ec1726dced7a42d421be36459fd00404ece14a1",
+      "questions": 6,
+      "response_sha256": "373abb393a00af7b06de690dd1d5910609be1e98ef9b8fd9f0a187ce83068589"
+    },
+    "rtk": {
+      "checks": [
+        {
+          "case_id": "R4",
+          "id": "Q1",
+          "passed": true
+        },
+        {
+          "case_id": "R5",
+          "id": "Q2",
+          "passed": true
+        },
+        {
+          "case_id": "R7",
+          "id": "Q3",
+          "passed": true
+        },
+        {
+          "case_id": "R8",
+          "id": "Q4",
+          "passed": true
+        },
+        {
+          "case_id": "J7",
+          "id": "Q5",
+          "passed": true
+        },
+        {
+          "case_id": "J8",
+          "id": "Q6",
+          "passed": true
+        }
+      ],
+      "correct": 6,
+      "input_sha256": "cf3da5ec835b73491610ad8a470c95930fcb2b408840f1295c8677f69e657440",
+      "questions": 6,
+      "response_sha256": "373abb393a00af7b06de690dd1d5910609be1e98ef9b8fd9f0a187ce83068589"
+    }
+  }
+}

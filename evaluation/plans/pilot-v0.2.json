@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "pilot_id": "v0.2-two-repository-pilot",
+  "registration_date": "2026-11-06",
+  "design": {
+    "ordinary_cases": 14,
+    "controlled_cases": 2,
+    "scope": "Pre-registered command-output and programmatic retention pilot, not a live-agent task-success or API-cost experiment.",
+    "selection_limit": "The Rust repository is MinifyCLI itself. The two repositories and case frequencies are a convenience sample, not a representative developer-workload distribution.",
+    "corrections": "Any preflight correction to argv, adapter support, or an expected status must be recorded before comparative outcomes are collected. Keep original registration and correction history. Do not remove low-savings or failed cases after observing comparison results.",
+    "aggregation": "Report ordinary and controlled cases separately. Include passthrough, empty-output, unsupported-adapter, and expansion outcomes. Token or byte reductions alone do not establish diagnostic completeness or task success."
+  },
+  "repositories": [
+    {
+      "id": "rust",
+      "name": "MinifyCLI v0.1.1 baseline",
+      "commit": "2272e3d2377fa4480e3bd96993a54b2a56152998",
+      "source_name": "minifycli",
+      "self_pilot": true
+    },
+    {
+      "id": "javascript",
+      "name": "Continuity Ledger Site",
+      "commit": "b20d122a46fefaf917f9063bd8c5a39e2a43ba94",
+      "source_name": "continuity-ledger-site",
+      "self_pilot": false
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "case_id": "R4",
+      "prompt": "Which atomic memory ordering does the diff use to read the shared IO exit flag? Give the ordering name.",
+      "required_answers": ["Acquire"]
+    },
+    {
+      "id": "Q2",
+      "case_id": "R5",
+      "prompt": "What is the configured graceful-cancellation period, in milliseconds?",
+      "required_answers": ["500"]
+    },
+    {
+      "id": "Q3",
+      "case_id": "R7",
+      "prompt": "What exact Cargo test target could not be found?",
+      "required_answers": ["minifycli_pilot_missing_target"]
+    },
+    {
+      "id": "Q4",
+      "case_id": "R8",
+      "prompt": "Name the failing Rust test and its unique assertion-message marker.",
+      "required_answers": ["z_controlled_failure", "MINIFYCLI_PILOT_RUST_ASSERTION"]
+    },
+    {
+      "id": "Q5",
+      "case_id": "J7",
+      "prompt": "What exact npm script could not be found?",
+      "required_answers": ["minifycli_pilot_missing_script"]
+    },
+    {
+      "id": "Q6",
+      "case_id": "J8",
+      "prompt": "Name the deliberately failing JavaScript test and its unique assertion-message marker.",
+      "required_answers": ["pilot controlled failure", "MINIFYCLI_PILOT_JS_ASSERTION"]
+    }
+  ],
+  "controlled_patch": {
+    "rust": {
+      "file": "tests/pilot_controlled_failure.rs",
+      "fixture": "evaluation/fixtures/controlled/rust-failure.rs"
+    },
+    "javascript": {
+      "file": "tests/pilot-controlled-failure.test.mjs",
+      "fixture": "evaluation/fixtures/controlled/javascript-failure.test.mjs",
+      "append_test_script": true
+    }
+  },
+  "cases": [
+    {
+      "id": "R1",
+      "repo": "rust",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["cargo", "test", "--offline", "--locked"],
+      "expected_exit": 0,
+      "rtk_native": ["cargo", "test", "--offline", "--locked"],
+      "rtk_pipe": "cargo-test",
+      "contracts": [
+        {
+          "id": "test_success_summary",
+          "any": ["(?i)\\bpassed\\b", "(?i)\\bok\\b", "[✓✔].*\\btests?\\b"]
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "repo": "rust",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["cargo", "test", "--offline", "--locked", "--test", "log_retention"],
+      "expected_exit": 0,
+      "rtk_native": ["cargo", "test", "--offline", "--locked", "--test", "log_retention"],
+      "rtk_pipe": "cargo-test",
+      "contracts": [
+        {
+          "id": "four_test_count",
+          "any": ["(?i)\\b4\\s+(?:passed|tests?)\\b", "(?i)\\b(?:passed|tests?)\\s*[:=]?\\s*4\\b"]
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "repo": "rust",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["cargo", "check", "--offline", "--locked"],
+      "expected_exit": 0,
+      "rtk_native": ["cargo", "check", "--offline", "--locked"],
+      "rtk_pipe": null,
+      "contracts": []
+    },
+    {
+      "id": "R4",
+      "repo": "rust",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["git", "diff", "--no-ext-diff", "--no-color", "HEAD~1", "HEAD", "--", "src/main.rs", "src/process.rs", "tests/cancellation.rs"],
+      "expected_exit": 0,
+      "rtk_native": ["git", "diff", "--no-ext-diff", "--no-color", "HEAD~1", "HEAD", "--", "src/main.rs", "src/process.rs", "tests/cancellation.rs"],
+      "rtk_pipe": "git-diff",
+      "contracts": [
+        {"id": "changed_exit_status_symbol", "any": ["exit_code"]},
+        {"id": "changed_memory_ordering_symbol", "any": ["Ordering::Acquire"]},
+        {"id": "changed_startup_timeout_symbol", "any": ["STARTUP_TIMEOUT"]}
+      ]
+    },
+    {
+      "id": "R5",
+      "repo": "rust",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["rg", "-n", "io_exit|exit_code|GRACE", "src/process.rs"],
+      "expected_exit": 0,
+      "rtk_native": ["rg", "-n", "io_exit|exit_code|GRACE", "src/process.rs"],
+      "rtk_pipe": "rg",
+      "contracts": [
+        {"id": "io_error_symbol", "any": ["io_exit"]},
+        {"id": "exit_status_symbol", "any": ["exit_code"]},
+        {"id": "cleanup_grace_symbol", "any": ["GRACE"]}
+      ]
+    },
+    {
+      "id": "R6",
+      "repo": "rust",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["rg", "-n", "MINIFYCLI_PILOT_ABSENT_20261106", "src", "tests"],
+      "expected_exit": 1,
+      "rtk_native": ["rg", "-n", "MINIFYCLI_PILOT_ABSENT_20261106", "src", "tests"],
+      "rtk_pipe": "rg",
+      "contracts": []
+    },
+    {
+      "id": "R7",
+      "repo": "rust",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["cargo", "test", "--offline", "--locked", "--test", "minifycli_pilot_missing_target"],
+      "expected_exit": 101,
+      "rtk_native": ["cargo", "test", "--offline", "--locked", "--test", "minifycli_pilot_missing_target"],
+      "rtk_pipe": "cargo-test",
+      "contracts": [
+        {"id": "missing_target_name", "any": ["minifycli_pilot_missing_target"]}
+      ]
+    },
+    {
+      "id": "R8",
+      "repo": "rust",
+      "scenario": "controlled_failure",
+      "group": "controlled",
+      "argv": ["cargo", "test", "--offline", "--locked", "--test", "pilot_controlled_failure", "--", "--test-threads=1"],
+      "expected_exit": 101,
+      "rtk_native": ["cargo", "test", "--offline", "--locked", "--test", "pilot_controlled_failure", "--", "--test-threads=1"],
+      "rtk_pipe": "cargo-test",
+      "contracts": [
+        {"id": "failure_assertion_marker", "any": ["MINIFYCLI_PILOT_RUST_ASSERTION"]},
+        {"id": "failing_test_name", "any": ["z_controlled_failure"]},
+        {"id": "failure_source_location", "any": ["pilot_controlled_failure\\.rs"]},
+        {"id": "success_looking_application_log", "any": ["✓ migration completed \\(2 ms\\)"]}
+      ]
+    },
+    {
+      "id": "J1",
+      "repo": "javascript",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["npm", "test"],
+      "expected_exit": 0,
+      "rtk_native": ["npm", "test"],
+      "rtk_pipe": null,
+      "contracts": [
+        {
+          "id": "thirty_one_test_count",
+          "any": ["(?i)\\b31\\s+(?:pass(?:ed)?|tests?)\\b", "(?i)\\b(?:pass(?:ed)?|tests?)\\s*[:=]?\\s*31\\b"]
+        }
+      ]
+    },
+    {
+      "id": "J2",
+      "repo": "javascript",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["node", "--experimental-strip-types", "--test", "--test-reporter=tap", "tests/ledger.test.ts"],
+      "expected_exit": 0,
+      "rtk_native": null,
+      "rtk_pipe": null,
+      "contracts": [
+        {
+          "id": "fifteen_test_count",
+          "any": ["(?i)\\b15\\s+(?:pass(?:ed)?|tests?)\\b", "(?i)\\b(?:pass(?:ed)?|tests?)\\s*[:=]?\\s*15\\b"]
+        }
+      ]
+    },
+    {
+      "id": "J3",
+      "repo": "javascript",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["git", "diff", "--no-ext-diff", "--no-color", "HEAD~1", "HEAD", "--", "scripts/cloud-dashboard.mjs", "scripts/shared-dashboard.mjs", "tests/cloud-dashboard.test.mjs"],
+      "expected_exit": 0,
+      "rtk_native": ["git", "diff", "--no-ext-diff", "--no-color", "HEAD~1", "HEAD", "--", "scripts/cloud-dashboard.mjs", "scripts/shared-dashboard.mjs", "tests/cloud-dashboard.test.mjs"],
+      "rtk_pipe": "git-diff",
+      "contracts": [
+        {"id": "snapshot_validation_entrypoint", "any": ["validateSnapshot"]},
+        {"id": "scope_guard_entrypoint", "any": ["guardCloudScope"]}
+      ]
+    },
+    {
+      "id": "J4",
+      "repo": "javascript",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["rg", "-n", "previewDigest|operationId", "lib", "tests"],
+      "expected_exit": 0,
+      "rtk_native": ["rg", "-n", "previewDigest|operationId", "lib", "tests"],
+      "rtk_pipe": "rg",
+      "contracts": [
+        {"id": "preview_binding_field", "any": ["previewDigest"]},
+        {"id": "operation_identity_field", "any": ["operationId"]}
+      ]
+    },
+    {
+      "id": "J5",
+      "repo": "javascript",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["rg", "-n", "MINIFYCLI_PILOT_ABSENT_20261106", "lib", "tests"],
+      "expected_exit": 1,
+      "rtk_native": ["rg", "-n", "MINIFYCLI_PILOT_ABSENT_20261106", "lib", "tests"],
+      "rtk_pipe": "rg",
+      "contracts": []
+    },
+    {
+      "id": "J6",
+      "repo": "javascript",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["git", "status", "--short"],
+      "expected_exit": 0,
+      "rtk_native": ["git", "status", "--short"],
+      "rtk_pipe": null,
+      "contracts": []
+    },
+    {
+      "id": "J7",
+      "repo": "javascript",
+      "scenario": "baseline",
+      "group": "ordinary",
+      "argv": ["npm", "run", "minifycli_pilot_missing_script"],
+      "expected_exit": 1,
+      "rtk_native": ["npm", "run", "minifycli_pilot_missing_script"],
+      "rtk_pipe": null,
+      "contracts": [
+        {"id": "missing_script_name", "any": ["minifycli_pilot_missing_script"]}
+      ]
+    },
+    {
+      "id": "J8",
+      "repo": "javascript",
+      "scenario": "controlled_failure",
+      "group": "controlled",
+      "argv": ["npm", "test"],
+      "expected_exit": 1,
+      "rtk_native": ["npm", "test"],
+      "rtk_pipe": null,
+      "contracts": [
+        {"id": "failure_assertion_marker", "any": ["MINIFYCLI_PILOT_JS_ASSERTION"]},
+        {"id": "failing_test_name", "any": ["pilot controlled failure"]},
+        {"id": "failure_source_location", "any": ["pilot-controlled-failure\\.test\\.mjs"]},
+        {"id": "success_looking_application_log", "any": ["✓ migration completed \\(2 ms\\)"]}
+      ]
+    }
+  ]
+}

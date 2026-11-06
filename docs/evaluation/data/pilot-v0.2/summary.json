@@ -1,0 +1,531 @@
+{
+  "native": {
+    "controlled": {
+      "mini": {
+        "contract_checks": 24,
+        "contract_failures": 0,
+        "encodings": {
+          "cl100k_base": {
+            "excluded_pairs": 0,
+            "excluded_trials": 0,
+            "paired_output_tokens": 5062,
+            "paired_raw_tokens": 5139,
+            "paired_trials": 6,
+            "reduction_percent": 1.4983459817085036,
+            "tokens": 5062,
+            "valid_trials": 6
+          },
+          "o200k_base": {
+            "excluded_pairs": 0,
+            "excluded_trials": 0,
+            "paired_output_tokens": 5065,
+            "paired_raw_tokens": 5142,
+            "paired_trials": 6,
+            "reduction_percent": 1.4974718008556982,
+            "tokens": 5065,
+            "valid_trials": 6
+          }
+        },
+        "median_wall_seconds": 0.5943163750343956,
+        "status_mismatches": 0,
+        "timeouts": 0,
+        "trials": 6
+      },
+      "raw": {
+        "contract_checks": 24,
+        "contract_failures": 0,
+        "encodings": {
+          "cl100k_base": {
+            "excluded_trials": 0,
+            "tokens": 5139,
+            "valid_trials": 6
+          },
+          "o200k_base": {
+            "excluded_trials": 0,
+            "tokens": 5142,
+            "valid_trials": 6
+          }
+        },
+        "median_wall_seconds": 0.648157354502473,
+        "status_mismatches": 0,
+        "timeouts": 0,
+        "trials": 6
+      },
+      "rtk": {
+        "contract_checks": 24,
+        "contract_failures": 0,
+        "encodings": {
+          "cl100k_base": {
+            "excluded_pairs": 0,
+            "excluded_trials": 0,
+            "paired_output_tokens": 4688,
+            "paired_raw_tokens": 5139,
+            "paired_trials": 6,
+            "reduction_percent": 8.776026464292665,
+            "tokens": 4688,
+            "valid_trials": 6
+          },
+          "o200k_base": {
+            "excluded_pairs": 0,
+            "excluded_trials": 0,
+            "paired_output_tokens": 4688,
+            "paired_raw_tokens": 5142,
+            "paired_trials": 6,
+            "reduction_percent": 8.829249319331,
+            "tokens": 4688,
+            "valid_trials": 6
+          }
+        },
+        "median_wall_seconds": 0.6779551040090155,
+        "status_mismatches": 0,
+        "timeouts": 0,
+        "trials": 6
+      }
+    },
+    "ordinary": {
+      "mini": {
+        "contract_checks": 48,
+        "contract_failures": 0,
+        "encodings": {
+          "cl100k_base": {
+            "excluded_pairs": 0,
+            "excluded_trials": 0,
+            "paired_output_tokens": 42148,
+            "paired_raw_tokens": 47075,
+            "paired_trials": 42,
+            "reduction_percent": 10.466277217206585,
+            "tokens": 42148,
+            "valid_trials": 42
+          },
+          "o200k_base": {
+            "excluded_pairs": 0,
+            "excluded_trials": 0,
+            "paired_output_tokens": 42493,
+            "paired_raw_tokens": 47540,
+            "paired_trials": 42,
+            "reduction_percent": 10.616323096339924,
+            "tokens": 42493,
+            "valid_trials": 42
+          }
+        },
+        "median_wall_seconds": 0.035303104523336515,
+        "status_mismatches": 0,
+        "timeouts": 0,
+        "trials": 42
+      },
+      "raw": {
+        "contract_checks": 48,
+        "contract_failures": 0,
+        "encodings": {
+          "cl100k_base": {
+            "excluded_trials": 0,
+            "tokens": 47075,
+            "valid_trials": 42
+          },
+          "o200k_base": {
+            "excluded_trials": 0,
+            "tokens": 47540,
+            "valid_trials": 42
+          }
+        },
+        "median_wall_seconds": 0.025747750012669712,
+        "status_mismatches": 0,
+        "timeouts": 0,
+        "trials": 42
+      },
+      "rtk": {
+        "contract_checks": 45,
+        "contract_failures": 0,
+        "encodings": {
+          "cl100k_base": {
+            "excluded_pairs": 0,
+            "excluded_trials": 0,
+            "paired_output_tokens": 32963,
+            "paired_raw_tokens": 44493,
+            "paired_trials": 39,
+            "reduction_percent": 25.914188748791943,
+            "tokens": 32963,
+            "valid_trials": 39
+          },
+          "o200k_base": {
+            "excluded_pairs": 0,
+            "excluded_trials": 0,
+            "paired_output_tokens": 33236,
+            "paired_raw_tokens": 44958,
+            "paired_trials": 39,
+            "reduction_percent": 26.073223897860224,
+            "tokens": 33236,
+            "valid_trials": 39
+          }
+        },
+        "median_wall_seconds": 0.04317912500118837,
+        "status_mismatches": 0,
+        "timeouts": 0,
+        "trials": 39
+      }
+    }
+  },
+  "native_common": {
+    "controlled": {
+      "case_ids": [
+        "R8",
+        "J8"
+      ],
+      "variants": {
+        "mini": {
+          "contract_checks": 24,
+          "contract_failures": 0,
+          "encodings": {
+            "cl100k_base": {
+              "excluded_pairs": 0,
+              "output_tokens": 5062,
+              "paired_trials": 6,
+              "raw_tokens": 5139,
+              "reduction_percent": 1.4983459817085036
+            },
+            "o200k_base": {
+              "excluded_pairs": 0,
+              "output_tokens": 5065,
+              "paired_trials": 6,
+              "raw_tokens": 5142,
+              "reduction_percent": 1.4974718008556982
+            }
+          },
+          "median_wall_seconds": 0.5943163750343956,
+          "status_mismatches": 0,
+          "timing_trials": 6,
+          "trials": 6
+        },
+        "raw": {
+          "contract_checks": 24,
+          "contract_failures": 0,
+          "encodings": {
+            "cl100k_base": {
+              "excluded_pairs": 0,
+              "output_tokens": 5139,
+              "paired_trials": 6,
+              "raw_tokens": 5139,
+              "reduction_percent": 0.0
+            },
+            "o200k_base": {
+              "excluded_pairs": 0,
+              "output_tokens": 5142,
+              "paired_trials": 6,
+              "raw_tokens": 5142,
+              "reduction_percent": 0.0
+            }
+          },
+          "median_wall_seconds": 0.648157354502473,
+          "status_mismatches": 0,
+          "timing_trials": 6,
+          "trials": 6
+        },
+        "rtk": {
+          "contract_checks": 24,
+          "contract_failures": 0,
+          "encodings": {
+            "cl100k_base": {
+              "excluded_pairs": 0,
+              "output_tokens": 4688,
+              "paired_trials": 6,
+              "raw_tokens": 5139,
+              "reduction_percent": 8.776026464292665
+            },
+            "o200k_base": {
+              "excluded_pairs": 0,
+              "output_tokens": 4688,
+              "paired_trials": 6,
+              "raw_tokens": 5142,
+              "reduction_percent": 8.829249319331
+            }
+          },
+          "median_wall_seconds": 0.6779551040090155,
+          "status_mismatches": 0,
+          "timing_trials": 6,
+          "trials": 6
+        }
+      }
+    },
+    "ordinary": {
+      "case_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "J1",
+        "J3",
+        "J4",
+        "J5",
+        "J6",
+        "J7"
+      ],
+      "variants": {
+        "mini": {
+          "contract_checks": 45,
+          "contract_failures": 0,
+          "encodings": {
+            "cl100k_base": {
+              "excluded_pairs": 0,
+              "output_tokens": 39570,
+              "paired_trials": 39,
+              "raw_tokens": 44493,
+              "reduction_percent": 11.064661856921314
+            },
+            "o200k_base": {
+              "excluded_pairs": 0,
+              "output_tokens": 39915,
+              "paired_trials": 39,
+              "raw_tokens": 44958,
+              "reduction_percent": 11.21713599359402
+            }
+          },
+          "median_wall_seconds": 0.03516845899866894,
+          "status_mismatches": 0,
+          "timing_trials": 39,
+          "trials": 39
+        },
+        "raw": {
+          "contract_checks": 45,
+          "contract_failures": 0,
+          "encodings": {
+            "cl100k_base": {
+              "excluded_pairs": 0,
+              "output_tokens": 44493,
+              "paired_trials": 39,
+              "raw_tokens": 44493,
+              "reduction_percent": 0.0
+            },
+            "o200k_base": {
+              "excluded_pairs": 0,
+              "output_tokens": 44958,
+              "paired_trials": 39,
+              "raw_tokens": 44958,
+              "reduction_percent": 0.0
+            }
+          },
+          "median_wall_seconds": 0.025145624997094274,
+          "status_mismatches": 0,
+          "timing_trials": 39,
+          "trials": 39
+        },
+        "rtk": {
+          "contract_checks": 45,
+          "contract_failures": 0,
+          "encodings": {
+            "cl100k_base": {
+              "excluded_pairs": 0,
+              "output_tokens": 32963,
+              "paired_trials": 39,
+              "raw_tokens": 44493,
+              "reduction_percent": 25.914188748791943
+            },
+            "o200k_base": {
+              "excluded_pairs": 0,
+              "output_tokens": 33236,
+              "paired_trials": 39,
+              "raw_tokens": 44958,
+              "reduction_percent": 26.073223897860224
+            }
+          },
+          "median_wall_seconds": 0.04317912500118837,
+          "status_mismatches": 0,
+          "timing_trials": 39,
+          "trials": 39
+        }
+      }
+    }
+  },
+  "same_capture": {
+    "controlled": {
+      "mini": {
+        "encodings": {
+          "cl100k_base": {
+            "excluded_cases": 0,
+            "output_tokens": 1615,
+            "raw_tokens": 1643,
+            "reduction_percent": 1.704199634814364,
+            "valid_cases": 2
+          },
+          "o200k_base": {
+            "excluded_cases": 0,
+            "output_tokens": 1615,
+            "raw_tokens": 1643,
+            "reduction_percent": 1.704199634814364,
+            "valid_cases": 2
+          }
+        },
+        "supported_cases": 2,
+        "total_cases": 2
+      },
+      "rtk_pipe": {
+        "encodings": {
+          "cl100k_base": {
+            "excluded_cases": 0,
+            "output_tokens": 161,
+            "raw_tokens": 580,
+            "reduction_percent": 72.24137931034483,
+            "valid_cases": 1
+          },
+          "o200k_base": {
+            "excluded_cases": 0,
+            "output_tokens": 162,
+            "raw_tokens": 580,
+            "reduction_percent": 72.06896551724138,
+            "valid_cases": 1
+          }
+        },
+        "supported_cases": 1,
+        "total_cases": 2
+      }
+    },
+    "ordinary": {
+      "mini": {
+        "encodings": {
+          "cl100k_base": {
+            "excluded_cases": 0,
+            "output_tokens": 13647,
+            "raw_tokens": 15288,
+            "reduction_percent": 10.733908948194662,
+            "valid_cases": 14
+          },
+          "o200k_base": {
+            "excluded_cases": 0,
+            "output_tokens": 13756,
+            "raw_tokens": 15437,
+            "reduction_percent": 10.889421519725335,
+            "valid_cases": 14
+          }
+        },
+        "supported_cases": 14,
+        "total_cases": 14
+      },
+      "rtk_pipe": {
+        "encodings": {
+          "cl100k_base": {
+            "excluded_cases": 0,
+            "output_tokens": 7642,
+            "raw_tokens": 13663,
+            "reduction_percent": 44.067920661640926,
+            "valid_cases": 9
+          },
+          "o200k_base": {
+            "excluded_cases": 0,
+            "output_tokens": 7704,
+            "raw_tokens": 13814,
+            "reduction_percent": 44.230490806428264,
+            "valid_cases": 9
+          }
+        },
+        "supported_cases": 9,
+        "total_cases": 14
+      }
+    }
+  },
+  "same_capture_common": {
+    "controlled": {
+      "case_ids": [
+        "R8"
+      ],
+      "variants": {
+        "mini": {
+          "contract_failures": 0,
+          "eligible_contract_checks": 4,
+          "encodings": {
+            "cl100k_base": {
+              "excluded_cases": 0,
+              "output_tokens": 552,
+              "raw_tokens": 580,
+              "reduction_percent": 4.827586206896552,
+              "valid_cases": 1
+            },
+            "o200k_base": {
+              "excluded_cases": 0,
+              "output_tokens": 552,
+              "raw_tokens": 580,
+              "reduction_percent": 4.827586206896552,
+              "valid_cases": 1
+            }
+          }
+        },
+        "rtk_pipe": {
+          "contract_failures": 0,
+          "eligible_contract_checks": 4,
+          "encodings": {
+            "cl100k_base": {
+              "excluded_cases": 0,
+              "output_tokens": 161,
+              "raw_tokens": 580,
+              "reduction_percent": 72.24137931034483,
+              "valid_cases": 1
+            },
+            "o200k_base": {
+              "excluded_cases": 0,
+              "output_tokens": 162,
+              "raw_tokens": 580,
+              "reduction_percent": 72.06896551724138,
+              "valid_cases": 1
+            }
+          }
+        }
+      }
+    },
+    "ordinary": {
+      "case_ids": [
+        "R1",
+        "R2",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "J3",
+        "J4",
+        "J5"
+      ],
+      "variants": {
+        "mini": {
+          "contract_failures": 0,
+          "eligible_contract_checks": 12,
+          "encodings": {
+            "cl100k_base": {
+              "excluded_cases": 0,
+              "output_tokens": 12022,
+              "raw_tokens": 13663,
+              "reduction_percent": 12.010539413013248,
+              "valid_cases": 9
+            },
+            "o200k_base": {
+              "excluded_cases": 0,
+              "output_tokens": 12133,
+              "raw_tokens": 13814,
+              "reduction_percent": 12.168814246416678,
+              "valid_cases": 9
+            }
+          }
+        },
+        "rtk_pipe": {
+          "contract_failures": 0,
+          "eligible_contract_checks": 12,
+          "encodings": {
+            "cl100k_base": {
+              "excluded_cases": 0,
+              "output_tokens": 7642,
+              "raw_tokens": 13663,
+              "reduction_percent": 44.067920661640926,
+              "valid_cases": 9
+            },
+            "o200k_base": {
+              "excluded_cases": 0,
+              "output_tokens": 7704,
+              "raw_tokens": 13814,
+              "reduction_percent": 44.230490806428264,
+              "valid_cases": 9
+            }
+          }
+        }
+      }
+    }
+  }
+}

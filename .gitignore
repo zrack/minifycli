@@ -2,3 +2,5 @@
 /.tools/
 /benchmarks/results/
 *.tmp
+**/__pycache__/
+/evaluation/local-recordings/

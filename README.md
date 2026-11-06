@@ -49,7 +49,8 @@ Add the chosen `bin` directory to your `PATH` if needed.
 ## Usage
 
 ```text
-mini [--stats] [--raw] [--max-buffer N] [--max-line-chars N] [--] COMMAND [ARGS...]
+mini [--stats] [--raw] [--record DIR] [--max-buffer N] [--max-line-chars N] [--] COMMAND [ARGS...]
+mini --replay DIR [--stats] [--max-buffer N]
 ```
 
 Arguments after `COMMAND` belong to that command. MinifyCLI inherits the working directory, environment, and stdin, and returns the command's exit code. It does not evaluate shell syntax.
@@ -58,6 +59,8 @@ Arguments after `COMMAND` belong to that command. MinifyCLI inherits the working
 | --- | --- |
 | `--stats` | Print input/output byte counts and reduction to stderr; cannot combine with `--raw`. |
 | `--raw` | Run with original output, without compression. |
+| `--record DIR` | Save original and emitted child streams in a new local directory; cannot combine with `--raw`. |
+| `--replay DIR` | Apply current filters to a completed recording without executing the command; return its recorded exit status. |
 | `--max-buffer N` | Set the capture limit in bytes per stream; default is 4 MiB. |
 | `--max-line-chars N` | Opt into shortening long search match text, with a visible truncation marker. |
 | `--` | End MinifyCLI option parsing. |
@@ -91,19 +94,35 @@ mini --raw git diff > changes.patch
 
 This is an explicit command wrapper. Installing it does not automatically intercept an agent's shell calls. See [agent integration](docs/agent-integration.md) for guidance and shell examples.
 
+### Record one execution and replay it
+
+```sh
+mkdir -p evaluation/local-recordings
+mini --record evaluation/local-recordings/test-run --stats cargo test
+mini --replay evaluation/local-recordings/test-run
+mini --replay evaluation/local-recordings/test-run --stats
+```
+
+Choose a new recording name for each execution. MinifyCLI saves original stdout/stderr, the child output actually emitted after filtering, and versioned argv/status metadata. Its own statistics are excluded from the saved child streams. Replay reads those original bytes and applies the current filters; it does not run the command or restore its working directory or environment.
+
+Recording is opt-in. Arguments and command output can contain private source or secrets, and hex-encoded argv is reversible. Files stay local; review and sanitize them before sharing. No environment snapshot is stored. On macOS/Linux the directory is created with mode `0700` and files with `0600`, subject to a stricter umask.
+
+Only complete, uncancelled, unspilled records are replayable in v0.2. The default replay limit is 4 MiB per original stream. A recording that spilled cannot be replayed by increasing that limit; its raw files remain available for inspection. See the [recording guide](docs/recording.md) for the format, limits, and failure behavior.
+
 ## Output guarantees and limits
 
 - Unrecognized commands and unsupported formats retain their original output. Non-text data passes through.
 - Compressed output is for reading. Use `--raw` for output consumed by another tool, including patches and search pipelines.
 - Use `--raw` for search paths containing colons. Numbered text formats cannot distinguish every such filename from a line number.
 - Recognized commands buffer stdout and stderr separately until they finish. Their original interleaving is not preserved.
-- `--stats` also captures otherwise unrecognized commands so it can count bytes. Use `--raw` without `--stats` for live terminal behavior.
+- `--stats` and `--record` also buffer otherwise unrecognized commands. Use `--raw` without those options for live terminal behavior.
 - The default capture limit is 4 MiB per stream. When a stream exceeds the limit, its original buffered bytes and subsequent output pass through without compression.
 - Use `--raw` for interactive programs, watch mode, servers, or any command whose output you need to see immediately. Buffered mode targets finite, noninteractive commands.
 - On macOS and Linux, buffered commands run in a separate process group. Sending SIGINT or SIGTERM to `mini` forwards that signal to the group, allows 500 ms for cleanup, then kills remaining group members. Exit status is 130 or 143 respectively. Descendants that create another group or session can escape group cleanup; SIGKILL sent to `mini` cannot be handled.
 - When cancellation is detected before filtering, completed captures are emitted unfiltered where they can drain. Cleanup takes priority over complete output when a downstream reader stalls. Closed output pipes stop the buffered command group and return status 141. Interactive terminal input requires `--raw`.
 - `--stats` measures bytes, not tokens, API charges, or total context savings. A tokenizer and representative workloads are needed for token-cost claims.
 - MinifyCLI runs commands with your existing permissions. It is not a sandbox.
+- Recording spools complete original streams to disk, so disk use can grow with command output even though the capture buffer is capped. Recording-file writes and synchronization can stall on a slow filesystem; process-group cancellation timing is not an end-to-end deadline for recording mode.
 
 ## Reproducible benchmarks
 
@@ -120,6 +139,21 @@ These are **handcrafted fixtures**, measured in bytes with truncation disabled. 
 Run `cargo run --locked --release --example benchmark` to reproduce the measurements. The benchmark also checks retained failure details and source locations. See [benchmark method and fixtures](benchmarks/README.md).
 
 Since v0.1.1, individual checkmark-prefixed JavaScript test lines are retained because they cannot reliably be distinguished from application logs. This deliberately reduces compression in favor of retaining diagnostics. See [release history](CHANGELOG.md).
+
+## v0.2 evaluation pilot
+
+The [evaluation harness](evaluation/run_pilot.py) compares raw output, MinifyCLI, and the pinned RTK OSS 1.1.0 comparator on two frozen repositories: the v0.1.1 MinifyCLI Rust baseline and an independent TypeScript application. The Rust arm is explicitly a self-pilot. The registered convenience sample does not establish production workload savings or generalization across Rust applications.
+
+In the pilot's 13 common ordinary native-command cases, MinifyCLI reduced `o200k_base` output tokens by **11.22%**, versus **26.07%** for RTK OSS. Both matched expected statuses and passed the registered fact checks; all three output variants scored 6/6 on a small label-blinded comprehension check. RTK reduced more tokens in aggregate, with case-level exceptions in the [results and limits](docs/evaluation/pilot-results.md).
+
+The method distinguishes shared-capture filtering from native wrapper execution. RTK's named stdin filters do not cover every command, and native wrappers can change arguments or run additional commands. Unsupported adapters remain visible instead of being treated as successful compression. Command outcomes and bounded diagnostic checks are separate from autonomous agent-task success, retries, or API charges.
+
+Token measurements use the named `o200k_base` and `cl100k_base` encodings through pinned `tiktoken==0.14.0`. These are local evaluation tools, not dependencies of the Rust binary, and the evaluator does not call a model API. Raw captures and repository snapshots stay local and ignored by Git; reviewed aggregate metrics and sanitized provenance are the shareable outputs.
+
+- [Pilot method](docs/evaluation/method.md)
+- [Repository selection and registered case scope](docs/evaluation/repository-selection.md)
+- [RTK artifact and adapter provenance](docs/evaluation/rtk-provenance.md)
+- [Pilot results and limitations](docs/evaluation/pilot-results.md)
 
 ## Development
 

@@ -1,14 +1,17 @@
-MinifyCLI v0.1.1 fixes application-log retention and adds bounded cancellation for buffered commands on macOS and Linux.
+MinifyCLI v0.2 adds opt-in recording and replay plus a reproducible command-output evaluation harness.
 
-- Retains checkmark-prefixed application messages and timing-looking log lines that v0.1.0 could mistake for JavaScript test passes. Only narrowly recognized Jest file headers are removed; ambiguous Vitest records are retained.
-- Forwards SIGINT/SIGTERM received by `mini` to the buffered command's process group, allows 500 ms for cleanup, and force-stops remaining group members. Returns 130/143 even when a child handles the signal and exits successfully.
-- Handles cancellation after the command leader exits while descendants retain its pipes. Bounded drain avoids hanging on a stalled output consumer; captures completed before filtering are emitted unfiltered when cancellation is detected.
-- Stops buffered command groups when downstream output pipes close, with exit status 141.
-- Adds regression fixtures for success-looking logs, failure diagnostics, CRLF, and missing final newlines, plus subprocess cancellation tests. Captured Cargo and Node TAP probes provide real-framework replay coverage with documented provenance.
-- Updates the synthetic Jest fixture measurement to 2.0% byte reduction (2,622 → 2,570), reflecting the more conservative retention policy.
+- `mini --record DIR COMMAND ...` saves original and emitted child stdout/stderr from one execution, with native argv/status metadata. The directory must be new and its parent must exist. Statistics are excluded from the recorded child streams.
+- `mini --replay DIR` applies current filters to complete original captures without executing the command. The recorded failure context, line-clipping setting, and exit status are retained.
+- Recording is local and explicit, with owner-only files on macOS/Linux. It can contain sensitive output or arguments; no environment snapshot is stored. Disk usage grows with output, and filesystem stalls can delay recording completion or cancellation.
+- Replay rejects incomplete, cancelled, spilled, malformed, length-inconsistent, or symlink-backed records. The default raw replay cap is 4 MiB per stream. Length checks are not cryptographic authentication.
+- API and CLI regressions cover binary output, native argv encoding, replay after deleting the executable, statistics separation, exclusivity, cancellation, and spills.
+- The registered evaluation compares raw output, MinifyCLI, and pinned RTK OSS 1.1.0 across a frozen Rust self-pilot and an independent TypeScript application. Shared-capture filtering and native wrapper executions are separate comparisons, with unsupported adapters reported explicitly.
+- Local token counting uses pinned `tiktoken==0.14.0` with the named `o200k_base` and `cl100k_base` encodings. These are evaluation dependencies only; the Rust binary still has no third-party Rust dependencies or model API calls.
 
-The binary still has no third-party Rust dependencies or API calls. Rust 1.74 remains the minimum supported compiler.
+Read the [pilot method](https://github.com/zrack/minifycli/blob/main/docs/evaluation/method.md), [results and limitations](https://github.com/zrack/minifycli/blob/main/docs/evaluation/pilot-results.md), and [RTK provenance](https://github.com/zrack/minifycli/blob/main/docs/evaluation/rtk-provenance.md). A convenience sample and bounded diagnostic contracts do not establish production API savings or autonomous coding-agent success. Raw captures and repository snapshots remain local; shared evidence is reviewed and sanitized.
 
-Download the archive matching your OS and architecture, extract it, and place `mini` in a directory on your PATH. Verify the archive against `SHA256SUMS`. Source installation and agent integration instructions are in the README.
+The completed pilot measured **11.22%** ordinary native-command output-token reduction for MinifyCLI and **26.07%** for RTK OSS using `o200k_base`, on the same 13 registered common cases with three timed runs per variant. Both matched expected statuses and passed the registered output checks. All 16 Mini records replayed exactly; each output variant scored 6/6 on a one-pass, label-blinded comprehension check. The pilot did not demonstrate a MinifyCLI advantage over RTK. Shared-capture stdout filtering is reported separately with different coverage and denominators.
 
-Use `--raw` for machine-consumed output, exact patches, interactive programs, and live/watch sessions. Group cleanup cannot cover descendants that create a new group/session, and SIGKILL cannot be handled. Cancellation prioritizes bounded cleanup over complete output when a sink stalls. Savings are measured in bytes on handcrafted fixtures; they are not token-cost or production-workload measurements.
+Download the archive matching your OS and architecture, extract it, and place `mini` on your PATH. Verify it against `SHA256SUMS`. Rust 1.74 remains the minimum source compiler.
+
+Use `--raw` without recording for exact machine-consumed output, interactive programs, and live/watch sessions. The v0.1.1 conservative JavaScript retention policy remains: individual checkmark lines stay intact, and the handcrafted Jest fixture still measures 2.0% byte reduction.

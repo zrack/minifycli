@@ -1,7 +1,9 @@
 use minifycli::{minify, select_matcher, Matcher};
 use std::env;
 use std::ffi::OsString;
+use std::fs::File;
 use std::io::{self, Read, Write};
+use std::path::PathBuf;
 #[cfg(not(unix))]
 use std::process::ExitStatus;
 use std::process::{Command, Stdio};
@@ -10,13 +12,17 @@ use std::sync::Arc;
 use std::thread;
 
 mod process;
+mod recording;
 const HELP: &str = "mini — terminal output compression for coding agents
 
 Usage: mini [OPTIONS] [--] COMMAND [ARGS...]
+       mini --replay DIR [--stats] [--max-buffer N]
 
 Options (before COMMAND):
   --stats              Print actual byte counts to stderr (not with --raw)
   --raw                Bypass compression; inherit live terminal streams
+  --record DIR         Save raw/filtered child streams locally in a NEW directory
+  --replay DIR         Refilter a complete record without executing its command
   --max-buffer N       Per-stream capture cap in bytes (default: 4194304)
   --max-line-chars N   Opt-in search match clipping; adds an omission marker
   -h, --help           Show this help
@@ -32,6 +38,8 @@ Arguments, stdin, cwd, environment, and child exit codes are preserved.
 Known commands are buffered until exit. Unknown commands pass through live.
 Use --raw for scripts, exact patches, interactive tools, and machine output.
 No shell expansion is performed; use an explicit shell for pipelines.
+Recording is opt-in and can contain private output or sensitive arguments.
+Raw passthrough and recording cannot be combined.
 ";
 
 #[derive(Debug)]
@@ -41,10 +49,16 @@ struct Options {
     raw: bool,
     max_buffer: usize,
     max_line_chars: Option<usize>,
+    record: Option<PathBuf>,
 }
 
 enum Action {
     Run(Options),
+    Replay {
+        directory: PathBuf,
+        stats: bool,
+        max_buffer: usize,
+    },
     Help,
     Version,
 }
@@ -57,13 +71,29 @@ fn parse(args: impl IntoIterator<Item = OsString>) -> Result<Action, String> {
         raw: false,
         max_buffer: 4 * 1024 * 1024,
         max_line_chars: None,
+        record: None,
     };
+    let mut replay = None;
     while let Some(arg) = args.next() {
         match arg.to_str() {
             Some("-h" | "--help") => return Ok(Action::Help),
             Some("-V" | "--version") => return Ok(Action::Version),
             Some("--stats") => options.stats = true,
             Some("--raw") => options.raw = true,
+            Some("--record" | "--replay") => {
+                let name = arg.to_string_lossy();
+                let directory = args
+                    .next()
+                    .ok_or_else(|| format!("{name} requires a directory"))?;
+                let target = if name == "--record" {
+                    &mut options.record
+                } else {
+                    &mut replay
+                };
+                if target.replace(PathBuf::from(directory)).is_some() {
+                    return Err(format!("{name} can only be supplied once"));
+                }
+            }
             Some("--max-buffer" | "--max-line-chars") => {
                 let name = arg.to_string_lossy();
                 let value = args
@@ -92,11 +122,32 @@ fn parse(args: impl IntoIterator<Item = OsString>) -> Result<Action, String> {
             }
         }
     }
+    if let Some(directory) = replay {
+        if !options.command.is_empty()
+            || options.raw
+            || options.record.is_some()
+            || options.max_line_chars.is_some()
+        {
+            return Err(
+                "--replay accepts no command, --raw, --record, or line-clipping override".into(),
+            );
+        }
+        return Ok(Action::Replay {
+            directory,
+            stats: options.stats,
+            max_buffer: options.max_buffer,
+        });
+    }
     if options.command.is_empty() {
         return Err("a command is required (see mini --help)".into());
     }
     if options.raw && options.stats {
         return Err("--raw and --stats cannot be combined; --raw inherits terminal streams".into());
+    }
+    if options.raw && options.record.is_some() {
+        return Err(
+            "--raw and --record cannot be combined; --raw inherits terminal streams".into(),
+        );
     }
     Ok(Action::Run(options))
 }
@@ -109,7 +160,12 @@ struct Captured {
 
 /// Drain both pipes concurrently. If a stream exceeds the cap, emit its
 /// original buffered prefix and copy remaining bytes without transformation.
-fn capture(mut reader: impl Read, mut writer: impl Write, limit: usize) -> io::Result<Captured> {
+fn capture(
+    mut reader: impl Read,
+    mut writer: impl Write,
+    limit: usize,
+    mut raw_record: Option<File>,
+) -> io::Result<Captured> {
     let mut captured = Captured {
         bytes: Vec::new(),
         total: 0,
@@ -125,6 +181,9 @@ fn capture(mut reader: impl Read, mut writer: impl Write, limit: usize) -> io::R
             break;
         }
         captured.total += count as u64;
+        if let Some(file) = raw_record.as_mut() {
+            file.write_all(&chunk[..count])?;
+        }
         if !captured.spilled && count <= limit.saturating_sub(captured.bytes.len()) {
             captured.bytes.extend_from_slice(&chunk[..count]);
         } else {
@@ -137,7 +196,20 @@ fn capture(mut reader: impl Read, mut writer: impl Write, limit: usize) -> io::R
             writer.flush()?;
         }
     }
+    if let Some(file) = raw_record.as_mut() {
+        file.flush()?;
+    }
     Ok(captured)
+}
+
+fn with_record<W: Write + Send + 'static>(
+    writer: W,
+    record: Option<File>,
+) -> Box<dyn Write + Send> {
+    match record {
+        Some(file) => Box::new(recording::TeeWriter::new(writer, file)),
+        None => Box::new(writer),
+    }
 }
 
 #[cfg(not(unix))]
@@ -165,8 +237,24 @@ fn run(options: Options) -> io::Result<i32> {
     };
     let mut command = Command::new(&options.command[0]);
     command.args(&options.command[1..]);
-    if matcher == Matcher::Passthrough && !options.stats {
+    if matcher == Matcher::Passthrough && !options.stats && options.record.is_none() {
         return passthrough(command);
+    }
+    let mut record = options
+        .record
+        .as_deref()
+        .map(recording::Record::create)
+        .transpose()?;
+    let mut raw_files = [None, None];
+    let mut filtered_files = [None, None];
+    if let Some(record) = record.as_mut() {
+        for (index, stream) in [recording::Stream::Stdout, recording::Stream::Stderr]
+            .into_iter()
+            .enumerate()
+        {
+            raw_files[index] = Some(record.take_raw(stream)?);
+            filtered_files[index] = Some(record.take_filtered(stream)?);
+        }
     }
     command
         .stdin(Stdio::inherit())
@@ -179,10 +267,25 @@ fn run(options: Options) -> io::Result<i32> {
     let io_exit = Arc::new(AtomicI32::new(0));
     let out_error = Arc::clone(&io_exit);
     let err_error = Arc::clone(&io_exit);
+    let [out_raw, err_raw] = raw_files;
+    let out_sink = with_record(
+        io::stdout(),
+        filtered_files[0]
+            .as_ref()
+            .map(File::try_clone)
+            .transpose()?,
+    );
+    let err_sink = with_record(
+        io::stderr(),
+        filtered_files[1]
+            .as_ref()
+            .map(File::try_clone)
+            .transpose()?,
+    );
     let out_thread =
-        thread::spawn(move || report_io(capture(stdout, io::stdout(), limit), &out_error));
+        thread::spawn(move || report_io(capture(stdout, out_sink, limit, out_raw), &out_error));
     let err_thread =
-        thread::spawn(move || report_io(capture(stderr, io::stderr(), limit), &err_error));
+        thread::spawn(move || report_io(capture(stderr, err_sink, limit, err_raw), &err_error));
     if !child.wait_until(
         || out_thread.is_finished() && err_thread.is_finished(),
         &io_exit,
@@ -203,6 +306,7 @@ fn run(options: Options) -> io::Result<i32> {
     let mut input_bytes = 0;
     let mut output_bytes = 0;
     let mut spills = 0;
+    let spilled = [stdout.spilled, stderr.spilled];
     let mut outputs = [Vec::new(), Vec::new()];
     for (index, captured) in [stdout, stderr].into_iter().enumerate() {
         input_bytes += captured.total;
@@ -229,33 +333,53 @@ fn run(options: Options) -> io::Result<i32> {
         output_bytes += output.len() as u64;
         outputs[index] = output;
     }
-    if options.stats && !child.cancelled() {
+    let stats = if options.stats && !child.cancelled() {
         let reduction = if input_bytes == 0 {
             0.0
         } else {
             100.0 * (input_bytes - output_bytes) as f64 / input_bytes as f64
         };
-        let stats = format!(
-            "[mini] matcher={} input={}B output={}B saved={:.1}% passthrough_streams={}",
+        Some(format!(
+            "[mini] matcher={} input={}B output={}B saved={:.1}% passthrough_streams={}\n",
             matcher.name(),
             input_bytes,
             output_bytes,
             reduction,
             spills
-        );
-        outputs[1].extend_from_slice(stats.as_bytes());
-        outputs[1].push(b'\n');
-    }
+        ))
+    } else {
+        None
+    };
     let [stdout, stderr] = outputs;
+    let [out_record, err_record] = filtered_files;
     let out_error = Arc::clone(&io_exit);
     let err_error = Arc::clone(&io_exit);
-    let out_thread = thread::spawn(move || report_io(io::stdout().write_all(&stdout), &out_error));
-    let err_thread = thread::spawn(move || report_io(io::stderr().write_all(&stderr), &err_error));
+    let out_thread = thread::spawn(move || {
+        let mut writer = with_record(io::stdout(), out_record);
+        report_io(
+            writer.write_all(&stdout).and_then(|_| writer.flush()),
+            &out_error,
+        )
+    });
+    let err_thread = thread::spawn(move || {
+        let mut writer = with_record(io::stderr(), err_record);
+        let result = writer
+            .write_all(&stderr)
+            .and_then(|_| writer.flush())
+            .and_then(|_| {
+                if let Some(stats) = stats {
+                    io::stderr().write_all(stats.as_bytes())
+                } else {
+                    Ok(())
+                }
+            });
+        report_io(result, &err_error)
+    });
     if child.wait_until(
         || out_thread.is_finished() && err_thread.is_finished(),
         &io_exit,
     )? {
-        if child.cancelled() || io_exit.load(Ordering::Relaxed) != 0 {
+        if io_exit.load(Ordering::Relaxed) != 0 {
             return Ok(child.exit_code(&io_exit));
         }
         out_thread
@@ -264,8 +388,47 @@ fn run(options: Options) -> io::Result<i32> {
         err_thread
             .join()
             .map_err(|_| io::Error::other("stderr writer panicked"))??;
+        if let Some(record) = record {
+            let exit_code = child.exit_code(&io_exit);
+            record.finish(recording::Metadata {
+                command: options.command,
+                matcher,
+                exit_code,
+                failed: exit_code != 0,
+                cancelled: child.cancelled(),
+                spilled,
+                max_line_chars: options.max_line_chars,
+                complete: !child.cancelled() && !spilled.into_iter().any(|value| value),
+            })?;
+        }
     }
     Ok(child.exit_code(&io_exit))
+}
+
+fn replay(directory: PathBuf, stats: bool, max_buffer: usize) -> io::Result<i32> {
+    let captured = recording::load_replay(&directory, max_buffer)?;
+    let [stdout, stderr] = captured.render();
+    io::stdout().write_all(&stdout)?;
+    io::stderr().write_all(&stderr)?;
+    if stats {
+        let input = captured.stdout.len() + captured.stderr.len();
+        let output = stdout.len() + stderr.len();
+        let reduction = if input == 0 {
+            0.0
+        } else {
+            100.0 * (input - output) as f64 / input as f64
+        };
+        writeln!(
+            io::stderr(),
+            "[mini] replay matcher={} recorded_matcher={} input={}B output={}B saved={:.1}%",
+            select_matcher(&captured.command).name(),
+            captured.matcher.name(),
+            input,
+            output,
+            reduction
+        )?;
+    }
+    Ok(captured.exit_code)
 }
 
 fn report_io<T>(result: io::Result<T>, exit: &AtomicI32) -> io::Result<T> {
@@ -292,6 +455,11 @@ fn main() {
         Action::Help => io::stdout().write_all(HELP.as_bytes()).map(|_| 0),
         Action::Version => writeln!(io::stdout(), "mini {}", env!("CARGO_PKG_VERSION")).map(|_| 0),
         Action::Run(options) => run(options),
+        Action::Replay {
+            directory,
+            stats,
+            max_buffer,
+        } => replay(directory, stats, max_buffer),
     };
     let exit_code = match result {
         Ok(code) => code,
@@ -316,7 +484,7 @@ mod tests {
     fn spill_is_byte_exact_and_bounded() {
         let input = vec![b'x'; 20_000];
         let mut output = Vec::new();
-        let result = capture(input.as_slice(), &mut output, 8).unwrap();
+        let result = capture(input.as_slice(), &mut output, 8, None).unwrap();
         assert!(result.spilled);
         assert!(result.bytes.is_empty());
         assert_eq!(result.total, 20_000);

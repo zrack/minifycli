@@ -25,6 +25,10 @@ jobs:
         run: cargo +stable clippy --all-targets -- -D warnings
       - name: Run tests
         run: cargo +stable test --locked
+      - name: Check evaluation harness invariants
+        run: |
+          python3 -m py_compile evaluation/*.py
+          python3 -m unittest discover -s evaluation/tests -v
       - name: Build release
         run: cargo +stable build --release --locked
       - name: Validate fixture benchmarks
