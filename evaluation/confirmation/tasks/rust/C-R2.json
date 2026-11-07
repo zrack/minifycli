@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "id": "C-R2",
+  "title": "Completed streams still request more input in take_till",
+  "repository": {
+    "url": "https://github.com/winnow-rs/winnow",
+    "license": "MIT"
+  },
+  "base_commit": "4399c7e191f93bbeddf2a1164287d1feefc97f21",
+  "oracle_commit": "eded0f272b54211a3deb307d886e6da64abc3766",
+  "base_tree": "84075d84e0d59d444a4f0855159a5f14f7ef4c16",
+  "oracle_tree": "ff6f46bfd2b2227a66f794b73ab34122e41f44b2",
+  "prompt": "A Partial stream remains treated as incomplete by take_till after StreamIsPartial::complete() marks it complete. On complete input 'abc', taking zero or more or one or more tokens until ';' should consume 'abc' and succeed even without a delimiter. Empty complete input should succeed with a zero minimum and return a recoverable error with a one-token minimum. Fix the inconsistent state handling while preserving partial-stream requests for more input, bounded ranges, delimiters, Unicode, and returned remainders. Add regression coverage.",
+  "baseline_command": [
+    "cargo",
+    "test",
+    "--offline",
+    "--locked",
+    "--lib"
+  ],
+  "hidden_command": [
+    "python3",
+    "evaluation/confirmation/tasks/rust/run_hidden.py",
+    "C-R2",
+    "WORKSPACE"
+  ],
+  "assets": {
+    "hidden_test": "evaluation/confirmation/tasks/rust/C-R2-hidden.rs",
+    "hidden_runner": "evaluation/confirmation/tasks/rust/run_hidden.py",
+    "baseline_lockfile": "evaluation/confirmation/tasks/rust/C-R2-Cargo.lock",
+    "licenses": [
+      "evaluation/confirmation/tasks/rust/licenses/winnow-MIT.txt"
+    ]
+  },
+  "reference_source": "https://github.com/winnow-rs/winnow/commit/eded0f272b54211a3deb307d886e6da64abc3766",
+  "upstream_test_paths": [
+    "src/token/tests.rs"
+  ],
+  "hardness": {
+    "rule_registered_before_comparative_runs": ">=20 meaningful changed production lines across >=2 functions, OR >=40 meaningful stateful-algorithm lines and >=3 edge-case families",
+    "meaningful_changed_lexical_lines": 99,
+    "count_method": "Added plus removed nonblank production lines containing an identifier or digit, excluding comment-only lines and pure punctuation; original upstream production diff, excluding test modules. This is a structural proxy, not observed solver difficulty.",
+    "functions": [
+      "take_till",
+      "take_while",
+      "take_till0",
+      "take_till1"
+    ],
+    "edge_case_families": [
+      "runtime complete versus partial state",
+      "zero-minimum versus one-minimum and bounded ranges",
+      "empty, unterminated, delimited, and multibyte input"
+    ],
+    "structurally_qualified": true
+  },
+  "hidden_test_counts": {
+    "total": 10,
+    "expected_base_failed": 6
+  },
+  "setup": {
+    "runtime_dependencies": "none with default features",
+    "dependency_lock": "Upstream Cargo.lock, copied unchanged to the registered source; historical dev dependencies fetched once before all checks",
+    "instructions_found": [],
+    "toolchain_tested": "rustc 1.99.1 / cargo 1.99.1",
+    "target_isolation": "Distinct Cargo target per exported source; delete own build products after each trial/evaluation stage, retaining frozen source and receipts",
+    "platform": "aarch64-apple-darwin qualified"
+  },
+  "evaluation": {
+    "production_globs": [
+      "src/*.rs",
+      "src/**/*.rs"
+    ],
+    "protected_test_globs": [
+      "src/**/tests.rs",
+      "src/**/test.rs",
+      "tests/**"
+    ],
+    "inline_test_handling": "Restore all registered cfg(test) items/blocks; do not assume a single EOF test module"
+  },
+  "historical_test_evidence": "The correction commit adds no new upstream regression assertions; held-out behavioral regressions were written and qualified before comparative solver outcomes."
+}

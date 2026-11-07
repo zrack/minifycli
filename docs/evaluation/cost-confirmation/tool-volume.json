@@ -1,0 +1,1476 @@
+{
+  "by_variant": {
+    "mini": {
+      "cl100k_base": {
+        "all_responses": 617673,
+        "read_responses": 206500,
+        "recovery_responses": 0,
+        "request_arguments": 77816,
+        "terminal_responses": 394223,
+        "write_and_list_responses": 16950
+      },
+      "o200k_base": {
+        "all_responses": 619956,
+        "read_responses": 207640,
+        "recovery_responses": 0,
+        "request_arguments": 78440,
+        "terminal_responses": 394919,
+        "write_and_list_responses": 17397
+      }
+    },
+    "raw": {
+      "cl100k_base": {
+        "all_responses": 661980,
+        "read_responses": 214417,
+        "recovery_responses": 0,
+        "request_arguments": 80722,
+        "terminal_responses": 431441,
+        "write_and_list_responses": 16122
+      },
+      "o200k_base": {
+        "all_responses": 665244,
+        "read_responses": 215682,
+        "recovery_responses": 0,
+        "request_arguments": 81179,
+        "terminal_responses": 433002,
+        "write_and_list_responses": 16560
+      }
+    },
+    "rtk": {
+      "cl100k_base": {
+        "all_responses": 473912,
+        "read_responses": 226415,
+        "recovery_responses": 31,
+        "request_arguments": 73765,
+        "terminal_responses": 229505,
+        "write_and_list_responses": 17961
+      },
+      "o200k_base": {
+        "all_responses": 477177,
+        "read_responses": 227787,
+        "recovery_responses": 31,
+        "request_arguments": 74392,
+        "terminal_responses": 230935,
+        "write_and_list_responses": 18424
+      }
+    }
+  },
+  "cache_files_sha256": [
+    "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7",
+    "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d"
+  ],
+  "definition": "Encode each exact JSON text string delivered as a tool content block; count request arguments separately. Excludes model instructions, reasoning, model messages, protocol wrappers and repeated context. CLI actual whole-session usage is the primary measure. Different request sets mean these volumes are not matched-command compression ratios.",
+  "encodings": [
+    "o200k_base",
+    "cl100k_base"
+  ],
+  "plan_sha256": "2f17831952b856d9b98826a547cf6fdf1aee2d8ab16c4553b9ccefbe320ac0b8",
+  "schema": 1,
+  "tiktoken_version": "0.14.0",
+  "trials": [
+    {
+      "actions": 23,
+      "id": "trial-001",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 24726,
+          "read_responses": 6390,
+          "recovery_responses": 0,
+          "request_arguments": 1505,
+          "terminal_responses": 16984,
+          "write_and_list_responses": 1352
+        },
+        "o200k_base": {
+          "all_responses": 24911,
+          "read_responses": 6473,
+          "recovery_responses": 0,
+          "request_arguments": 1549,
+          "terminal_responses": 17027,
+          "write_and_list_responses": 1411
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-J2",
+      "tool_log_sha256": "1f4ecc5e04458a8ec4f95e20f06a1b1f72891d542dc231bd539f26e656292f07",
+      "variant": "mini"
+    },
+    {
+      "actions": 26,
+      "id": "trial-002",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 30817,
+          "read_responses": 11605,
+          "recovery_responses": 0,
+          "request_arguments": 1391,
+          "terminal_responses": 17860,
+          "write_and_list_responses": 1352
+        },
+        "o200k_base": {
+          "all_responses": 31096,
+          "read_responses": 11755,
+          "recovery_responses": 0,
+          "request_arguments": 1422,
+          "terminal_responses": 17930,
+          "write_and_list_responses": 1411
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-J2",
+      "tool_log_sha256": "91fd2f6d70f7b11e148537a15a20fbbe55fd718c3d4198926d8f062616cd6d94",
+      "variant": "rtk"
+    },
+    {
+      "actions": 29,
+      "id": "trial-003",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 28406,
+          "read_responses": 9754,
+          "recovery_responses": 0,
+          "request_arguments": 1489,
+          "terminal_responses": 17300,
+          "write_and_list_responses": 1352
+        },
+        "o200k_base": {
+          "all_responses": 28658,
+          "read_responses": 9897,
+          "recovery_responses": 0,
+          "request_arguments": 1528,
+          "terminal_responses": 17350,
+          "write_and_list_responses": 1411
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-J2",
+      "tool_log_sha256": "f710b6ed4475e6426054016acb57cecd33b589bf625e7845eab2f860170ed44e",
+      "variant": "raw"
+    },
+    {
+      "actions": 56,
+      "id": "trial-004",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 36611,
+          "read_responses": 21364,
+          "recovery_responses": 0,
+          "request_arguments": 8984,
+          "terminal_responses": 14208,
+          "write_and_list_responses": 1039
+        },
+        "o200k_base": {
+          "all_responses": 36844,
+          "read_responses": 21421,
+          "recovery_responses": 0,
+          "request_arguments": 9061,
+          "terminal_responses": 14375,
+          "write_and_list_responses": 1048
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-J3",
+      "tool_log_sha256": "94d2e13f3f7b8778f6c3ee8f9494e93ed5ad808cafd697ac8e1184b4cd8e1c3a",
+      "variant": "rtk"
+    },
+    {
+      "actions": 51,
+      "id": "trial-005",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 47563,
+          "read_responses": 17184,
+          "recovery_responses": 0,
+          "request_arguments": 8161,
+          "terminal_responses": 29386,
+          "write_and_list_responses": 993
+        },
+        "o200k_base": {
+          "all_responses": 47710,
+          "read_responses": 17224,
+          "recovery_responses": 0,
+          "request_arguments": 8220,
+          "terminal_responses": 29484,
+          "write_and_list_responses": 1002
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-J3",
+      "tool_log_sha256": "fbd53a299defdd8eadeff9e2c067aeafc673300045f694999a0936791e8ec8f8",
+      "variant": "raw"
+    },
+    {
+      "actions": 63,
+      "id": "trial-006",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 68950,
+          "read_responses": 17823,
+          "recovery_responses": 0,
+          "request_arguments": 9084,
+          "terminal_responses": 50070,
+          "write_and_list_responses": 1057
+        },
+        "o200k_base": {
+          "all_responses": 69174,
+          "read_responses": 17864,
+          "recovery_responses": 0,
+          "request_arguments": 9176,
+          "terminal_responses": 50244,
+          "write_and_list_responses": 1066
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-J3",
+      "tool_log_sha256": "410501bded72c97516a9b777dd64bb178857640d90ffc2d2e36e2cae86af8992",
+      "variant": "mini"
+    },
+    {
+      "actions": 31,
+      "id": "trial-007",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 40642,
+          "read_responses": 10707,
+          "recovery_responses": 0,
+          "request_arguments": 2145,
+          "terminal_responses": 28453,
+          "write_and_list_responses": 1482
+        },
+        "o200k_base": {
+          "all_responses": 40965,
+          "read_responses": 10882,
+          "recovery_responses": 0,
+          "request_arguments": 2198,
+          "terminal_responses": 28539,
+          "write_and_list_responses": 1544
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-J1",
+      "tool_log_sha256": "07b711566e8cade49713156b629ee051f4dd0870db6a052c5eeb6ed320332600",
+      "variant": "raw"
+    },
+    {
+      "actions": 29,
+      "id": "trial-008",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 30797,
+          "read_responses": 11492,
+          "recovery_responses": 0,
+          "request_arguments": 1543,
+          "terminal_responses": 17884,
+          "write_and_list_responses": 1421
+        },
+        "o200k_base": {
+          "all_responses": 31040,
+          "read_responses": 11648,
+          "recovery_responses": 0,
+          "request_arguments": 1567,
+          "terminal_responses": 17912,
+          "write_and_list_responses": 1480
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-J1",
+      "tool_log_sha256": "f92a10f3967ecd26972856ae7a8816569b079af4c459db1c26361bc710d6fda1",
+      "variant": "mini"
+    },
+    {
+      "actions": 33,
+      "id": "trial-009",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 38756,
+          "read_responses": 10514,
+          "recovery_responses": 0,
+          "request_arguments": 2118,
+          "terminal_responses": 26757,
+          "write_and_list_responses": 1485
+        },
+        "o200k_base": {
+          "all_responses": 39113,
+          "read_responses": 10678,
+          "recovery_responses": 0,
+          "request_arguments": 2158,
+          "terminal_responses": 26889,
+          "write_and_list_responses": 1546
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-J1",
+      "tool_log_sha256": "48e7e5e16f4c8e8860211c1d7a82bbd04669b3beca6185b1df65d2eccef160b5",
+      "variant": "rtk"
+    },
+    {
+      "actions": 19,
+      "id": "trial-010",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 13009,
+          "read_responses": 9329,
+          "recovery_responses": 31,
+          "request_arguments": 1749,
+          "terminal_responses": 3577,
+          "write_and_list_responses": 72
+        },
+        "o200k_base": {
+          "all_responses": 13017,
+          "read_responses": 9338,
+          "recovery_responses": 31,
+          "request_arguments": 1739,
+          "terminal_responses": 3576,
+          "write_and_list_responses": 72
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-R3",
+      "tool_log_sha256": "c7aa7c68bc0e468b292d5970a3f547ab464dba37f2c78bbac67567fdefc2c4cd",
+      "variant": "rtk"
+    },
+    {
+      "actions": 21,
+      "id": "trial-011",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 20950,
+          "read_responses": 13173,
+          "recovery_responses": 0,
+          "request_arguments": 2535,
+          "terminal_responses": 7697,
+          "write_and_list_responses": 80
+        },
+        "o200k_base": {
+          "all_responses": 20963,
+          "read_responses": 13187,
+          "recovery_responses": 0,
+          "request_arguments": 2519,
+          "terminal_responses": 7696,
+          "write_and_list_responses": 80
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-R3",
+      "tool_log_sha256": "91b808203cecbf12cb1185a28d6c723e604049396b01d802a00634326334b5be",
+      "variant": "raw"
+    },
+    {
+      "actions": 19,
+      "id": "trial-012",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 14655,
+          "read_responses": 7567,
+          "recovery_responses": 0,
+          "request_arguments": 1799,
+          "terminal_responses": 7016,
+          "write_and_list_responses": 72
+        },
+        "o200k_base": {
+          "all_responses": 14646,
+          "read_responses": 7570,
+          "recovery_responses": 0,
+          "request_arguments": 1794,
+          "terminal_responses": 7004,
+          "write_and_list_responses": 72
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-R3",
+      "tool_log_sha256": "a265a02a73c86998439203a48c94ee24692410eb74e9b8a8030830cb9cb965a2",
+      "variant": "mini"
+    },
+    {
+      "actions": 29,
+      "id": "trial-013",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 58444,
+          "read_responses": 15222,
+          "recovery_responses": 0,
+          "request_arguments": 10304,
+          "terminal_responses": 42179,
+          "write_and_list_responses": 1043
+        },
+        "o200k_base": {
+          "all_responses": 58610,
+          "read_responses": 15331,
+          "recovery_responses": 0,
+          "request_arguments": 10368,
+          "terminal_responses": 42223,
+          "write_and_list_responses": 1056
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-R1",
+      "tool_log_sha256": "4f98e7e519bb3f714a198f7e13cd24ddea3864d8fe29f70686d0c9e180f3c6ad",
+      "variant": "raw"
+    },
+    {
+      "actions": 30,
+      "id": "trial-014",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 49504,
+          "read_responses": 13890,
+          "recovery_responses": 0,
+          "request_arguments": 8056,
+          "terminal_responses": 34591,
+          "write_and_list_responses": 1023
+        },
+        "o200k_base": {
+          "all_responses": 49559,
+          "read_responses": 13982,
+          "recovery_responses": 0,
+          "request_arguments": 8120,
+          "terminal_responses": 34541,
+          "write_and_list_responses": 1036
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-R1",
+      "tool_log_sha256": "7d96216fc34c7dc676090a727fc06b0be1e38e161e86e5982ec23a0e5d0fbd4c",
+      "variant": "mini"
+    },
+    {
+      "actions": 35,
+      "id": "trial-015",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 26021,
+          "read_responses": 12305,
+          "recovery_responses": 0,
+          "request_arguments": 7980,
+          "terminal_responses": 12713,
+          "write_and_list_responses": 1003
+        },
+        "o200k_base": {
+          "all_responses": 26240,
+          "read_responses": 12379,
+          "recovery_responses": 0,
+          "request_arguments": 8068,
+          "terminal_responses": 12845,
+          "write_and_list_responses": 1016
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-R1",
+      "tool_log_sha256": "1f7d1ad3443c6198847744ce1a0a3bd5f3354e102296e71ed6844103c9c99984",
+      "variant": "rtk"
+    },
+    {
+      "actions": 27,
+      "id": "trial-016",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 17937,
+          "read_responses": 7298,
+          "recovery_responses": 0,
+          "request_arguments": 4189,
+          "terminal_responses": 9537,
+          "write_and_list_responses": 1102
+        },
+        "o200k_base": {
+          "all_responses": 17948,
+          "read_responses": 7267,
+          "recovery_responses": 0,
+          "request_arguments": 4138,
+          "terminal_responses": 9566,
+          "write_and_list_responses": 1115
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-R2",
+      "tool_log_sha256": "e32a4e1d47e493a6f3d4975b53393960f924e8b673b5a00e2e63410e7669c597",
+      "variant": "mini"
+    },
+    {
+      "actions": 19,
+      "id": "trial-017",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 13210,
+          "read_responses": 6710,
+          "recovery_responses": 0,
+          "request_arguments": 1331,
+          "terminal_responses": 5425,
+          "write_and_list_responses": 1075
+        },
+        "o200k_base": {
+          "all_responses": 13256,
+          "read_responses": 6685,
+          "recovery_responses": 0,
+          "request_arguments": 1332,
+          "terminal_responses": 5483,
+          "write_and_list_responses": 1088
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-R2",
+      "tool_log_sha256": "25c8685a8f61f39b6fc350f64327e914c8e0e799fb8675f9d751e59e8a47a235",
+      "variant": "rtk"
+    },
+    {
+      "actions": 22,
+      "id": "trial-018",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 23520,
+          "read_responses": 6498,
+          "recovery_responses": 0,
+          "request_arguments": 4079,
+          "terminal_responses": 16986,
+          "write_and_list_responses": 36
+        },
+        "o200k_base": {
+          "all_responses": 23603,
+          "read_responses": 6473,
+          "recovery_responses": 0,
+          "request_arguments": 4037,
+          "terminal_responses": 17094,
+          "write_and_list_responses": 36
+        }
+      },
+      "repetition": 1,
+      "task_id": "C-R2",
+      "tool_log_sha256": "b708612726bdaeb8b2dd3e433067cf0fdeda19ad6472b07b993d8f054b4d6f7a",
+      "variant": "raw"
+    },
+    {
+      "actions": 29,
+      "id": "trial-019",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 31034,
+          "read_responses": 11952,
+          "recovery_responses": 0,
+          "request_arguments": 1515,
+          "terminal_responses": 17730,
+          "write_and_list_responses": 1352
+        },
+        "o200k_base": {
+          "all_responses": 31326,
+          "read_responses": 12126,
+          "recovery_responses": 0,
+          "request_arguments": 1546,
+          "terminal_responses": 17789,
+          "write_and_list_responses": 1411
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-J2",
+      "tool_log_sha256": "f2306a121426dbaf2db1516f671b2c23df8894108fdbbc31b63877a58d6019c1",
+      "variant": "rtk"
+    },
+    {
+      "actions": 27,
+      "id": "trial-020",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 30443,
+          "read_responses": 10584,
+          "recovery_responses": 0,
+          "request_arguments": 1481,
+          "terminal_responses": 18506,
+          "write_and_list_responses": 1353
+        },
+        "o200k_base": {
+          "all_responses": 30702,
+          "read_responses": 10687,
+          "recovery_responses": 0,
+          "request_arguments": 1513,
+          "terminal_responses": 18603,
+          "write_and_list_responses": 1412
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-J2",
+      "tool_log_sha256": "ff58c9fa2919ee9590997782adbab24c38592877373b6228a48966b56b44ec51",
+      "variant": "raw"
+    },
+    {
+      "actions": 27,
+      "id": "trial-021",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 25776,
+          "read_responses": 7670,
+          "recovery_responses": 0,
+          "request_arguments": 1578,
+          "terminal_responses": 16754,
+          "write_and_list_responses": 1352
+        },
+        "o200k_base": {
+          "all_responses": 25963,
+          "read_responses": 7758,
+          "recovery_responses": 0,
+          "request_arguments": 1620,
+          "terminal_responses": 16794,
+          "write_and_list_responses": 1411
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-J2",
+      "tool_log_sha256": "d57dcceda2cb2983259b77415ba0d767b789057702052cc0d5d77d65051279ed",
+      "variant": "mini"
+    },
+    {
+      "actions": 23,
+      "id": "trial-022",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 47603,
+          "read_responses": 10632,
+          "recovery_responses": 0,
+          "request_arguments": 7792,
+          "terminal_responses": 35958,
+          "write_and_list_responses": 1013
+        },
+        "o200k_base": {
+          "all_responses": 47662,
+          "read_responses": 10703,
+          "recovery_responses": 0,
+          "request_arguments": 7854,
+          "terminal_responses": 35933,
+          "write_and_list_responses": 1026
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-R1",
+      "tool_log_sha256": "b326351180202d3616028a045de1196cf2907d1b1170e9f2b6f329b49c6127a7",
+      "variant": "mini"
+    },
+    {
+      "actions": 34,
+      "id": "trial-023",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 23166,
+          "read_responses": 12995,
+          "recovery_responses": 0,
+          "request_arguments": 8363,
+          "terminal_responses": 9138,
+          "write_and_list_responses": 1033
+        },
+        "o200k_base": {
+          "all_responses": 23383,
+          "read_responses": 13091,
+          "recovery_responses": 0,
+          "request_arguments": 8446,
+          "terminal_responses": 9246,
+          "write_and_list_responses": 1046
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-R1",
+      "tool_log_sha256": "0843e94eeed2e918458b3b007924a413d3ce3e6aeb2f7ce358cb064ce1339559",
+      "variant": "rtk"
+    },
+    {
+      "actions": 35,
+      "id": "trial-024",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 57766,
+          "read_responses": 12384,
+          "recovery_responses": 0,
+          "request_arguments": 6130,
+          "terminal_responses": 44339,
+          "write_and_list_responses": 1043
+        },
+        "o200k_base": {
+          "all_responses": 57921,
+          "read_responses": 12469,
+          "recovery_responses": 0,
+          "request_arguments": 6168,
+          "terminal_responses": 44396,
+          "write_and_list_responses": 1056
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-R1",
+      "tool_log_sha256": "1896b6b0af97a42a4f5cf89e33c609fc6aebc5ab50aa2a9f68895056516dc5ca",
+      "variant": "raw"
+    },
+    {
+      "actions": 35,
+      "id": "trial-025",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 39988,
+          "read_responses": 10772,
+          "recovery_responses": 0,
+          "request_arguments": 1920,
+          "terminal_responses": 27770,
+          "write_and_list_responses": 1446
+        },
+        "o200k_base": {
+          "all_responses": 40298,
+          "read_responses": 10941,
+          "recovery_responses": 0,
+          "request_arguments": 1953,
+          "terminal_responses": 27851,
+          "write_and_list_responses": 1506
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-J1",
+      "tool_log_sha256": "124e6919bc353a8f5d361f998443340c50ff09975b7820c53823fc3c4be13404",
+      "variant": "mini"
+    },
+    {
+      "actions": 32,
+      "id": "trial-026",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 38875,
+          "read_responses": 10992,
+          "recovery_responses": 0,
+          "request_arguments": 2124,
+          "terminal_responses": 26423,
+          "write_and_list_responses": 1460
+        },
+        "o200k_base": {
+          "all_responses": 39218,
+          "read_responses": 11146,
+          "recovery_responses": 0,
+          "request_arguments": 2165,
+          "terminal_responses": 26552,
+          "write_and_list_responses": 1520
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-J1",
+      "tool_log_sha256": "d87849f0b095437fa1e107f2e93edf9a9b7cfc7a5c5a8c1939d365594184b5e1",
+      "variant": "rtk"
+    },
+    {
+      "actions": 33,
+      "id": "trial-027",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 49114,
+          "read_responses": 10633,
+          "recovery_responses": 0,
+          "request_arguments": 2046,
+          "terminal_responses": 37018,
+          "write_and_list_responses": 1463
+        },
+        "o200k_base": {
+          "all_responses": 49540,
+          "read_responses": 10791,
+          "recovery_responses": 0,
+          "request_arguments": 2072,
+          "terminal_responses": 37227,
+          "write_and_list_responses": 1522
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-J1",
+      "tool_log_sha256": "35073f140213a2b17e3425da8896e7eb664041539220cebb7be37b7e91ddff8b",
+      "variant": "raw"
+    },
+    {
+      "actions": 71,
+      "id": "trial-028",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 57403,
+          "read_responses": 19603,
+          "recovery_responses": 0,
+          "request_arguments": 10276,
+          "terminal_responses": 36675,
+          "write_and_list_responses": 1125
+        },
+        "o200k_base": {
+          "all_responses": 57624,
+          "read_responses": 19657,
+          "recovery_responses": 0,
+          "request_arguments": 10332,
+          "terminal_responses": 36833,
+          "write_and_list_responses": 1134
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-J3",
+      "tool_log_sha256": "63a289ab526d2793aa57e891126e49eab0c05796d29828d4ad7d3d21f0718f28",
+      "variant": "raw"
+    },
+    {
+      "actions": 56,
+      "id": "trial-029",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 34003,
+          "read_responses": 18206,
+          "recovery_responses": 0,
+          "request_arguments": 9273,
+          "terminal_responses": 14804,
+          "write_and_list_responses": 993
+        },
+        "o200k_base": {
+          "all_responses": 34178,
+          "read_responses": 18243,
+          "recovery_responses": 0,
+          "request_arguments": 9370,
+          "terminal_responses": 14933,
+          "write_and_list_responses": 1002
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-J3",
+      "tool_log_sha256": "cc49f0c0805013eae80ff1eb8f498ebb291e958cfb63a30b9b6ffdf02d11e194",
+      "variant": "mini"
+    },
+    {
+      "actions": 51,
+      "id": "trial-030",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 35368,
+          "read_responses": 18458,
+          "recovery_responses": 0,
+          "request_arguments": 8139,
+          "terminal_responses": 15950,
+          "write_and_list_responses": 960
+        },
+        "o200k_base": {
+          "all_responses": 35585,
+          "read_responses": 18500,
+          "recovery_responses": 0,
+          "request_arguments": 8216,
+          "terminal_responses": 16116,
+          "write_and_list_responses": 969
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-J3",
+      "tool_log_sha256": "c5f0f24448d11f61b7a86f61c6339df9360d55fd8aad79d055649dbe31762580",
+      "variant": "rtk"
+    },
+    {
+      "actions": 20,
+      "id": "trial-031",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 15448,
+          "read_responses": 7918,
+          "recovery_responses": 0,
+          "request_arguments": 1624,
+          "terminal_responses": 6455,
+          "write_and_list_responses": 1075
+        },
+        "o200k_base": {
+          "all_responses": 15516,
+          "read_responses": 7911,
+          "recovery_responses": 0,
+          "request_arguments": 1620,
+          "terminal_responses": 6517,
+          "write_and_list_responses": 1088
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-R2",
+      "tool_log_sha256": "e500d92f817c2bca6bed62c3ab75ccebf96ab6e2e592a2b2782a0212f7f7774a",
+      "variant": "rtk"
+    },
+    {
+      "actions": 21,
+      "id": "trial-032",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 24131,
+          "read_responses": 5746,
+          "recovery_responses": 0,
+          "request_arguments": 4506,
+          "terminal_responses": 17301,
+          "write_and_list_responses": 1084
+        },
+        "o200k_base": {
+          "all_responses": 24210,
+          "read_responses": 5716,
+          "recovery_responses": 0,
+          "request_arguments": 4471,
+          "terminal_responses": 17397,
+          "write_and_list_responses": 1097
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-R2",
+      "tool_log_sha256": "58508b0c17d758dc1573dd6e67360c61dfad6efecb32dd12f03a440acc311021",
+      "variant": "raw"
+    },
+    {
+      "actions": 24,
+      "id": "trial-033",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 17275,
+          "read_responses": 7340,
+          "recovery_responses": 0,
+          "request_arguments": 3805,
+          "terminal_responses": 8851,
+          "write_and_list_responses": 1084
+        },
+        "o200k_base": {
+          "all_responses": 17299,
+          "read_responses": 7322,
+          "recovery_responses": 0,
+          "request_arguments": 3798,
+          "terminal_responses": 8880,
+          "write_and_list_responses": 1097
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-R2",
+      "tool_log_sha256": "5992a30c28e2ed4aa9b4dfdf395237845a28ac790d423037ab083803fa19bdc6",
+      "variant": "mini"
+    },
+    {
+      "actions": 18,
+      "id": "trial-034",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 21194,
+          "read_responses": 12858,
+          "recovery_responses": 0,
+          "request_arguments": 2543,
+          "terminal_responses": 8256,
+          "write_and_list_responses": 80
+        },
+        "o200k_base": {
+          "all_responses": 21177,
+          "read_responses": 12869,
+          "recovery_responses": 0,
+          "request_arguments": 2507,
+          "terminal_responses": 8228,
+          "write_and_list_responses": 80
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-R3",
+      "tool_log_sha256": "6ac542576422a8b80ef5d794934c95502c1fd2b818dcb8fc7f076d60fd16c366",
+      "variant": "raw"
+    },
+    {
+      "actions": 19,
+      "id": "trial-035",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 21519,
+          "read_responses": 14977,
+          "recovery_responses": 0,
+          "request_arguments": 2475,
+          "terminal_responses": 6462,
+          "write_and_list_responses": 80
+        },
+        "o200k_base": {
+          "all_responses": 21543,
+          "read_responses": 15000,
+          "recovery_responses": 0,
+          "request_arguments": 2473,
+          "terminal_responses": 6463,
+          "write_and_list_responses": 80
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-R3",
+      "tool_log_sha256": "3ab6ea1796c70db0ca38d969176f4e49338813a7dabd1160d2ff22d56607ce1b",
+      "variant": "mini"
+    },
+    {
+      "actions": 16,
+      "id": "trial-036",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 14560,
+          "read_responses": 10554,
+          "recovery_responses": 0,
+          "request_arguments": 2206,
+          "terminal_responses": 3934,
+          "write_and_list_responses": 72
+        },
+        "o200k_base": {
+          "all_responses": 14545,
+          "read_responses": 10567,
+          "recovery_responses": 0,
+          "request_arguments": 2168,
+          "terminal_responses": 3906,
+          "write_and_list_responses": 72
+        }
+      },
+      "repetition": 2,
+      "task_id": "C-R3",
+      "tool_log_sha256": "f3a3a63ff094f64652d45701a61cbd8e501f2ca6678d8682e9a58ccb1986b4e2",
+      "variant": "rtk"
+    },
+    {
+      "actions": 34,
+      "id": "trial-037",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 32263,
+          "read_responses": 12796,
+          "recovery_responses": 0,
+          "request_arguments": 1872,
+          "terminal_responses": 18114,
+          "write_and_list_responses": 1353
+        },
+        "o200k_base": {
+          "all_responses": 32560,
+          "read_responses": 12954,
+          "recovery_responses": 0,
+          "request_arguments": 1917,
+          "terminal_responses": 18194,
+          "write_and_list_responses": 1412
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-J2",
+      "tool_log_sha256": "9a5763cdac4915409be11479a4c35880c69af55ee6a9f875e3dbcdbf7a6e4a7f",
+      "variant": "raw"
+    },
+    {
+      "actions": 27,
+      "id": "trial-038",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 29071,
+          "read_responses": 9484,
+          "recovery_responses": 0,
+          "request_arguments": 1650,
+          "terminal_responses": 18235,
+          "write_and_list_responses": 1352
+        },
+        "o200k_base": {
+          "all_responses": 29315,
+          "read_responses": 9600,
+          "recovery_responses": 0,
+          "request_arguments": 1695,
+          "terminal_responses": 18304,
+          "write_and_list_responses": 1411
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-J2",
+      "tool_log_sha256": "4475d21e4eb37e6fc61f6bd0ce8152283c10e58fb528754c01dd79ee3f74ea8c",
+      "variant": "mini"
+    },
+    {
+      "actions": 27,
+      "id": "trial-039",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 28735,
+          "read_responses": 10411,
+          "recovery_responses": 0,
+          "request_arguments": 1590,
+          "terminal_responses": 16972,
+          "write_and_list_responses": 1352
+        },
+        "o200k_base": {
+          "all_responses": 28992,
+          "read_responses": 10558,
+          "recovery_responses": 0,
+          "request_arguments": 1637,
+          "terminal_responses": 17023,
+          "write_and_list_responses": 1411
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-J2",
+      "tool_log_sha256": "85798eb14cc6d8470a76c42eacca06f7d518b0eb2ac8468852b166643e517e3e",
+      "variant": "rtk"
+    },
+    {
+      "actions": 36,
+      "id": "trial-040",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 27351,
+          "read_responses": 15470,
+          "recovery_responses": 0,
+          "request_arguments": 10562,
+          "terminal_responses": 10868,
+          "write_and_list_responses": 1013
+        },
+        "o200k_base": {
+          "all_responses": 27513,
+          "read_responses": 15526,
+          "recovery_responses": 0,
+          "request_arguments": 10630,
+          "terminal_responses": 10961,
+          "write_and_list_responses": 1026
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-R1",
+      "tool_log_sha256": "313537ec15d67cf147456b0291e89997122ab868bd1db42f4b0025e080363a05",
+      "variant": "rtk"
+    },
+    {
+      "actions": 36,
+      "id": "trial-041",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 53412,
+          "read_responses": 11660,
+          "recovery_responses": 0,
+          "request_arguments": 8981,
+          "terminal_responses": 41712,
+          "write_and_list_responses": 40
+        },
+        "o200k_base": {
+          "all_responses": 53528,
+          "read_responses": 11723,
+          "recovery_responses": 0,
+          "request_arguments": 9053,
+          "terminal_responses": 41765,
+          "write_and_list_responses": 40
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-R1",
+      "tool_log_sha256": "5aa03d337916ef4ffc2d56bb28027a10061e0effb7f3094ea8089bebfea14f10",
+      "variant": "raw"
+    },
+    {
+      "actions": 38,
+      "id": "trial-042",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 55043,
+          "read_responses": 12888,
+          "recovery_responses": 0,
+          "request_arguments": 8909,
+          "terminal_responses": 41112,
+          "write_and_list_responses": 1043
+        },
+        "o200k_base": {
+          "all_responses": 55097,
+          "read_responses": 12980,
+          "recovery_responses": 0,
+          "request_arguments": 8993,
+          "terminal_responses": 41061,
+          "write_and_list_responses": 1056
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-R1",
+      "tool_log_sha256": "cdaec9e5cc6483b1d06d1c79b814063df42c573331f0bb72b7f98cbc0645c87d",
+      "variant": "mini"
+    },
+    {
+      "actions": 23,
+      "id": "trial-043",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 24754,
+          "read_responses": 8565,
+          "recovery_responses": 0,
+          "request_arguments": 2119,
+          "terminal_responses": 15105,
+          "write_and_list_responses": 1084
+        },
+        "o200k_base": {
+          "all_responses": 24875,
+          "read_responses": 8560,
+          "recovery_responses": 0,
+          "request_arguments": 2120,
+          "terminal_responses": 15218,
+          "write_and_list_responses": 1097
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-R2",
+      "tool_log_sha256": "eec88836cba6d5015d70a65d4c6d5a740cc15af14cc7553bb7cd26e1150ce9a7",
+      "variant": "raw"
+    },
+    {
+      "actions": 24,
+      "id": "trial-044",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 17162,
+          "read_responses": 9606,
+          "recovery_responses": 0,
+          "request_arguments": 1910,
+          "terminal_responses": 7529,
+          "write_and_list_responses": 27
+        },
+        "o200k_base": {
+          "all_responses": 17190,
+          "read_responses": 9607,
+          "recovery_responses": 0,
+          "request_arguments": 1906,
+          "terminal_responses": 7556,
+          "write_and_list_responses": 27
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-R2",
+      "tool_log_sha256": "37df08c5eba03e08b814d95868ae42ccb26793d175f78e90db1619c81ac25352",
+      "variant": "mini"
+    },
+    {
+      "actions": 22,
+      "id": "trial-045",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 17432,
+          "read_responses": 10505,
+          "recovery_responses": 0,
+          "request_arguments": 1580,
+          "terminal_responses": 5852,
+          "write_and_list_responses": 1075
+        },
+        "o200k_base": {
+          "all_responses": 17535,
+          "read_responses": 10524,
+          "recovery_responses": 0,
+          "request_arguments": 1580,
+          "terminal_responses": 5923,
+          "write_and_list_responses": 1088
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-R2",
+      "tool_log_sha256": "1a70086a98bfa77e41c7bc32f0fcb82de4c36f90b51534b4ccc90cc2d193c31f",
+      "variant": "rtk"
+    },
+    {
+      "actions": 51,
+      "id": "trial-046",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 60252,
+          "read_responses": 16418,
+          "recovery_responses": 0,
+          "request_arguments": 8096,
+          "terminal_responses": 42816,
+          "write_and_list_responses": 1018
+        },
+        "o200k_base": {
+          "all_responses": 60401,
+          "read_responses": 16468,
+          "recovery_responses": 0,
+          "request_arguments": 8187,
+          "terminal_responses": 42906,
+          "write_and_list_responses": 1027
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-J3",
+      "tool_log_sha256": "1078b475399f7c12d4ccc2c33a78a9d15ac98a95517d5cbbc894a62ec18cfd10",
+      "variant": "mini"
+    },
+    {
+      "actions": 56,
+      "id": "trial-047",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 30730,
+          "read_responses": 20985,
+          "recovery_responses": 0,
+          "request_arguments": 8262,
+          "terminal_responses": 8758,
+          "write_and_list_responses": 987
+        },
+        "o200k_base": {
+          "all_responses": 30884,
+          "read_responses": 21049,
+          "recovery_responses": 0,
+          "request_arguments": 8336,
+          "terminal_responses": 8839,
+          "write_and_list_responses": 996
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-J3",
+      "tool_log_sha256": "3b5108a3722f86fa9d0f46b43c1c5da58d88c30a4a0c61bac4e7b5f9b28b6123",
+      "variant": "rtk"
+    },
+    {
+      "actions": 53,
+      "id": "trial-048",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 31482,
+          "read_responses": 18482,
+          "recovery_responses": 0,
+          "request_arguments": 8757,
+          "terminal_responses": 12018,
+          "write_and_list_responses": 982
+        },
+        "o200k_base": {
+          "all_responses": 31644,
+          "read_responses": 18528,
+          "recovery_responses": 0,
+          "request_arguments": 8826,
+          "terminal_responses": 12125,
+          "write_and_list_responses": 991
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-J3",
+      "tool_log_sha256": "60c122b6399780e9283adaffa909bd2038096983ce4c8c25911ebb6efb8133b0",
+      "variant": "raw"
+    },
+    {
+      "actions": 32,
+      "id": "trial-049",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 34498,
+          "read_responses": 10699,
+          "recovery_responses": 0,
+          "request_arguments": 1915,
+          "terminal_responses": 22339,
+          "write_and_list_responses": 1460
+        },
+        "o200k_base": {
+          "all_responses": 34808,
+          "read_responses": 10865,
+          "recovery_responses": 0,
+          "request_arguments": 1949,
+          "terminal_responses": 22423,
+          "write_and_list_responses": 1520
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-J1",
+      "tool_log_sha256": "29febd6868ef4c05bc1b61d8a32091292b94e69446f6e8fd26373b3cc772df85",
+      "variant": "rtk"
+    },
+    {
+      "actions": 33,
+      "id": "trial-050",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 46918,
+          "read_responses": 11135,
+          "recovery_responses": 0,
+          "request_arguments": 1666,
+          "terminal_responses": 34326,
+          "write_and_list_responses": 1457
+        },
+        "o200k_base": {
+          "all_responses": 47364,
+          "read_responses": 11291,
+          "recovery_responses": 0,
+          "request_arguments": 1694,
+          "terminal_responses": 34555,
+          "write_and_list_responses": 1518
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-J1",
+      "tool_log_sha256": "152cd7d35f01cb996655d0b256d00f0aa6d25813b39765c89c1480065598716c",
+      "variant": "raw"
+    },
+    {
+      "actions": 29,
+      "id": "trial-051",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 42193,
+          "read_responses": 9902,
+          "recovery_responses": 0,
+          "request_arguments": 1673,
+          "terminal_responses": 30856,
+          "write_and_list_responses": 1435
+        },
+        "o200k_base": {
+          "all_responses": 42508,
+          "read_responses": 10056,
+          "recovery_responses": 0,
+          "request_arguments": 1705,
+          "terminal_responses": 30958,
+          "write_and_list_responses": 1494
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-J1",
+      "tool_log_sha256": "f286d585fb3ed09a5fd46665b354690405fa403fe2f2c922d85bde3a9b8a6909",
+      "variant": "mini"
+    },
+    {
+      "actions": 19,
+      "id": "trial-052",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 21219,
+          "read_responses": 14145,
+          "recovery_responses": 0,
+          "request_arguments": 2559,
+          "terminal_responses": 6994,
+          "write_and_list_responses": 80
+        },
+        "o200k_base": {
+          "all_responses": 21224,
+          "read_responses": 14158,
+          "recovery_responses": 0,
+          "request_arguments": 2542,
+          "terminal_responses": 6986,
+          "write_and_list_responses": 80
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-R3",
+      "tool_log_sha256": "abfb1a9bea4bd705029be75e7c34b93bdb8d6bb2626f5fc1143b23ba99ccbfe6",
+      "variant": "mini"
+    },
+    {
+      "actions": 22,
+      "id": "trial-053",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 18291,
+          "read_responses": 13649,
+          "recovery_responses": 0,
+          "request_arguments": 2332,
+          "terminal_responses": 4546,
+          "write_and_list_responses": 96
+        },
+        "o200k_base": {
+          "all_responses": 18306,
+          "read_responses": 13668,
+          "recovery_responses": 0,
+          "request_arguments": 2319,
+          "terminal_responses": 4542,
+          "write_and_list_responses": 96
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-R3",
+      "tool_log_sha256": "c5b66e2ea7e59a0b70fc118b64a2f2e8c639bbc7000044acd36b022445f22e79",
+      "variant": "rtk"
+    },
+    {
+      "actions": 15,
+      "id": "trial-054",
+      "reference_tokens": {
+        "cl100k_base": {
+          "all_responses": 13575,
+          "read_responses": 7433,
+          "recovery_responses": 0,
+          "request_arguments": 1632,
+          "terminal_responses": 6070,
+          "write_and_list_responses": 72
+        },
+        "o200k_base": {
+          "all_responses": 13590,
+          "read_responses": 7443,
+          "recovery_responses": 0,
+          "request_arguments": 1636,
+          "terminal_responses": 6075,
+          "write_and_list_responses": 72
+        }
+      },
+      "repetition": 3,
+      "task_id": "C-R3",
+      "tool_log_sha256": "dfbb17ef4f446c9f28462aaae849f5e344d9f187f42ee6bcb7afa3510e6bcd8d",
+      "variant": "raw"
+    }
+  ]
+}

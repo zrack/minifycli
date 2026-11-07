@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "id": "C-J3",
+  "title": "Deeply nested CSS overflows multiple AST traversal operations",
+  "repository": {
+    "url": "https://github.com/postcss/postcss",
+    "license": "MIT"
+  },
+  "base_commit": "2421312ffea96ba77b35ce24a1b2d9c2e22b5e83",
+  "oracle_commit": "d1518afd5a88f42728b30b87f8917210f363f9f1",
+  "prompt": "Valid deeply nested stylesheets fail with 'Maximum call stack size exceeded' during normal AST operations. A stylesheet consisting of 'a{' repeated 6000 times, then 'color:red', then 6000 closing braces should round-trip through parsing/stringification, cloning and the toJSON/fromJSON APIs, and walking it should visit all 6001 nodes. A normal declaration plugin must also be able to change the innermost value without overflowing. Fix the supported traversal paths consistently while preserving ordinary node order, metadata, custom properties with toJSON methods, subclass overrides and visitor revisit semantics. Add regression coverage; changing global runtime stack limits is not an acceptable repair.",
+  "baseline_command": [
+    "npm",
+    "run",
+    "unit"
+  ],
+  "hidden_command": [
+    "node",
+    "evaluation/confirmation/tasks/js/C-J3-hidden.cjs",
+    "WORKSPACE"
+  ],
+  "assets": {
+    "hidden_test": "evaluation/confirmation/tasks/js/C-J3-hidden.cjs",
+    "dependency_spec": "evaluation/confirmation/tasks/js/postcss-dependencies.json",
+    "dependencies_lockfile": "evaluation/confirmation/tasks/js/postcss-dependencies-lock.json",
+    "licenses": [
+      "evaluation/confirmation/tasks/js/POSTCSS-LICENSE"
+    ]
+  },
+  "reference_source": "https://github.com/postcss/postcss/commit/d1518afd5a88f42728b30b87f8917210f363f9f1",
+  "upstream_test_paths": [
+    "test/node.test.ts",
+    "test/parse.test.ts",
+    "test/stringifier.test.js",
+    "test/visitor.test.ts"
+  ],
+  "production_globs": [
+    "lib/**/*.js"
+  ],
+  "evaluation": {
+    "production_globs": [
+      "lib/**/*.js"
+    ],
+    "protected_test_globs": [
+      "test/**",
+      "package.json",
+      "pnpm-lock.yaml",
+      "tsconfig*.json"
+    ]
+  },
+  "hardness_evidence": {
+    "criterion": "at least 20 meaningful changed production lines across at least two functions",
+    "meaningful_changed_production_lines": 407,
+    "production_files": [
+      "lib/container.js",
+      "lib/fromJSON.js",
+      "lib/lazy-result.js",
+      "lib/node.js",
+      "lib/stringifier.js"
+    ],
+    "upstream_changed_functions": [
+      "Container.walk",
+      "fromJSON",
+      "LazyResult traversal",
+      "Node.clone",
+      "Node.toJSON",
+      "Stringifier.stringify"
+    ],
+    "families": [
+      "deep AST stringify/clone/walk",
+      "structured JSON roundtrip and custom serialization",
+      "plugin visitor passes and subclass traversal overrides"
+    ]
+  },
+  "setup": {
+    "node_version": "v26.12.1",
+    "npm_version": "11.20.0",
+    "build": "CommonJS production source; original uvu suite loads TypeScript tests via pinned ts-node transpile-only; no source build",
+    "baseline_scope": "Original upstream unit script; excludes release/build/lint/size/type-only/integration packaging scripts",
+    "deps": "Exact minimal runtime/unit-test lock, source and original package manifest unchanged",
+    "solver_export": "Only buggy source snapshot plus prepared node_modules; no upstream Git history, oracle, metadata or held-out assertions",
+    "environment_unset": [
+      "NO_COLOR"
+    ],
+    "environment_reason": "The unchanged UVU runner enables FORCE_COLOR internally; explicit color tests compare picocolors output. Unset NO_COLOR equally in all variants/evaluation so the original full suite remains valid.",
+    "instructions_found": []
+  },
+  "hidden_test_counts": {
+    "total": 8,
+    "note": "Checks stop at first failing assertion; total denotes registered held-out assertions, not observed partial score."
+  }
+}

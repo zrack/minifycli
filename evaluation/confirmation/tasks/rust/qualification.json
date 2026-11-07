@@ -1,0 +1,273 @@
+{
+  "assets_sha256": {
+    "C-R1-Cargo.lock": "8544e6d7a3b31478c33c9dbbefd73281cd6287f4f04c943b60789e51d7ac3716",
+    "C-R1-hidden.rs": "2bb192beee38bd40ca00ede2b5b0aaebe462fddaa6b203c5e90f2682a0d3b854",
+    "C-R1.json": "85560a584327a74ebc36cf596307c3204d88840a3deaa0ab73e8a577a3c5f255",
+    "C-R2-Cargo.lock": "5c2622a718a136ab27a191b0b10e9694fdc572746afd39ab116e09ae87f9a257",
+    "C-R2-hidden.rs": "e546c5893c67c714775cadcbb2b1635d75fad78969085433c215afc0b0389eb8",
+    "C-R2.json": "155a9fed56bc494c55290f74b1e8fad21b21f0ba6d3607767ec45cce46dff25d",
+    "C-R3-Cargo.lock": "71522171c9248901295b78d3d1af94abbe03c576f3bab23924369fc94460710b",
+    "C-R3-base-portability.patch": "156e5835023e70784c3e2b75f425068c45396f1786397025d61b22c1893562b6",
+    "C-R3-hidden.rs": "ecec8e9db27f93024e909cb4deafde4fea53c7e5452ea9f8807d6de38c1e5837",
+    "C-R3-oracle-portability.patch": "f10427da796821af84084204d5db644d052f4cac540f591bd58d505c1c8a5091",
+    "C-R3.json": "45df66a6576e6ee6cf9750d046e7961303353cf10e3e4ba356c8df98e4240a07",
+    "README.md": "772134e33f85247e39fc698296ce34e899478ca8a6dfe5a4a2edade5af005e27",
+    "licenses/glob-APACHE.txt": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "licenses/glob-MIT.txt": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+    "licenses/winnow-MIT.txt": "cb5aedb296c5246d1f22e9099f925a65146f9f0d6b4eebba97fd27a6cdbbab2d",
+    "run_hidden.py": "e5540af19b50111fcf3382e4d6bb2e2bb40c845d8bf3d05d61da8d25e22e1783"
+  },
+  "checks": [
+    {
+      "cargo_build_finished_seconds": 33.64,
+      "check": "baseline",
+      "exit_code": 0,
+      "failed_tests": 0,
+      "passed_tests": 193,
+      "stderr_bytes": 20697,
+      "stderr_sha256": "8418dfca9957d4c325d0ba87f2fa912f6d47efb38fa9edf3105f49d4afa34778",
+      "stdout_bytes": 9876,
+      "stdout_sha256": "7c189e4b283804c82648e771f9dd44693a1266ad9da6486a62519c5fdd1bee42",
+      "task_id": "C-R1",
+      "version": "base"
+    },
+    {
+      "cargo_build_finished_seconds": 14.99,
+      "check": "hidden",
+      "exit_code": 101,
+      "failed_tests": 4,
+      "passed_tests": 3,
+      "stderr_bytes": 17896,
+      "stderr_sha256": "a96f26c2952596818ab77e6e535adfadaa7cd700c7cea6e25bfffe047bf809c4",
+      "stdout_bytes": 2129,
+      "stdout_sha256": "7b0f9bd40b0285891c4ed59a0340afbab3ee0d867cf1d608b2695a7d203fde90",
+      "task_id": "C-R1",
+      "version": "base"
+    },
+    {
+      "cargo_build_finished_seconds": 44.59,
+      "check": "baseline",
+      "exit_code": 0,
+      "failed_tests": 0,
+      "passed_tests": 193,
+      "stderr_bytes": 20857,
+      "stderr_sha256": "a02daf278f9850306bc2cd3bc031ea2e4cc299ea65bb60579f1d9d53ca6d439b",
+      "stdout_bytes": 9876,
+      "stdout_sha256": "8c5d8248e616df3dcb511f1231930b181e5a3b5d8d0ab130b95ff768a3141cc5",
+      "task_id": "C-R1",
+      "version": "oracle"
+    },
+    {
+      "cargo_build_finished_seconds": 4.34,
+      "check": "hidden",
+      "exit_code": 0,
+      "failed_tests": 0,
+      "passed_tests": 7,
+      "stderr_bytes": 17891,
+      "stderr_sha256": "40802543585cd0de8b06b5dd6664acdc488f2dc1f6996e7d6821f5bef7df16bc",
+      "stdout_bytes": 556,
+      "stdout_sha256": "4205e9648d0645f379af316aabdc632d3f1d46272fa70dcad7d75276cf2f63ec",
+      "task_id": "C-R1",
+      "version": "oracle"
+    },
+    {
+      "cargo_build_finished_seconds": 36.67,
+      "check": "baseline",
+      "exit_code": 0,
+      "failed_tests": 0,
+      "passed_tests": 223,
+      "stderr_bytes": 3986,
+      "stderr_sha256": "bb8753db479963b2935c646410fb9689ebdba4c9e8a3682cfa9ef9e243a34b26",
+      "stdout_bytes": 11518,
+      "stdout_sha256": "1d98524b6984b6c2ab48c64f6d8a601e181e8fb47b5ab4127d0b090031f4a168",
+      "task_id": "C-R2",
+      "version": "base"
+    },
+    {
+      "cargo_build_finished_seconds": 2.75,
+      "check": "hidden",
+      "exit_code": 101,
+      "failed_tests": 6,
+      "passed_tests": 4,
+      "stderr_bytes": 540,
+      "stderr_sha256": "f982e18fe6c9faff16655e4fe643d26925babe945b1191fd6e7c8f40ef543c12",
+      "stdout_bytes": 2929,
+      "stdout_sha256": "00e276de5bfef9ec58afdcb85e6cf4a1167df820ee207a7f364214b7043ced7d",
+      "task_id": "C-R2",
+      "version": "base"
+    },
+    {
+      "cargo_build_finished_seconds": 46.29,
+      "check": "baseline",
+      "exit_code": 0,
+      "failed_tests": 0,
+      "passed_tests": 223,
+      "stderr_bytes": 4146,
+      "stderr_sha256": "2069f399eb21e87b52f54e1359859e69e5fa42d1e79fc510ea069b50340f3d37",
+      "stdout_bytes": 11518,
+      "stdout_sha256": "90ceda31afe53ddc2c60848c3b509e177f7dd930573b4ad77c103067c5eefbd0",
+      "task_id": "C-R2",
+      "version": "oracle"
+    },
+    {
+      "cargo_build_finished_seconds": 3.21,
+      "check": "hidden",
+      "exit_code": 0,
+      "failed_tests": 0,
+      "passed_tests": 10,
+      "stderr_bytes": 490,
+      "stderr_sha256": "1f129d5d266a5b08ad47788a6b4ba4375c0977493d9b6de9e6db0b9e1576921b",
+      "stdout_bytes": 726,
+      "stdout_sha256": "73900c9ae4bafedaa564a16b6a2d94068c7296ae51b48fbbc6fc5f0e9e9f589c",
+      "task_id": "C-R2",
+      "version": "oracle"
+    },
+    {
+      "cargo_build_finished_seconds": 2.39,
+      "check": "baseline",
+      "exit_code": 0,
+      "failed_tests": 0,
+      "passed_tests": 18,
+      "stderr_bytes": 1453,
+      "stderr_sha256": "70adcf8b223ed990105a12590f9b7f629468fd06408c0963878ce964b383a5cb",
+      "stdout_bytes": 902,
+      "stdout_sha256": "1dfe25d81d76548033f73724baff6a04f03621859f66d20fdd31f6dd0f3ee403",
+      "task_id": "C-R3",
+      "version": "base"
+    },
+    {
+      "cargo_build_finished_seconds": 1.11,
+      "check": "hidden",
+      "exit_code": 101,
+      "failed_tests": 4,
+      "passed_tests": 4,
+      "stderr_bytes": 1936,
+      "stderr_sha256": "519ebab233d07e9d021e4737e2bf56d59aab539c98d75f4ec9bc278c997a9f59",
+      "stdout_bytes": 2073,
+      "stdout_sha256": "9573aec7eb9bb9d3217783ee48fa6bd7f00599eaca4e89e9489a3fe71d9fbf89",
+      "task_id": "C-R3",
+      "version": "base"
+    },
+    {
+      "cargo_build_finished_seconds": 5.73,
+      "check": "baseline",
+      "exit_code": 0,
+      "failed_tests": 0,
+      "passed_tests": 18,
+      "stderr_bytes": 1572,
+      "stderr_sha256": "a3f666f1ce75f5b04e89ccb578df648c53d4651e9f779f4cbc7ff47423b88dff",
+      "stdout_bytes": 902,
+      "stdout_sha256": "896863ad00a747e6dfc630d851e05051b1883e44f8cde098c895a1ee06fc7963",
+      "task_id": "C-R3",
+      "version": "oracle"
+    },
+    {
+      "cargo_build_finished_seconds": 1.51,
+      "check": "hidden",
+      "exit_code": 0,
+      "failed_tests": 0,
+      "passed_tests": 8,
+      "stderr_bytes": 1896,
+      "stderr_sha256": "434c52fcabc271cf2c97d3f102a3f4cfb9d4d9260375bebbcd5607b743d470bc",
+      "stdout_bytes": 634,
+      "stdout_sha256": "a155a4855bfd1b0153868fa003bb4c6590e8fef197e6c081630a7913e02e1249",
+      "task_id": "C-R3",
+      "version": "oracle"
+    }
+  ],
+  "cleanup_receipts": [
+    {
+      "bytes_before_cleanup": 461139387,
+      "cleaned_after_check": true,
+      "target_name": "C-R1-base"
+    },
+    {
+      "bytes_before_cleanup": 19022559,
+      "cleaned_after_check": true,
+      "target_name": "glob-base"
+    },
+    {
+      "bytes_before_cleanup": 17801726,
+      "cleaned_after_check": true,
+      "target_name": "semver-base"
+    },
+    {
+      "bytes_before_cleanup": 470121971,
+      "cleaned_after_check": true,
+      "target_name": "C-R2-base"
+    },
+    {
+      "bytes_before_cleanup": 18996859,
+      "cleaned_after_check": true,
+      "target_name": "C-R3-base"
+    },
+    {
+      "bytes_before_cleanup": 33607239,
+      "cleaned_after_check": true,
+      "target_name": "C-R1-base-hidden"
+    },
+    {
+      "bytes_before_cleanup": 461321560,
+      "cleaned_after_check": true,
+      "target_name": "C-R1-oracle"
+    },
+    {
+      "bytes_before_cleanup": 33732753,
+      "cleaned_after_check": true,
+      "target_name": "C-R1-oracle-hidden"
+    },
+    {
+      "bytes_before_cleanup": 34526661,
+      "cleaned_after_check": true,
+      "target_name": "C-R2-base-hidden"
+    },
+    {
+      "bytes_before_cleanup": 465987889,
+      "cleaned_after_check": true,
+      "target_name": "C-R2-oracle"
+    },
+    {
+      "bytes_before_cleanup": 34345148,
+      "cleaned_after_check": true,
+      "target_name": "C-R2-oracle-hidden"
+    },
+    {
+      "bytes_before_cleanup": 9129403,
+      "cleaned_after_check": true,
+      "target_name": "C-R3-base-hidden"
+    },
+    {
+      "bytes_before_cleanup": 18988717,
+      "cleaned_after_check": true,
+      "target_name": "C-R3-oracle"
+    },
+    {
+      "bytes_before_cleanup": 9081611,
+      "cleaned_after_check": true,
+      "target_name": "C-R3-oracle-hidden"
+    }
+  ],
+  "comparator_outputs_used_for_selection": false,
+  "compatibility_note": "C-R3 registers explicit test-only permission-fixture patches for both snapshots; production prefixes are byte-identical to upstream. No skipped tests.",
+  "excluded_candidates": [
+    {
+      "oracle_commit": "5742fc2f584dc14b46199d797de65305fe9b5144",
+      "reason": "Unrelated historical debug-character expectation fails under the selected compiler; no tests skipped or production patched.",
+      "repository": "dtolnay/semver"
+    },
+    {
+      "oracle_commit": "c255e1334efea06c7523e93721b9c8510691951f",
+      "reason": "Upstream issue categorizes the generic escape-control change as API enhancement; replaced before comparative runs.",
+      "repository": "winnow-rs/winnow"
+    }
+  ],
+  "network_during_checks": false,
+  "platform": "aarch64-apple-darwin",
+  "prepared_date": "2026-11-06",
+  "schema": 1,
+  "selected_before_comparative_runs": true,
+  "toolchain": {
+    "cargo": "1.99.1 (5f94df478 2026-08-27)",
+    "rustc": "1.99.1 (58cf8f9c3 2026-10-13)"
+  }
+}

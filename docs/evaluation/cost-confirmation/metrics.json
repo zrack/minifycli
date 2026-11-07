@@ -1,0 +1,5786 @@
+{
+  "actual_billed": false,
+  "all_attempts": {
+    "comparisons": {
+      "mini_vs_raw": {
+        "comparator_successes": 15,
+        "cost_per_success_ratio": "0.965755151865879907726037889054351055127171275197791430485163",
+        "mini_successes": 15,
+        "total_cost_ratio": "0.965755151865879907726037889054351055127171275197791430485163"
+      },
+      "mini_vs_rtk": {
+        "comparator_successes": 15,
+        "cost_per_success_ratio": "1.02076484222636973634883779908114678626104279821110623709848",
+        "mini_successes": 15,
+        "total_cost_ratio": "1.02076484222636973634883779908114678626104279821110623709848"
+      }
+    },
+    "variants": {
+      "mini": {
+        "actual_billed": false,
+        "all_planned_costs_known": true,
+        "credits_per_planned_attempt": "4.516967222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222",
+        "credits_per_successful_repair": "5.420360666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666667",
+        "exclusion_counts": {},
+        "grading_timeout_attempts": 0,
+        "incorrect_repairs": 3,
+        "known_attempt_credits_sum": "81.30541",
+        "known_component_subtotals": {
+          "cached_input": "15.36896",
+          "output": "29.6865",
+          "uncached_input": "36.24995"
+        },
+        "known_cost_attempts": 18,
+        "measure": "published-rate-credit-calculation",
+        "missing_attempt_ids": [],
+        "observed_attempts": 18,
+        "operationally_complete_attempts": 18,
+        "planned_attempts": 18,
+        "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+        "schema": 1,
+        "successful_repairs": 15,
+        "tools": {
+          "actions": 563,
+          "incomplete_terminal_captures": 0,
+          "mini_wrapped_commands": 221,
+          "native_filtered_commands": 0,
+          "observations": 18,
+          "passthrough_commands": 0,
+          "recovery_calls": 0,
+          "repeated_test_commands": 45,
+          "terminal_commands": 221,
+          "terminal_timeouts": 0,
+          "test_commands": 88,
+          "tool_errors": 0,
+          "visible_response_bytes": 1992122
+        },
+        "total_components": {
+          "cached_input": "15.36896",
+          "output": "29.6865",
+          "uncached_input": "36.24995"
+        },
+        "total_credits": "81.30541",
+        "unit": "credits",
+        "unknown_correctness": 0,
+        "unknown_correctness_attempt_ids": [],
+        "unknown_cost_attempt_ids": [],
+        "usage": {
+          "cached_input_tokens": 6147584,
+          "input_tokens": 6872583,
+          "observations": 18,
+          "output_tokens": 118746,
+          "reasoning_output_tokens": 51287,
+          "uncached_input_tokens": 724999
+        },
+        "wall_seconds_sum": 3057.250968957087
+      },
+      "raw": {
+        "actual_billed": false,
+        "all_planned_costs_known": true,
+        "credits_per_planned_attempt": "4.677135",
+        "credits_per_successful_repair": "5.612562",
+        "exclusion_counts": {},
+        "grading_timeout_attempts": 0,
+        "incorrect_repairs": 3,
+        "known_attempt_credits_sum": "84.18843",
+        "known_component_subtotals": {
+          "cached_input": "16.37088",
+          "output": "29.58525",
+          "uncached_input": "38.2323"
+        },
+        "known_cost_attempts": 18,
+        "measure": "published-rate-credit-calculation",
+        "missing_attempt_ids": [],
+        "observed_attempts": 18,
+        "operationally_complete_attempts": 18,
+        "planned_attempts": 18,
+        "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+        "schema": 1,
+        "successful_repairs": 15,
+        "tools": {
+          "actions": 582,
+          "incomplete_terminal_captures": 0,
+          "mini_wrapped_commands": 0,
+          "native_filtered_commands": 0,
+          "observations": 18,
+          "passthrough_commands": 0,
+          "recovery_calls": 0,
+          "repeated_test_commands": 43,
+          "terminal_commands": 214,
+          "terminal_timeouts": 0,
+          "test_commands": 88,
+          "tool_errors": 3,
+          "visible_response_bytes": 2194420
+        },
+        "total_components": {
+          "cached_input": "16.37088",
+          "output": "29.58525",
+          "uncached_input": "38.2323"
+        },
+        "total_credits": "84.18843",
+        "unit": "credits",
+        "unknown_correctness": 0,
+        "unknown_correctness_attempt_ids": [],
+        "unknown_cost_attempt_ids": [],
+        "usage": {
+          "cached_input_tokens": 6548352,
+          "input_tokens": 7312998,
+          "observations": 18,
+          "output_tokens": 118341,
+          "reasoning_output_tokens": 49534,
+          "uncached_input_tokens": 764646
+        },
+        "wall_seconds_sum": 3047.3929020019714
+      },
+      "rtk": {
+        "actual_billed": false,
+        "all_planned_costs_known": true,
+        "credits_per_planned_attempt": "4.42508111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+        "credits_per_successful_repair": "5.31009733333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333",
+        "exclusion_counts": {},
+        "grading_timeout_attempts": 0,
+        "incorrect_repairs": 3,
+        "known_attempt_credits_sum": "79.65146",
+        "known_component_subtotals": {
+          "cached_input": "14.97856",
+          "output": "29.28325",
+          "uncached_input": "35.38965"
+        },
+        "known_cost_attempts": 18,
+        "measure": "published-rate-credit-calculation",
+        "missing_attempt_ids": [],
+        "observed_attempts": 18,
+        "operationally_complete_attempts": 18,
+        "planned_attempts": 18,
+        "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+        "schema": 1,
+        "successful_repairs": 15,
+        "tools": {
+          "actions": 565,
+          "incomplete_terminal_captures": 1,
+          "mini_wrapped_commands": 0,
+          "native_filtered_commands": 182,
+          "observations": 18,
+          "passthrough_commands": 32,
+          "recovery_calls": 1,
+          "repeated_test_commands": 38,
+          "terminal_commands": 215,
+          "terminal_timeouts": 1,
+          "test_commands": 87,
+          "tool_errors": 3,
+          "visible_response_bytes": 1607046
+        },
+        "total_components": {
+          "cached_input": "14.97856",
+          "output": "29.28325",
+          "uncached_input": "35.38965"
+        },
+        "total_credits": "79.65146",
+        "unit": "credits",
+        "unknown_correctness": 0,
+        "unknown_correctness_attempt_ids": [],
+        "unknown_cost_attempt_ids": [],
+        "usage": {
+          "cached_input_tokens": 5991424,
+          "input_tokens": 6699217,
+          "observations": 18,
+          "output_tokens": 117133,
+          "reasoning_output_tokens": 52858,
+          "uncached_input_tokens": 707793
+        },
+        "wall_seconds_sum": 3130.5831267919857
+      }
+    }
+  },
+  "by_language": {
+    "javascript": {
+      "comparisons": {
+        "mini_vs_raw": {
+          "comparator_successes": 6,
+          "cost_per_success_ratio": "0.988619168581120723244559086818702734040730751099712290161321",
+          "mini_successes": 6,
+          "total_cost_ratio": "0.988619168581120723244559086818702734040730751099712290161321"
+        },
+        "mini_vs_rtk": {
+          "comparator_successes": 6,
+          "cost_per_success_ratio": "1.00444496507646125033517416906403171479778119373305825685339",
+          "mini_successes": 6,
+          "total_cost_ratio": "1.00444496507646125033517416906403171479778119373305825685339"
+        }
+      },
+      "variants": {
+        "mini": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "5.37340222222222222222222222222222222222222222222222222222222222222222222222222222",
+          "credits_per_successful_repair": "8.06010333333333333333333333333333333333333333333333333333333333333333333333333333",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 3,
+          "known_attempt_credits_sum": "48.36062",
+          "known_component_subtotals": {
+            "cached_input": "9.02432",
+            "output": "17.86175",
+            "uncached_input": "21.47455"
+          },
+          "known_cost_attempts": 9,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 9,
+          "operationally_complete_attempts": 9,
+          "planned_attempts": 9,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 6,
+          "tools": {
+            "actions": 340,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 112,
+            "native_filtered_commands": 0,
+            "observations": 9,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 26,
+            "terminal_commands": 112,
+            "terminal_timeouts": 0,
+            "test_commands": 51,
+            "tool_errors": 0,
+            "visible_response_bytes": 1081495
+          },
+          "total_components": {
+            "cached_input": "9.02432",
+            "output": "17.86175",
+            "uncached_input": "21.47455"
+          },
+          "total_credits": "48.36062",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 3609728,
+            "input_tokens": 4039219,
+            "observations": 9,
+            "output_tokens": 71447,
+            "reasoning_output_tokens": 30083,
+            "uncached_input_tokens": 429491
+          },
+          "wall_seconds_sum": 1764.0405507910764
+        },
+        "raw": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "5.43526",
+          "credits_per_successful_repair": "8.15289",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 3,
+          "known_attempt_credits_sum": "48.91734",
+          "known_component_subtotals": {
+            "cached_input": "9.19104",
+            "output": "17.44575",
+            "uncached_input": "22.28055"
+          },
+          "known_cost_attempts": 9,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 9,
+          "operationally_complete_attempts": 9,
+          "planned_attempts": 9,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 6,
+          "tools": {
+            "actions": 362,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 0,
+            "observations": 9,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 26,
+            "terminal_commands": 114,
+            "terminal_timeouts": 0,
+            "test_commands": 53,
+            "tool_errors": 3,
+            "visible_response_bytes": 1152933
+          },
+          "total_components": {
+            "cached_input": "9.19104",
+            "output": "17.44575",
+            "uncached_input": "22.28055"
+          },
+          "total_credits": "48.91734",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 3676416,
+            "input_tokens": 4122027,
+            "observations": 9,
+            "output_tokens": 69783,
+            "reasoning_output_tokens": 27786,
+            "uncached_input_tokens": 445611
+          },
+          "wall_seconds_sum": 1693.580343874928
+        },
+        "rtk": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "5.34962333333333333333333333333333333333333333333333333333333333333333333333333333",
+          "credits_per_successful_repair": "8.024435",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 3,
+          "known_attempt_credits_sum": "48.14661",
+          "known_component_subtotals": {
+            "cached_input": "8.81536",
+            "output": "17.69925",
+            "uncached_input": "21.632"
+          },
+          "known_cost_attempts": 9,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 9,
+          "operationally_complete_attempts": 9,
+          "planned_attempts": 9,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 6,
+          "tools": {
+            "actions": 342,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 84,
+            "observations": 9,
+            "passthrough_commands": 23,
+            "recovery_calls": 0,
+            "repeated_test_commands": 19,
+            "terminal_commands": 107,
+            "terminal_timeouts": 0,
+            "test_commands": 47,
+            "tool_errors": 1,
+            "visible_response_bytes": 1024583
+          },
+          "total_components": {
+            "cached_input": "8.81536",
+            "output": "17.69925",
+            "uncached_input": "21.632"
+          },
+          "total_credits": "48.14661",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 3526144,
+            "input_tokens": 3958784,
+            "observations": 9,
+            "output_tokens": 70797,
+            "reasoning_output_tokens": 30449,
+            "uncached_input_tokens": 432640
+          },
+          "wall_seconds_sum": 1727.1684444168932
+        }
+      }
+    },
+    "rust": {
+      "comparisons": {
+        "mini_vs_raw": {
+          "comparator_successes": 9,
+          "cost_per_success_ratio": "0.934045134414615482538248747061687064391829115573122350344149",
+          "mini_successes": 9,
+          "total_cost_ratio": "0.934045134414615482538248747061687064391829115573122350344149"
+        },
+        "mini_vs_rtk": {
+          "comparator_successes": 9,
+          "cost_per_success_ratio": "1.04570534378040206507886880908812452685856304664202495806201",
+          "mini_successes": 9,
+          "total_cost_ratio": "1.04570534378040206507886880908812452685856304664202495806201"
+        }
+      },
+      "variants": {
+        "mini": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "3.66053222222222222222222222222222222222222222222222222222222222222222222222222222",
+          "credits_per_successful_repair": "3.66053222222222222222222222222222222222222222222222222222222222222222222222222222",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "32.94479",
+          "known_component_subtotals": {
+            "cached_input": "6.34464",
+            "output": "11.82475",
+            "uncached_input": "14.7754"
+          },
+          "known_cost_attempts": 9,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 9,
+          "operationally_complete_attempts": 9,
+          "planned_attempts": 9,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 9,
+          "tools": {
+            "actions": 223,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 109,
+            "native_filtered_commands": 0,
+            "observations": 9,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 19,
+            "terminal_commands": 109,
+            "terminal_timeouts": 0,
+            "test_commands": 37,
+            "tool_errors": 0,
+            "visible_response_bytes": 910627
+          },
+          "total_components": {
+            "cached_input": "6.34464",
+            "output": "11.82475",
+            "uncached_input": "14.7754"
+          },
+          "total_credits": "32.94479",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 2537856,
+            "input_tokens": 2833364,
+            "observations": 9,
+            "output_tokens": 47299,
+            "reasoning_output_tokens": 21204,
+            "uncached_input_tokens": 295508
+          },
+          "wall_seconds_sum": 1293.2104181660106
+        },
+        "raw": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "3.91901",
+          "credits_per_successful_repair": "3.91901",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "35.27109",
+          "known_component_subtotals": {
+            "cached_input": "7.17984",
+            "output": "12.1395",
+            "uncached_input": "15.95175"
+          },
+          "known_cost_attempts": 9,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 9,
+          "operationally_complete_attempts": 9,
+          "planned_attempts": 9,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 9,
+          "tools": {
+            "actions": 220,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 0,
+            "observations": 9,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 17,
+            "terminal_commands": 100,
+            "terminal_timeouts": 0,
+            "test_commands": 35,
+            "tool_errors": 0,
+            "visible_response_bytes": 1041487
+          },
+          "total_components": {
+            "cached_input": "7.17984",
+            "output": "12.1395",
+            "uncached_input": "15.95175"
+          },
+          "total_credits": "35.27109",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 2871936,
+            "input_tokens": 3190971,
+            "observations": 9,
+            "output_tokens": 48558,
+            "reasoning_output_tokens": 21748,
+            "uncached_input_tokens": 319035
+          },
+          "wall_seconds_sum": 1353.8125581270433
+        },
+        "rtk": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "3.5005388888888888888888888888888888888888888888888888888888888888888888888888888889",
+          "credits_per_successful_repair": "3.5005388888888888888888888888888888888888888888888888888888888888888888888888888889",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "31.50485",
+          "known_component_subtotals": {
+            "cached_input": "6.1632",
+            "output": "11.584",
+            "uncached_input": "13.75765"
+          },
+          "known_cost_attempts": 9,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 9,
+          "operationally_complete_attempts": 9,
+          "planned_attempts": 9,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 9,
+          "tools": {
+            "actions": 223,
+            "incomplete_terminal_captures": 1,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 98,
+            "observations": 9,
+            "passthrough_commands": 9,
+            "recovery_calls": 1,
+            "repeated_test_commands": 19,
+            "terminal_commands": 108,
+            "terminal_timeouts": 1,
+            "test_commands": 40,
+            "tool_errors": 2,
+            "visible_response_bytes": 582463
+          },
+          "total_components": {
+            "cached_input": "6.1632",
+            "output": "11.584",
+            "uncached_input": "13.75765"
+          },
+          "total_credits": "31.50485",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 2465280,
+            "input_tokens": 2740433,
+            "observations": 9,
+            "output_tokens": 46336,
+            "reasoning_output_tokens": 22409,
+            "uncached_input_tokens": 275153
+          },
+          "wall_seconds_sum": 1403.4146823750925
+        }
+      }
+    }
+  },
+  "by_repetition": {
+    "1": {
+      "comparisons": {
+        "mini_vs_raw": {
+          "comparator_successes": 5,
+          "cost_per_success_ratio": "0.954046301542833210827887999994116797022510973092803482267842",
+          "mini_successes": 5,
+          "total_cost_ratio": "0.954046301542833210827887999994116797022510973092803482267842"
+        },
+        "mini_vs_rtk": {
+          "comparator_successes": 5,
+          "cost_per_success_ratio": "0.964389096207311815167779248004043948201781121303578596809444",
+          "mini_successes": 5,
+          "total_cost_ratio": "0.964389096207311815167779248004043948201781121303578596809444"
+        }
+      },
+      "variants": {
+        "mini": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "4.324385",
+          "credits_per_successful_repair": "5.189262",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 1,
+          "known_attempt_credits_sum": "25.94631",
+          "known_component_subtotals": {
+            "cached_input": "4.97056",
+            "output": "9.29375",
+            "uncached_input": "11.682"
+          },
+          "known_cost_attempts": 6,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 6,
+          "operationally_complete_attempts": 6,
+          "planned_attempts": 6,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 5,
+          "tools": {
+            "actions": 191,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 75,
+            "native_filtered_commands": 0,
+            "observations": 6,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 15,
+            "terminal_commands": 75,
+            "terminal_timeouts": 0,
+            "test_commands": 30,
+            "tool_errors": 0,
+            "visible_response_bytes": 657485
+          },
+          "total_components": {
+            "cached_input": "4.97056",
+            "output": "9.29375",
+            "uncached_input": "11.682"
+          },
+          "total_credits": "25.94631",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 1988224,
+            "input_tokens": 2221864,
+            "observations": 6,
+            "output_tokens": 37175,
+            "reasoning_output_tokens": 15053,
+            "uncached_input_tokens": 233640
+          },
+          "wall_seconds_sum": 1005.6439219170134
+        },
+        "raw": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "4.532678333333333333333333333333333333333333333333333333333333",
+          "credits_per_successful_repair": "5.439214",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 1,
+          "known_attempt_credits_sum": "27.19607",
+          "known_component_subtotals": {
+            "cached_input": "4.56512",
+            "output": "9.654",
+            "uncached_input": "12.97695"
+          },
+          "known_cost_attempts": 6,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 6,
+          "operationally_complete_attempts": 6,
+          "planned_attempts": 6,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 5,
+          "tools": {
+            "actions": 183,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 0,
+            "observations": 6,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 15,
+            "terminal_commands": 69,
+            "terminal_timeouts": 0,
+            "test_commands": 30,
+            "tool_errors": 0,
+            "visible_response_bytes": 720127
+          },
+          "total_components": {
+            "cached_input": "4.56512",
+            "output": "9.654",
+            "uncached_input": "12.97695"
+          },
+          "total_credits": "27.19607",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 1826048,
+            "input_tokens": 2085587,
+            "observations": 6,
+            "output_tokens": 38616,
+            "reasoning_output_tokens": 15997,
+            "uncached_input_tokens": 259539
+          },
+          "wall_seconds_sum": 1047.1045458340086
+        },
+        "rtk": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "4.4840666666666666666666666666666666666666666666666666666666667",
+          "credits_per_successful_repair": "5.38088",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 1,
+          "known_attempt_credits_sum": "26.9044",
+          "known_component_subtotals": {
+            "cached_input": "4.7696",
+            "output": "10.02025",
+            "uncached_input": "12.11455"
+          },
+          "known_cost_attempts": 6,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 6,
+          "operationally_complete_attempts": 6,
+          "planned_attempts": 6,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 5,
+          "tools": {
+            "actions": 188,
+            "incomplete_terminal_captures": 1,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 61,
+            "observations": 6,
+            "passthrough_commands": 11,
+            "recovery_calls": 1,
+            "repeated_test_commands": 15,
+            "terminal_commands": 73,
+            "terminal_timeouts": 1,
+            "test_commands": 30,
+            "tool_errors": 2,
+            "visible_response_bytes": 537095
+          },
+          "total_components": {
+            "cached_input": "4.7696",
+            "output": "10.02025",
+            "uncached_input": "12.11455"
+          },
+          "total_credits": "26.9044",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 1907840,
+            "input_tokens": 2150131,
+            "observations": 6,
+            "output_tokens": 40081,
+            "reasoning_output_tokens": 18438,
+            "uncached_input_tokens": 242291
+          },
+          "wall_seconds_sum": 1148.5844253330724
+        }
+      }
+    },
+    "2": {
+      "comparisons": {
+        "mini_vs_raw": {
+          "comparator_successes": 5,
+          "cost_per_success_ratio": "0.891159316188292528242582904574356097030768601779830340081017",
+          "mini_successes": 5,
+          "total_cost_ratio": "0.891159316188292528242582904574356097030768601779830340081017"
+        },
+        "mini_vs_rtk": {
+          "comparator_successes": 5,
+          "cost_per_success_ratio": "0.972945579065711421929355340445653459834794240370678699402016",
+          "mini_successes": 5,
+          "total_cost_ratio": "0.972945579065711421929355340445653459834794240370678699402016"
+        }
+      },
+      "variants": {
+        "mini": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "4.468405",
+          "credits_per_successful_repair": "5.362086",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 1,
+          "known_attempt_credits_sum": "26.81043",
+          "known_component_subtotals": {
+            "cached_input": "4.76768",
+            "output": "10.01325",
+            "uncached_input": "12.0295"
+          },
+          "known_cost_attempts": 6,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 6,
+          "operationally_complete_attempts": 6,
+          "planned_attempts": 6,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 5,
+          "tools": {
+            "actions": 184,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 71,
+            "native_filtered_commands": 0,
+            "observations": 6,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 14,
+            "terminal_commands": 71,
+            "terminal_timeouts": 0,
+            "test_commands": 28,
+            "tool_errors": 0,
+            "visible_response_bytes": 634080
+          },
+          "total_components": {
+            "cached_input": "4.76768",
+            "output": "10.01325",
+            "uncached_input": "12.0295"
+          },
+          "total_credits": "26.81043",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 1907072,
+            "input_tokens": 2147662,
+            "observations": 6,
+            "output_tokens": 40053,
+            "reasoning_output_tokens": 17881,
+            "uncached_input_tokens": 240590
+          },
+          "wall_seconds_sum": 1006.1121119990712
+        },
+        "raw": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "5.0141483333333333333333333333333333333333333333333333333333333",
+          "credits_per_successful_repair": "6.016978",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 1,
+          "known_attempt_credits_sum": "30.08489",
+          "known_component_subtotals": {
+            "cached_input": "6.21824",
+            "output": "10.72025",
+            "uncached_input": "13.1464"
+          },
+          "known_cost_attempts": 6,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 6,
+          "operationally_complete_attempts": 6,
+          "planned_attempts": 6,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 5,
+          "tools": {
+            "actions": 205,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 0,
+            "observations": 6,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 16,
+            "terminal_commands": 71,
+            "terminal_timeouts": 0,
+            "test_commands": 32,
+            "tool_errors": 3,
+            "visible_response_bytes": 787480
+          },
+          "total_components": {
+            "cached_input": "6.21824",
+            "output": "10.72025",
+            "uncached_input": "13.1464"
+          },
+          "total_credits": "30.08489",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 2487296,
+            "input_tokens": 2750224,
+            "observations": 6,
+            "output_tokens": 42881,
+            "reasoning_output_tokens": 18702,
+            "uncached_input_tokens": 262928
+          },
+          "wall_seconds_sum": 1060.3960869578877
+        },
+        "rtk": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "4.59265666666666666666666666666666666666666666666666666666667",
+          "credits_per_successful_repair": "5.511188",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 1,
+          "known_attempt_credits_sum": "27.55594",
+          "known_component_subtotals": {
+            "cached_input": "5.09024",
+            "output": "9.55325",
+            "uncached_input": "12.91245"
+          },
+          "known_cost_attempts": 6,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 6,
+          "operationally_complete_attempts": 6,
+          "planned_attempts": 6,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 5,
+          "tools": {
+            "actions": 182,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 62,
+            "observations": 6,
+            "passthrough_commands": 11,
+            "recovery_calls": 0,
+            "repeated_test_commands": 11,
+            "terminal_commands": 73,
+            "terminal_timeouts": 0,
+            "test_commands": 28,
+            "tool_errors": 0,
+            "visible_response_bytes": 537068
+          },
+          "total_components": {
+            "cached_input": "5.09024",
+            "output": "9.55325",
+            "uncached_input": "12.91245"
+          },
+          "total_credits": "27.55594",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 2036096,
+            "input_tokens": 2294345,
+            "observations": 6,
+            "output_tokens": 38213,
+            "reasoning_output_tokens": 16971,
+            "uncached_input_tokens": 258249
+          },
+          "wall_seconds_sum": 967.5012242919183
+        }
+      }
+    },
+    "3": {
+      "comparisons": {
+        "mini_vs_raw": {
+          "comparator_successes": 5,
+          "cost_per_success_ratio": "1.06099421461772511499594722209111447490232266355774065714837",
+          "mini_successes": 5,
+          "total_cost_ratio": "1.06099421461772511499594722209111447490232266355774065714837"
+        },
+        "mini_vs_rtk": {
+          "comparator_successes": 5,
+          "cost_per_success_ratio": "1.13328307752890701167713067144295291356636783120401157233184",
+          "mini_successes": 5,
+          "total_cost_ratio": "1.13328307752890701167713067144295291356636783120401157233184"
+        }
+      },
+      "variants": {
+        "mini": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "4.7581116666666666666666666666666666666666666666666666666666667",
+          "credits_per_successful_repair": "5.709734",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 1,
+          "known_attempt_credits_sum": "28.54867",
+          "known_component_subtotals": {
+            "cached_input": "5.63072",
+            "output": "10.3795",
+            "uncached_input": "12.53845"
+          },
+          "known_cost_attempts": 6,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 6,
+          "operationally_complete_attempts": 6,
+          "planned_attempts": 6,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 5,
+          "tools": {
+            "actions": 188,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 75,
+            "native_filtered_commands": 0,
+            "observations": 6,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 16,
+            "terminal_commands": 75,
+            "terminal_timeouts": 0,
+            "test_commands": 30,
+            "tool_errors": 0,
+            "visible_response_bytes": 700557
+          },
+          "total_components": {
+            "cached_input": "5.63072",
+            "output": "10.3795",
+            "uncached_input": "12.53845"
+          },
+          "total_credits": "28.54867",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 2252288,
+            "input_tokens": 2503057,
+            "observations": 6,
+            "output_tokens": 41518,
+            "reasoning_output_tokens": 18353,
+            "uncached_input_tokens": 250769
+          },
+          "wall_seconds_sum": 1045.4949350410025
+        },
+        "raw": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "4.484578333333333333333333333333333333333333333333333333333333",
+          "credits_per_successful_repair": "5.381494",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 1,
+          "known_attempt_credits_sum": "26.90747",
+          "known_component_subtotals": {
+            "cached_input": "5.58752",
+            "output": "9.211",
+            "uncached_input": "12.10895"
+          },
+          "known_cost_attempts": 6,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 6,
+          "operationally_complete_attempts": 6,
+          "planned_attempts": 6,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 5,
+          "tools": {
+            "actions": 194,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 0,
+            "observations": 6,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 12,
+            "terminal_commands": 74,
+            "terminal_timeouts": 0,
+            "test_commands": 26,
+            "tool_errors": 0,
+            "visible_response_bytes": 686813
+          },
+          "total_components": {
+            "cached_input": "5.58752",
+            "output": "9.211",
+            "uncached_input": "12.10895"
+          },
+          "total_credits": "26.90747",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 2235008,
+            "input_tokens": 2477187,
+            "observations": 6,
+            "output_tokens": 36844,
+            "reasoning_output_tokens": 14835,
+            "uncached_input_tokens": 242179
+          },
+          "wall_seconds_sum": 939.892269210075
+        },
+        "rtk": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "4.19852",
+          "credits_per_successful_repair": "5.038224",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 1,
+          "known_attempt_credits_sum": "25.19112",
+          "known_component_subtotals": {
+            "cached_input": "5.11872",
+            "output": "9.70975",
+            "uncached_input": "10.36265"
+          },
+          "known_cost_attempts": 6,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 6,
+          "operationally_complete_attempts": 6,
+          "planned_attempts": 6,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 5,
+          "tools": {
+            "actions": 195,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 59,
+            "observations": 6,
+            "passthrough_commands": 10,
+            "recovery_calls": 0,
+            "repeated_test_commands": 12,
+            "terminal_commands": 69,
+            "terminal_timeouts": 0,
+            "test_commands": 29,
+            "tool_errors": 1,
+            "visible_response_bytes": 532883
+          },
+          "total_components": {
+            "cached_input": "5.11872",
+            "output": "9.70975",
+            "uncached_input": "10.36265"
+          },
+          "total_credits": "25.19112",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 2047488,
+            "input_tokens": 2254741,
+            "observations": 6,
+            "output_tokens": 38839,
+            "reasoning_output_tokens": 17449,
+            "uncached_input_tokens": 207253
+          },
+          "wall_seconds_sum": 1014.4974771669949
+        }
+      }
+    }
+  },
+  "by_task": {
+    "C-J1": {
+      "comparisons": {
+        "mini_vs_raw": {
+          "comparator_successes": 3,
+          "cost_per_success_ratio": "0.937641289811283372133339937589776611025806132052107583337461",
+          "mini_successes": 3,
+          "total_cost_ratio": "0.937641289811283372133339937589776611025806132052107583337461"
+        },
+        "mini_vs_rtk": {
+          "comparator_successes": 3,
+          "cost_per_success_ratio": "0.864242268555831241340855578254316484576070203290535752983372",
+          "mini_successes": 3,
+          "total_cost_ratio": "0.864242268555831241340855578254316484576070203290535752983372"
+        }
+      },
+      "variants": {
+        "mini": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "4.73251",
+          "credits_per_successful_repair": "4.73251",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "14.19753",
+          "known_component_subtotals": {
+            "cached_input": "2.58368",
+            "output": "4.71725",
+            "uncached_input": "6.8966"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 93,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 37,
+            "native_filtered_commands": 0,
+            "observations": 3,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 9,
+            "terminal_commands": 37,
+            "terminal_timeouts": 0,
+            "test_commands": 19,
+            "tool_errors": 0,
+            "visible_response_bytes": 372903
+          },
+          "total_components": {
+            "cached_input": "2.58368",
+            "output": "4.71725",
+            "uncached_input": "6.8966"
+          },
+          "total_credits": "14.19753",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 1033472,
+            "input_tokens": 1171404,
+            "observations": 3,
+            "output_tokens": 18869,
+            "reasoning_output_tokens": 11508,
+            "uncached_input_tokens": 137932
+          },
+          "wall_seconds_sum": 480.01953849900747
+        },
+        "raw": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "5.04725",
+          "credits_per_successful_repair": "5.04725",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "15.14175",
+          "known_component_subtotals": {
+            "cached_input": "2.64",
+            "output": "4.7245",
+            "uncached_input": "7.77725"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 97,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 0,
+            "observations": 3,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 8,
+            "terminal_commands": 36,
+            "terminal_timeouts": 0,
+            "test_commands": 21,
+            "tool_errors": 0,
+            "visible_response_bytes": 449060
+          },
+          "total_components": {
+            "cached_input": "2.64",
+            "output": "4.7245",
+            "uncached_input": "7.77725"
+          },
+          "total_credits": "15.14175",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 1056000,
+            "input_tokens": 1211545,
+            "observations": 3,
+            "output_tokens": 18898,
+            "reasoning_output_tokens": 10861,
+            "uncached_input_tokens": 155545
+          },
+          "wall_seconds_sum": 501.8745536659844
+        },
+        "rtk": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "5.47590666666666666666666666666666666666666666666666666666667",
+          "credits_per_successful_repair": "5.47590666666666666666666666666666666666666666666666666666667",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "16.42772",
+          "known_component_subtotals": {
+            "cached_input": "2.76832",
+            "output": "5.144",
+            "uncached_input": "8.5154"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 97,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 24,
+            "observations": 3,
+            "passthrough_commands": 9,
+            "recovery_calls": 0,
+            "repeated_test_commands": 5,
+            "terminal_commands": 33,
+            "terminal_timeouts": 0,
+            "test_commands": 18,
+            "tool_errors": 1,
+            "visible_response_bytes": 368051
+          },
+          "total_components": {
+            "cached_input": "2.76832",
+            "output": "5.144",
+            "uncached_input": "8.5154"
+          },
+          "total_credits": "16.42772",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 1107328,
+            "input_tokens": 1277636,
+            "observations": 3,
+            "output_tokens": 20576,
+            "reasoning_output_tokens": 12302,
+            "uncached_input_tokens": 170308
+          },
+          "wall_seconds_sum": 506.21632516692625
+        }
+      }
+    },
+    "C-J2": {
+      "comparisons": {
+        "mini_vs_raw": {
+          "comparator_successes": 0,
+          "cost_per_success_ratio": null,
+          "mini_successes": 0,
+          "total_cost_ratio": "0.870263449440639623167746134060553472372865598562087452353652"
+        },
+        "mini_vs_rtk": {
+          "comparator_successes": 0,
+          "cost_per_success_ratio": null,
+          "mini_successes": 0,
+          "total_cost_ratio": "0.921652827804625899457658825556494556076108271318274682266838"
+        }
+      },
+      "variants": {
+        "mini": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "2.99547",
+          "credits_per_successful_repair": null,
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 3,
+          "known_attempt_credits_sum": "8.98641",
+          "known_component_subtotals": {
+            "cached_input": "1.96736",
+            "output": "2.7665",
+            "uncached_input": "4.25255"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 0,
+          "tools": {
+            "actions": 77,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 34,
+            "native_filtered_commands": 0,
+            "observations": 3,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 6,
+            "terminal_commands": 34,
+            "terminal_timeouts": 0,
+            "test_commands": 15,
+            "tool_errors": 0,
+            "visible_response_bytes": 263221
+          },
+          "total_components": {
+            "cached_input": "1.96736",
+            "output": "2.7665",
+            "uncached_input": "4.25255"
+          },
+          "total_credits": "8.98641",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 786944,
+            "input_tokens": 871995,
+            "observations": 3,
+            "output_tokens": 11066,
+            "reasoning_output_tokens": 4304,
+            "uncached_input_tokens": 85051
+          },
+          "wall_seconds_sum": 354.5627067510504
+        },
+        "raw": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "3.44202666666666666666666666666666666666666666666666666666667",
+          "credits_per_successful_repair": null,
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 3,
+          "known_attempt_credits_sum": "10.32608",
+          "known_component_subtotals": {
+            "cached_input": "2.13568",
+            "output": "2.62525",
+            "uncached_input": "5.56515"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 0,
+          "tools": {
+            "actions": 90,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 0,
+            "observations": 3,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 6,
+            "terminal_commands": 35,
+            "terminal_timeouts": 0,
+            "test_commands": 14,
+            "tool_errors": 0,
+            "visible_response_bytes": 301781
+          },
+          "total_components": {
+            "cached_input": "2.13568",
+            "output": "2.62525",
+            "uncached_input": "5.56515"
+          },
+          "total_credits": "10.32608",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 854272,
+            "input_tokens": 965575,
+            "observations": 3,
+            "output_tokens": 10501,
+            "reasoning_output_tokens": 3445,
+            "uncached_input_tokens": 111303
+          },
+          "wall_seconds_sum": 289.4407950839959
+        },
+        "rtk": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "3.25010666666666666666666666666666666666666666666666666666667",
+          "credits_per_successful_repair": null,
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 3,
+          "known_attempt_credits_sum": "9.75032",
+          "known_component_subtotals": {
+            "cached_input": "1.91712",
+            "output": "2.44",
+            "uncached_input": "5.3932"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 0,
+          "tools": {
+            "actions": 82,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 28,
+            "observations": 3,
+            "passthrough_commands": 6,
+            "recovery_calls": 0,
+            "repeated_test_commands": 6,
+            "terminal_commands": 34,
+            "terminal_timeouts": 0,
+            "test_commands": 15,
+            "tool_errors": 0,
+            "visible_response_bytes": 301166
+          },
+          "total_components": {
+            "cached_input": "1.91712",
+            "output": "2.44",
+            "uncached_input": "5.3932"
+          },
+          "total_credits": "9.75032",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 766848,
+            "input_tokens": 874712,
+            "observations": 3,
+            "output_tokens": 9760,
+            "reasoning_output_tokens": 3144,
+            "uncached_input_tokens": 107864
+          },
+          "wall_seconds_sum": 265.8824031659751
+        }
+      }
+    },
+    "C-J3": {
+      "comparisons": {
+        "mini_vs_raw": {
+          "comparator_successes": 3,
+          "cost_per_success_ratio": "1.07365484396049213821525481769128651302308662313199721444073",
+          "mini_successes": 3,
+          "total_cost_ratio": "1.07365484396049213821525481769128651302308662313199721444073"
+        },
+        "mini_vs_rtk": {
+          "comparator_successes": 3,
+          "cost_per_success_ratio": "1.14603180816958045061649438265667724389889737930142926917865",
+          "mini_successes": 3,
+          "total_cost_ratio": "1.14603180816958045061649438265667724389889737930142926917865"
+        }
+      },
+      "variants": {
+        "mini": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "8.39222666666666666666666666666666666666666666666666666666667",
+          "credits_per_successful_repair": "8.39222666666666666666666666666666666666666666666666666666667",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "25.17668",
+          "known_component_subtotals": {
+            "cached_input": "4.47328",
+            "output": "10.378",
+            "uncached_input": "10.3254"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 170,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 41,
+            "native_filtered_commands": 0,
+            "observations": 3,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 11,
+            "terminal_commands": 41,
+            "terminal_timeouts": 0,
+            "test_commands": 17,
+            "tool_errors": 0,
+            "visible_response_bytes": 445371
+          },
+          "total_components": {
+            "cached_input": "4.47328",
+            "output": "10.378",
+            "uncached_input": "10.3254"
+          },
+          "total_credits": "25.17668",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 1789312,
+            "input_tokens": 1995820,
+            "observations": 3,
+            "output_tokens": 41512,
+            "reasoning_output_tokens": 14271,
+            "uncached_input_tokens": 206508
+          },
+          "wall_seconds_sum": 929.4583055410185
+        },
+        "raw": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "7.81650333333333333333333333333333333333333333333333333333333",
+          "credits_per_successful_repair": "7.81650333333333333333333333333333333333333333333333333333333",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "23.44951",
+          "known_component_subtotals": {
+            "cached_input": "4.41536",
+            "output": "10.096",
+            "uncached_input": "8.93815"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 175,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 0,
+            "observations": 3,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 12,
+            "terminal_commands": 43,
+            "terminal_timeouts": 0,
+            "test_commands": 18,
+            "tool_errors": 3,
+            "visible_response_bytes": 402092
+          },
+          "total_components": {
+            "cached_input": "4.41536",
+            "output": "10.096",
+            "uncached_input": "8.93815"
+          },
+          "total_credits": "23.44951",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 1766144,
+            "input_tokens": 1944907,
+            "observations": 3,
+            "output_tokens": 40384,
+            "reasoning_output_tokens": 13480,
+            "uncached_input_tokens": 178763
+          },
+          "wall_seconds_sum": 902.2649951249477
+        },
+        "rtk": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "7.32285666666666666666666666666666666666666666666666666666667",
+          "credits_per_successful_repair": "7.32285666666666666666666666666666666666666666666666666666667",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "21.96857",
+          "known_component_subtotals": {
+            "cached_input": "4.12992",
+            "output": "10.11525",
+            "uncached_input": "7.7234"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 163,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 32,
+            "observations": 3,
+            "passthrough_commands": 8,
+            "recovery_calls": 0,
+            "repeated_test_commands": 8,
+            "terminal_commands": 40,
+            "terminal_timeouts": 0,
+            "test_commands": 14,
+            "tool_errors": 0,
+            "visible_response_bytes": 355366
+          },
+          "total_components": {
+            "cached_input": "4.12992",
+            "output": "10.11525",
+            "uncached_input": "7.7234"
+          },
+          "total_credits": "21.96857",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 1651968,
+            "input_tokens": 1806436,
+            "observations": 3,
+            "output_tokens": 40461,
+            "reasoning_output_tokens": 15003,
+            "uncached_input_tokens": 154468
+          },
+          "wall_seconds_sum": 955.0697160839918
+        }
+      }
+    },
+    "C-R1": {
+      "comparisons": {
+        "mini_vs_raw": {
+          "comparator_successes": 3,
+          "cost_per_success_ratio": "0.878114703311501343105402922029550237129558997207645182308735",
+          "mini_successes": 3,
+          "total_cost_ratio": "0.878114703311501343105402922029550237129558997207645182308735"
+        },
+        "mini_vs_rtk": {
+          "comparator_successes": 3,
+          "cost_per_success_ratio": "0.974134586124295003614092905241250454864980468292807494046855",
+          "mini_successes": 3,
+          "total_cost_ratio": "0.974134586124295003614092905241250454864980468292807494046855"
+        }
+      },
+      "variants": {
+        "mini": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "4.57765",
+          "credits_per_successful_repair": "4.57765",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "13.73295",
+          "known_component_subtotals": {
+            "cached_input": "3.0944",
+            "output": "4.795",
+            "uncached_input": "5.84355"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 91,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 48,
+            "native_filtered_commands": 0,
+            "observations": 3,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 9,
+            "terminal_commands": 48,
+            "terminal_timeouts": 0,
+            "test_commands": 15,
+            "tool_errors": 0,
+            "visible_response_bytes": 521708
+          },
+          "total_components": {
+            "cached_input": "3.0944",
+            "output": "4.795",
+            "uncached_input": "5.84355"
+          },
+          "total_credits": "13.73295",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 1237760,
+            "input_tokens": 1354631,
+            "observations": 3,
+            "output_tokens": 19180,
+            "reasoning_output_tokens": 8264,
+            "uncached_input_tokens": 116871
+          },
+          "wall_seconds_sum": 542.4824991659843
+        },
+        "raw": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "5.21304333333333333333333333333333333333333333333333333333333",
+          "credits_per_successful_repair": "5.21304333333333333333333333333333333333333333333333333333333",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "15.63913",
+          "known_component_subtotals": {
+            "cached_input": "4.02848",
+            "output": "5.34625",
+            "uncached_input": "6.2644"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 100,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 0,
+            "observations": 3,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 8,
+            "terminal_commands": 45,
+            "terminal_timeouts": 0,
+            "test_commands": 14,
+            "tool_errors": 0,
+            "visible_response_bytes": 587790
+          },
+          "total_components": {
+            "cached_input": "4.02848",
+            "output": "5.34625",
+            "uncached_input": "6.2644"
+          },
+          "total_credits": "15.63913",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 1611392,
+            "input_tokens": 1736680,
+            "observations": 3,
+            "output_tokens": 21385,
+            "reasoning_output_tokens": 9519,
+            "uncached_input_tokens": 125288
+          },
+          "wall_seconds_sum": 627.6164819999831
+        },
+        "rtk": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "4.69919666666666666666666666666666666666666666666666666666667",
+          "credits_per_successful_repair": "4.69919666666666666666666666666666666666666666666666666666667",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "14.09759",
+          "known_component_subtotals": {
+            "cached_input": "2.91264",
+            "output": "4.7395",
+            "uncached_input": "6.44545"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 105,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 44,
+            "observations": 3,
+            "passthrough_commands": 6,
+            "recovery_calls": 0,
+            "repeated_test_commands": 9,
+            "terminal_commands": 50,
+            "terminal_timeouts": 0,
+            "test_commands": 16,
+            "tool_errors": 0,
+            "visible_response_bytes": 256342
+          },
+          "total_components": {
+            "cached_input": "2.91264",
+            "output": "4.7395",
+            "uncached_input": "6.44545"
+          },
+          "total_credits": "14.09759",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 1165056,
+            "input_tokens": 1293965,
+            "observations": 3,
+            "output_tokens": 18958,
+            "reasoning_output_tokens": 8638,
+            "uncached_input_tokens": 128909
+          },
+          "wall_seconds_sum": 536.9161233330378
+        }
+      }
+    },
+    "C-R2": {
+      "comparisons": {
+        "mini_vs_raw": {
+          "comparator_successes": 3,
+          "cost_per_success_ratio": "0.929827703251439971013164854295340866023347729572819011365671",
+          "mini_successes": 3,
+          "total_cost_ratio": "0.929827703251439971013164854295340866023347729572819011365671"
+        },
+        "mini_vs_rtk": {
+          "comparator_successes": 3,
+          "cost_per_success_ratio": "1.08717856321118441155595918819520615902287355328336350433208",
+          "mini_successes": 3,
+          "total_cost_ratio": "1.08717856321118441155595918819520615902287355328336350433208"
+        }
+      },
+      "variants": {
+        "mini": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "2.9768",
+          "credits_per_successful_repair": "2.9768",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "8.9304",
+          "known_component_subtotals": {
+            "cached_input": "1.568",
+            "output": "3.186",
+            "uncached_input": "4.1764"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 75,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 38,
+            "native_filtered_commands": 0,
+            "observations": 3,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 5,
+            "terminal_commands": 38,
+            "terminal_timeouts": 0,
+            "test_commands": 11,
+            "tool_errors": 0,
+            "visible_response_bytes": 169540
+          },
+          "total_components": {
+            "cached_input": "1.568",
+            "output": "3.186",
+            "uncached_input": "4.1764"
+          },
+          "total_credits": "8.9304",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 627200,
+            "input_tokens": 710728,
+            "observations": 3,
+            "output_tokens": 12744,
+            "reasoning_output_tokens": 5336,
+            "uncached_input_tokens": 83528
+          },
+          "wall_seconds_sum": 372.2415350410156
+        },
+        "raw": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "3.20145333333333333333333333333333333333333333333333333333333",
+          "credits_per_successful_repair": "3.20145333333333333333333333333333333333333333333333333333333",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "9.60436",
+          "known_component_subtotals": {
+            "cached_input": "1.68576",
+            "output": "3.07425",
+            "uncached_input": "4.84435"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 66,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 0,
+            "observations": 3,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 3,
+            "terminal_commands": 31,
+            "terminal_timeouts": 0,
+            "test_commands": 9,
+            "tool_errors": 0,
+            "visible_response_bytes": 240181
+          },
+          "total_components": {
+            "cached_input": "1.68576",
+            "output": "3.07425",
+            "uncached_input": "4.84435"
+          },
+          "total_credits": "9.60436",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 674304,
+            "input_tokens": 771191,
+            "observations": 3,
+            "output_tokens": 12297,
+            "reasoning_output_tokens": 5193,
+            "uncached_input_tokens": 96887
+          },
+          "wall_seconds_sum": 363.43148100102553
+        },
+        "rtk": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "2.73809666666666666666666666666666666666666666666666666666667",
+          "credits_per_successful_repair": "2.73809666666666666666666666666666666666666666666666666666667",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "8.21429",
+          "known_component_subtotals": {
+            "cached_input": "1.38944",
+            "output": "3.0885",
+            "uncached_input": "3.73635"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 61,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 29,
+            "observations": 3,
+            "passthrough_commands": 3,
+            "recovery_calls": 0,
+            "repeated_test_commands": 3,
+            "terminal_commands": 32,
+            "terminal_timeouts": 0,
+            "test_commands": 10,
+            "tool_errors": 0,
+            "visible_response_bytes": 147522
+          },
+          "total_components": {
+            "cached_input": "1.38944",
+            "output": "3.0885",
+            "uncached_input": "3.73635"
+          },
+          "total_credits": "8.21429",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 555776,
+            "input_tokens": 630503,
+            "observations": 3,
+            "output_tokens": 12354,
+            "reasoning_output_tokens": 6582,
+            "uncached_input_tokens": 74727
+          },
+          "wall_seconds_sum": 366.46650050004246
+        }
+      }
+    },
+    "C-R3": {
+      "comparisons": {
+        "mini_vs_raw": {
+          "comparator_successes": 3,
+          "cost_per_success_ratio": "1.0253141329929394870158362918345366787666041724839443136942",
+          "mini_successes": 3,
+          "total_cost_ratio": "1.0253141329929394870158362918345366787666041724839443136942"
+        },
+        "mini_vs_rtk": {
+          "comparator_successes": 3,
+          "cost_per_success_ratio": "1.11840243142314181379902251394271927353184009085203149798161",
+          "mini_successes": 3,
+          "total_cost_ratio": "1.11840243142314181379902251394271927353184009085203149798161"
+        }
+      },
+      "variants": {
+        "mini": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "3.42714666666666666666666666666666666666666666666666666666667",
+          "credits_per_successful_repair": "3.42714666666666666666666666666666666666666666666666666666667",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "10.28144",
+          "known_component_subtotals": {
+            "cached_input": "1.68224",
+            "output": "3.84375",
+            "uncached_input": "4.75545"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 57,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 23,
+            "native_filtered_commands": 0,
+            "observations": 3,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 5,
+            "terminal_commands": 23,
+            "terminal_timeouts": 0,
+            "test_commands": 11,
+            "tool_errors": 0,
+            "visible_response_bytes": 219379
+          },
+          "total_components": {
+            "cached_input": "1.68224",
+            "output": "3.84375",
+            "uncached_input": "4.75545"
+          },
+          "total_credits": "10.28144",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 672896,
+            "input_tokens": 768005,
+            "observations": 3,
+            "output_tokens": 15375,
+            "reasoning_output_tokens": 7604,
+            "uncached_input_tokens": 95109
+          },
+          "wall_seconds_sum": 378.4863839590107
+        },
+        "raw": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "3.34253333333333333333333333333333333333333333333333333333333",
+          "credits_per_successful_repair": "3.34253333333333333333333333333333333333333333333333333333333",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "10.0276",
+          "known_component_subtotals": {
+            "cached_input": "1.4656",
+            "output": "3.719",
+            "uncached_input": "4.843"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 54,
+            "incomplete_terminal_captures": 0,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 0,
+            "observations": 3,
+            "passthrough_commands": 0,
+            "recovery_calls": 0,
+            "repeated_test_commands": 6,
+            "terminal_commands": 24,
+            "terminal_timeouts": 0,
+            "test_commands": 12,
+            "tool_errors": 0,
+            "visible_response_bytes": 213516
+          },
+          "total_components": {
+            "cached_input": "1.4656",
+            "output": "3.719",
+            "uncached_input": "4.843"
+          },
+          "total_credits": "10.0276",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 586240,
+            "input_tokens": 683100,
+            "observations": 3,
+            "output_tokens": 14876,
+            "reasoning_output_tokens": 7036,
+            "uncached_input_tokens": 96860
+          },
+          "wall_seconds_sum": 362.7645951260347
+        },
+        "rtk": {
+          "actual_billed": false,
+          "all_planned_costs_known": true,
+          "credits_per_planned_attempt": "3.06432333333333333333333333333333333333333333333333333333333",
+          "credits_per_successful_repair": "3.06432333333333333333333333333333333333333333333333333333333",
+          "exclusion_counts": {},
+          "grading_timeout_attempts": 0,
+          "incorrect_repairs": 0,
+          "known_attempt_credits_sum": "9.19297",
+          "known_component_subtotals": {
+            "cached_input": "1.86112",
+            "output": "3.756",
+            "uncached_input": "3.57585"
+          },
+          "known_cost_attempts": 3,
+          "measure": "published-rate-credit-calculation",
+          "missing_attempt_ids": [],
+          "observed_attempts": 3,
+          "operationally_complete_attempts": 3,
+          "planned_attempts": 3,
+          "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+          "schema": 1,
+          "successful_repairs": 3,
+          "tools": {
+            "actions": 57,
+            "incomplete_terminal_captures": 1,
+            "mini_wrapped_commands": 0,
+            "native_filtered_commands": 25,
+            "observations": 3,
+            "passthrough_commands": 0,
+            "recovery_calls": 1,
+            "repeated_test_commands": 7,
+            "terminal_commands": 26,
+            "terminal_timeouts": 1,
+            "test_commands": 14,
+            "tool_errors": 2,
+            "visible_response_bytes": 178599
+          },
+          "total_components": {
+            "cached_input": "1.86112",
+            "output": "3.756",
+            "uncached_input": "3.57585"
+          },
+          "total_credits": "9.19297",
+          "unit": "credits",
+          "unknown_correctness": 0,
+          "unknown_correctness_attempt_ids": [],
+          "unknown_cost_attempt_ids": [],
+          "usage": {
+            "cached_input_tokens": 744448,
+            "input_tokens": 815965,
+            "observations": 3,
+            "output_tokens": 15024,
+            "reasoning_output_tokens": 7189,
+            "uncached_input_tokens": 71517
+          },
+          "wall_seconds_sum": 500.03205854201224
+        }
+      }
+    }
+  },
+  "cost_boundary": "Observed CLI usage priced at published Standard credit rates; not an invoice, subscription cost, attributed account deduction or USD charge.",
+  "coverage": {
+    "complete_confirmation": true,
+    "observed_grades": 54,
+    "observed_results": 54,
+    "operationally_complete": 54,
+    "planned": 54
+  },
+  "decision": {
+    "classification": "equal_or_higher_observed_cost",
+    "continue_compressor_expansion": false,
+    "cost_boundary": "Observed CLI usage priced at published Standard credit rates; not an invoice, subscription cost, attributed account deduction or USD charge.",
+    "criteria": {
+      "all_54_attempts_usable": true,
+      "all_leave_one_task_out_ratios_lower": false,
+      "at_least_four_task_totals_lower": false,
+      "bootstrap_upper_below_one": false,
+      "both_language_groups_lower": false,
+      "correctness_no_lower_than_raw_and_rtk": true,
+      "cost_per_success_at_least_10_percent_lower": false,
+      "total_cost_at_least_10_percent_lower": false
+    },
+    "recommendation": "maintain_release_and_stop_broad_expansion",
+    "repeatable_cost_evidence": false
+  },
+  "leave_one_task_out": {
+    "C-J1": {
+      "comparator_successes": 12,
+      "cost_per_success_ratio": "1.06143483444668094611296326348298914300229628933688516370591",
+      "mini_successes": 12,
+      "total_cost_ratio": "1.06143483444668094611296326348298914300229628933688516370591"
+    },
+    "C-J2": {
+      "comparator_successes": 15,
+      "cost_per_success_ratio": "1.03458970769289313450395801842430609858437215759285184762366",
+      "mini_successes": 15,
+      "total_cost_ratio": "1.03458970769289313450395801842430609858437215759285184762366"
+    },
+    "C-J3": {
+      "comparator_successes": 12,
+      "cost_per_success_ratio": "0.973056828463345023108238855577451129789093438279531417375239",
+      "mini_successes": 12,
+      "total_cost_ratio": "0.973056828463345023108238855577451129789093438279531417375239"
+    },
+    "C-R1": {
+      "comparator_successes": 12,
+      "cost_per_success_ratio": "1.03079284258885097096479582364855042120320280099405267759173",
+      "mini_successes": 12,
+      "total_cost_ratio": "1.03079284258885097096479582364855042120320280099405267759173"
+    },
+    "C-R2": {
+      "comparator_successes": 12,
+      "cost_per_success_ratio": "1.01312817962973617235957135480030913878587295661348286893224",
+      "mini_successes": 12,
+      "total_cost_ratio": "1.01312817962973617235957135480030913878587295661348286893224"
+    },
+    "C-R3": {
+      "comparator_successes": 12,
+      "cost_per_success_ratio": "1.00802571840526244601608691869496493609215865965904179893722",
+      "mini_successes": 12,
+      "total_cost_ratio": "1.00802571840526244601608691869496493609215865965904179893722"
+    }
+  },
+  "measure": "fixed-filter-published-rate-cost-confirmation",
+  "mini_vs_rtk_task_cluster_bootstrap": {
+    "available": true,
+    "clusters": 6,
+    "interpretation": "Stability check for six convenience-sampled tasks, not population proof",
+    "lower_2_5_percentile": "0.920194863485041357206522058899531764704011525791901254749738",
+    "method": "paired task-cluster ratio of summed costs; linear percentile interpolation",
+    "repetitions_per_cluster": 3,
+    "resamples": 20000,
+    "seed": 20261107,
+    "upper_97_5_percentile": "1.11358388659299361383406480775800898793724212241465401697721"
+  },
+  "plan_sha256": "2f17831952b856d9b98826a547cf6fdf1aee2d8ab16c4553b9ccefbe320ac0b8",
+  "rate_card": {
+    "cache_write_charge": "none",
+    "fetched_at": "2026-11-06T22:24:33Z",
+    "model": "gpt-6.1-sol",
+    "per_million_tokens": {
+      "cached_input": "2.5",
+      "output": "250",
+      "uncached_input": "50"
+    },
+    "reasoning_charge": "included-in-output",
+    "schema": 1,
+    "service_tier": "standard",
+    "source_url": "https://learn.chatgpt.com/docs/pricing#token-rates",
+    "unit": "credits"
+  },
+  "schema": 1,
+  "successful_attempts_only_secondary": {
+    "comparisons": {
+      "mini_vs_raw": {
+        "comparator_successes": 15,
+        "cost_per_success_ratio": "0.97910505149105058260399242645271914581650868135118906993888",
+        "mini_successes": 15,
+        "total_cost_ratio": "0.97910505149105058260399242645271914581650868135118906993888"
+      },
+      "mini_vs_rtk": {
+        "comparator_successes": 15,
+        "cost_per_success_ratio": "1.03458970769289313450395801842430609858437215759285184762366",
+        "mini_successes": 15,
+        "total_cost_ratio": "1.03458970769289313450395801842430609858437215759285184762366"
+      }
+    },
+    "variants": {
+      "mini": {
+        "actual_billed": false,
+        "all_planned_costs_known": true,
+        "credits_per_planned_attempt": "4.8212666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666667",
+        "credits_per_successful_repair": "4.8212666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666667",
+        "exclusion_counts": {},
+        "grading_timeout_attempts": 0,
+        "incorrect_repairs": 0,
+        "known_attempt_credits_sum": "72.319",
+        "known_component_subtotals": {
+          "cached_input": "13.4016",
+          "output": "26.92",
+          "uncached_input": "31.9974"
+        },
+        "known_cost_attempts": 15,
+        "measure": "published-rate-credit-calculation",
+        "missing_attempt_ids": [],
+        "observed_attempts": 15,
+        "operationally_complete_attempts": 15,
+        "planned_attempts": 15,
+        "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+        "schema": 1,
+        "successful_repairs": 15,
+        "tools": {
+          "actions": 486,
+          "incomplete_terminal_captures": 0,
+          "mini_wrapped_commands": 187,
+          "native_filtered_commands": 0,
+          "observations": 15,
+          "passthrough_commands": 0,
+          "recovery_calls": 0,
+          "repeated_test_commands": 39,
+          "terminal_commands": 187,
+          "terminal_timeouts": 0,
+          "test_commands": 73,
+          "tool_errors": 0,
+          "visible_response_bytes": 1728901
+        },
+        "total_components": {
+          "cached_input": "13.4016",
+          "output": "26.92",
+          "uncached_input": "31.9974"
+        },
+        "total_credits": "72.319",
+        "unit": "credits",
+        "unknown_correctness": 0,
+        "unknown_correctness_attempt_ids": [],
+        "unknown_cost_attempt_ids": [],
+        "usage": {
+          "cached_input_tokens": 5360640,
+          "input_tokens": 6000588,
+          "observations": 15,
+          "output_tokens": 107680,
+          "reasoning_output_tokens": 46983,
+          "uncached_input_tokens": 639948
+        },
+        "wall_seconds_sum": 2702.6882622060366
+      },
+      "raw": {
+        "actual_billed": false,
+        "all_planned_costs_known": true,
+        "credits_per_planned_attempt": "4.92415666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666667",
+        "credits_per_successful_repair": "4.92415666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666667",
+        "exclusion_counts": {},
+        "grading_timeout_attempts": 0,
+        "incorrect_repairs": 0,
+        "known_attempt_credits_sum": "73.86235",
+        "known_component_subtotals": {
+          "cached_input": "14.2352",
+          "output": "26.96",
+          "uncached_input": "32.66715"
+        },
+        "known_cost_attempts": 15,
+        "measure": "published-rate-credit-calculation",
+        "missing_attempt_ids": [],
+        "observed_attempts": 15,
+        "operationally_complete_attempts": 15,
+        "planned_attempts": 15,
+        "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+        "schema": 1,
+        "successful_repairs": 15,
+        "tools": {
+          "actions": 492,
+          "incomplete_terminal_captures": 0,
+          "mini_wrapped_commands": 0,
+          "native_filtered_commands": 0,
+          "observations": 15,
+          "passthrough_commands": 0,
+          "recovery_calls": 0,
+          "repeated_test_commands": 37,
+          "terminal_commands": 179,
+          "terminal_timeouts": 0,
+          "test_commands": 74,
+          "tool_errors": 3,
+          "visible_response_bytes": 1892639
+        },
+        "total_components": {
+          "cached_input": "14.2352",
+          "output": "26.96",
+          "uncached_input": "32.66715"
+        },
+        "total_credits": "73.86235",
+        "unit": "credits",
+        "unknown_correctness": 0,
+        "unknown_correctness_attempt_ids": [],
+        "unknown_cost_attempt_ids": [],
+        "usage": {
+          "cached_input_tokens": 5694080,
+          "input_tokens": 6347423,
+          "observations": 15,
+          "output_tokens": 107840,
+          "reasoning_output_tokens": 46089,
+          "uncached_input_tokens": 653343
+        },
+        "wall_seconds_sum": 2757.9521069179755
+      },
+      "rtk": {
+        "actual_billed": false,
+        "all_planned_costs_known": true,
+        "credits_per_planned_attempt": "4.660076",
+        "credits_per_successful_repair": "4.660076",
+        "exclusion_counts": {},
+        "grading_timeout_attempts": 0,
+        "incorrect_repairs": 0,
+        "known_attempt_credits_sum": "69.90114",
+        "known_component_subtotals": {
+          "cached_input": "13.06144",
+          "output": "26.84325",
+          "uncached_input": "29.99645"
+        },
+        "known_cost_attempts": 15,
+        "measure": "published-rate-credit-calculation",
+        "missing_attempt_ids": [],
+        "observed_attempts": 15,
+        "operationally_complete_attempts": 15,
+        "planned_attempts": 15,
+        "rate_card_sha256": "58a8a5db30131db8e5012b83f0b16345a239cb99d3c1211e3a723ec5e9a42603",
+        "schema": 1,
+        "successful_repairs": 15,
+        "tools": {
+          "actions": 483,
+          "incomplete_terminal_captures": 1,
+          "mini_wrapped_commands": 0,
+          "native_filtered_commands": 154,
+          "observations": 15,
+          "passthrough_commands": 26,
+          "recovery_calls": 1,
+          "repeated_test_commands": 32,
+          "terminal_commands": 181,
+          "terminal_timeouts": 1,
+          "test_commands": 72,
+          "tool_errors": 3,
+          "visible_response_bytes": 1305880
+        },
+        "total_components": {
+          "cached_input": "13.06144",
+          "output": "26.84325",
+          "uncached_input": "29.99645"
+        },
+        "total_credits": "69.90114",
+        "unit": "credits",
+        "unknown_correctness": 0,
+        "unknown_correctness_attempt_ids": [],
+        "unknown_cost_attempt_ids": [],
+        "usage": {
+          "cached_input_tokens": 5224576,
+          "input_tokens": 5824505,
+          "observations": 15,
+          "output_tokens": 107373,
+          "reasoning_output_tokens": 49714,
+          "uncached_input_tokens": 599929
+        },
+        "wall_seconds_sum": 2864.7007236260106
+      }
+    },
+    "warning": "Unpaired successful-only subsets; excludes failure costs and does not replace the all-attempt primary denominator"
+  },
+  "trials": [
+    {
+      "argv_sha256": "e702bb404a4c588797272b6551a9af5290ad68e2cff9462af468afadf451d7c2",
+      "correct_repair": false,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": false,
+        "grading_timeout_checks": 0,
+        "hidden_failure": true,
+        "observed": true,
+        "patch_bytes": 3262,
+        "test_changes_detected": true
+      },
+      "id": "trial-001",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "2.72455",
+        "components": {
+          "cached_input": "0.5856",
+          "output": "0.82925",
+          "uncached_input": "1.3097"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J2",
+      "timed_out": false,
+      "tools": {
+        "actions": 23,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 11,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 81736
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 234240,
+        "input_tokens": 260434,
+        "output_tokens": 3317,
+        "reasoning_output_tokens": 1198,
+        "uncached_input_tokens": 26194
+      },
+      "variant": "mini",
+      "wall_seconds": 146.32224200002383
+    },
+    {
+      "argv_sha256": "eef07e73a0403db0337636c4d0d722f703f01dd756b1efb6390608dd454fc090",
+      "correct_repair": false,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": false,
+        "grading_timeout_checks": 0,
+        "hidden_failure": true,
+        "observed": true,
+        "patch_bytes": 3241,
+        "test_changes_detected": true
+      },
+      "id": "trial-002",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.11736",
+        "components": {
+          "cached_input": "0.67936",
+          "output": "0.81475",
+          "uncached_input": "1.62325"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J2",
+      "timed_out": false,
+      "tools": {
+        "actions": 26,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 9,
+        "passthrough_commands": 2,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 102410
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 271744,
+        "input_tokens": 304209,
+        "output_tokens": 3259,
+        "reasoning_output_tokens": 1236,
+        "uncached_input_tokens": 32465
+      },
+      "variant": "rtk",
+      "wall_seconds": 90.97206387500046
+    },
+    {
+      "argv_sha256": "0ea57aebec131b9c54531d99980655afcebe2b5b199b65b80c5ba579b24edbc1",
+      "correct_repair": false,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": false,
+        "grading_timeout_checks": 0,
+        "hidden_failure": true,
+        "observed": true,
+        "patch_bytes": 3326,
+        "test_changes_detected": true
+      },
+      "id": "trial-003",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.31109",
+        "components": {
+          "cached_input": "0.65984",
+          "output": "0.78175",
+          "uncached_input": "1.8695"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J2",
+      "timed_out": false,
+      "tools": {
+        "actions": 29,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 12,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 94428
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 263936,
+        "input_tokens": 301326,
+        "output_tokens": 3127,
+        "reasoning_output_tokens": 901,
+        "uncached_input_tokens": 37390
+      },
+      "variant": "raw",
+      "wall_seconds": 88.4187491670018
+    },
+    {
+      "argv_sha256": "0556ca67099101fbb1d29cf99ff520177f82ed8d4c7779f2915408b61bb6a401",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 24676,
+        "test_changes_detected": true
+      },
+      "id": "trial-004",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "8.09583",
+        "components": {
+          "cached_input": "1.12448",
+          "output": "3.6635",
+          "uncached_input": "3.30785"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J3",
+      "timed_out": false,
+      "tools": {
+        "actions": 56,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 11,
+        "passthrough_commands": 3,
+        "recovery_calls": 0,
+        "repeated_test_commands": 3,
+        "terminal_commands": 14,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 127666
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 449792,
+        "input_tokens": 515949,
+        "output_tokens": 14654,
+        "reasoning_output_tokens": 5628,
+        "uncached_input_tokens": 66157
+      },
+      "variant": "rtk",
+      "wall_seconds": 359.52521366701694
+    },
+    {
+      "argv_sha256": "658450b15437b765d61d5802b2304e4da6b28e1d8af5718e94af1174b8aef550",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 24617,
+        "test_changes_detected": true
+      },
+      "id": "trial-005",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "7.13393",
+        "components": {
+          "cached_input": "1.23488",
+          "output": "2.9975",
+          "uncached_input": "2.90155"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J3",
+      "timed_out": false,
+      "tools": {
+        "actions": 51,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 3,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 129654
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 493952,
+        "input_tokens": 551983,
+        "output_tokens": 11990,
+        "reasoning_output_tokens": 3976,
+        "uncached_input_tokens": 58031
+      },
+      "variant": "raw",
+      "wall_seconds": 268.09926658298355
+    },
+    {
+      "argv_sha256": "428229b32a0399357f26528326781940d26bdae64285019517d2e7bd9ae6d6b5",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 25243,
+        "test_changes_detected": true
+      },
+      "id": "trial-006",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "8.4357",
+        "components": {
+          "cached_input": "1.4768",
+          "output": "3.413",
+          "uncached_input": "3.5459"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J3",
+      "timed_out": false,
+      "tools": {
+        "actions": 63,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 15,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 4,
+        "terminal_commands": 15,
+        "terminal_timeouts": 0,
+        "test_commands": 6,
+        "tool_errors": 0,
+        "visible_response_bytes": 187605
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 590720,
+        "input_tokens": 661638,
+        "output_tokens": 13652,
+        "reasoning_output_tokens": 4542,
+        "uncached_input_tokens": 70918
+      },
+      "variant": "mini",
+      "wall_seconds": 307.3871207080083
+    },
+    {
+      "argv_sha256": "fccc5e16350bc3babcd271441da1502672755854217b5f3acf3f89de4d68ee41",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 4989,
+        "test_changes_detected": true
+      },
+      "id": "trial-007",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "4.95068",
+        "components": {
+          "cached_input": "0.78848",
+          "output": "1.64",
+          "uncached_input": "2.5222"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J1",
+      "timed_out": false,
+      "tools": {
+        "actions": 31,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 4,
+        "terminal_commands": 12,
+        "terminal_timeouts": 0,
+        "test_commands": 8,
+        "tool_errors": 0,
+        "visible_response_bytes": 134201
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 315392,
+        "input_tokens": 365836,
+        "output_tokens": 6560,
+        "reasoning_output_tokens": 3713,
+        "uncached_input_tokens": 50444
+      },
+      "variant": "raw",
+      "wall_seconds": 196.9624681249843
+    },
+    {
+      "argv_sha256": "a9faf9447e323469cb637b8f9167e20862b02866f47aed56b34ebb44a869e5e9",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 3345,
+        "test_changes_detected": true
+      },
+      "id": "trial-008",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "4.01932",
+        "components": {
+          "cached_input": "0.80672",
+          "output": "1.2215",
+          "uncached_input": "1.9911"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J1",
+      "timed_out": false,
+      "tools": {
+        "actions": 29,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 11,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 6,
+        "tool_errors": 0,
+        "visible_response_bytes": 101520
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 322688,
+        "input_tokens": 362510,
+        "output_tokens": 4886,
+        "reasoning_output_tokens": 2726,
+        "uncached_input_tokens": 39822
+      },
+      "variant": "mini",
+      "wall_seconds": 130.1200334999594
+    },
+    {
+      "argv_sha256": "189338f1d00d444773e7b50ae4ee7c3621b308eb02006effe94e4ed0143bef60",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 5068,
+        "test_changes_detected": true
+      },
+      "id": "trial-009",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "5.43287",
+        "components": {
+          "cached_input": "0.75712",
+          "output": "1.6925",
+          "uncached_input": "2.98325"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J1",
+      "timed_out": false,
+      "tools": {
+        "actions": 33,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 8,
+        "passthrough_commands": 3,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 6,
+        "tool_errors": 0,
+        "visible_response_bytes": 127639
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 302848,
+        "input_tokens": 362513,
+        "output_tokens": 6770,
+        "reasoning_output_tokens": 3898,
+        "uncached_input_tokens": 59665
+      },
+      "variant": "rtk",
+      "wall_seconds": 163.01169100002153
+    },
+    {
+      "argv_sha256": "59972b5574445f1432dbdf41988517648cc990f25b960f1fbfb5217850722079",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 5938,
+        "test_changes_detected": true
+      },
+      "id": "trial-010",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.38961",
+        "components": {
+          "cached_input": "0.90176",
+          "output": "1.339",
+          "uncached_input": "1.14885"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R3",
+      "timed_out": false,
+      "tools": {
+        "actions": 19,
+        "available": true,
+        "incomplete_terminal_captures": 1,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 8,
+        "passthrough_commands": 0,
+        "recovery_calls": 1,
+        "repeated_test_commands": 3,
+        "terminal_commands": 9,
+        "terminal_timeouts": 1,
+        "test_commands": 5,
+        "tool_errors": 2,
+        "visible_response_bytes": 50599
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 360704,
+        "input_tokens": 383681,
+        "output_tokens": 5356,
+        "reasoning_output_tokens": 2607,
+        "uncached_input_tokens": 22977
+      },
+      "variant": "rtk",
+      "wall_seconds": 251.34506762499223
+    },
+    {
+      "argv_sha256": "4f1d0c8f6d0a7dd78d55bd0da81ffaac296239e1df20880374af5d23d128feb7",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 8830,
+        "test_changes_detected": true
+      },
+      "id": "trial-011",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.63926",
+        "components": {
+          "cached_input": "0.44416",
+          "output": "1.34625",
+          "uncached_input": "1.84885"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R3",
+      "timed_out": false,
+      "tools": {
+        "actions": 21,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 9,
+        "terminal_timeouts": 0,
+        "test_commands": 4,
+        "tool_errors": 0,
+        "visible_response_bytes": 79805
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 177664,
+        "input_tokens": 214641,
+        "output_tokens": 5385,
+        "reasoning_output_tokens": 2521,
+        "uncached_input_tokens": 36977
+      },
+      "variant": "raw",
+      "wall_seconds": 128.25028683402343
+    },
+    {
+      "argv_sha256": "368ac8ed73789718f18666e0756741910f1f1fc6f9046baf871e8ad8b511af42",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 6309,
+        "test_changes_detected": true
+      },
+      "id": "trial-012",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "2.8557",
+        "components": {
+          "cached_input": "0.528",
+          "output": "1.01225",
+          "uncached_input": "1.31545"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R3",
+      "timed_out": false,
+      "tools": {
+        "actions": 19,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 8,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 8,
+        "terminal_timeouts": 0,
+        "test_commands": 4,
+        "tool_errors": 0,
+        "visible_response_bytes": 57423
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 211200,
+        "input_tokens": 237509,
+        "output_tokens": 4049,
+        "reasoning_output_tokens": 1854,
+        "uncached_input_tokens": 26309
+      },
+      "variant": "mini",
+      "wall_seconds": 101.45495408400893
+    },
+    {
+      "argv_sha256": "7c17d5c018a779ed3e3f99523ac190700886246203124122460f9e042d0af703",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 8085,
+        "test_changes_detected": true
+      },
+      "id": "trial-013",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "4.7065",
+        "components": {
+          "cached_input": "0.9536",
+          "output": "1.643",
+          "uncached_input": "2.1099"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R1",
+      "timed_out": false,
+      "tools": {
+        "actions": 29,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 3,
+        "terminal_commands": 14,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 203992
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 381440,
+        "input_tokens": 423638,
+        "output_tokens": 6572,
+        "reasoning_output_tokens": 2202,
+        "uncached_input_tokens": 42198
+      },
+      "variant": "raw",
+      "wall_seconds": 223.67674299998907
+    },
+    {
+      "argv_sha256": "32295ca26d77e9f14d6a37337f61d93c30288de6146c86387d433ad2f86131c1",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 8499,
+        "test_changes_detected": true
+      },
+      "id": "trial-014",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "4.3587",
+        "components": {
+          "cached_input": "1.008",
+          "output": "1.5805",
+          "uncached_input": "1.7702"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R1",
+      "timed_out": false,
+      "tools": {
+        "actions": 30,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 16,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 3,
+        "terminal_commands": 16,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 170954
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 403200,
+        "input_tokens": 438604,
+        "output_tokens": 6322,
+        "reasoning_output_tokens": 2641,
+        "uncached_input_tokens": 35404
+      },
+      "variant": "mini",
+      "wall_seconds": 179.4996913750074
+    },
+    {
+      "argv_sha256": "42d0624f4e3e7d023d9ee5bc19a349ed9f8517877bb43aac73061472de0998fc",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 7973,
+        "test_changes_detected": true
+      },
+      "id": "trial-015",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "4.48975",
+        "components": {
+          "cached_input": "0.8944",
+          "output": "1.54475",
+          "uncached_input": "2.0506"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R1",
+      "timed_out": false,
+      "tools": {
+        "actions": 35,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 16,
+        "passthrough_commands": 2,
+        "recovery_calls": 0,
+        "repeated_test_commands": 4,
+        "terminal_commands": 18,
+        "terminal_timeouts": 0,
+        "test_commands": 6,
+        "tool_errors": 0,
+        "visible_response_bytes": 86609
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 357760,
+        "input_tokens": 398772,
+        "output_tokens": 6179,
+        "reasoning_output_tokens": 2975,
+        "uncached_input_tokens": 41012
+      },
+      "variant": "rtk",
+      "wall_seconds": 170.81971933302702
+    },
+    {
+      "argv_sha256": "25c554a25598c2b2b732c0f213b10dde3fb66e2b85957531db9fb7e2ab5f5bec",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 5013,
+        "test_changes_detected": true
+      },
+      "id": "trial-016",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.55234",
+        "components": {
+          "cached_input": "0.56544",
+          "output": "1.23725",
+          "uncached_input": "1.74965"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R2",
+      "timed_out": false,
+      "tools": {
+        "actions": 27,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 14,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 14,
+        "terminal_timeouts": 0,
+        "test_commands": 4,
+        "tool_errors": 0,
+        "visible_response_bytes": 58247
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 226176,
+        "input_tokens": 261169,
+        "output_tokens": 4949,
+        "reasoning_output_tokens": 2092,
+        "uncached_input_tokens": 34993
+      },
+      "variant": "mini",
+      "wall_seconds": 140.85988025000552
+    },
+    {
+      "argv_sha256": "3fc18e62c31a619fe5f30630b8425af29fbdae28e700a2d15bb4a4acc58e842d",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 3590,
+        "test_changes_detected": true
+      },
+      "id": "trial-017",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "2.37898",
+        "components": {
+          "cached_input": "0.41248",
+          "output": "0.96575",
+          "uncached_input": "1.00075"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R2",
+      "timed_out": false,
+      "tools": {
+        "actions": 19,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 9,
+        "passthrough_commands": 1,
+        "recovery_calls": 0,
+        "repeated_test_commands": 1,
+        "terminal_commands": 10,
+        "terminal_timeouts": 0,
+        "test_commands": 3,
+        "tool_errors": 0,
+        "visible_response_bytes": 42172
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 164992,
+        "input_tokens": 185007,
+        "output_tokens": 3863,
+        "reasoning_output_tokens": 2094,
+        "uncached_input_tokens": 20015
+      },
+      "variant": "rtk",
+      "wall_seconds": 112.91066983301425
+    },
+    {
+      "argv_sha256": "72178fbe3c0ff20c44192eac5c1aeeed487f264c957640f94ae82ddb8a47249d",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 4755,
+        "test_changes_detected": true
+      },
+      "id": "trial-018",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.45461",
+        "components": {
+          "cached_input": "0.48416",
+          "output": "1.2455",
+          "uncached_input": "1.72495"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 1,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R2",
+      "timed_out": false,
+      "tools": {
+        "actions": 22,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 1,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 3,
+        "tool_errors": 0,
+        "visible_response_bytes": 78047
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 193664,
+        "input_tokens": 228163,
+        "output_tokens": 4982,
+        "reasoning_output_tokens": 2684,
+        "uncached_input_tokens": 34499
+      },
+      "variant": "raw",
+      "wall_seconds": 141.69703212502645
+    },
+    {
+      "argv_sha256": "e87ce270e5d0ce0056d5a42b3729ce395535f78a5471705b297d6cf75dc632f9",
+      "correct_repair": false,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": false,
+        "grading_timeout_checks": 0,
+        "hidden_failure": true,
+        "observed": true,
+        "patch_bytes": 3522,
+        "test_changes_detected": true
+      },
+      "id": "trial-019",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.623",
+        "components": {
+          "cached_input": "0.5872",
+          "output": "0.77525",
+          "uncached_input": "2.26055"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J2",
+      "timed_out": false,
+      "tools": {
+        "actions": 29,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 10,
+        "passthrough_commands": 2,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 12,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 103396
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 234880,
+        "input_tokens": 280091,
+        "output_tokens": 3101,
+        "reasoning_output_tokens": 903,
+        "uncached_input_tokens": 45211
+      },
+      "variant": "rtk",
+      "wall_seconds": 84.8193862499902
+    },
+    {
+      "argv_sha256": "a7f317128bfe77ea4dce08e30f0552c8e97c7b0d99092aabad42e65dfa9ac588",
+      "correct_repair": false,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": false,
+        "grading_timeout_checks": 0,
+        "hidden_failure": true,
+        "observed": true,
+        "patch_bytes": 3048,
+        "test_changes_detected": true
+      },
+      "id": "trial-020",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.43408",
+        "components": {
+          "cached_input": "0.68128",
+          "output": "0.78125",
+          "uncached_input": "1.97155"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J2",
+      "timed_out": false,
+      "tools": {
+        "actions": 27,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 100599
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 272512,
+        "input_tokens": 311943,
+        "output_tokens": 3125,
+        "reasoning_output_tokens": 1004,
+        "uncached_input_tokens": 39431
+      },
+      "variant": "raw",
+      "wall_seconds": 88.77654087496921
+    },
+    {
+      "argv_sha256": "21371490fe961621ab115a1014b00c4e9bcc0883316909c8130611cfea606f88",
+      "correct_repair": false,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": false,
+        "grading_timeout_checks": 0,
+        "hidden_failure": true,
+        "observed": true,
+        "patch_bytes": 3658,
+        "test_changes_detected": true
+      },
+      "id": "trial-021",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "2.9783",
+        "components": {
+          "cached_input": "0.6256",
+          "output": "0.97775",
+          "uncached_input": "1.37495"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J2",
+      "timed_out": false,
+      "tools": {
+        "actions": 27,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 12,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 12,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 85288
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 250240,
+        "input_tokens": 277739,
+        "output_tokens": 3911,
+        "reasoning_output_tokens": 1580,
+        "uncached_input_tokens": 27499
+      },
+      "variant": "mini",
+      "wall_seconds": 104.26252833398758
+    },
+    {
+      "argv_sha256": "1c83f7e3d7129e3f3104fca3408b89d946b9450910021fa309fe648abd53bb6d",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 7720,
+        "test_changes_detected": true
+      },
+      "id": "trial-022",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "4.46094",
+        "components": {
+          "cached_input": "0.91424",
+          "output": "1.32275",
+          "uncached_input": "2.22395"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R1",
+      "timed_out": false,
+      "tools": {
+        "actions": 23,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 12,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 12,
+        "terminal_timeouts": 0,
+        "test_commands": 4,
+        "tool_errors": 0,
+        "visible_response_bytes": 160809
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 365696,
+        "input_tokens": 410175,
+        "output_tokens": 5291,
+        "reasoning_output_tokens": 2333,
+        "uncached_input_tokens": 44479
+      },
+      "variant": "mini",
+      "wall_seconds": 152.9773192909779
+    },
+    {
+      "argv_sha256": "72ca0ba2c66b12d4cb2c73f9041bd2b0a0c3d91ac849bada2213e93418bb6442",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 8383,
+        "test_changes_detected": true
+      },
+      "id": "trial-023",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "5.34907",
+        "components": {
+          "cached_input": "1.03392",
+          "output": "1.583",
+          "uncached_input": "2.73215"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R1",
+      "timed_out": false,
+      "tools": {
+        "actions": 34,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 14,
+        "passthrough_commands": 2,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 16,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 78005
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 413568,
+        "input_tokens": 468211,
+        "output_tokens": 6332,
+        "reasoning_output_tokens": 2715,
+        "uncached_input_tokens": 54643
+      },
+      "variant": "rtk",
+      "wall_seconds": 183.2311913750018
+    },
+    {
+      "argv_sha256": "63141040b5b14f68cde4b9155bffae1e3aae78f1d2c221b763732d74112c602e",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 7268,
+        "test_changes_detected": true
+      },
+      "id": "trial-024",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "5.44077",
+        "components": {
+          "cached_input": "1.49952",
+          "output": "1.9175",
+          "uncached_input": "2.02375"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R1",
+      "timed_out": false,
+      "tools": {
+        "actions": 35,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 3,
+        "terminal_commands": 14,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 200352
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 599808,
+        "input_tokens": 640283,
+        "output_tokens": 7670,
+        "reasoning_output_tokens": 3909,
+        "uncached_input_tokens": 40475
+      },
+      "variant": "raw",
+      "wall_seconds": 201.9364889159915
+    },
+    {
+      "argv_sha256": "38bd63b921c0b4e91ba22f9232940dae31a816246ae18da647cd06b48c2ded95",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 3943,
+        "test_changes_detected": true
+      },
+      "id": "trial-025",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "5.21284",
+        "components": {
+          "cached_input": "0.68704",
+          "output": "1.855",
+          "uncached_input": "2.6708"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J1",
+      "timed_out": false,
+      "tools": {
+        "actions": 35,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 15,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 4,
+        "terminal_commands": 15,
+        "terminal_timeouts": 0,
+        "test_commands": 7,
+        "tool_errors": 0,
+        "visible_response_bytes": 132387
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 274816,
+        "input_tokens": 328232,
+        "output_tokens": 7420,
+        "reasoning_output_tokens": 4660,
+        "uncached_input_tokens": 53416
+      },
+      "variant": "mini",
+      "wall_seconds": 180.21834991604555
+    },
+    {
+      "argv_sha256": "4bc02352cb06911c74d9306f63d1b579fd5438c775a6aef5b71a467c905d7419",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 4040,
+        "test_changes_detected": true
+      },
+      "id": "trial-026",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "6.09289",
+        "components": {
+          "cached_input": "1.10144",
+          "output": "1.91975",
+          "uncached_input": "3.0717"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J1",
+      "timed_out": false,
+      "tools": {
+        "actions": 32,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 8,
+        "passthrough_commands": 3,
+        "recovery_calls": 0,
+        "repeated_test_commands": 1,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 6,
+        "tool_errors": 0,
+        "visible_response_bytes": 126088
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 440576,
+        "input_tokens": 502010,
+        "output_tokens": 7679,
+        "reasoning_output_tokens": 4790,
+        "uncached_input_tokens": 61434
+      },
+      "variant": "rtk",
+      "wall_seconds": 187.59922591695795
+    },
+    {
+      "argv_sha256": "dca13db5fa27e39cf070b7bb39f353ddf427d8848ebb820c473559d50597e036",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 4016,
+        "test_changes_detected": true
+      },
+      "id": "trial-027",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "4.85347",
+        "components": {
+          "cached_input": "0.89152",
+          "output": "1.5765",
+          "uncached_input": "2.38545"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J1",
+      "timed_out": false,
+      "tools": {
+        "actions": 33,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 12,
+        "terminal_timeouts": 0,
+        "test_commands": 7,
+        "tool_errors": 0,
+        "visible_response_bytes": 160750
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 356608,
+        "input_tokens": 404317,
+        "output_tokens": 6306,
+        "reasoning_output_tokens": 3366,
+        "uncached_input_tokens": 47709
+      },
+      "variant": "raw",
+      "wall_seconds": 156.41421770799207
+    },
+    {
+      "argv_sha256": "3d42df7ed0de8a00a6d9a5bb6fd85735cf2af3d2eb3164cdd062c7dc9113880f",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 28071,
+        "test_changes_detected": true
+      },
+      "id": "trial-028",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "9.48521",
+        "components": {
+          "cached_input": "1.98816",
+          "output": "3.9825",
+          "uncached_input": "3.51455"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J3",
+      "timed_out": false,
+      "tools": {
+        "actions": 71,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 6,
+        "terminal_commands": 18,
+        "terminal_timeouts": 0,
+        "test_commands": 8,
+        "tool_errors": 3,
+        "visible_response_bytes": 164088
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 795264,
+        "input_tokens": 865555,
+        "output_tokens": 15930,
+        "reasoning_output_tokens": 5691,
+        "uncached_input_tokens": 70291
+      },
+      "variant": "raw",
+      "wall_seconds": 353.0146277919994
+    },
+    {
+      "argv_sha256": "df7890e1d51d314b5a63cb1ab29e13bb4b91149541be11d498d6245ecbc580fd",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 26476,
+        "test_changes_detected": true
+      },
+      "id": "trial-029",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "8.16465",
+        "components": {
+          "cached_input": "1.384",
+          "output": "3.69675",
+          "uncached_input": "3.0839"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J3",
+      "timed_out": false,
+      "tools": {
+        "actions": 56,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 14,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 4,
+        "terminal_commands": 14,
+        "terminal_timeouts": 0,
+        "test_commands": 6,
+        "tool_errors": 0,
+        "visible_response_bytes": 117030
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 553600,
+        "input_tokens": 615278,
+        "output_tokens": 14787,
+        "reasoning_output_tokens": 5640,
+        "uncached_input_tokens": 61678
+      },
+      "variant": "mini",
+      "wall_seconds": 335.95364262501244
+    },
+    {
+      "argv_sha256": "1f2d8e7372650e62505ad05d4a15d654f32c51e6fb5214c0ea0294d127f72557",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 25434,
+        "test_changes_detected": true
+      },
+      "id": "trial-030",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "6.97985",
+        "components": {
+          "cached_input": "1.5184",
+          "output": "3.1275",
+          "uncached_input": "2.33395"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J3",
+      "timed_out": false,
+      "tools": {
+        "actions": 51,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 12,
+        "passthrough_commands": 3,
+        "recovery_calls": 0,
+        "repeated_test_commands": 3,
+        "terminal_commands": 15,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 122598
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 607360,
+        "input_tokens": 654039,
+        "output_tokens": 12510,
+        "reasoning_output_tokens": 4483,
+        "uncached_input_tokens": 46679
+      },
+      "variant": "rtk",
+      "wall_seconds": 285.5069488749723
+    },
+    {
+      "argv_sha256": "e7aba7999eae3072c2d0d4430feccae747d3e70e25b86200a36a3a3bcfa68d15",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 4272,
+        "test_changes_detected": true
+      },
+      "id": "trial-031",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "2.91869",
+        "components": {
+          "cached_input": "0.41984",
+          "output": "1.08825",
+          "uncached_input": "1.4106"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R2",
+      "timed_out": false,
+      "tools": {
+        "actions": 20,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 10,
+        "passthrough_commands": 1,
+        "recovery_calls": 0,
+        "repeated_test_commands": 1,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 3,
+        "tool_errors": 0,
+        "visible_response_bytes": 49384
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 167936,
+        "input_tokens": 196148,
+        "output_tokens": 4353,
+        "reasoning_output_tokens": 2348,
+        "uncached_input_tokens": 28212
+      },
+      "variant": "rtk",
+      "wall_seconds": 122.02162574999966
+    },
+    {
+      "argv_sha256": "0f3e097a00ed51e67b31a43614a27b56da10a4ba1bdbf905a144a6799188be48",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 5395,
+        "test_changes_detected": true
+      },
+      "id": "trial-032",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.04954",
+        "components": {
+          "cached_input": "0.58784",
+          "output": "0.97025",
+          "uncached_input": "1.49145"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R2",
+      "timed_out": false,
+      "tools": {
+        "actions": 21,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 1,
+        "terminal_commands": 9,
+        "terminal_timeouts": 0,
+        "test_commands": 3,
+        "tool_errors": 0,
+        "visible_response_bytes": 80569
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 235136,
+        "input_tokens": 264965,
+        "output_tokens": 3881,
+        "reasoning_output_tokens": 1555,
+        "uncached_input_tokens": 29829
+      },
+      "variant": "raw",
+      "wall_seconds": 117.55034916696604
+    },
+    {
+      "argv_sha256": "3d72887bb003fe110327d649b65641723b6017ac0eebe51aa834c57848fad142",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 5114,
+        "test_changes_detected": true
+      },
+      "id": "trial-033",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "2.55659",
+        "components": {
+          "cached_input": "0.49184",
+          "output": "0.89775",
+          "uncached_input": "1.167"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R2",
+      "timed_out": false,
+      "tools": {
+        "actions": 24,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 11,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 1,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 3,
+        "tool_errors": 0,
+        "visible_response_bytes": 57015
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 196736,
+        "input_tokens": 220076,
+        "output_tokens": 3591,
+        "reasoning_output_tokens": 1399,
+        "uncached_input_tokens": 23340
+      },
+      "variant": "mini",
+      "wall_seconds": 108.75641070801066
+    },
+    {
+      "argv_sha256": "bf03e96282cf1d304062f24c0c32b1a9a7fa3c72647c4dc105a07f1143187d39",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 8545,
+        "test_changes_detected": true
+      },
+      "id": "trial-034",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.82182",
+        "components": {
+          "cached_input": "0.56992",
+          "output": "1.49225",
+          "uncached_input": "1.75965"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R3",
+      "timed_out": false,
+      "tools": {
+        "actions": 18,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 7,
+        "terminal_timeouts": 0,
+        "test_commands": 4,
+        "tool_errors": 0,
+        "visible_response_bytes": 81122
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 227968,
+        "input_tokens": 263161,
+        "output_tokens": 5969,
+        "reasoning_output_tokens": 3177,
+        "uncached_input_tokens": 35193
+      },
+      "variant": "raw",
+      "wall_seconds": 142.70386249996955
+    },
+    {
+      "argv_sha256": "8d8a9957a1e0e5608d008c34fed1c4aa80937ba3ce4462ca8ee9c169ed2b2e12",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 8847,
+        "test_changes_detected": true
+      },
+      "id": "trial-035",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.43711",
+        "components": {
+          "cached_input": "0.66496",
+          "output": "1.26325",
+          "uncached_input": "1.5089"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R3",
+      "timed_out": false,
+      "tools": {
+        "actions": 19,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 7,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 1,
+        "terminal_commands": 7,
+        "terminal_timeouts": 0,
+        "test_commands": 3,
+        "tool_errors": 0,
+        "visible_response_bytes": 81551
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 265984,
+        "input_tokens": 296162,
+        "output_tokens": 5053,
+        "reasoning_output_tokens": 2269,
+        "uncached_input_tokens": 30178
+      },
+      "variant": "mini",
+      "wall_seconds": 123.94386112503707
+    },
+    {
+      "argv_sha256": "8f4bec7dca11e9d454066ea313bd6ad243bb8d915e920c46e42f21fcc107530a",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 8205,
+        "test_changes_detected": true
+      },
+      "id": "trial-036",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "2.59244",
+        "components": {
+          "cached_input": "0.42944",
+          "output": "1.0595",
+          "uncached_input": "1.1035"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 2,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R3",
+      "timed_out": false,
+      "tools": {
+        "actions": 16,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 8,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 8,
+        "terminal_timeouts": 0,
+        "test_commands": 4,
+        "tool_errors": 0,
+        "visible_response_bytes": 57597
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 171776,
+        "input_tokens": 193846,
+        "output_tokens": 4238,
+        "reasoning_output_tokens": 1732,
+        "uncached_input_tokens": 22070
+      },
+      "variant": "rtk",
+      "wall_seconds": 104.32284612499643
+    },
+    {
+      "argv_sha256": "c846534483be238882efdebafe304196f8e3f93194d9f00823fb0f9218950c00",
+      "correct_repair": false,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": false,
+        "grading_timeout_checks": 0,
+        "hidden_failure": true,
+        "observed": true,
+        "patch_bytes": 4010,
+        "test_changes_detected": true
+      },
+      "id": "trial-037",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.58091",
+        "components": {
+          "cached_input": "0.79456",
+          "output": "1.06225",
+          "uncached_input": "1.7241"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J2",
+      "timed_out": false,
+      "tools": {
+        "actions": 34,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 12,
+        "terminal_timeouts": 0,
+        "test_commands": 4,
+        "tool_errors": 0,
+        "visible_response_bytes": 106754
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 317824,
+        "input_tokens": 352306,
+        "output_tokens": 4249,
+        "reasoning_output_tokens": 1540,
+        "uncached_input_tokens": 34482
+      },
+      "variant": "raw",
+      "wall_seconds": 112.24550504202489
+    },
+    {
+      "argv_sha256": "bf18e041edc0579551a25c40617a3a20c3d7a1bee2f4d7c07fe5504a044f9c80",
+      "correct_repair": false,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": false,
+        "grading_timeout_checks": 0,
+        "hidden_failure": true,
+        "observed": true,
+        "patch_bytes": 3753,
+        "test_changes_detected": true
+      },
+      "id": "trial-038",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.28356",
+        "components": {
+          "cached_input": "0.75616",
+          "output": "0.9595",
+          "uncached_input": "1.5679"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J2",
+      "timed_out": false,
+      "tools": {
+        "actions": 27,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 11,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 96197
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 302464,
+        "input_tokens": 333822,
+        "output_tokens": 3838,
+        "reasoning_output_tokens": 1526,
+        "uncached_input_tokens": 31358
+      },
+      "variant": "mini",
+      "wall_seconds": 103.97793641703902
+    },
+    {
+      "argv_sha256": "2bab8ffe4cdceb775a21d0586a64aa06cbddd284e6244cab1f64a490156ba172",
+      "correct_repair": false,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": false,
+        "grading_timeout_checks": 0,
+        "hidden_failure": true,
+        "observed": true,
+        "patch_bytes": 3760,
+        "test_changes_detected": true
+      },
+      "id": "trial-039",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.00996",
+        "components": {
+          "cached_input": "0.65056",
+          "output": "0.85",
+          "uncached_input": "1.5094"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J2",
+      "timed_out": false,
+      "tools": {
+        "actions": 27,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 9,
+        "passthrough_commands": 2,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 95360
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 260224,
+        "input_tokens": 290412,
+        "output_tokens": 3400,
+        "reasoning_output_tokens": 1005,
+        "uncached_input_tokens": 30188
+      },
+      "variant": "rtk",
+      "wall_seconds": 90.09095304098446
+    },
+    {
+      "argv_sha256": "0ac9f2cd05ba746916b2e0b62b6faf9e9270f56d5f3f7276818ed8ed2c53ca45",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 8632,
+        "test_changes_detected": true
+      },
+      "id": "trial-040",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "4.25877",
+        "components": {
+          "cached_input": "0.98432",
+          "output": "1.61175",
+          "uncached_input": "1.6627"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R1",
+      "timed_out": false,
+      "tools": {
+        "actions": 36,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 14,
+        "passthrough_commands": 2,
+        "recovery_calls": 0,
+        "repeated_test_commands": 3,
+        "terminal_commands": 16,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 91728
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 393728,
+        "input_tokens": 426982,
+        "output_tokens": 6447,
+        "reasoning_output_tokens": 2948,
+        "uncached_input_tokens": 33254
+      },
+      "variant": "rtk",
+      "wall_seconds": 182.865212625009
+    },
+    {
+      "argv_sha256": "c58ee80ff6ee1e2f1a16f8f8fed037bd343681c3e6fc1fd95e8deca284fbf14c",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 7314,
+        "test_changes_detected": true
+      },
+      "id": "trial-041",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "5.49186",
+        "components": {
+          "cached_input": "1.57536",
+          "output": "1.78575",
+          "uncached_input": "2.13075"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R1",
+      "timed_out": false,
+      "tools": {
+        "actions": 36,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 17,
+        "terminal_timeouts": 0,
+        "test_commands": 4,
+        "tool_errors": 0,
+        "visible_response_bytes": 183446
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 630144,
+        "input_tokens": 672759,
+        "output_tokens": 7143,
+        "reasoning_output_tokens": 3408,
+        "uncached_input_tokens": 42615
+      },
+      "variant": "raw",
+      "wall_seconds": 202.0032500840025
+    },
+    {
+      "argv_sha256": "bd4f33e372b363a3c37fd2f379e4623fee0dae8c3aecfa650f80ef3f1c7ad34c",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 8510,
+        "test_changes_detected": true
+      },
+      "id": "trial-042",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "4.91331",
+        "components": {
+          "cached_input": "1.17216",
+          "output": "1.89175",
+          "uncached_input": "1.8494"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R1",
+      "timed_out": false,
+      "tools": {
+        "actions": 38,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 20,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 4,
+        "terminal_commands": 20,
+        "terminal_timeouts": 0,
+        "test_commands": 6,
+        "tool_errors": 0,
+        "visible_response_bytes": 189945
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 468864,
+        "input_tokens": 505852,
+        "output_tokens": 7567,
+        "reasoning_output_tokens": 3290,
+        "uncached_input_tokens": 36988
+      },
+      "variant": "mini",
+      "wall_seconds": 210.00548849999905
+    },
+    {
+      "argv_sha256": "609f63617d23f395ace3a46ad3d13321b48a740216fde497df9b0d77fc515ef1",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 5457,
+        "test_changes_detected": true
+      },
+      "id": "trial-043",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.10021",
+        "components": {
+          "cached_input": "0.61376",
+          "output": "0.8585",
+          "uncached_input": "1.62795"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R2",
+      "timed_out": false,
+      "tools": {
+        "actions": 23,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 1,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 3,
+        "tool_errors": 0,
+        "visible_response_bytes": 81565
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 245504,
+        "input_tokens": 278063,
+        "output_tokens": 3434,
+        "reasoning_output_tokens": 954,
+        "uncached_input_tokens": 32559
+      },
+      "variant": "raw",
+      "wall_seconds": 104.18409970903303
+    },
+    {
+      "argv_sha256": "c1a3dfc7ac37333fad45ed1dc92fb9d5a268c03b1afd5f4c22118f1231c63dbf",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 5133,
+        "test_changes_detected": true
+      },
+      "id": "trial-044",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "2.82147",
+        "components": {
+          "cached_input": "0.51072",
+          "output": "1.051",
+          "uncached_input": "1.25975"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R2",
+      "timed_out": false,
+      "tools": {
+        "actions": 24,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 13,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 13,
+        "terminal_timeouts": 0,
+        "test_commands": 4,
+        "tool_errors": 0,
+        "visible_response_bytes": 54278
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 204288,
+        "input_tokens": 229483,
+        "output_tokens": 4204,
+        "reasoning_output_tokens": 1845,
+        "uncached_input_tokens": 25195
+      },
+      "variant": "mini",
+      "wall_seconds": 122.62524408299942
+    },
+    {
+      "argv_sha256": "0eefaa59a001edf3a31d2e4b344d3ff51846ad9323491a9d0a37ad944c10bb6d",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 3766,
+        "test_changes_detected": true
+      },
+      "id": "trial-045",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "2.91662",
+        "components": {
+          "cached_input": "0.55712",
+          "output": "1.0345",
+          "uncached_input": "1.325"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R2",
+      "timed_out": false,
+      "tools": {
+        "actions": 22,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 10,
+        "passthrough_commands": 1,
+        "recovery_calls": 0,
+        "repeated_test_commands": 1,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 4,
+        "tool_errors": 0,
+        "visible_response_bytes": 55966
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 222848,
+        "input_tokens": 249348,
+        "output_tokens": 4138,
+        "reasoning_output_tokens": 2140,
+        "uncached_input_tokens": 26500
+      },
+      "variant": "rtk",
+      "wall_seconds": 131.53420491702855
+    },
+    {
+      "argv_sha256": "f9330ec64457c0548d78a4522121fd8d9d92be9db63629d8de42bbc4116acb9d",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 23712,
+        "test_changes_detected": true
+      },
+      "id": "trial-046",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "8.57633",
+        "components": {
+          "cached_input": "1.61248",
+          "output": "3.26825",
+          "uncached_input": "3.6956"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J3",
+      "timed_out": false,
+      "tools": {
+        "actions": 51,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 12,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 3,
+        "terminal_commands": 12,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 140736
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 644992,
+        "input_tokens": 718904,
+        "output_tokens": 13073,
+        "reasoning_output_tokens": 4089,
+        "uncached_input_tokens": 73912
+      },
+      "variant": "mini",
+      "wall_seconds": 286.11754220799776
+    },
+    {
+      "argv_sha256": "31bf7df1dd1f8d9511787a3a1eabde1ff81733a0db896f1440888055e7b8c590",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 23401,
+        "test_changes_detected": true
+      },
+      "id": "trial-047",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "6.89289",
+        "components": {
+          "cached_input": "1.48704",
+          "output": "3.32425",
+          "uncached_input": "2.0816"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J3",
+      "timed_out": false,
+      "tools": {
+        "actions": 56,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 9,
+        "passthrough_commands": 2,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 4,
+        "tool_errors": 0,
+        "visible_response_bytes": 105102
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 594816,
+        "input_tokens": 636448,
+        "output_tokens": 13297,
+        "reasoning_output_tokens": 4892,
+        "uncached_input_tokens": 41632
+      },
+      "variant": "rtk",
+      "wall_seconds": 310.03755354200257
+    },
+    {
+      "argv_sha256": "3125658e505715bf1a96d691bc406f2ef01efc132e5ed5e91d51fde2292140cc",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 26535,
+        "test_changes_detected": true
+      },
+      "id": "trial-048",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "6.83037",
+        "components": {
+          "cached_input": "1.19232",
+          "output": "3.116",
+          "uncached_input": "2.52205"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J3",
+      "timed_out": false,
+      "tools": {
+        "actions": 53,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 3,
+        "terminal_commands": 14,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 108350
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 476928,
+        "input_tokens": 527369,
+        "output_tokens": 12464,
+        "reasoning_output_tokens": 3813,
+        "uncached_input_tokens": 50441
+      },
+      "variant": "raw",
+      "wall_seconds": 281.1511007499648
+    },
+    {
+      "argv_sha256": "c0097fd90169eeb5f1717809a573faf453dd843d8d4fc4c725c28e9efa62d185",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 4123,
+        "test_changes_detected": true
+      },
+      "id": "trial-049",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "4.90196",
+        "components": {
+          "cached_input": "0.90976",
+          "output": "1.53175",
+          "uncached_input": "2.46045"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J1",
+      "timed_out": false,
+      "tools": {
+        "actions": 32,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 8,
+        "passthrough_commands": 3,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 6,
+        "tool_errors": 1,
+        "visible_response_bytes": 114324
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 363904,
+        "input_tokens": 413113,
+        "output_tokens": 6127,
+        "reasoning_output_tokens": 3614,
+        "uncached_input_tokens": 49209
+      },
+      "variant": "rtk",
+      "wall_seconds": 155.60540824994678
+    },
+    {
+      "argv_sha256": "894e0f8144efea19942a35ec0953e6a00937607a2a967ab4e210d2c83991106c",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 4025,
+        "test_changes_detected": true
+      },
+      "id": "trial-050",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "5.3376",
+        "components": {
+          "cached_input": "0.96",
+          "output": "1.508",
+          "uncached_input": "2.8696"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J1",
+      "timed_out": false,
+      "tools": {
+        "actions": 33,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 12,
+        "terminal_timeouts": 0,
+        "test_commands": 6,
+        "tool_errors": 0,
+        "visible_response_bytes": 154109
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 384000,
+        "input_tokens": 441392,
+        "output_tokens": 6032,
+        "reasoning_output_tokens": 3782,
+        "uncached_input_tokens": 57392
+      },
+      "variant": "raw",
+      "wall_seconds": 148.49786783300806
+    },
+    {
+      "argv_sha256": "3d3aa32a6b311a0b0a8ed5613b25056a1852195a40a4bcfe8f5820e3abf31926",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 4192,
+        "test_changes_detected": true
+      },
+      "id": "trial-051",
+      "language": "javascript",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "4.96537",
+        "components": {
+          "cached_input": "1.08992",
+          "output": "1.64075",
+          "uncached_input": "2.2347"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-J1",
+      "timed_out": false,
+      "tools": {
+        "actions": 29,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 11,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 3,
+        "terminal_commands": 11,
+        "terminal_timeouts": 0,
+        "test_commands": 6,
+        "tool_errors": 0,
+        "visible_response_bytes": 138996
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 435968,
+        "input_tokens": 480662,
+        "output_tokens": 6563,
+        "reasoning_output_tokens": 4122,
+        "uncached_input_tokens": 44694
+      },
+      "variant": "mini",
+      "wall_seconds": 169.68115508300252
+    },
+    {
+      "argv_sha256": "1ff509e05a3071cfd1ded4b0c28e9ecd0565f7a2b632586e3389a65cfde2af45",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 9021,
+        "test_changes_detected": true
+      },
+      "id": "trial-052",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.98863",
+        "components": {
+          "cached_input": "0.48928",
+          "output": "1.56825",
+          "uncached_input": "1.9311"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R3",
+      "timed_out": false,
+      "tools": {
+        "actions": 19,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 8,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 8,
+        "terminal_timeouts": 0,
+        "test_commands": 4,
+        "tool_errors": 0,
+        "visible_response_bytes": 80405
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 195712,
+        "input_tokens": 234334,
+        "output_tokens": 6273,
+        "reasoning_output_tokens": 3481,
+        "uncached_input_tokens": 38622
+      },
+      "variant": "mini",
+      "wall_seconds": 153.0875687499647
+    },
+    {
+      "argv_sha256": "a98b93577dd32f8b8876b798816e26eb244327f715b206d9a40119ac9668fa89",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 8325,
+        "test_changes_detected": true
+      },
+      "id": "trial-053",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "3.21092",
+        "components": {
+          "cached_input": "0.52992",
+          "output": "1.3575",
+          "uncached_input": "1.3235"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R3",
+      "timed_out": false,
+      "tools": {
+        "actions": 22,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 9,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 9,
+        "terminal_timeouts": 0,
+        "test_commands": 5,
+        "tool_errors": 0,
+        "visible_response_bytes": 70403
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 211968,
+        "input_tokens": 238438,
+        "output_tokens": 5430,
+        "reasoning_output_tokens": 2850,
+        "uncached_input_tokens": 26470
+      },
+      "variant": "rtk",
+      "wall_seconds": 144.36414479202358
+    },
+    {
+      "argv_sha256": "fe52a6b63a7dcac9b90d99d0b8f15b9c95447d78e28a6d512f33c0afdd51ba4e",
+      "correct_repair": true,
+      "exclusions": [],
+      "grade": {
+        "baseline_regression": false,
+        "correct_repair": true,
+        "grading_timeout_checks": 0,
+        "hidden_failure": false,
+        "observed": true,
+        "patch_bytes": 5713,
+        "test_changes_detected": true
+      },
+      "id": "trial-054",
+      "language": "rust",
+      "observed": true,
+      "operational_complete": true,
+      "priced_cost": {
+        "amount": "2.56652",
+        "components": {
+          "cached_input": "0.45152",
+          "output": "0.8805",
+          "uncached_input": "1.2345"
+        },
+        "known": true,
+        "unknown_reasons": []
+      },
+      "protocol_deviations_count": 0,
+      "repetition": 3,
+      "session_errors_count": 0,
+      "standard_speed_verified": true,
+      "task_id": "C-R3",
+      "timed_out": false,
+      "tools": {
+        "actions": 15,
+        "available": true,
+        "incomplete_terminal_captures": 0,
+        "mini_wrapped_commands": 0,
+        "native_filtered_commands": 0,
+        "passthrough_commands": 0,
+        "recovery_calls": 0,
+        "repeated_test_commands": 2,
+        "terminal_commands": 8,
+        "terminal_timeouts": 0,
+        "test_commands": 4,
+        "tool_errors": 0,
+        "visible_response_bytes": 52589
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 180608,
+        "input_tokens": 205298,
+        "output_tokens": 3522,
+        "reasoning_output_tokens": 1338,
+        "uncached_input_tokens": 24690
+      },
+      "variant": "raw",
+      "wall_seconds": 91.81044579204172
+    }
+  ]
+}

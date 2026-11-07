@@ -1,0 +1,279 @@
+{
+  "schema": 1,
+  "purpose": "Harder historical task qualification before comparative agent outcomes; no output treatment collection",
+  "node_version": "v26.12.1",
+  "npm_version": "11.20.0",
+  "checks": [
+    {
+      "id": "C-J1",
+      "version": "base",
+      "check": "baseline",
+      "exit_code": 0,
+      "wall_seconds": 6.110972959024366,
+      "stdout": {
+        "bytes": 20411,
+        "sha256": "7aef2cc0dde1b11b25d9b96bc532c739c404a9d7c7aa8fb2c660204300f584f5"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "test_count": 295
+    },
+    {
+      "id": "C-J1",
+      "version": "base",
+      "check": "hidden",
+      "exit_code": 1,
+      "wall_seconds": 0.1654086250346154,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 540,
+        "sha256": "7dcf7230dcd33dcafd1954c89af9d23eb7477c27e2d8ba117459475f58da5d8d"
+      }
+    },
+    {
+      "id": "C-J1",
+      "version": "oracle",
+      "check": "baseline",
+      "exit_code": 0,
+      "wall_seconds": 6.387773833004758,
+      "stdout": {
+        "bytes": 20844,
+        "sha256": "cf19e182ae7fcd4e31944162b946451fc4fd12fea3eecd27f19e38dc5e771cdc"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "test_count": 300
+    },
+    {
+      "id": "C-J1",
+      "version": "oracle",
+      "check": "hidden",
+      "exit_code": 0,
+      "wall_seconds": 0.30701970803784207,
+      "stdout": {
+        "bytes": 36,
+        "sha256": "6018e0e9f89fc09887ed5d7ec7b730ff126de7e5c18598f4e57877d0277b43c0"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "C-J2",
+      "version": "base",
+      "check": "baseline",
+      "exit_code": 0,
+      "wall_seconds": 7.093657375022303,
+      "stdout": {
+        "bytes": 20265,
+        "sha256": "cd73448b0d9b942dde63ee5c572adf5b1aac55cc814d7f9ec36ab53c8829880d"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "test_count": 293
+    },
+    {
+      "id": "C-J2",
+      "version": "base",
+      "check": "hidden",
+      "exit_code": 1,
+      "wall_seconds": 0.16134179203072563,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 574,
+        "sha256": "1158d8a5e5c6456c5faee1371d521e4932030d113ed823d9d49b8461775aafd1"
+      }
+    },
+    {
+      "id": "C-J2",
+      "version": "oracle",
+      "check": "baseline",
+      "exit_code": 0,
+      "wall_seconds": 5.299767250020523,
+      "stdout": {
+        "bytes": 20306,
+        "sha256": "7670040afd29187a6d042cc3593bfc9d53a28f2635e25db29a22fccaaec0f162"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "test_count": 294
+    },
+    {
+      "id": "C-J2",
+      "version": "oracle",
+      "check": "hidden",
+      "exit_code": 0,
+      "wall_seconds": 0.2317200829857029,
+      "stdout": {
+        "bytes": 35,
+        "sha256": "4915d2eb7be7c8997597751e12ae2eb2d8c2a0d12d044616cf36ffea0ce2dbcb"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "C-J3",
+      "version": "base",
+      "check": "baseline",
+      "exit_code": 0,
+      "wall_seconds": 7.329390041995794,
+      "stdout": {
+        "bytes": 11173,
+        "sha256": "4e5cd3f764a3528689c9cf14c2d6ff0a4631573b8019822dfcdd5c2ba686eaf4"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "test_count": 661
+    },
+    {
+      "id": "C-J3",
+      "version": "base",
+      "check": "hidden",
+      "exit_code": 1,
+      "wall_seconds": 1.2660631670150906,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 1507,
+        "sha256": "70e7208e16c72908ce9cc5aee1d76ae1075628e2c55e8a5f21598fcbeead6367"
+      }
+    },
+    {
+      "id": "C-J3",
+      "version": "oracle",
+      "check": "baseline",
+      "exit_code": 0,
+      "wall_seconds": 2.82353316701483,
+      "stdout": {
+        "bytes": 11229,
+        "sha256": "a6afd03b06a6d65c6c0868af3d366dce9c5a9e0bba139a21d528525fa6d245c5"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "test_count": 665
+    },
+    {
+      "id": "C-J3",
+      "version": "oracle",
+      "check": "hidden",
+      "exit_code": 0,
+      "wall_seconds": 0.4319570829975419,
+      "stdout": {
+        "bytes": 35,
+        "sha256": "f99cf966caba5c25370a3655c0ea14b44aab93f4dfcae5378c2550f026141ebc"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "asset_sha256": {
+    "C-J1-hidden.mjs": "430ff01b89f20191f212c39cd648f35cb4655b4e40db71a1593adb3d20d8f6ec",
+    "C-J1.json": "8d0344728f5e5a0823dd1fc3dd2c8855c5aec7290c098ca4b0bfacdec21b8031",
+    "C-J2-hidden.mjs": "bb455fd68d3942fb1116c4b79fb6421b452b14c3f762768f589ec4dfe8338389",
+    "C-J2.json": "8b02bd6e488bb1a115a8181edd98460ace46c273f0e7fb856c54f4d9d161f6b7",
+    "C-J3-hidden.cjs": "08ca29b5cef31ec8b7b47d9b4a0e854f7636209d957c6313333c0efce5973c81",
+    "C-J3.json": "7e0e0ac5b021272eee7ddcd3c17322fa6caf74880738452128c7ba2779888dda",
+    "MARKDOWN-IT-LICENSE": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
+    "POSTCSS-LICENSE": "5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8",
+    "markdown-dependencies-lock.json": "e6969d46ccf1583cb7be03398d9629e0347206e5c5a2e9edac6a8d851b67b5a1",
+    "markdown-dependencies.json": "99abf4e84fc6ec97531d04801ebaae0dcc52fd702a35b34a1bd3da7b559a2f78",
+    "postcss-dependencies-lock.json": "a25462ba45c7bf37b0bb536e3f2683d27dd79d19b4cdb8fb9f038bed82479c90",
+    "postcss-dependencies.json": "068c95be8438f27f482308222e5ae6bb4573bf1005bb27fcc198ade9fd6dddcb",
+    "rejected-candidates.json": "4d19b947740708eb00816da172cde58fb1dc805d408a759bd897e790f5b48091"
+  },
+  "setup_corrections": [
+    {
+      "id": "C-J3",
+      "reason": "Initial unchanged baseline tests failed two explicit-color comparisons in both base/oracle because NO_COLOR=1 conflicts with UVU enabling FORCE_COLOR=1. Unset NO_COLOR for this task equally in every arm and evaluator, then both complete original suites passed.",
+      "initial_checks": [
+        {
+          "id": "C-J3",
+          "version": "base",
+          "check": "baseline",
+          "exit_code": 1,
+          "wall_seconds": 1.6875482500181533,
+          "stdout": {
+            "bytes": 6270,
+            "sha256": "d24043827d4c6a7989e66c9f110568b0410737ba6f3a5c8f024a6f6b0eebb471"
+          },
+          "stderr": {
+            "bytes": 164,
+            "sha256": "bd9d4d32785990d1de1707a69c9e8c41e0971af687f77769fe5198249833daac"
+          }
+        },
+        {
+          "id": "C-J3",
+          "version": "base",
+          "check": "hidden",
+          "exit_code": 1,
+          "wall_seconds": 0.3169918330386281,
+          "stdout": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stderr": {
+            "bytes": 1507,
+            "sha256": "70e7208e16c72908ce9cc5aee1d76ae1075628e2c55e8a5f21598fcbeead6367"
+          }
+        },
+        {
+          "id": "C-J3",
+          "version": "oracle",
+          "check": "baseline",
+          "exit_code": 1,
+          "wall_seconds": 2.1110886670066975,
+          "stdout": {
+            "bytes": 6290,
+            "sha256": "71b0dfb2122b558ddd16487f4d437e0884128b6b7043b334407e09a4689d046e"
+          },
+          "stderr": {
+            "bytes": 164,
+            "sha256": "eab48a9513b78650c3df30883d49558e403a68410afd54ecf3913c1e639bcd6a"
+          }
+        },
+        {
+          "id": "C-J3",
+          "version": "oracle",
+          "check": "hidden",
+          "exit_code": 0,
+          "wall_seconds": 0.15896074997726828,
+          "stdout": {
+            "bytes": 35,
+            "sha256": "f99cf966caba5c25370a3655c0ea14b44aab93f4dfcae5378c2550f026141ebc"
+          },
+          "stderr": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      ],
+      "raw_logs_preserved_privately": true
+    }
+  ],
+  "comparison_outcomes_viewed": false
+}

@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "id": "C-J1",
+  "title": "Code spans change after unsuccessful link/image lookahead",
+  "repository": {
+    "url": "https://github.com/markdown-it/markdown-it",
+    "license": "MIT"
+  },
+  "base_commit": "7b9a6a3a630187e6f9b18fe66b66804bc9ac1122",
+  "oracle_commit": "5e9b1cc8309d09a9df0f53ae32f811da6ad5c23d",
+  "prompt": "Parsing an unfinished link or image label can change how later inline code is rendered. For example, '[foo `bar` baz`' should render as '<p>[foo <code>bar</code> baz`</p>\\n', and the corresponding unfinished image case should preserve its code span too. Also keep a code span from consuming a closing marker beyond the current label boundary: '[`](``)' should remain a link whose visible label is a literal backtick. Correct these inconsistent inline results while preserving normal code spans, link precedence, different backtick-run lengths and ordinary Markdown behavior. Add regression tests.",
+  "baseline_command": [
+    "npm",
+    "run",
+    "test:markdown-it"
+  ],
+  "hidden_command": [
+    "node",
+    "evaluation/confirmation/tasks/js/C-J1-hidden.mjs",
+    "WORKSPACE"
+  ],
+  "assets": {
+    "hidden_test": "evaluation/confirmation/tasks/js/C-J1-hidden.mjs",
+    "dependency_spec": "evaluation/confirmation/tasks/js/markdown-dependencies.json",
+    "dependencies_lockfile": "evaluation/confirmation/tasks/js/markdown-dependencies-lock.json",
+    "licenses": [
+      "evaluation/confirmation/tasks/js/MARKDOWN-IT-LICENSE"
+    ]
+  },
+  "reference_source": "https://github.com/markdown-it/markdown-it/commit/5e9b1cc8309d09a9df0f53ae32f811da6ad5c23d",
+  "upstream_test_paths": [
+    "test/fixtures/markdown-it/commonmark_extras.txt"
+  ],
+  "production_globs": [
+    "src/**/*.ts"
+  ],
+  "hardness_evidence": {
+    "criterion": "at least 40 meaningful changed production lines in a stateful algorithm with at least three edge-case families",
+    "families": [
+      "unsuccessful link/image lookahead must not change subsequent tokenization",
+      "narrowed label ranges and runs crossing their endpoint",
+      "code-span/link precedence with heterogeneous backtick run lengths"
+    ],
+    "upstream_changed_functions": [
+      "backtick",
+      "buildLastRuns"
+    ],
+    "state_files": [
+      "src/rules_inline/backticks.ts",
+      "src/rules_inline/state_inline.ts"
+    ],
+    "meaningful_changed_production_lines": 58
+  },
+  "setup": {
+    "node_version": "v26.12.1",
+    "npm_version": "11.20.0",
+    "build": "Native Node TypeScript stripping; tests and hidden runner import src directly, no dist build",
+    "baseline_scope": "Original upstream test:markdown-it script (functional and pathological tests), excluding packaging/lint/CommonMark standalone suite",
+    "deps": "Exact minimal runtime/test dependency lock; original source/package manifest unchanged",
+    "solver_export": "Only buggy source snapshot and prepared node_modules; no Git upstream history, oracle, task metadata or held-out assertions",
+    "instructions_found": []
+  },
+  "evaluation": {
+    "production_globs": [
+      "src/**/*.ts"
+    ],
+    "protected_test_globs": [
+      "test/**",
+      "package.json",
+      "package-lock.json",
+      "tsconfig*.json"
+    ]
+  },
+  "hidden_test_counts": {
+    "total": 10,
+    "note": "Checks stop at first failing assertion; total denotes registered held-out assertions, not observed partial score."
+  }
+}

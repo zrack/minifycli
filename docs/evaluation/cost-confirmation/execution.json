@@ -1,0 +1,39 @@
+{
+  "definition": "Local registration preceded all comparative sessions; artifacts are published after collection. The registered runtime and fixed comparator bytes remained unchanged. These completion receipts are not billing receipts.",
+  "metrics_sha256": "436370b5837f063ff56c152edf7a8b5904a573637ceca1c387afc377898430bb",
+  "plan_sha256": "2f17831952b856d9b98826a547cf6fdf1aee2d8ab16c4553b9ccefbe320ac0b8",
+  "private_evidence_retention": {
+    "archive_bytes": 725871040,
+    "archive_sha256": "6129710bde07d83704ac8850f3b2a46afa817a6517a518a2e69c8d9d5f5d9e80",
+    "critical_files_verified": 331,
+    "raw_evidence_private": true,
+    "source_archive_preserved": true,
+    "tar_entries": 177610
+  },
+  "receipts": {
+    "grading-complete.json": {
+      "finished_utc": "2026-11-07T00:04:14.016653+00:00",
+      "graded": 54,
+      "plan_sha256": "2f17831952b856d9b98826a547cf6fdf1aee2d8ab16c4553b9ccefbe320ac0b8",
+      "planned": 54
+    },
+    "grading-started.json": {
+      "driver_sha256": "cadb0d798a062dcb2631adff52a3cdefd3ec0bbe5ad75ab4372eaaebc285ab95",
+      "plan_sha256": "2f17831952b856d9b98826a547cf6fdf1aee2d8ab16c4553b9ccefbe320ac0b8",
+      "started_utc": "2026-11-06T23:55:06.536090+00:00",
+      "workers": 3
+    },
+    "registration.json": {
+      "comparative_sessions_started": false,
+      "plan_sha256": "2f17831952b856d9b98826a547cf6fdf1aee2d8ab16c4553b9ccefbe320ac0b8",
+      "registered_utc": "2026-11-06T23:01:00.716600+00:00"
+    },
+    "sessions-complete.json": {
+      "completed": 54,
+      "finished_utc": "2026-11-06T23:54:59.086450+00:00",
+      "plan_sha256": "2f17831952b856d9b98826a547cf6fdf1aee2d8ab16c4553b9ccefbe320ac0b8",
+      "planned": 54
+    }
+  },
+  "schema": 1
+}

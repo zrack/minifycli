@@ -1,0 +1,45 @@
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -919,6 +919,8 @@
+ 
+ #[cfg(test)]
+ mod test {
++    extern crate tempdir;
++    use self::tempdir::TempDir;
+     use std::path::Path;
+     use super::{glob, Pattern, MatchOptions};
+ 
+@@ -955,14 +957,19 @@
+         assert!(glob("abc[def").err().unwrap().pos == 3);
+     }
+ 
+-    // this test assumes that there is a /root directory and that
+-    // the user running this test is not root or otherwise doesn't
+-    // have permission to read its contents
++    // Use a private unreadable directory rather than assuming /root exists.
++    // This preserves the original permission-error assertion on Unix hosts.
++    // The qualification environment runs this test as an unprivileged user.
+     #[cfg(unix)]
+     #[test]
+     fn test_iteration_errors() {
+         use std::io;
+-        let mut iter = glob("/root/*").unwrap();
++        use std::fs;
++        use std::os::unix::fs::PermissionsExt;
++        let directory = TempDir::new("glob-permission-test").unwrap();
++        fs::set_permissions(directory.path(), fs::Permissions::from_mode(0o000)).unwrap();
++        let pattern = format!("{}/*", directory.path().display());
++        let mut iter = glob(&pattern).unwrap();
+ 
+         // GlobErrors shouldn't halt iteration
+         let next = iter.next();
+@@ -972,7 +979,8 @@
+         assert!(err.is_err());
+ 
+         let err = err.err().unwrap();
+-        assert!(err.path() == Path::new("/root"));
++        assert!(err.path() == directory.path());
++        fs::set_permissions(directory.path(), fs::Permissions::from_mode(0o700)).unwrap();
+         assert!(err.error().kind() == io::ErrorKind::PermissionDenied);
+     }
+ 

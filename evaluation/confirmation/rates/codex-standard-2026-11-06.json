@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "unit": "credits",
+  "model": "gpt-6.1-sol",
+  "service_tier": "standard",
+  "per_million_tokens": {
+    "uncached_input": "50",
+    "cached_input": "2.5",
+    "output": "250"
+  },
+  "source_url": "https://learn.chatgpt.com/docs/pricing#token-rates",
+  "speed_source_url": "https://learn.chatgpt.com/docs/agent-configuration/speed",
+  "fetched_at": "2026-11-06T22:24:33Z",
+  "measure": "published-rate-credit-calculation",
+  "actual_billed": false,
+  "notes": [
+    "Input tokens include cached input; subtract cached input before applying the uncached rate.",
+    "Output tokens already include reasoning. Do not add reasoning again.",
+    "Codex has no separate cache-write charge under this card.",
+    "Standard speed is configured explicitly; Fast and Ultrafast controls are disabled.",
+    "This prices observed usage at the published Standard credit card. It is not an invoice or an attributed subscription charge.",
+    "Included subscription usage and contractual or legacy Enterprise billing may differ. No USD conversion is assumed."
+  ]
+}

@@ -29,6 +29,7 @@ jobs:
         run: |
           python3 -m py_compile evaluation/*.py
           python3 -m py_compile evaluation/debugging/*.py
+          python3 -m py_compile evaluation/confirmation/*.py
           python3 -m unittest discover -s evaluation/tests -v
           python3 -m unittest discover -s evaluation/debugging/tests -v
       - name: Build release

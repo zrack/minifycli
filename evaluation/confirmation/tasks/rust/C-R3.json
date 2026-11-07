@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "id": "C-R3",
+  "title": "Recursive wildcards cross component and hidden-file boundaries",
+  "repository": {
+    "url": "https://github.com/rust-lang/glob",
+    "license": "MIT OR Apache-2.0"
+  },
+  "base_commit": "3ed4935eec5f2ea4030f5225965e9f3ca34c8ee5",
+  "oracle_commit": "398e0935167b0a75d2d955cae4c9750869ca6972",
+  "base_tree": "7adecc5cb353d921ebf75330e054d1cf20f6efca",
+  "oracle_tree": "6e268a465feae279152b003188f5ca139db1aeee",
+  "prompt": "Recursive glob matching violates component boundaries and hidden-file settings. '**/.*' should match '.abc' and 'abc/.abc', but must not match 'ab.c' or 'abc/ab.c'. When require_literal_leading_dot is enabled, '**/*' must not match '.cache' or descend through 'dir/.cache/file'. Fix these inconsistencies while preserving explicitly requested hidden names, the option-off behavior, Unicode path components, recursive empty matches, and literal separator requirements. Add regression coverage and keep the registered portable suite passing.",
+  "baseline_command": [
+    "cargo",
+    "test",
+    "--offline",
+    "--locked",
+    "--lib"
+  ],
+  "hidden_command": [
+    "python3",
+    "evaluation/confirmation/tasks/rust/run_hidden.py",
+    "C-R3",
+    "WORKSPACE"
+  ],
+  "assets": {
+    "hidden_test": "evaluation/confirmation/tasks/rust/C-R3-hidden.rs",
+    "hidden_runner": "evaluation/confirmation/tasks/rust/run_hidden.py",
+    "baseline_lockfile": "evaluation/confirmation/tasks/rust/C-R3-Cargo.lock",
+    "licenses": [
+      "evaluation/confirmation/tasks/rust/licenses/glob-MIT.txt",
+      "evaluation/confirmation/tasks/rust/licenses/glob-APACHE.txt"
+    ]
+  },
+  "reference_source": "https://github.com/rust-lang/glob/commit/398e0935167b0a75d2d955cae4c9750869ca6972",
+  "upstream_test_paths": [
+    "src/lib.rs"
+  ],
+  "hardness": {
+    "rule_registered_before_comparative_runs": ">=20 meaningful changed production lines across >=2 functions, OR >=40 meaningful stateful-algorithm lines and >=3 edge-case families",
+    "meaningful_changed_lexical_lines": 78,
+    "count_method": "Added plus removed nonblank production lines containing an identifier or digit, excluding comment-only lines and pure punctuation; original upstream production diff, excluding test modules. This is a structural proxy, not observed solver difficulty.",
+    "functions": [
+      "matches_with",
+      "matches_from"
+    ],
+    "edge_case_families": [
+      "full component boundaries versus suffixes within a component",
+      "hidden components at the root and below visible directories",
+      "separator policy, explicit hidden names, and multibyte components"
+    ],
+    "structurally_qualified": true
+  },
+  "hidden_test_counts": {
+    "total": 8,
+    "expected_base_failed": 4
+  },
+  "setup": {
+    "runtime_dependencies": "none with default features",
+    "dependency_lock": "Upstream Cargo.lock, copied unchanged to the registered source; historical dev dependencies fetched once before all checks",
+    "instructions_found": [],
+    "toolchain_tested": "rustc 1.99.1 / cargo 1.99.1",
+    "target_isolation": "Distinct Cargo target per exported source; delete own build products after each trial/evaluation stage, retaining frozen source and receipts",
+    "platform": "Unix as an unprivileged user"
+  },
+  "evaluation": {
+    "production_globs": [
+      "src/lib.rs"
+    ],
+    "protected_test_globs": [],
+    "inline_test_handling": "Restore the registered EOF #[cfg(test)] mod test suffix including the portability fixture"
+  },
+  "compatibility": {
+    "purpose": "Replace the /root directory and access-control assumption in test_iteration_errors with a private temporary unreadable directory; same permission-denied assertions, no skips, no production changes",
+    "patches": {
+      "base": {
+        "asset": "evaluation/confirmation/tasks/rust/C-R3-base-portability.patch",
+        "sha256": "156e5835023e70784c3e2b75f425068c45396f1786397025d61b22c1893562b6"
+      },
+      "oracle": {
+        "asset": "evaluation/confirmation/tasks/rust/C-R3-oracle-portability.patch",
+        "sha256": "f10427da796821af84084204d5db644d052f4cac540f591bd58d505c1c8a5091"
+      }
+    },
+    "production_prefix_unchanged": true
+  }
+}

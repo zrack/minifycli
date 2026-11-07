@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "id": "C-R1",
+  "title": "Backtracking consumes input inside escaped parsers",
+  "repository": {
+    "url": "https://github.com/winnow-rs/winnow",
+    "license": "MIT"
+  },
+  "base_commit": "8ff218f7d339f128267da8e724cd920151cb4020",
+  "oracle_commit": "97728b3ae287f57366a814436bd82b0040785d05",
+  "base_tree": "0730d72787e4d66c0ac4a9801942b4124da916f0",
+  "oracle_tree": "b8cba2940b80e5a0a5038b9ce96b9d783fc06ebd",
+  "prompt": "An escaped-text parser loses input when its normal-content parser consumes a prefix and then returns a recoverable failure. For example, a normal parser that accepts alphabetic text only when followed by '!' should leave the input consisting of 'a', a backslash, 'n', and ';' untouched when that terminator is missing; the escape layer should stop with an empty result and the full remainder. Instead, it consumes the prefix and escape. Fix this for recognition and transformation on both complete and partial streams. Preserve successful parsing, committed failures, and incomplete-input behavior. Add regression coverage.",
+  "baseline_command": [
+    "cargo",
+    "test",
+    "--offline",
+    "--locked",
+    "--lib"
+  ],
+  "hidden_command": [
+    "python3",
+    "evaluation/confirmation/tasks/rust/run_hidden.py",
+    "C-R1",
+    "WORKSPACE"
+  ],
+  "assets": {
+    "hidden_test": "evaluation/confirmation/tasks/rust/C-R1-hidden.rs",
+    "hidden_runner": "evaluation/confirmation/tasks/rust/run_hidden.py",
+    "baseline_lockfile": "evaluation/confirmation/tasks/rust/C-R1-Cargo.lock",
+    "licenses": [
+      "evaluation/confirmation/tasks/rust/licenses/winnow-MIT.txt"
+    ]
+  },
+  "reference_source": "https://github.com/winnow-rs/winnow/commit/97728b3ae287f57366a814436bd82b0040785d05",
+  "upstream_test_paths": [
+    "src/ascii/tests.rs"
+  ],
+  "hardness": {
+    "rule_registered_before_comparative_runs": ">=20 meaningful changed production lines across >=2 functions, OR >=40 meaningful stateful-algorithm lines and >=3 edge-case families",
+    "meaningful_changed_lexical_lines": 30,
+    "count_method": "Added plus removed nonblank production lines containing an identifier or digit, excluding comment-only lines and pure punctuation; original upstream production diff, excluding test modules. This is a structural proxy, not observed solver difficulty.",
+    "functions": [
+      "streaming_escaped_internal",
+      "complete_escaped_internal",
+      "streaming_escaped_transform_internal",
+      "complete_escaped_transform_internal"
+    ],
+    "edge_case_families": [
+      "recoverable normal-parser failure after consumption",
+      "complete versus partial streams",
+      "recognition versus transformation; committed/incomplete failure controls"
+    ],
+    "structurally_qualified": true
+  },
+  "hidden_test_counts": {
+    "total": 7,
+    "expected_base_failed": 4
+  },
+  "setup": {
+    "runtime_dependencies": "none with default features",
+    "dependency_lock": "Upstream Cargo.lock, copied unchanged to the registered source; historical dev dependencies fetched once before all checks",
+    "instructions_found": [],
+    "toolchain_tested": "rustc 1.99.1 / cargo 1.99.1",
+    "target_isolation": "Distinct Cargo target per exported source; delete own build products after each trial/evaluation stage, retaining frozen source and receipts",
+    "platform": "aarch64-apple-darwin qualified"
+  },
+  "evaluation": {
+    "production_globs": [
+      "src/*.rs",
+      "src/**/*.rs"
+    ],
+    "protected_test_globs": [
+      "src/**/tests.rs",
+      "src/**/test.rs",
+      "tests/**"
+    ],
+    "inline_test_handling": "Restore all registered cfg(test) items/blocks; do not assume a single EOF test module"
+  },
+  "historical_test_evidence": "The correction commit adds no new upstream regression assertions; held-out behavioral regressions were written and qualified before comparative solver outcomes."
+}

@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "argparse": "3.0.0",
+    "entities": "8.0.0",
+    "linkify-it": "6.0.0",
+    "markdown-it-for-inline": "2.0.1",
+    "mdurl": "2.1.0",
+    "punycode.js": "2.3.1",
+    "uc.micro": "3.0.0"
+  }
+}

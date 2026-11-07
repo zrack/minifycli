@@ -1,0 +1,50 @@
+{
+  "definition": "Retrospective application of the current Standard rate card to prior saved usage. The prior session speed/billing was not attributed; these are as-if Standard credits, not an actual bill.",
+  "mini_over_rtk_cost_ratio": "0.9769814175585497398241270754",
+  "rate_card": "../../../evaluation/confirmation/rates/codex-standard-2026-11-06.json",
+  "rate_card_sha256": "09cd97d3dd4d36a7dcbf4d4c11b7bdd49c848f613abd602bbadc8c89aa7f860b",
+  "schema": 1,
+  "source_metrics": "../debugging-sprint/metrics.json",
+  "source_metrics_sha256": "9d49ddd553af2ae3974c89a079c395cbeb34e8b1aa80ae8a4b898ed58ef34216",
+  "variants": {
+    "mini": {
+      "attempts": 12,
+      "cached_input_tokens": 2373760,
+      "cost_components_credits": {
+        "cached_input": "5.9344",
+        "output": "12.19975",
+        "uncached_input": "21.49885"
+      },
+      "input_tokens": 2803737,
+      "output_tokens": 48799,
+      "total_credits": "39.63300",
+      "uncached_input_tokens": 429977
+    },
+    "raw": {
+      "attempts": 12,
+      "cached_input_tokens": 2759424,
+      "cost_components_credits": {
+        "cached_input": "6.89856",
+        "output": "13.029",
+        "uncached_input": "20.99755"
+      },
+      "input_tokens": 3179375,
+      "output_tokens": 52116,
+      "total_credits": "40.92511",
+      "uncached_input_tokens": 419951
+    },
+    "rtk": {
+      "attempts": 12,
+      "cached_input_tokens": 3273216,
+      "cost_components_credits": {
+        "cached_input": "8.18304",
+        "output": "13.00875",
+        "uncached_input": "19.375"
+      },
+      "input_tokens": 3660716,
+      "output_tokens": 52035,
+      "total_credits": "40.56679",
+      "uncached_input_tokens": 387500
+    }
+  }
+}

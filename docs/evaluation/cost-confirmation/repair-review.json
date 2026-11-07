@@ -1,0 +1,1175 @@
+{
+  "all_trial_screens": [
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-001",
+      "patch_sha256": "5f8d02b1c19b68c82caae16da64ef66fcb13062cc7f191c4a81181911b1bfc02",
+      "repetition": 1,
+      "task_id": "C-J2",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-002",
+      "patch_sha256": "64fa3addaf710a3dfd2d8f88aa5362aa476d198e7d786b34513791f5820b17e3",
+      "repetition": 1,
+      "task_id": "C-J2",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-003",
+      "patch_sha256": "3ba86eda97257a8e2f215f1f0afde272f84097cf51989d9647e758290776d94a",
+      "repetition": 1,
+      "task_id": "C-J2",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-004",
+      "patch_sha256": "17ca1150f658479751983b88ab55e646223b45fc36a887541ec56c639f035a3f",
+      "repetition": 1,
+      "task_id": "C-J3",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-005",
+      "patch_sha256": "af60584073618eebf2e66d1da39463d884490702ca5922b35a42d099cff8801d",
+      "repetition": 1,
+      "task_id": "C-J3",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-006",
+      "patch_sha256": "cc7aab1143960ac8813f079a2c47e7c121c8161cba147689bc4b2dd63bfbb265",
+      "repetition": 1,
+      "task_id": "C-J3",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-007",
+      "patch_sha256": "4ad70ddb9b4a24fb460cdbe37b6119e63525bda42f39e7fdd193d5b0030cecfd",
+      "repetition": 1,
+      "task_id": "C-J1",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-008",
+      "patch_sha256": "437ae186f498fd355395bdfb740290beefe8b89b10382b6a5281d32fb9a820ca",
+      "repetition": 1,
+      "task_id": "C-J1",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-009",
+      "patch_sha256": "7d0bce42985764e1466138d2009599e299be02d62bfb4259aea07000afe0eb9d",
+      "repetition": 1,
+      "task_id": "C-J1",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-010",
+      "patch_sha256": "41015f1e871537e003f4d944862b961b949ca0530476b83f63674f6174e9a779",
+      "repetition": 1,
+      "task_id": "C-R3",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-011",
+      "patch_sha256": "5bab9f946e2fe5011315600e3699fad95fa9c7ce20fe47550f7b7d5b75d348dc",
+      "repetition": 1,
+      "task_id": "C-R3",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-012",
+      "patch_sha256": "37ce651f003a4fcc81249fde09a7666098c83dcd4439cfcf9cafe804c8f32869",
+      "repetition": 1,
+      "task_id": "C-R3",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-013",
+      "patch_sha256": "bffa954cc8b267ab2f854514bbe4914ec15abf1283d938c76d54ab3dd79919e8",
+      "repetition": 1,
+      "task_id": "C-R1",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-014",
+      "patch_sha256": "a29008f58be884613980361097ca692de4994a4b03a533fcc000f06d87c2aa20",
+      "repetition": 1,
+      "task_id": "C-R1",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-015",
+      "patch_sha256": "986d5387a367a45f906d12b06d75bcaa3ab6a1bbaeff45ef287155a53fb609b6",
+      "repetition": 1,
+      "task_id": "C-R1",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-016",
+      "patch_sha256": "ea5849b55c8b3a141857cd74724a09c0c8ab2f3d991bf0418305aca823983f6e",
+      "repetition": 1,
+      "task_id": "C-R2",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-017",
+      "patch_sha256": "6dd620b01af28de979fe9c72002b17f842edf0deb29942e349c512891fec3fa9",
+      "repetition": 1,
+      "task_id": "C-R2",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-018",
+      "patch_sha256": "a1bc6bf8b830754963c8bb1b75ec7071dcc1a18d5506f93c8b1e5f83570bffa2",
+      "repetition": 1,
+      "task_id": "C-R2",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-019",
+      "patch_sha256": "cee7eede6633cf8baf89716e1bcc61ac7115509c9b503c9775c2fb138f0ce99a",
+      "repetition": 2,
+      "task_id": "C-J2",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-020",
+      "patch_sha256": "b3ef56ed985db63b74a56961de241f020ccf29200f101e523482bcf536a94846",
+      "repetition": 2,
+      "task_id": "C-J2",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-021",
+      "patch_sha256": "23ffa9c27c664cc870da191bc1f3e072d6a1d76b349828572750c3428610deaa",
+      "repetition": 2,
+      "task_id": "C-J2",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-022",
+      "patch_sha256": "77fe2b48ae5d65709af3800c559e0fc49893e63e12d53a4ee57b7464da38d9d6",
+      "repetition": 2,
+      "task_id": "C-R1",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-023",
+      "patch_sha256": "31dec301cb2ccb5aba42e5b00231b74f3bbb65f99e2b0c8747002b0a34bf630c",
+      "repetition": 2,
+      "task_id": "C-R1",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-024",
+      "patch_sha256": "eab1fc2a1d7c463d3bbefd214bc31285a803b19a0cfb4e60b879c6b00616fa07",
+      "repetition": 2,
+      "task_id": "C-R1",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-025",
+      "patch_sha256": "e55330ec364c96e7605604d35b5b5cfa1f045015391804a1cc653e11896a8bd0",
+      "repetition": 2,
+      "task_id": "C-J1",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-026",
+      "patch_sha256": "120d027ef64b3edffae721cba2b114bf647b097f3860ce89905e2ed91ab39c97",
+      "repetition": 2,
+      "task_id": "C-J1",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-027",
+      "patch_sha256": "3ac6dac16c10cc5c4c98c162d8ff9fc02dc21af40703f231569efa3893b6c38c",
+      "repetition": 2,
+      "task_id": "C-J1",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-028",
+      "patch_sha256": "54bb84306a37f41a7850099b4997f53de9e95789075843bcae0ebb305f820878",
+      "repetition": 2,
+      "task_id": "C-J3",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-029",
+      "patch_sha256": "fca7e7ff7a5750c2acfc0e71948a353360765985285c31383d78e62eb4e37440",
+      "repetition": 2,
+      "task_id": "C-J3",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-030",
+      "patch_sha256": "cfede0fab7544c655e21c5684d9b32cd62c7e943a4021d398cea1975703cb7a5",
+      "repetition": 2,
+      "task_id": "C-J3",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-031",
+      "patch_sha256": "46679a39e266ca792065047c16483aa51f218f29ded3a46c60c788b603ae9eda",
+      "repetition": 2,
+      "task_id": "C-R2",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-032",
+      "patch_sha256": "b2d181820b65e516330c989e1e44920b0a7e004f47bc953376120d217333a54b",
+      "repetition": 2,
+      "task_id": "C-R2",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-033",
+      "patch_sha256": "8152af326727fd44e24883e36564c10044826138c29b8e0fefff5e2dd37ba1ec",
+      "repetition": 2,
+      "task_id": "C-R2",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-034",
+      "patch_sha256": "c91bdc250ebaf4e6c408e913752a9794df4cd905c1d3a688d2ff3d4b6dcf8f8a",
+      "repetition": 2,
+      "task_id": "C-R3",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-035",
+      "patch_sha256": "c29280ada9d8a91ca8c4d9293c2c9347ce2e40d806b9ecf2434009ecc3d41cb3",
+      "repetition": 2,
+      "task_id": "C-R3",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-036",
+      "patch_sha256": "cb43b966c0eb3046a6f8f4a5da2eab526673f2b338c35294ec5ba25c8d52f8f2",
+      "repetition": 2,
+      "task_id": "C-R3",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-037",
+      "patch_sha256": "4f4f3de3a25b6414b61d2548addeb081d3f3723aa5d76d27d7a7d045dd25c7cf",
+      "repetition": 3,
+      "task_id": "C-J2",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-038",
+      "patch_sha256": "f5b6e11a15c68014c157d73a9cbd2f272ab701641e7ff316c56fbb32aa4eb399",
+      "repetition": 3,
+      "task_id": "C-J2",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-039",
+      "patch_sha256": "b65e88c895a3610c63cbd59e3149067377b7160b4685f5fe7181dcf9f5da744d",
+      "repetition": 3,
+      "task_id": "C-J2",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-040",
+      "patch_sha256": "c3b3c85403b325b05982fc3c9b65dfb7303b03ab3c54197757d09f5929e3d8f3",
+      "repetition": 3,
+      "task_id": "C-R1",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-041",
+      "patch_sha256": "b8a84dcbc58d379f9f2dd4c3f5658218aac68b2638b1f3f3e4254aee4287e0fa",
+      "repetition": 3,
+      "task_id": "C-R1",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-042",
+      "patch_sha256": "66cb4e8aac2db10a479a11c8290cdd42564cab6219f1220f46a0b6573c69eec7",
+      "repetition": 3,
+      "task_id": "C-R1",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-043",
+      "patch_sha256": "374f9d1ccab9521b40a622fd0eaad96cec63c709068852cced469a3f6c5c1deb",
+      "repetition": 3,
+      "task_id": "C-R2",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-044",
+      "patch_sha256": "e471573f818409be32d87a2fadff95c984400b4d46769700f90045be2a66eb94",
+      "repetition": 3,
+      "task_id": "C-R2",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-045",
+      "patch_sha256": "be235efcf7216c764246e8e407d39cc778ee5bf4bd157867aaba78a9193329bd",
+      "repetition": 3,
+      "task_id": "C-R2",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-046",
+      "patch_sha256": "7e7ac947321d2707aa649fad126939c2b991f8dcc1267d6de4aa12eee940dd74",
+      "repetition": 3,
+      "task_id": "C-J3",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-047",
+      "patch_sha256": "1e97cedb35c4260c4766918f588b34c9edd73421fa4eabff7d1d339d54ed0111",
+      "repetition": 3,
+      "task_id": "C-J3",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-048",
+      "patch_sha256": "a64ee3557f4ffb0d968a5b8d2b839ef48fe9cc8569f51eca0d1d2075d1d33836",
+      "repetition": 3,
+      "task_id": "C-J3",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-049",
+      "patch_sha256": "0852a590947a6d67cd350271a407abf6da1355cbb2732f3aae8e28938ec31507",
+      "repetition": 3,
+      "task_id": "C-J1",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-050",
+      "patch_sha256": "0fc4fad811280251dd911cdd48c136e5e97ef2f2c500be16b451c5dc896a854a",
+      "repetition": 3,
+      "task_id": "C-J1",
+      "variant": "raw"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-051",
+      "patch_sha256": "128291bd1de4fb374b7b343ea1797e976a0b7fe7af6a0b36522473957d3f1328",
+      "repetition": 3,
+      "task_id": "C-J1",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-052",
+      "patch_sha256": "f79996999c2c25713f6dc361308bcfdc3b099e9a067129326010efef40e8b40d",
+      "repetition": 3,
+      "task_id": "C-R3",
+      "variant": "mini"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-053",
+      "patch_sha256": "e5fd778f76a0282c69bfba5040366f66f93f61e9843f6594544a03cd83bd5551",
+      "repetition": 3,
+      "task_id": "C-R3",
+      "variant": "rtk"
+    },
+    {
+      "added_runtime_control_pattern_hits": 0,
+      "existing_test_or_config_changes": [],
+      "id": "trial-054",
+      "patch_sha256": "4a14cca87d59fed5b1372cd49f3fdda4cc06a1c344d25df5cce5a3d08723b376",
+      "repetition": 3,
+      "task_id": "C-R3",
+      "variant": "raw"
+    }
+  ],
+  "grading_snapshot": {
+    "all_54_grades_and_completion_receipt_observed": true,
+    "grades_observed": 54,
+    "postcss_grade_observations": 9
+  },
+  "image_description_fixture_review": {
+    "all_nine_completed_seven_render_assertions_before_failure": true,
+    "fixture_matches_registered_implementation_hash": true,
+    "fixture_sha256": "bb455fd68d3942fb1116c4b79fb6421b452b14c3f762768f589ec4dfe8338389",
+    "interpretation": "Keep the registered failures, but describe them as rendering repaired with the stricter upstream token-shape requirement unmet; do not claim the nine candidates still lose characters or fail all metadata behavior.",
+    "material_ambiguity": "The registered token-shape fixture is stricter than the rendering examples stated to solvers. Retaining individual escape/entity metadata is a plausible reading of the prompt, and all nine repairs take that approach.",
+    "registered_prompt_review": "The solver prompt specifies rendered examples, character order, token metadata and renderer compatibility; it does not expressly require adjacent-text coalescing.",
+    "trials": [
+      {
+        "added_runtime_control_pattern_hits": 0,
+        "candidate_baseline_passed": true,
+        "evidence_method": "frozen fixture hash plus captured first-failure stack location after its seven sequential rendering assertions",
+        "existing_test_or_config_changes": [],
+        "first_failed_assertion": "image child token types require adjacent text-token coalescing",
+        "first_failed_assertion_ordinal": 8,
+        "hidden_capture_hash_matches_grade": true,
+        "hidden_exit_code": 1,
+        "hidden_spawn_error": false,
+        "hidden_stderr_sha256": "4a164138b753663bea10aad9416bcc3c76be0f5681fafa4cc9baf796421fd256",
+        "hidden_timeout": false,
+        "id": "trial-001",
+        "manual_production_diff_reviewed": true,
+        "patch_sha256": "5f8d02b1c19b68c82caae16da64ef66fcb13062cc7f191c4a81181911b1bfc02",
+        "pristine_baseline_passed": true,
+        "registered_assertion_count": 9,
+        "registered_grade_correct": false,
+        "render_assertions_completed_before_failure": 7,
+        "repair_character": "normalize special text token types while retaining separate tokens and their escape/entity metadata",
+        "repetition": 1,
+        "subsequent_token_content_assertion_executed": false,
+        "task_id": "C-J2",
+        "variant": "mini"
+      },
+      {
+        "added_runtime_control_pattern_hits": 0,
+        "candidate_baseline_passed": true,
+        "evidence_method": "frozen fixture hash plus captured first-failure stack location after its seven sequential rendering assertions",
+        "existing_test_or_config_changes": [],
+        "first_failed_assertion": "image child token types require adjacent text-token coalescing",
+        "first_failed_assertion_ordinal": 8,
+        "hidden_capture_hash_matches_grade": true,
+        "hidden_exit_code": 1,
+        "hidden_spawn_error": false,
+        "hidden_stderr_sha256": "4a164138b753663bea10aad9416bcc3c76be0f5681fafa4cc9baf796421fd256",
+        "hidden_timeout": false,
+        "id": "trial-002",
+        "manual_production_diff_reviewed": true,
+        "patch_sha256": "64fa3addaf710a3dfd2d8f88aa5362aa476d198e7d786b34513791f5820b17e3",
+        "pristine_baseline_passed": true,
+        "registered_assertion_count": 9,
+        "registered_grade_correct": false,
+        "render_assertions_completed_before_failure": 7,
+        "repair_character": "normalize special text token types while retaining separate tokens and their escape/entity metadata",
+        "repetition": 1,
+        "subsequent_token_content_assertion_executed": false,
+        "task_id": "C-J2",
+        "variant": "rtk"
+      },
+      {
+        "added_runtime_control_pattern_hits": 0,
+        "candidate_baseline_passed": true,
+        "evidence_method": "frozen fixture hash plus captured first-failure stack location after its seven sequential rendering assertions",
+        "existing_test_or_config_changes": [],
+        "first_failed_assertion": "image child token types require adjacent text-token coalescing",
+        "first_failed_assertion_ordinal": 8,
+        "hidden_capture_hash_matches_grade": true,
+        "hidden_exit_code": 1,
+        "hidden_spawn_error": false,
+        "hidden_stderr_sha256": "4a164138b753663bea10aad9416bcc3c76be0f5681fafa4cc9baf796421fd256",
+        "hidden_timeout": false,
+        "id": "trial-003",
+        "manual_production_diff_reviewed": true,
+        "patch_sha256": "3ba86eda97257a8e2f215f1f0afde272f84097cf51989d9647e758290776d94a",
+        "pristine_baseline_passed": true,
+        "registered_assertion_count": 9,
+        "registered_grade_correct": false,
+        "render_assertions_completed_before_failure": 7,
+        "repair_character": "normalize special text token types while retaining separate tokens and their escape/entity metadata",
+        "repetition": 1,
+        "subsequent_token_content_assertion_executed": false,
+        "task_id": "C-J2",
+        "variant": "raw"
+      },
+      {
+        "added_runtime_control_pattern_hits": 0,
+        "candidate_baseline_passed": true,
+        "evidence_method": "frozen fixture hash plus captured first-failure stack location after its seven sequential rendering assertions",
+        "existing_test_or_config_changes": [],
+        "first_failed_assertion": "image child token types require adjacent text-token coalescing",
+        "first_failed_assertion_ordinal": 8,
+        "hidden_capture_hash_matches_grade": true,
+        "hidden_exit_code": 1,
+        "hidden_spawn_error": false,
+        "hidden_stderr_sha256": "4a164138b753663bea10aad9416bcc3c76be0f5681fafa4cc9baf796421fd256",
+        "hidden_timeout": false,
+        "id": "trial-019",
+        "manual_production_diff_reviewed": true,
+        "patch_sha256": "cee7eede6633cf8baf89716e1bcc61ac7115509c9b503c9775c2fb138f0ce99a",
+        "pristine_baseline_passed": true,
+        "registered_assertion_count": 9,
+        "registered_grade_correct": false,
+        "render_assertions_completed_before_failure": 7,
+        "repair_character": "normalize special text token types while retaining separate tokens and their escape/entity metadata",
+        "repetition": 2,
+        "subsequent_token_content_assertion_executed": false,
+        "task_id": "C-J2",
+        "variant": "rtk"
+      },
+      {
+        "added_runtime_control_pattern_hits": 0,
+        "candidate_baseline_passed": true,
+        "evidence_method": "frozen fixture hash plus captured first-failure stack location after its seven sequential rendering assertions",
+        "existing_test_or_config_changes": [],
+        "first_failed_assertion": "image child token types require adjacent text-token coalescing",
+        "first_failed_assertion_ordinal": 8,
+        "hidden_capture_hash_matches_grade": true,
+        "hidden_exit_code": 1,
+        "hidden_spawn_error": false,
+        "hidden_stderr_sha256": "4a164138b753663bea10aad9416bcc3c76be0f5681fafa4cc9baf796421fd256",
+        "hidden_timeout": false,
+        "id": "trial-020",
+        "manual_production_diff_reviewed": true,
+        "patch_sha256": "b3ef56ed985db63b74a56961de241f020ccf29200f101e523482bcf536a94846",
+        "pristine_baseline_passed": true,
+        "registered_assertion_count": 9,
+        "registered_grade_correct": false,
+        "render_assertions_completed_before_failure": 7,
+        "repair_character": "normalize special text token types while retaining separate tokens and their escape/entity metadata",
+        "repetition": 2,
+        "subsequent_token_content_assertion_executed": false,
+        "task_id": "C-J2",
+        "variant": "raw"
+      },
+      {
+        "added_runtime_control_pattern_hits": 0,
+        "candidate_baseline_passed": true,
+        "evidence_method": "frozen fixture hash plus captured first-failure stack location after its seven sequential rendering assertions",
+        "existing_test_or_config_changes": [],
+        "first_failed_assertion": "image child token types require adjacent text-token coalescing",
+        "first_failed_assertion_ordinal": 8,
+        "hidden_capture_hash_matches_grade": true,
+        "hidden_exit_code": 1,
+        "hidden_spawn_error": false,
+        "hidden_stderr_sha256": "4a164138b753663bea10aad9416bcc3c76be0f5681fafa4cc9baf796421fd256",
+        "hidden_timeout": false,
+        "id": "trial-021",
+        "manual_production_diff_reviewed": true,
+        "patch_sha256": "23ffa9c27c664cc870da191bc1f3e072d6a1d76b349828572750c3428610deaa",
+        "pristine_baseline_passed": true,
+        "registered_assertion_count": 9,
+        "registered_grade_correct": false,
+        "render_assertions_completed_before_failure": 7,
+        "repair_character": "normalize special text token types while retaining separate tokens and their escape/entity metadata",
+        "repetition": 2,
+        "subsequent_token_content_assertion_executed": false,
+        "task_id": "C-J2",
+        "variant": "mini"
+      },
+      {
+        "added_runtime_control_pattern_hits": 0,
+        "candidate_baseline_passed": true,
+        "evidence_method": "frozen fixture hash plus captured first-failure stack location after its seven sequential rendering assertions",
+        "existing_test_or_config_changes": [],
+        "first_failed_assertion": "image child token types require adjacent text-token coalescing",
+        "first_failed_assertion_ordinal": 8,
+        "hidden_capture_hash_matches_grade": true,
+        "hidden_exit_code": 1,
+        "hidden_spawn_error": false,
+        "hidden_stderr_sha256": "4a164138b753663bea10aad9416bcc3c76be0f5681fafa4cc9baf796421fd256",
+        "hidden_timeout": false,
+        "id": "trial-037",
+        "manual_production_diff_reviewed": true,
+        "patch_sha256": "4f4f3de3a25b6414b61d2548addeb081d3f3723aa5d76d27d7a7d045dd25c7cf",
+        "pristine_baseline_passed": true,
+        "registered_assertion_count": 9,
+        "registered_grade_correct": false,
+        "render_assertions_completed_before_failure": 7,
+        "repair_character": "normalize special text token types while retaining separate tokens and their escape/entity metadata",
+        "repetition": 3,
+        "subsequent_token_content_assertion_executed": false,
+        "task_id": "C-J2",
+        "variant": "raw"
+      },
+      {
+        "added_runtime_control_pattern_hits": 0,
+        "candidate_baseline_passed": true,
+        "evidence_method": "frozen fixture hash plus captured first-failure stack location after its seven sequential rendering assertions",
+        "existing_test_or_config_changes": [],
+        "first_failed_assertion": "image child token types require adjacent text-token coalescing",
+        "first_failed_assertion_ordinal": 8,
+        "hidden_capture_hash_matches_grade": true,
+        "hidden_exit_code": 1,
+        "hidden_spawn_error": false,
+        "hidden_stderr_sha256": "4a164138b753663bea10aad9416bcc3c76be0f5681fafa4cc9baf796421fd256",
+        "hidden_timeout": false,
+        "id": "trial-038",
+        "manual_production_diff_reviewed": true,
+        "patch_sha256": "f5b6e11a15c68014c157d73a9cbd2f272ab701641e7ff316c56fbb32aa4eb399",
+        "pristine_baseline_passed": true,
+        "registered_assertion_count": 9,
+        "registered_grade_correct": false,
+        "render_assertions_completed_before_failure": 7,
+        "repair_character": "normalize special text token types while retaining separate tokens and their escape/entity metadata",
+        "repetition": 3,
+        "subsequent_token_content_assertion_executed": false,
+        "task_id": "C-J2",
+        "variant": "mini"
+      },
+      {
+        "added_runtime_control_pattern_hits": 0,
+        "candidate_baseline_passed": true,
+        "evidence_method": "frozen fixture hash plus captured first-failure stack location after its seven sequential rendering assertions",
+        "existing_test_or_config_changes": [],
+        "first_failed_assertion": "image child token types require adjacent text-token coalescing",
+        "first_failed_assertion_ordinal": 8,
+        "hidden_capture_hash_matches_grade": true,
+        "hidden_exit_code": 1,
+        "hidden_spawn_error": false,
+        "hidden_stderr_sha256": "4a164138b753663bea10aad9416bcc3c76be0f5681fafa4cc9baf796421fd256",
+        "hidden_timeout": false,
+        "id": "trial-039",
+        "manual_production_diff_reviewed": true,
+        "patch_sha256": "b65e88c895a3610c63cbd59e3149067377b7160b4685f5fe7181dcf9f5da744d",
+        "pristine_baseline_passed": true,
+        "registered_assertion_count": 9,
+        "registered_grade_correct": false,
+        "render_assertions_completed_before_failure": 7,
+        "repair_character": "normalize special text token types while retaining separate tokens and their escape/entity metadata",
+        "repetition": 3,
+        "subsequent_token_content_assertion_executed": false,
+        "task_id": "C-J2",
+        "variant": "rtk"
+      }
+    ],
+    "upstream_implementation_review": "The pinned upstream repair explicitly converts special-text tokens and joins adjacent text segments in image children.",
+    "upstream_reference": "https://github.com/markdown-it/markdown-it/commit/974e2d7f3bf1356123032a68c831735c5891ec05"
+  },
+  "limitations": [
+    "Manual semantic source review covers the nine C-J3 and nine C-J2 production diffs; remaining trials received only the stated supplementary screen here.",
+    "Pattern screening is corroboration, not proof that arbitrary behavior is absent.",
+    "No new test was executed and no model session, grading run, fixture, threshold or recorded grade was replaced.",
+    "Post-hoc rendering-only sensitivity does not repair the prompt ambiguity prospectively or establish general diagnostic quality."
+  ],
+  "overall_findings": {
+    "existing_test_path_or_package_config_edits_in_54_trial_manifest_screen": 0,
+    "postcss_global_runtime_stack_limit_changes_identified": 0,
+    "postcss_original_test_or_build_config_weakening_identified": 0,
+    "postcss_task_contract_violations_identified": 0,
+    "primary_registered_grades_retained_unchanged": true,
+    "rendering_only_sensitivity_changes_total_cost_ranking": false,
+    "rendering_only_sensitivity_is_post_hoc": true,
+    "runtime_control_pattern_hits_in_all_54_added_line_screen": 0
+  },
+  "plan_sha256": "2f17831952b856d9b98826a547cf6fdf1aee2d8ab16c4553b9ccefbe320ac0b8",
+  "postcss_fixture_scope": {
+    "coverage": "parse/stringify, clone, JSON roundtrip, walking, declaration plugin revisits, a small subclass override, and custom JSON properties",
+    "deep_stylesheet_depth": 6000,
+    "limit": "Passing these fixtures and scoped baseline does not prove equivalence for all PostCSS plugins, extension combinations, deep subclass cases, source maps or arbitrary AST shapes.",
+    "registered_hidden_assertions": 8
+  },
+  "postcss_trials": [
+    {
+      "actual_source_hashes_match_frozen_manifest": true,
+      "added_runtime_control_pattern_hits": 0,
+      "checks_passed": {
+        "candidate_baseline": true,
+        "hidden": true,
+        "pristine_baseline": true
+      },
+      "existing_test_or_config_changes": [],
+      "grade_observed": true,
+      "id": "trial-004",
+      "identified_task_contract_violation": false,
+      "implementation_character": "explicit iterative stacks and/or generator-frame traversal; ordinary subclass/serialization dispatch paths retained",
+      "manual_production_diff_reviewed": true,
+      "new_regression_files": [
+        "test/deep.test.js"
+      ],
+      "original_tests_and_build_configuration_unchanged": true,
+      "patch_sha256": "17ca1150f658479751983b88ab55e646223b45fc36a887541ec56c639f035a3f",
+      "registered_grade_correct": true,
+      "repetition": 1,
+      "runtime_control_pattern_hits_in_modules": 0,
+      "source_modules_reviewed": [
+        "lib/container.js",
+        "lib/fromJSON.js",
+        "lib/lazy-result.js",
+        "lib/node.js",
+        "lib/stringifier.js"
+      ],
+      "task_id": "C-J3",
+      "variant": "rtk"
+    },
+    {
+      "actual_source_hashes_match_frozen_manifest": true,
+      "added_runtime_control_pattern_hits": 0,
+      "checks_passed": {
+        "candidate_baseline": true,
+        "hidden": true,
+        "pristine_baseline": true
+      },
+      "existing_test_or_config_changes": [],
+      "grade_observed": true,
+      "id": "trial-005",
+      "identified_task_contract_violation": false,
+      "implementation_character": "explicit iterative stacks and/or generator-frame traversal; ordinary subclass/serialization dispatch paths retained",
+      "manual_production_diff_reviewed": true,
+      "new_regression_files": [
+        "test/deep-nesting.test.js"
+      ],
+      "original_tests_and_build_configuration_unchanged": true,
+      "patch_sha256": "af60584073618eebf2e66d1da39463d884490702ca5922b35a42d099cff8801d",
+      "registered_grade_correct": true,
+      "repetition": 1,
+      "runtime_control_pattern_hits_in_modules": 0,
+      "source_modules_reviewed": [
+        "lib/container.js",
+        "lib/fromJSON.js",
+        "lib/lazy-result.js",
+        "lib/node.js",
+        "lib/stringifier.js"
+      ],
+      "task_id": "C-J3",
+      "variant": "raw"
+    },
+    {
+      "actual_source_hashes_match_frozen_manifest": true,
+      "added_runtime_control_pattern_hits": 0,
+      "checks_passed": {
+        "candidate_baseline": true,
+        "hidden": true,
+        "pristine_baseline": true
+      },
+      "existing_test_or_config_changes": [],
+      "grade_observed": true,
+      "id": "trial-006",
+      "identified_task_contract_violation": false,
+      "implementation_character": "explicit iterative stacks and/or generator-frame traversal; ordinary subclass/serialization dispatch paths retained",
+      "manual_production_diff_reviewed": true,
+      "new_regression_files": [
+        "test/deep-tree.test.js"
+      ],
+      "original_tests_and_build_configuration_unchanged": true,
+      "patch_sha256": "cc7aab1143960ac8813f079a2c47e7c121c8161cba147689bc4b2dd63bfbb265",
+      "registered_grade_correct": true,
+      "repetition": 1,
+      "runtime_control_pattern_hits_in_modules": 0,
+      "source_modules_reviewed": [
+        "lib/container.js",
+        "lib/fromJSON.js",
+        "lib/lazy-result.js",
+        "lib/node.js",
+        "lib/stringifier.js"
+      ],
+      "task_id": "C-J3",
+      "variant": "mini"
+    },
+    {
+      "actual_source_hashes_match_frozen_manifest": true,
+      "added_runtime_control_pattern_hits": 0,
+      "checks_passed": {
+        "candidate_baseline": true,
+        "hidden": true,
+        "pristine_baseline": true
+      },
+      "existing_test_or_config_changes": [],
+      "grade_observed": true,
+      "id": "trial-028",
+      "identified_task_contract_violation": false,
+      "implementation_character": "explicit iterative stacks and/or generator-frame traversal; ordinary subclass/serialization dispatch paths retained",
+      "manual_production_diff_reviewed": true,
+      "new_regression_files": [
+        "test/deep-nesting.test.js"
+      ],
+      "original_tests_and_build_configuration_unchanged": true,
+      "patch_sha256": "54bb84306a37f41a7850099b4997f53de9e95789075843bcae0ebb305f820878",
+      "registered_grade_correct": true,
+      "repetition": 2,
+      "runtime_control_pattern_hits_in_modules": 0,
+      "source_modules_reviewed": [
+        "lib/container.js",
+        "lib/fromJSON.js",
+        "lib/lazy-result.js",
+        "lib/node.js",
+        "lib/stringifier.js"
+      ],
+      "task_id": "C-J3",
+      "variant": "raw"
+    },
+    {
+      "actual_source_hashes_match_frozen_manifest": true,
+      "added_runtime_control_pattern_hits": 0,
+      "checks_passed": {
+        "candidate_baseline": true,
+        "hidden": true,
+        "pristine_baseline": true
+      },
+      "existing_test_or_config_changes": [],
+      "grade_observed": true,
+      "id": "trial-029",
+      "identified_task_contract_violation": false,
+      "implementation_character": "explicit iterative stacks and/or generator-frame traversal; ordinary subclass/serialization dispatch paths retained",
+      "manual_production_diff_reviewed": true,
+      "new_regression_files": [
+        "test/deep-nesting.test.js"
+      ],
+      "original_tests_and_build_configuration_unchanged": true,
+      "patch_sha256": "fca7e7ff7a5750c2acfc0e71948a353360765985285c31383d78e62eb4e37440",
+      "registered_grade_correct": true,
+      "repetition": 2,
+      "runtime_control_pattern_hits_in_modules": 0,
+      "source_modules_reviewed": [
+        "lib/container.js",
+        "lib/fromJSON.js",
+        "lib/lazy-result.js",
+        "lib/node.js",
+        "lib/stringifier.js"
+      ],
+      "task_id": "C-J3",
+      "variant": "mini"
+    },
+    {
+      "actual_source_hashes_match_frozen_manifest": true,
+      "added_runtime_control_pattern_hits": 0,
+      "checks_passed": {
+        "candidate_baseline": true,
+        "hidden": true,
+        "pristine_baseline": true
+      },
+      "existing_test_or_config_changes": [],
+      "grade_observed": true,
+      "id": "trial-030",
+      "identified_task_contract_violation": false,
+      "implementation_character": "explicit iterative stacks and/or generator-frame traversal; ordinary subclass/serialization dispatch paths retained",
+      "manual_production_diff_reviewed": true,
+      "new_regression_files": [
+        "test/deep-nesting.test.js"
+      ],
+      "original_tests_and_build_configuration_unchanged": true,
+      "patch_sha256": "cfede0fab7544c655e21c5684d9b32cd62c7e943a4021d398cea1975703cb7a5",
+      "registered_grade_correct": true,
+      "repetition": 2,
+      "runtime_control_pattern_hits_in_modules": 0,
+      "source_modules_reviewed": [
+        "lib/container.js",
+        "lib/fromJSON.js",
+        "lib/lazy-result.js",
+        "lib/node.js",
+        "lib/stringifier.js"
+      ],
+      "task_id": "C-J3",
+      "variant": "rtk"
+    },
+    {
+      "actual_source_hashes_match_frozen_manifest": true,
+      "added_runtime_control_pattern_hits": 0,
+      "checks_passed": {
+        "candidate_baseline": true,
+        "hidden": true,
+        "pristine_baseline": true
+      },
+      "existing_test_or_config_changes": [],
+      "grade_observed": true,
+      "id": "trial-046",
+      "identified_task_contract_violation": false,
+      "implementation_character": "explicit iterative stacks and/or generator-frame traversal; ordinary subclass/serialization dispatch paths retained",
+      "manual_production_diff_reviewed": true,
+      "new_regression_files": [
+        "test/deep-nesting.test.js"
+      ],
+      "original_tests_and_build_configuration_unchanged": true,
+      "patch_sha256": "7e7ac947321d2707aa649fad126939c2b991f8dcc1267d6de4aa12eee940dd74",
+      "registered_grade_correct": true,
+      "repetition": 3,
+      "runtime_control_pattern_hits_in_modules": 0,
+      "source_modules_reviewed": [
+        "lib/container.js",
+        "lib/fromJSON.js",
+        "lib/lazy-result.js",
+        "lib/node.js",
+        "lib/stringifier.js"
+      ],
+      "task_id": "C-J3",
+      "variant": "mini"
+    },
+    {
+      "actual_source_hashes_match_frozen_manifest": true,
+      "added_runtime_control_pattern_hits": 0,
+      "checks_passed": {
+        "candidate_baseline": true,
+        "hidden": true,
+        "pristine_baseline": true
+      },
+      "existing_test_or_config_changes": [],
+      "grade_observed": true,
+      "id": "trial-047",
+      "identified_task_contract_violation": false,
+      "implementation_character": "explicit iterative stacks and/or generator-frame traversal; ordinary subclass/serialization dispatch paths retained",
+      "manual_production_diff_reviewed": true,
+      "new_regression_files": [
+        "test/deep-nesting.test.js"
+      ],
+      "original_tests_and_build_configuration_unchanged": true,
+      "patch_sha256": "1e97cedb35c4260c4766918f588b34c9edd73421fa4eabff7d1d339d54ed0111",
+      "registered_grade_correct": true,
+      "repetition": 3,
+      "runtime_control_pattern_hits_in_modules": 0,
+      "source_modules_reviewed": [
+        "lib/container.js",
+        "lib/fromJSON.js",
+        "lib/lazy-result.js",
+        "lib/node.js",
+        "lib/stringifier.js"
+      ],
+      "task_id": "C-J3",
+      "variant": "rtk"
+    },
+    {
+      "actual_source_hashes_match_frozen_manifest": true,
+      "added_runtime_control_pattern_hits": 0,
+      "checks_passed": {
+        "candidate_baseline": true,
+        "hidden": true,
+        "pristine_baseline": true
+      },
+      "existing_test_or_config_changes": [],
+      "grade_observed": true,
+      "id": "trial-048",
+      "identified_task_contract_violation": false,
+      "implementation_character": "explicit iterative stacks and/or generator-frame traversal; ordinary subclass/serialization dispatch paths retained",
+      "manual_production_diff_reviewed": true,
+      "new_regression_files": [
+        "test/deep-nesting.test.js"
+      ],
+      "original_tests_and_build_configuration_unchanged": true,
+      "patch_sha256": "a64ee3557f4ffb0d968a5b8d2b839ef48fe9cc8569f51eca0d1d2075d1d33836",
+      "registered_grade_correct": true,
+      "repetition": 3,
+      "runtime_control_pattern_hits_in_modules": 0,
+      "source_modules_reviewed": [
+        "lib/container.js",
+        "lib/fromJSON.js",
+        "lib/lazy-result.js",
+        "lib/node.js",
+        "lib/stringifier.js"
+      ],
+      "task_id": "C-J3",
+      "variant": "raw"
+    }
+  ],
+  "pristine_guard_cross_check": {
+    "mismatches": [],
+    "protected_file_hashes_checked": 1116,
+    "scope": "original external test trees and package/build/lock/configuration files in available pristine grading copies; Rust inline test bodies are outside this supplementary hash check"
+  },
+  "review_kind": "post-collection correctness and registered-task-contract review",
+  "reviewed_utc": "2026-11-07T00:04:40.383185+00:00",
+  "schema": 1,
+  "scope": {
+    "all_trial_filename_and_runtime_control_screen_ids": [
+      "trial-001",
+      "trial-002",
+      "trial-003",
+      "trial-004",
+      "trial-005",
+      "trial-006",
+      "trial-007",
+      "trial-008",
+      "trial-009",
+      "trial-010",
+      "trial-011",
+      "trial-012",
+      "trial-013",
+      "trial-014",
+      "trial-015",
+      "trial-016",
+      "trial-017",
+      "trial-018",
+      "trial-019",
+      "trial-020",
+      "trial-021",
+      "trial-022",
+      "trial-023",
+      "trial-024",
+      "trial-025",
+      "trial-026",
+      "trial-027",
+      "trial-028",
+      "trial-029",
+      "trial-030",
+      "trial-031",
+      "trial-032",
+      "trial-033",
+      "trial-034",
+      "trial-035",
+      "trial-036",
+      "trial-037",
+      "trial-038",
+      "trial-039",
+      "trial-040",
+      "trial-041",
+      "trial-042",
+      "trial-043",
+      "trial-044",
+      "trial-045",
+      "trial-046",
+      "trial-047",
+      "trial-048",
+      "trial-049",
+      "trial-050",
+      "trial-051",
+      "trial-052",
+      "trial-053",
+      "trial-054"
+    ],
+    "candidate_or_fixture_execution_performed": false,
+    "not_a_security_scan": true,
+    "primary_manual_review_task": "C-J3",
+    "primary_manual_trial_ids": [
+      "trial-004",
+      "trial-005",
+      "trial-006",
+      "trial-028",
+      "trial-029",
+      "trial-030",
+      "trial-046",
+      "trial-047",
+      "trial-048"
+    ],
+    "registered_files_workspaces_and_grades_modified": false,
+    "supplementary_manual_review_task": "C-J2",
+    "supplementary_manual_trial_ids": [
+      "trial-001",
+      "trial-002",
+      "trial-003",
+      "trial-019",
+      "trial-020",
+      "trial-021",
+      "trial-037",
+      "trial-038",
+      "trial-039"
+    ]
+  },
+  "sensitivity": {
+    "actual_billed": false,
+    "all_other_grades_available": true,
+    "by_variant": {
+      "mini": {
+        "all_attempt_rate_card_credits": "81.30541",
+        "grades_observed": 18,
+        "planned_attempts": 18,
+        "registered_correct_repairs": 15,
+        "registered_credits_per_correct_repair": "5.4203606666666666666666666666666666666666666666667",
+        "rendering_only_correct_repairs": 18,
+        "rendering_only_credits_per_correct_repair": "4.5169672222222222222222222222222222222222222222222"
+      },
+      "raw": {
+        "all_attempt_rate_card_credits": "84.18843",
+        "grades_observed": 18,
+        "planned_attempts": 18,
+        "registered_correct_repairs": 15,
+        "registered_credits_per_correct_repair": "5.612562",
+        "rendering_only_correct_repairs": 18,
+        "rendering_only_credits_per_correct_repair": "4.677135"
+      },
+      "rtk": {
+        "all_attempt_rate_card_credits": "79.65146",
+        "grades_observed": 18,
+        "planned_attempts": 18,
+        "registered_correct_repairs": 15,
+        "registered_credits_per_correct_repair": "5.3100973333333333333333333333333333333333333333333",
+        "rendering_only_correct_repairs": 18,
+        "rendering_only_credits_per_correct_repair": "4.4250811111111111111111111111111111111111111111111"
+      }
+    },
+    "conclusion": "Mini has higher total priced usage than RTK. Relaxing token-shape grading equally cannot reverse that total-cost ranking or satisfy the registered investment gate.",
+    "definition": "Relax only C-J2 to its seven rendered-output assertions, while retaining production change, candidate/pristine baselines, immutable inputs and no protocol/infrastructure failures. Keep all other task grades unchanged.",
+    "pricing_measure": "published Standard rate-card credits from all observed attempts; no attributed bill or USD conversion",
+    "primary_grades_replaced": false
+  }
+}

@@ -1,0 +1,30 @@
+Repair the reported library bug in this isolated workspace.
+
+{task_prompt}
+
+Registered functional baseline command: {baseline_command}
+
+Use only the sprint MCP tools to inspect, search, edit, and test this workspace.
+Do not use native shell/apply_patch tools, network, outside sources, parent or
+sibling paths, other agents, Git history, upstream solutions, or other trials.
+The tool boundary accepts literal argv without shell syntax or environment
+assignments. Programs: cargo, npm, node, git, rg, ls, find, cat, head, tail, wc,
+pwd. Node inline eval/preload is unavailable; write a local reproduction file.
+Dependencies are installed. Test execution stays offline.
+
+Run the baseline before production edits and after your repair. Create a focused
+regression, demonstrate its failure, repair production code, and keep the
+regression and baseline passing. Preserve original tests and build/package
+configuration. Avoid unrelated refactors. Source reads and edits have identical
+tools in every treatment. Terminal output may be filtered. For missing details,
+recover_output can retrieve a returned artifact_id (source=original where
+captured) or native recall_hash. Native recall supports list=true, full=true,
+grep and line selection; its stored content can be formatted or capped. Every
+read, retry, edit and recovery request belongs to the same task usage.
+
+You have 90 tool actions and at most 90 seconds per command. Workspace actions
+close after 12 minutes; finish your final response promptly when notified. The
+whole session is limited to 15 minutes. Focus on a correct, verified repair;
+do not prolong the session to write a long explanation. Do not commit, publish
+or create a pull request. End with a concise description of the repair,
+regression and actual test results.

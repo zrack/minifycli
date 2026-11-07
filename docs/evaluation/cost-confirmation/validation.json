@@ -1,0 +1,4836 @@
+{
+  "actual_billed": false,
+  "analyzer_agreement_checked": true,
+  "audit": {
+    "assertions": 28301,
+    "coverage_counts": {
+      "assertions": 28301,
+      "capture_stream_files": 1294,
+      "grading_stream_files": 324,
+      "mini_record_files": 884,
+      "returned_stream_values": 1865,
+      "sdk_outputs_checked": 1710
+    },
+    "failures": [],
+    "passed": true
+  },
+  "audit_kind": "post-collection-independent-confirmation",
+  "by_language": {
+    "javascript": {
+      "mini": {
+        "attempts": 9,
+        "credits": "48.36062",
+        "credits_per_successful_repair": "8.06010333333333333333333333333333333333333333333333333333333",
+        "known_cost_attempts": 9,
+        "known_credit_subtotal": "48.36062",
+        "recovery_calls": 0,
+        "successful_repairs": 6,
+        "terminal_calls": 112,
+        "tool_calls": 340,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 3609728,
+          "input_tokens": 4039219,
+          "output_tokens": 71447,
+          "reasoning_output_tokens": 30083
+        },
+        "wall_seconds_sum": 1764.0405507910764
+      },
+      "raw": {
+        "attempts": 9,
+        "credits": "48.91734",
+        "credits_per_successful_repair": "8.15289",
+        "known_cost_attempts": 9,
+        "known_credit_subtotal": "48.91734",
+        "recovery_calls": 0,
+        "successful_repairs": 6,
+        "terminal_calls": 114,
+        "tool_calls": 362,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 3676416,
+          "input_tokens": 4122027,
+          "output_tokens": 69783,
+          "reasoning_output_tokens": 27786
+        },
+        "wall_seconds_sum": 1693.580343874928
+      },
+      "rtk": {
+        "attempts": 9,
+        "credits": "48.14661",
+        "credits_per_successful_repair": "8.024435",
+        "known_cost_attempts": 9,
+        "known_credit_subtotal": "48.14661",
+        "recovery_calls": 0,
+        "successful_repairs": 6,
+        "terminal_calls": 107,
+        "tool_calls": 342,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 3526144,
+          "input_tokens": 3958784,
+          "output_tokens": 70797,
+          "reasoning_output_tokens": 30449
+        },
+        "wall_seconds_sum": 1727.1684444168932
+      }
+    },
+    "rust": {
+      "mini": {
+        "attempts": 9,
+        "credits": "32.94479",
+        "credits_per_successful_repair": "3.66053222222222222222222222222222222222222222222222222222222",
+        "known_cost_attempts": 9,
+        "known_credit_subtotal": "32.94479",
+        "recovery_calls": 0,
+        "successful_repairs": 9,
+        "terminal_calls": 109,
+        "tool_calls": 223,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 2537856,
+          "input_tokens": 2833364,
+          "output_tokens": 47299,
+          "reasoning_output_tokens": 21204
+        },
+        "wall_seconds_sum": 1293.2104181660106
+      },
+      "raw": {
+        "attempts": 9,
+        "credits": "35.27109",
+        "credits_per_successful_repair": "3.91901",
+        "known_cost_attempts": 9,
+        "known_credit_subtotal": "35.27109",
+        "recovery_calls": 0,
+        "successful_repairs": 9,
+        "terminal_calls": 100,
+        "tool_calls": 220,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 2871936,
+          "input_tokens": 3190971,
+          "output_tokens": 48558,
+          "reasoning_output_tokens": 21748
+        },
+        "wall_seconds_sum": 1353.8125581270433
+      },
+      "rtk": {
+        "attempts": 9,
+        "credits": "31.50485",
+        "credits_per_successful_repair": "3.50053888888888888888888888888888888888888888888888888888889",
+        "known_cost_attempts": 9,
+        "known_credit_subtotal": "31.50485",
+        "recovery_calls": 1,
+        "successful_repairs": 9,
+        "terminal_calls": 108,
+        "tool_calls": 223,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 2465280,
+          "input_tokens": 2740433,
+          "output_tokens": 46336,
+          "reasoning_output_tokens": 22409
+        },
+        "wall_seconds_sum": 1403.4146823750925
+      }
+    }
+  },
+  "by_task": {
+    "C-J1": {
+      "mini": {
+        "attempts": 3,
+        "credits": "14.19753",
+        "credits_per_successful_repair": "4.73251",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "14.19753",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 37,
+        "tool_calls": 93,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 1033472,
+          "input_tokens": 1171404,
+          "output_tokens": 18869,
+          "reasoning_output_tokens": 11508
+        },
+        "wall_seconds_sum": 480.01953849900747
+      },
+      "raw": {
+        "attempts": 3,
+        "credits": "15.14175",
+        "credits_per_successful_repair": "5.04725",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "15.14175",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 36,
+        "tool_calls": 97,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 1056000,
+          "input_tokens": 1211545,
+          "output_tokens": 18898,
+          "reasoning_output_tokens": 10861
+        },
+        "wall_seconds_sum": 501.8745536659844
+      },
+      "rtk": {
+        "attempts": 3,
+        "credits": "16.42772",
+        "credits_per_successful_repair": "5.47590666666666666666666666666666666666666666666666666666667",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "16.42772",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 33,
+        "tool_calls": 97,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 1107328,
+          "input_tokens": 1277636,
+          "output_tokens": 20576,
+          "reasoning_output_tokens": 12302
+        },
+        "wall_seconds_sum": 506.21632516692625
+      }
+    },
+    "C-J2": {
+      "mini": {
+        "attempts": 3,
+        "credits": "8.98641",
+        "credits_per_successful_repair": null,
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "8.98641",
+        "recovery_calls": 0,
+        "successful_repairs": 0,
+        "terminal_calls": 34,
+        "tool_calls": 77,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 786944,
+          "input_tokens": 871995,
+          "output_tokens": 11066,
+          "reasoning_output_tokens": 4304
+        },
+        "wall_seconds_sum": 354.5627067510504
+      },
+      "raw": {
+        "attempts": 3,
+        "credits": "10.32608",
+        "credits_per_successful_repair": null,
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "10.32608",
+        "recovery_calls": 0,
+        "successful_repairs": 0,
+        "terminal_calls": 35,
+        "tool_calls": 90,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 854272,
+          "input_tokens": 965575,
+          "output_tokens": 10501,
+          "reasoning_output_tokens": 3445
+        },
+        "wall_seconds_sum": 289.4407950839959
+      },
+      "rtk": {
+        "attempts": 3,
+        "credits": "9.75032",
+        "credits_per_successful_repair": null,
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "9.75032",
+        "recovery_calls": 0,
+        "successful_repairs": 0,
+        "terminal_calls": 34,
+        "tool_calls": 82,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 766848,
+          "input_tokens": 874712,
+          "output_tokens": 9760,
+          "reasoning_output_tokens": 3144
+        },
+        "wall_seconds_sum": 265.8824031659751
+      }
+    },
+    "C-J3": {
+      "mini": {
+        "attempts": 3,
+        "credits": "25.17668",
+        "credits_per_successful_repair": "8.39222666666666666666666666666666666666666666666666666666667",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "25.17668",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 41,
+        "tool_calls": 170,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 1789312,
+          "input_tokens": 1995820,
+          "output_tokens": 41512,
+          "reasoning_output_tokens": 14271
+        },
+        "wall_seconds_sum": 929.4583055410185
+      },
+      "raw": {
+        "attempts": 3,
+        "credits": "23.44951",
+        "credits_per_successful_repair": "7.81650333333333333333333333333333333333333333333333333333333",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "23.44951",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 43,
+        "tool_calls": 175,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 1766144,
+          "input_tokens": 1944907,
+          "output_tokens": 40384,
+          "reasoning_output_tokens": 13480
+        },
+        "wall_seconds_sum": 902.2649951249477
+      },
+      "rtk": {
+        "attempts": 3,
+        "credits": "21.96857",
+        "credits_per_successful_repair": "7.32285666666666666666666666666666666666666666666666666666667",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "21.96857",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 40,
+        "tool_calls": 163,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 1651968,
+          "input_tokens": 1806436,
+          "output_tokens": 40461,
+          "reasoning_output_tokens": 15003
+        },
+        "wall_seconds_sum": 955.0697160839918
+      }
+    },
+    "C-R1": {
+      "mini": {
+        "attempts": 3,
+        "credits": "13.73295",
+        "credits_per_successful_repair": "4.57765",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "13.73295",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 48,
+        "tool_calls": 91,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 1237760,
+          "input_tokens": 1354631,
+          "output_tokens": 19180,
+          "reasoning_output_tokens": 8264
+        },
+        "wall_seconds_sum": 542.4824991659843
+      },
+      "raw": {
+        "attempts": 3,
+        "credits": "15.63913",
+        "credits_per_successful_repair": "5.21304333333333333333333333333333333333333333333333333333333",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "15.63913",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 45,
+        "tool_calls": 100,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 1611392,
+          "input_tokens": 1736680,
+          "output_tokens": 21385,
+          "reasoning_output_tokens": 9519
+        },
+        "wall_seconds_sum": 627.6164819999831
+      },
+      "rtk": {
+        "attempts": 3,
+        "credits": "14.09759",
+        "credits_per_successful_repair": "4.69919666666666666666666666666666666666666666666666666666667",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "14.09759",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 50,
+        "tool_calls": 105,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 1165056,
+          "input_tokens": 1293965,
+          "output_tokens": 18958,
+          "reasoning_output_tokens": 8638
+        },
+        "wall_seconds_sum": 536.9161233330378
+      }
+    },
+    "C-R2": {
+      "mini": {
+        "attempts": 3,
+        "credits": "8.9304",
+        "credits_per_successful_repair": "2.9768",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "8.9304",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 38,
+        "tool_calls": 75,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 627200,
+          "input_tokens": 710728,
+          "output_tokens": 12744,
+          "reasoning_output_tokens": 5336
+        },
+        "wall_seconds_sum": 372.2415350410156
+      },
+      "raw": {
+        "attempts": 3,
+        "credits": "9.60436",
+        "credits_per_successful_repair": "3.20145333333333333333333333333333333333333333333333333333333",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "9.60436",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 31,
+        "tool_calls": 66,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 674304,
+          "input_tokens": 771191,
+          "output_tokens": 12297,
+          "reasoning_output_tokens": 5193
+        },
+        "wall_seconds_sum": 363.43148100102553
+      },
+      "rtk": {
+        "attempts": 3,
+        "credits": "8.21429",
+        "credits_per_successful_repair": "2.73809666666666666666666666666666666666666666666666666666667",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "8.21429",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 32,
+        "tool_calls": 61,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 555776,
+          "input_tokens": 630503,
+          "output_tokens": 12354,
+          "reasoning_output_tokens": 6582
+        },
+        "wall_seconds_sum": 366.46650050004246
+      }
+    },
+    "C-R3": {
+      "mini": {
+        "attempts": 3,
+        "credits": "10.28144",
+        "credits_per_successful_repair": "3.42714666666666666666666666666666666666666666666666666666667",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "10.28144",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 23,
+        "tool_calls": 57,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 672896,
+          "input_tokens": 768005,
+          "output_tokens": 15375,
+          "reasoning_output_tokens": 7604
+        },
+        "wall_seconds_sum": 378.4863839590107
+      },
+      "raw": {
+        "attempts": 3,
+        "credits": "10.0276",
+        "credits_per_successful_repair": "3.34253333333333333333333333333333333333333333333333333333333",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "10.0276",
+        "recovery_calls": 0,
+        "successful_repairs": 3,
+        "terminal_calls": 24,
+        "tool_calls": 54,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 586240,
+          "input_tokens": 683100,
+          "output_tokens": 14876,
+          "reasoning_output_tokens": 7036
+        },
+        "wall_seconds_sum": 362.7645951260347
+      },
+      "rtk": {
+        "attempts": 3,
+        "credits": "9.19297",
+        "credits_per_successful_repair": "3.06432333333333333333333333333333333333333333333333333333333",
+        "known_cost_attempts": 3,
+        "known_credit_subtotal": "9.19297",
+        "recovery_calls": 1,
+        "successful_repairs": 3,
+        "terminal_calls": 26,
+        "tool_calls": 57,
+        "unknown_correctness": 0,
+        "usage": {
+          "cached_input_tokens": 744448,
+          "input_tokens": 815965,
+          "output_tokens": 15024,
+          "reasoning_output_tokens": 7189
+        },
+        "wall_seconds_sum": 500.03205854201224
+      }
+    }
+  },
+  "checked_utc": "2026-11-07T00:09:49.183985+00:00",
+  "checker_sha256": "61095b6333911527d68ca8b7947308b14f3640dfbe6a4097e2a4a4bd87369442",
+  "cost_boundary": "Observed CLI usage priced at published Standard credit rates; not an invoice, subscription cost, attributed account deduction, or USD charge.",
+  "coverage": {
+    "audited_attempts": 54,
+    "correlated_task_clusters": 6,
+    "independent_upstreams": 4,
+    "model_contexts": 54,
+    "planned_attempts": 54,
+    "registered_implementation_files": 50
+  },
+  "decision": {
+    "continue_compressor_expansion": false,
+    "criteria": {
+      "all_54_attempts_usable": true,
+      "all_leave_one_task_out_ratios_lower": false,
+      "at_least_four_task_totals_lower": false,
+      "bootstrap_upper_below_one": false,
+      "both_language_groups_lower": false,
+      "correctness_no_lower_than_raw_and_rtk": true,
+      "cost_per_success_at_least_10_percent_lower": false,
+      "total_cost_at_least_10_percent_lower": false
+    },
+    "repeatable_cost_evidence": false
+  },
+  "leave_one_task_out_mini_rtk_ratios": {
+    "C-J1": "1.06143483444668094611296326348298914300229628933688516370591",
+    "C-J2": "1.03458970769289313450395801842430609858437215759285184762366",
+    "C-J3": "0.973056828463345023108238855577451129789093438279531417375239",
+    "C-R1": "1.03079284258885097096479582364855042120320280099405267759173",
+    "C-R2": "1.01312817962973617235957135480030913878587295661348286893224",
+    "C-R3": "1.00802571840526244601608691869496493609215865965904179893722"
+  },
+  "mini_cost_ratios": {
+    "raw": {
+      "cost_per_success_ratio": "0.965755151865879907726037889054351055127171275197791430485163",
+      "total_cost_ratio": "0.965755151865879907726037889054351055127171275197791430485163"
+    },
+    "rtk": {
+      "cost_per_success_ratio": "1.02076484222636973634883779908114678626104279821110623709848",
+      "total_cost_ratio": "1.02076484222636973634883779908114678626104279821110623709848"
+    }
+  },
+  "paired_task_cluster_bootstrap": {
+    "available": true,
+    "interpretation": "Paired task-cluster stability check for six correlated convenience-sampled tasks; not a population confidence claim.",
+    "lower_2_5_percentile": "0.920194863485041357206522058899531764704011525791901254749738",
+    "repetitions_retained_together": 3,
+    "resamples": 20000,
+    "seed": 20261107,
+    "task_clusters": 6,
+    "upper_97_5_percentile": "1.11358388659299361383406480775800898793724212241465401697721"
+  },
+  "plan_sha256": "2f17831952b856d9b98826a547cf6fdf1aee2d8ab16c4553b9ccefbe320ac0b8",
+  "post_collection_J2_contract_caveat": {
+    "by_variant": {
+      "mini": {
+        "all_attempt_credits_unchanged": "81.30541",
+        "primary_registered_repairs": 15,
+        "rendering_only_credits_per_repair": "4.51696722222222222222222222222222222222222222222222222222222",
+        "rendering_only_sensitivity_repairs": 18
+      },
+      "raw": {
+        "all_attempt_credits_unchanged": "84.18843",
+        "primary_registered_repairs": 15,
+        "rendering_only_credits_per_repair": "4.677135",
+        "rendering_only_sensitivity_repairs": 18
+      },
+      "rtk": {
+        "all_attempt_credits_unchanged": "79.65146",
+        "primary_registered_repairs": 15,
+        "rendering_only_credits_per_repair": "4.42508111111111111111111111111111111111111111111111111111111",
+        "rendering_only_sensitivity_repairs": 18
+      }
+    },
+    "cost_per_success_ratio_ranking_unchanged": true,
+    "fixture_sha256": "bb455fd68d3942fb1116c4b79fb6421b452b14c3f762768f589ec4dfe8338389",
+    "interpretation_limit": "Passing the rendering checks alone does not establish the full metadata/token-shape requirement.",
+    "observations": [
+      {
+        "first_failed_fixture_line": 18,
+        "id": "trial-001",
+        "render_assertions_before_failure": 7,
+        "rendering_checks_completed": true
+      },
+      {
+        "first_failed_fixture_line": 18,
+        "id": "trial-002",
+        "render_assertions_before_failure": 7,
+        "rendering_checks_completed": true
+      },
+      {
+        "first_failed_fixture_line": 18,
+        "id": "trial-003",
+        "render_assertions_before_failure": 7,
+        "rendering_checks_completed": true
+      },
+      {
+        "first_failed_fixture_line": 18,
+        "id": "trial-019",
+        "render_assertions_before_failure": 7,
+        "rendering_checks_completed": true
+      },
+      {
+        "first_failed_fixture_line": 18,
+        "id": "trial-020",
+        "render_assertions_before_failure": 7,
+        "rendering_checks_completed": true
+      },
+      {
+        "first_failed_fixture_line": 18,
+        "id": "trial-021",
+        "render_assertions_before_failure": 7,
+        "rendering_checks_completed": true
+      },
+      {
+        "first_failed_fixture_line": 18,
+        "id": "trial-037",
+        "render_assertions_before_failure": 7,
+        "rendering_checks_completed": true
+      },
+      {
+        "first_failed_fixture_line": 18,
+        "id": "trial-038",
+        "render_assertions_before_failure": 7,
+        "rendering_checks_completed": true
+      },
+      {
+        "first_failed_fixture_line": 18,
+        "id": "trial-039",
+        "render_assertions_before_failure": 7,
+        "rendering_checks_completed": true
+      }
+    ],
+    "post_collection": true,
+    "primary_grades_and_gate_unchanged": true,
+    "scope": "Rendering-only sensitivity is weaker than the registered full token-shape contract and is not a replacement primary score.",
+    "sensitivity_usable": true,
+    "total_cost_ranking_unchanged": true
+  },
+  "pricing_identity": "(20*(I-C)+C+100*O)/400000 credits; reasoning already in O",
+  "runtime_versions": {
+    "cargo": {
+      "matches": true,
+      "registered": "cargo 1.99.1 (5f94df478 2026-08-27)"
+    },
+    "codex": {
+      "matches": true,
+      "registered": "codex-cli 0.166.0-alpha.6"
+    },
+    "node": {
+      "matches": true,
+      "registered": "v26.12.1"
+    },
+    "npm": {
+      "matches": true,
+      "registered": "11.20.0"
+    },
+    "rustc": {
+      "matches": true,
+      "registered": "rustc 1.99.1 (58cf8f9c3 2026-10-13)"
+    }
+  },
+  "schema": 1,
+  "totals": {
+    "mini": {
+      "attempts": 18,
+      "credits": "81.30541",
+      "credits_per_successful_repair": "5.42036066666666666666666666666666666666666666666666666666667",
+      "known_cost_attempts": 18,
+      "known_credit_subtotal": "81.30541",
+      "recovery_calls": 0,
+      "successful_repairs": 15,
+      "terminal_calls": 221,
+      "tool_calls": 563,
+      "unknown_correctness": 0,
+      "usage": {
+        "cached_input_tokens": 6147584,
+        "input_tokens": 6872583,
+        "output_tokens": 118746,
+        "reasoning_output_tokens": 51287
+      },
+      "wall_seconds_sum": 3057.250968957087
+    },
+    "raw": {
+      "attempts": 18,
+      "credits": "84.18843",
+      "credits_per_successful_repair": "5.612562",
+      "known_cost_attempts": 18,
+      "known_credit_subtotal": "84.18843",
+      "recovery_calls": 0,
+      "successful_repairs": 15,
+      "terminal_calls": 214,
+      "tool_calls": 582,
+      "unknown_correctness": 0,
+      "usage": {
+        "cached_input_tokens": 6548352,
+        "input_tokens": 7312998,
+        "output_tokens": 118341,
+        "reasoning_output_tokens": 49534
+      },
+      "wall_seconds_sum": 3047.3929020019714
+    },
+    "rtk": {
+      "attempts": 18,
+      "credits": "79.65146",
+      "credits_per_successful_repair": "5.31009733333333333333333333333333333333333333333333333333333",
+      "known_cost_attempts": 18,
+      "known_credit_subtotal": "79.65146",
+      "recovery_calls": 1,
+      "successful_repairs": 15,
+      "terminal_calls": 215,
+      "tool_calls": 565,
+      "unknown_correctness": 0,
+      "usage": {
+        "cached_input_tokens": 5991424,
+        "input_tokens": 6699217,
+        "output_tokens": 117133,
+        "reasoning_output_tokens": 52858
+      },
+      "wall_seconds_sum": 3130.5831267919857
+    }
+  },
+  "trials": [
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 11,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 298
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 1,
+          "passed": false,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 293
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.5856",
+        "output": "0.82925",
+        "uncached_input": "1.3097"
+      },
+      "correct_repair": false,
+      "credits": "2.72455",
+      "id": "trial-001",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 21375,
+      "operational_complete": true,
+      "patch_sha256": "5f8d02b1c19b68c82caae16da64ef66fcb13062cc7f191c4a81181911b1bfc02",
+      "repetition": 1,
+      "task_id": "C-J2",
+      "tools": {
+        "all": 23,
+        "list_files": 1,
+        "read_file": 9,
+        "replace_text": 1,
+        "terminal": 11,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 234240,
+        "input_tokens": 260434,
+        "output_tokens": 3317,
+        "reasoning_output_tokens": 1198
+      },
+      "variant": "mini",
+      "wall_seconds": 146.32224200002383,
+      "workspace_manifest_sha256": "6a655ddf888fa2dda80ffb66a40e09bea1be22c0b083ac9059d0de0f67e39f22"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 9,
+        "route_passthrough": 2,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 301
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 1,
+          "passed": false,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 293
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.67936",
+        "output": "0.81475",
+        "uncached_input": "1.62325"
+      },
+      "correct_repair": false,
+      "credits": "3.11736",
+      "id": "trial-002",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 21522,
+      "operational_complete": true,
+      "patch_sha256": "64fa3addaf710a3dfd2d8f88aa5362aa476d198e7d786b34513791f5820b17e3",
+      "repetition": 1,
+      "task_id": "C-J2",
+      "tools": {
+        "all": 26,
+        "list_files": 1,
+        "read_file": 12,
+        "replace_text": 1,
+        "terminal": 11,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 271744,
+        "input_tokens": 304209,
+        "output_tokens": 3259,
+        "reasoning_output_tokens": 1236
+      },
+      "variant": "rtk",
+      "wall_seconds": 90.97206387500046,
+      "workspace_manifest_sha256": "497792ca7eeed0c23ffd28e6be5f3ea31ca173e40dcc8e91e59ca5eafda174b0"
+    },
+    {
+      "captures": {
+        "commands": 12,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 12,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 298
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 1,
+          "passed": false,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 293
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.65984",
+        "output": "0.78175",
+        "uncached_input": "1.8695"
+      },
+      "correct_repair": false,
+      "credits": "3.31109",
+      "id": "trial-003",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 21411,
+      "operational_complete": true,
+      "patch_sha256": "3ba86eda97257a8e2f215f1f0afde272f84097cf51989d9647e758290776d94a",
+      "repetition": 1,
+      "task_id": "C-J2",
+      "tools": {
+        "all": 29,
+        "list_files": 1,
+        "read_file": 14,
+        "replace_text": 1,
+        "terminal": 12,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 263936,
+        "input_tokens": 301326,
+        "output_tokens": 3127,
+        "reasoning_output_tokens": 901
+      },
+      "variant": "raw",
+      "wall_seconds": 88.4187491670018,
+      "workspace_manifest_sha256": "186e1526385692c5316faadf8212c1ea782e82ab9e22ae7a191b1201d372414d"
+    },
+    {
+      "captures": {
+        "commands": 14,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 11,
+        "route_passthrough": 3,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 674
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 661
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.12448",
+        "output": "3.6635",
+        "uncached_input": "3.30785"
+      },
+      "correct_repair": true,
+      "credits": "8.09583",
+      "id": "trial-004",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 14513,
+      "operational_complete": true,
+      "patch_sha256": "17ca1150f658479751983b88ab55e646223b45fc36a887541ec56c639f035a3f",
+      "repetition": 1,
+      "task_id": "C-J3",
+      "tools": {
+        "all": 56,
+        "list_files": 1,
+        "read_file": 12,
+        "replace_text": 27,
+        "terminal": 14,
+        "write_file": 2
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 449792,
+        "input_tokens": 515949,
+        "output_tokens": 14654,
+        "reasoning_output_tokens": 5628
+      },
+      "variant": "rtk",
+      "wall_seconds": 359.52521366701694,
+      "workspace_manifest_sha256": "1458b0c5bdc9995781a1a53db3b76d13f134a89dab200ad6e54e5a0aa6e191f6"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 11,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 674
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 661
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.23488",
+        "output": "2.9975",
+        "uncached_input": "2.90155"
+      },
+      "correct_repair": true,
+      "credits": "7.13393",
+      "id": "trial-005",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 24083,
+      "operational_complete": true,
+      "patch_sha256": "af60584073618eebf2e66d1da39463d884490702ca5922b35a42d099cff8801d",
+      "repetition": 1,
+      "task_id": "C-J3",
+      "tools": {
+        "all": 51,
+        "list_files": 1,
+        "read_file": 16,
+        "replace_text": 22,
+        "terminal": 11,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 493952,
+        "input_tokens": 551983,
+        "output_tokens": 11990,
+        "reasoning_output_tokens": 3976
+      },
+      "variant": "raw",
+      "wall_seconds": 268.09926658298355,
+      "workspace_manifest_sha256": "afc00eb3b2f2dd4c62fdd20abd0f90bb3968654eee8eb02d8d67f0f409fe2bf7"
+    },
+    {
+      "captures": {
+        "commands": 15,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 15,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 675
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 661
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.4768",
+        "output": "3.413",
+        "uncached_input": "3.5459"
+      },
+      "correct_repair": true,
+      "credits": "8.4357",
+      "id": "trial-006",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 59187,
+      "operational_complete": true,
+      "patch_sha256": "cc7aab1143960ac8813f079a2c47e7c121c8161cba147689bc4b2dd63bfbb265",
+      "repetition": 1,
+      "task_id": "C-J3",
+      "tools": {
+        "all": 63,
+        "list_files": 1,
+        "read_file": 15,
+        "replace_text": 31,
+        "terminal": 15,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 590720,
+        "input_tokens": 661638,
+        "output_tokens": 13652,
+        "reasoning_output_tokens": 4542
+      },
+      "variant": "mini",
+      "wall_seconds": 307.3871207080083,
+      "workspace_manifest_sha256": "5efabc83fa176dd7c65d259474761299ba372a64555b494f5d0c5b97ea17537d"
+    },
+    {
+      "captures": {
+        "commands": 12,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 12,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 306
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 295
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.78848",
+        "output": "1.64",
+        "uncached_input": "2.5222"
+      },
+      "correct_repair": true,
+      "credits": "4.95068",
+      "id": "trial-007",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 22011,
+      "operational_complete": true,
+      "patch_sha256": "4ad70ddb9b4a24fb460cdbe37b6119e63525bda42f39e7fdd193d5b0030cecfd",
+      "repetition": 1,
+      "task_id": "C-J1",
+      "tools": {
+        "all": 31,
+        "list_files": 1,
+        "read_file": 8,
+        "replace_text": 9,
+        "terminal": 12,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 315392,
+        "input_tokens": 365836,
+        "output_tokens": 6560,
+        "reasoning_output_tokens": 3713
+      },
+      "variant": "raw",
+      "wall_seconds": 196.9624681249843,
+      "workspace_manifest_sha256": "4790151667c0f6870db5d332caedab5fffb73e3edd3b63fd3eeb8eb95dc8ec26"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 11,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 309
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 295
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.80672",
+        "output": "1.2215",
+        "uncached_input": "1.9911"
+      },
+      "correct_repair": true,
+      "credits": "4.01932",
+      "id": "trial-008",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 21897,
+      "operational_complete": true,
+      "patch_sha256": "437ae186f498fd355395bdfb740290beefe8b89b10382b6a5281d32fb9a820ca",
+      "repetition": 1,
+      "task_id": "C-J1",
+      "tools": {
+        "all": 29,
+        "list_files": 1,
+        "read_file": 12,
+        "replace_text": 4,
+        "terminal": 11,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 322688,
+        "input_tokens": 362510,
+        "output_tokens": 4886,
+        "reasoning_output_tokens": 2726
+      },
+      "variant": "mini",
+      "wall_seconds": 130.1200334999594,
+      "workspace_manifest_sha256": "622822a0b2c979942a272c2668d87be5e298e713182032a2ed2d4190a1f898dc"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 8,
+        "route_passthrough": 3,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 325
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 295
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.75712",
+        "output": "1.6925",
+        "uncached_input": "2.98325"
+      },
+      "correct_repair": true,
+      "credits": "5.43287",
+      "id": "trial-009",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 27397,
+      "operational_complete": true,
+      "patch_sha256": "7d0bce42985764e1466138d2009599e299be02d62bfb4259aea07000afe0eb9d",
+      "repetition": 1,
+      "task_id": "C-J1",
+      "tools": {
+        "all": 33,
+        "list_files": 1,
+        "read_file": 11,
+        "replace_text": 9,
+        "terminal": 11,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 302848,
+        "input_tokens": 362513,
+        "output_tokens": 6770,
+        "reasoning_output_tokens": 3898
+      },
+      "variant": "rtk",
+      "wall_seconds": 163.01169100002153,
+      "workspace_manifest_sha256": "ea58d82d721145d7db4a4a6f5d51545a8a00a8bcf1695b216a18e88937b2eb1e"
+    },
+    {
+      "captures": {
+        "commands": 8,
+        "incomplete": 1,
+        "output_limit": 0,
+        "route_native": 8,
+        "timed_out": 1
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 20
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 8
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 18
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.90176",
+        "output": "1.339",
+        "uncached_input": "1.14885"
+      },
+      "correct_repair": true,
+      "credits": "3.38961",
+      "id": "trial-010",
+      "language": "rust",
+      "maximum_visible_response_bytes": 11653,
+      "operational_complete": true,
+      "patch_sha256": "41015f1e871537e003f4d944862b961b949ca0530476b83f63674f6174e9a779",
+      "repetition": 1,
+      "task_id": "C-R3",
+      "tools": {
+        "all": 19,
+        "list_files": 1,
+        "read_file": 6,
+        "recover_output": 1,
+        "replace_text": 2,
+        "terminal": 9
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 360704,
+        "input_tokens": 383681,
+        "output_tokens": 5356,
+        "reasoning_output_tokens": 2607
+      },
+      "variant": "rtk",
+      "wall_seconds": 251.34506762499223,
+      "workspace_manifest_sha256": "c6e31db8020d741ba1f22e77e65c4cc0caee07eaa089043e55ffeabc64c08fa9"
+    },
+    {
+      "captures": {
+        "commands": 9,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 9,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 21
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 8
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 18
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.44416",
+        "output": "1.34625",
+        "uncached_input": "1.84885"
+      },
+      "correct_repair": true,
+      "credits": "3.63926",
+      "id": "trial-011",
+      "language": "rust",
+      "maximum_visible_response_bytes": 11995,
+      "operational_complete": true,
+      "patch_sha256": "5bab9f946e2fe5011315600e3699fad95fa9c7ce20fe47550f7b7d5b75d348dc",
+      "repetition": 1,
+      "task_id": "C-R3",
+      "tools": {
+        "all": 21,
+        "list_files": 1,
+        "read_file": 8,
+        "replace_text": 3,
+        "terminal": 9
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 177664,
+        "input_tokens": 214641,
+        "output_tokens": 5385,
+        "reasoning_output_tokens": 2521
+      },
+      "variant": "raw",
+      "wall_seconds": 128.25028683402343,
+      "workspace_manifest_sha256": "b5d63ffec19d4fb627f42f454629b3b515cf068993b503edbe10705a13f8ced0"
+    },
+    {
+      "captures": {
+        "commands": 8,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 8,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 21
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 8
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 18
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.528",
+        "output": "1.01225",
+        "uncached_input": "1.31545"
+      },
+      "correct_repair": true,
+      "credits": "2.8557",
+      "id": "trial-012",
+      "language": "rust",
+      "maximum_visible_response_bytes": 8388,
+      "operational_complete": true,
+      "patch_sha256": "37ce651f003a4fcc81249fde09a7666098c83dcd4439cfcf9cafe804c8f32869",
+      "repetition": 1,
+      "task_id": "C-R3",
+      "tools": {
+        "all": 19,
+        "list_files": 1,
+        "read_file": 8,
+        "replace_text": 2,
+        "terminal": 8
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 211200,
+        "input_tokens": 237509,
+        "output_tokens": 4049,
+        "reasoning_output_tokens": 1854
+      },
+      "variant": "mini",
+      "wall_seconds": 101.45495408400893,
+      "workspace_manifest_sha256": "8cd4d845e4e1f31e56d60ffdb917f8c21046f6f17a4d1bfffd8405e29fec969d"
+    },
+    {
+      "captures": {
+        "commands": 14,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 14,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 199
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 7
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 193
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.9536",
+        "output": "1.643",
+        "uncached_input": "2.1099"
+      },
+      "correct_repair": true,
+      "credits": "4.7065",
+      "id": "trial-013",
+      "language": "rust",
+      "maximum_visible_response_bytes": 31610,
+      "operational_complete": true,
+      "patch_sha256": "bffa954cc8b267ab2f854514bbe4914ec15abf1283d938c76d54ab3dd79919e8",
+      "repetition": 1,
+      "task_id": "C-R1",
+      "tools": {
+        "all": 29,
+        "list_files": 1,
+        "read_file": 6,
+        "replace_text": 8,
+        "terminal": 14
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 381440,
+        "input_tokens": 423638,
+        "output_tokens": 6572,
+        "reasoning_output_tokens": 2202
+      },
+      "variant": "raw",
+      "wall_seconds": 223.67674299998907,
+      "workspace_manifest_sha256": "445946e2d0892be8c8914165964995dff7840e4ba56060a513a03b4763f77555"
+    },
+    {
+      "captures": {
+        "commands": 16,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 16,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 199
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 7
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 193
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.008",
+        "output": "1.5805",
+        "uncached_input": "1.7702"
+      },
+      "correct_repair": true,
+      "credits": "4.3587",
+      "id": "trial-014",
+      "language": "rust",
+      "maximum_visible_response_bytes": 26275,
+      "operational_complete": true,
+      "patch_sha256": "a29008f58be884613980361097ca692de4994a4b03a533fcc000f06d87c2aa20",
+      "repetition": 1,
+      "task_id": "C-R1",
+      "tools": {
+        "all": 30,
+        "list_files": 1,
+        "read_file": 7,
+        "replace_text": 6,
+        "terminal": 16
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 403200,
+        "input_tokens": 438604,
+        "output_tokens": 6322,
+        "reasoning_output_tokens": 2641
+      },
+      "variant": "mini",
+      "wall_seconds": 179.4996913750074,
+      "workspace_manifest_sha256": "ee3fbf5690d2b829f626855223acf5f5bf4450937645070bd2933985c41f6d8e"
+    },
+    {
+      "captures": {
+        "commands": 18,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 16,
+        "route_passthrough": 2,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 201
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 7
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 193
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.8944",
+        "output": "1.54475",
+        "uncached_input": "2.0506"
+      },
+      "correct_repair": true,
+      "credits": "4.48975",
+      "id": "trial-015",
+      "language": "rust",
+      "maximum_visible_response_bytes": 9971,
+      "operational_complete": true,
+      "patch_sha256": "986d5387a367a45f906d12b06d75bcaa3ab6a1bbaeff45ef287155a53fb609b6",
+      "repetition": 1,
+      "task_id": "C-R1",
+      "tools": {
+        "all": 35,
+        "list_files": 1,
+        "read_file": 12,
+        "replace_text": 4,
+        "terminal": 18
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 357760,
+        "input_tokens": 398772,
+        "output_tokens": 6179,
+        "reasoning_output_tokens": 2975
+      },
+      "variant": "rtk",
+      "wall_seconds": 170.81971933302702,
+      "workspace_manifest_sha256": "c79c51aacc464d20b827a9afa31457136c6c773b81f69be187b0bd449d2ba586"
+    },
+    {
+      "captures": {
+        "commands": 14,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 14,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 227
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 10
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 223
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.56544",
+        "output": "1.23725",
+        "uncached_input": "1.74965"
+      },
+      "correct_repair": true,
+      "credits": "3.55234",
+      "id": "trial-016",
+      "language": "rust",
+      "maximum_visible_response_bytes": 10068,
+      "operational_complete": true,
+      "patch_sha256": "ea5849b55c8b3a141857cd74724a09c0c8ab2f3d991bf0418305aca823983f6e",
+      "repetition": 1,
+      "task_id": "C-R2",
+      "tools": {
+        "all": 27,
+        "list_files": 1,
+        "read_file": 6,
+        "replace_text": 6,
+        "terminal": 14
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 226176,
+        "input_tokens": 261169,
+        "output_tokens": 4949,
+        "reasoning_output_tokens": 2092
+      },
+      "variant": "mini",
+      "wall_seconds": 140.85988025000552,
+      "workspace_manifest_sha256": "c6aef97ac6ca4cc95a3808a0eb56bac2d5a0c031685017419be930c6d2560391"
+    },
+    {
+      "captures": {
+        "commands": 10,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 9,
+        "route_passthrough": 1,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 225
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 10
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 223
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.41248",
+        "output": "0.96575",
+        "uncached_input": "1.00075"
+      },
+      "correct_repair": true,
+      "credits": "2.37898",
+      "id": "trial-017",
+      "language": "rust",
+      "maximum_visible_response_bytes": 8032,
+      "operational_complete": true,
+      "patch_sha256": "6dd620b01af28de979fe9c72002b17f842edf0deb29942e349c512891fec3fa9",
+      "repetition": 1,
+      "task_id": "C-R2",
+      "tools": {
+        "all": 19,
+        "list_files": 1,
+        "read_file": 5,
+        "replace_text": 3,
+        "terminal": 10
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 164992,
+        "input_tokens": 185007,
+        "output_tokens": 3863,
+        "reasoning_output_tokens": 2094
+      },
+      "variant": "rtk",
+      "wall_seconds": 112.91066983301425,
+      "workspace_manifest_sha256": "64472c922abc5a9bd34f2c7652d2f409906601a4378701b0f528a8b549094a48"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 11,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 226
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 10
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 223
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.48416",
+        "output": "1.2455",
+        "uncached_input": "1.72495"
+      },
+      "correct_repair": true,
+      "credits": "3.45461",
+      "id": "trial-018",
+      "language": "rust",
+      "maximum_visible_response_bytes": 16136,
+      "operational_complete": true,
+      "patch_sha256": "a1bc6bf8b830754963c8bb1b75ec7071dcc1a18d5506f93c8b1e5f83570bffa2",
+      "repetition": 1,
+      "task_id": "C-R2",
+      "tools": {
+        "all": 22,
+        "read_file": 7,
+        "replace_text": 4,
+        "terminal": 11
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 193664,
+        "input_tokens": 228163,
+        "output_tokens": 4982,
+        "reasoning_output_tokens": 2684
+      },
+      "variant": "raw",
+      "wall_seconds": 141.69703212502645,
+      "workspace_manifest_sha256": "ab9902c3236b42de00c4f2abdeb26bacae2ecb6f3b1c17b5fd5f9e4cb6b9011c"
+    },
+    {
+      "captures": {
+        "commands": 12,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 10,
+        "route_passthrough": 2,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 300
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 1,
+          "passed": false,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 293
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.5872",
+        "output": "0.77525",
+        "uncached_input": "2.26055"
+      },
+      "correct_repair": false,
+      "credits": "3.623",
+      "id": "trial-019",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 21624,
+      "operational_complete": true,
+      "patch_sha256": "cee7eede6633cf8baf89716e1bcc61ac7115509c9b503c9775c2fb138f0ce99a",
+      "repetition": 2,
+      "task_id": "C-J2",
+      "tools": {
+        "all": 29,
+        "list_files": 1,
+        "read_file": 14,
+        "replace_text": 1,
+        "terminal": 12,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 234880,
+        "input_tokens": 280091,
+        "output_tokens": 3101,
+        "reasoning_output_tokens": 903
+      },
+      "variant": "rtk",
+      "wall_seconds": 84.8193862499902,
+      "workspace_manifest_sha256": "77b09e8b260c84a370043fc011119a1eef5b79522e1d741a4e8b4363c455b76d"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 11,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 302
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 1,
+          "passed": false,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 293
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.68128",
+        "output": "0.78125",
+        "uncached_input": "1.97155"
+      },
+      "correct_repair": false,
+      "credits": "3.43408",
+      "id": "trial-020",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 21764,
+      "operational_complete": true,
+      "patch_sha256": "b3ef56ed985db63b74a56961de241f020ccf29200f101e523482bcf536a94846",
+      "repetition": 2,
+      "task_id": "C-J2",
+      "tools": {
+        "all": 27,
+        "list_files": 1,
+        "read_file": 13,
+        "replace_text": 1,
+        "terminal": 11,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 272512,
+        "input_tokens": 311943,
+        "output_tokens": 3125,
+        "reasoning_output_tokens": 1004
+      },
+      "variant": "raw",
+      "wall_seconds": 88.77654087496921,
+      "workspace_manifest_sha256": "47bf72395c7015148361147dfe9fee1261f8abd8d7e109236ca92b1c1e5b7acb"
+    },
+    {
+      "captures": {
+        "commands": 12,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 12,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 298
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 1,
+          "passed": false,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 293
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.6256",
+        "output": "0.97775",
+        "uncached_input": "1.37495"
+      },
+      "correct_repair": false,
+      "credits": "2.9783",
+      "id": "trial-021",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 21345,
+      "operational_complete": true,
+      "patch_sha256": "23ffa9c27c664cc870da191bc1f3e072d6a1d76b349828572750c3428610deaa",
+      "repetition": 2,
+      "task_id": "C-J2",
+      "tools": {
+        "all": 27,
+        "list_files": 1,
+        "read_file": 12,
+        "replace_text": 1,
+        "terminal": 12,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 250240,
+        "input_tokens": 277739,
+        "output_tokens": 3911,
+        "reasoning_output_tokens": 1580
+      },
+      "variant": "mini",
+      "wall_seconds": 104.26252833398758,
+      "workspace_manifest_sha256": "cccefcbda62344adbd1331253b121f0444d4b4ed84e4a0fbd4fcacd266077c36"
+    },
+    {
+      "captures": {
+        "commands": 12,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 12,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 197
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 7
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 193
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.91424",
+        "output": "1.32275",
+        "uncached_input": "2.22395"
+      },
+      "correct_repair": true,
+      "credits": "4.46094",
+      "id": "trial-022",
+      "language": "rust",
+      "maximum_visible_response_bytes": 26250,
+      "operational_complete": true,
+      "patch_sha256": "77fe2b48ae5d65709af3800c559e0fc49893e63e12d53a4ee57b7464da38d9d6",
+      "repetition": 2,
+      "task_id": "C-R1",
+      "tools": {
+        "all": 23,
+        "list_files": 1,
+        "read_file": 5,
+        "replace_text": 5,
+        "terminal": 12
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 365696,
+        "input_tokens": 410175,
+        "output_tokens": 5291,
+        "reasoning_output_tokens": 2333
+      },
+      "variant": "mini",
+      "wall_seconds": 152.9773192909779,
+      "workspace_manifest_sha256": "6a3bdb069287e51dd4eebbec8fd1eafaed2265798a43fbae4b559c563cd2a594"
+    },
+    {
+      "captures": {
+        "commands": 16,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 14,
+        "route_passthrough": 2,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 201
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 7
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 193
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.03392",
+        "output": "1.583",
+        "uncached_input": "2.73215"
+      },
+      "correct_repair": true,
+      "credits": "5.34907",
+      "id": "trial-023",
+      "language": "rust",
+      "maximum_visible_response_bytes": 9971,
+      "operational_complete": true,
+      "patch_sha256": "31dec301cb2ccb5aba42e5b00231b74f3bbb65f99e2b0c8747002b0a34bf630c",
+      "repetition": 2,
+      "task_id": "C-R1",
+      "tools": {
+        "all": 34,
+        "list_files": 1,
+        "read_file": 10,
+        "replace_text": 7,
+        "terminal": 16
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 413568,
+        "input_tokens": 468211,
+        "output_tokens": 6332,
+        "reasoning_output_tokens": 2715
+      },
+      "variant": "rtk",
+      "wall_seconds": 183.2311913750018,
+      "workspace_manifest_sha256": "f3a4a4e814461af20861fc9e1ba3d0d075ec3c4edfa7c5d9dad81ad3d52270bb"
+    },
+    {
+      "captures": {
+        "commands": 14,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 14,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 197
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 7
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 193
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.49952",
+        "output": "1.9175",
+        "uncached_input": "2.02375"
+      },
+      "correct_repair": true,
+      "credits": "5.44077",
+      "id": "trial-024",
+      "language": "rust",
+      "maximum_visible_response_bytes": 31610,
+      "operational_complete": true,
+      "patch_sha256": "eab1fc2a1d7c463d3bbefd214bc31285a803b19a0cfb4e60b879c6b00616fa07",
+      "repetition": 2,
+      "task_id": "C-R1",
+      "tools": {
+        "all": 35,
+        "list_files": 1,
+        "read_file": 12,
+        "replace_text": 8,
+        "terminal": 14
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 599808,
+        "input_tokens": 640283,
+        "output_tokens": 7670,
+        "reasoning_output_tokens": 3909
+      },
+      "variant": "raw",
+      "wall_seconds": 201.9364889159915,
+      "workspace_manifest_sha256": "fe3162588c0ba25cac99910425e38432302b03f4d19d23967f86123fe8c1a567"
+    },
+    {
+      "captures": {
+        "commands": 15,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 15,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 310
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 295
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.68704",
+        "output": "1.855",
+        "uncached_input": "2.6708"
+      },
+      "correct_repair": true,
+      "credits": "5.21284",
+      "id": "trial-025",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 22326,
+      "operational_complete": true,
+      "patch_sha256": "e55330ec364c96e7605604d35b5b5cfa1f045015391804a1cc653e11896a8bd0",
+      "repetition": 2,
+      "task_id": "C-J1",
+      "tools": {
+        "all": 35,
+        "list_files": 1,
+        "read_file": 12,
+        "replace_text": 6,
+        "terminal": 15,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 274816,
+        "input_tokens": 328232,
+        "output_tokens": 7420,
+        "reasoning_output_tokens": 4660
+      },
+      "variant": "mini",
+      "wall_seconds": 180.21834991604555,
+      "workspace_manifest_sha256": "7c7fab7c28eee50fc755a1b5a44f96779838937da8d9e0fc5fe07becc96fdd43"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 8,
+        "route_passthrough": 3,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 339
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 295
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.10144",
+        "output": "1.91975",
+        "uncached_input": "3.0717"
+      },
+      "correct_repair": true,
+      "credits": "6.09289",
+      "id": "trial-026",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 29474,
+      "operational_complete": true,
+      "patch_sha256": "120d027ef64b3edffae721cba2b114bf647b097f3860ce89905e2ed91ab39c97",
+      "repetition": 2,
+      "task_id": "C-J1",
+      "tools": {
+        "all": 32,
+        "list_files": 1,
+        "read_file": 12,
+        "replace_text": 7,
+        "terminal": 11,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 440576,
+        "input_tokens": 502010,
+        "output_tokens": 7679,
+        "reasoning_output_tokens": 4790
+      },
+      "variant": "rtk",
+      "wall_seconds": 187.59922591695795,
+      "workspace_manifest_sha256": "5d1a8d964969838a1ce88aeaa80b9d297ab9e3b173d0b5262a897f74285fa710"
+    },
+    {
+      "captures": {
+        "commands": 12,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 12,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 337
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 295
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.89152",
+        "output": "1.5765",
+        "uncached_input": "2.38545"
+      },
+      "correct_repair": true,
+      "credits": "4.85347",
+      "id": "trial-027",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 32989,
+      "operational_complete": true,
+      "patch_sha256": "3ac6dac16c10cc5c4c98c162d8ff9fc02dc21af40703f231569efa3893b6c38c",
+      "repetition": 2,
+      "task_id": "C-J1",
+      "tools": {
+        "all": 33,
+        "list_files": 1,
+        "read_file": 12,
+        "replace_text": 7,
+        "terminal": 12,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 356608,
+        "input_tokens": 404317,
+        "output_tokens": 6306,
+        "reasoning_output_tokens": 3366
+      },
+      "variant": "raw",
+      "wall_seconds": 156.41421770799207,
+      "workspace_manifest_sha256": "87d2d189c25a977545e7d495d98380482937413ad5f3e93c9150d3d9fc2001d4"
+    },
+    {
+      "captures": {
+        "commands": 16,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 16,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 676
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 661
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.98816",
+        "output": "3.9825",
+        "uncached_input": "3.51455"
+      },
+      "correct_repair": true,
+      "credits": "9.48521",
+      "id": "trial-028",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 25330,
+      "operational_complete": true,
+      "patch_sha256": "54bb84306a37f41a7850099b4997f53de9e95789075843bcae0ebb305f820878",
+      "repetition": 2,
+      "task_id": "C-J3",
+      "tools": {
+        "all": 71,
+        "list_files": 1,
+        "read_file": 17,
+        "replace_text": 33,
+        "terminal": 18,
+        "write_file": 2
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 795264,
+        "input_tokens": 865555,
+        "output_tokens": 15930,
+        "reasoning_output_tokens": 5691
+      },
+      "variant": "raw",
+      "wall_seconds": 353.0146277919994,
+      "workspace_manifest_sha256": "a40dc0c57cfeb4bbc75fa9da6fc516b756f3d832322c0bb0cffa198e3563ccae"
+    },
+    {
+      "captures": {
+        "commands": 14,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 14,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 673
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 661
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.384",
+        "output": "3.69675",
+        "uncached_input": "3.0839"
+      },
+      "correct_repair": true,
+      "credits": "8.16465",
+      "id": "trial-029",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 10906,
+      "operational_complete": true,
+      "patch_sha256": "fca7e7ff7a5750c2acfc0e71948a353360765985285c31383d78e62eb4e37440",
+      "repetition": 2,
+      "task_id": "C-J3",
+      "tools": {
+        "all": 56,
+        "list_files": 1,
+        "read_file": 17,
+        "replace_text": 22,
+        "terminal": 14,
+        "write_file": 2
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 553600,
+        "input_tokens": 615278,
+        "output_tokens": 14787,
+        "reasoning_output_tokens": 5640
+      },
+      "variant": "mini",
+      "wall_seconds": 335.95364262501244,
+      "workspace_manifest_sha256": "4b20dd75f17c902b7f537df1d0f1cdc2426f27eaf9128cdf4278af44f80cbcb5"
+    },
+    {
+      "captures": {
+        "commands": 15,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 12,
+        "route_passthrough": 3,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 673
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 661
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.5184",
+        "output": "3.1275",
+        "uncached_input": "2.33395"
+      },
+      "correct_repair": true,
+      "credits": "6.97985",
+      "id": "trial-030",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 18319,
+      "operational_complete": true,
+      "patch_sha256": "cfede0fab7544c655e21c5684d9b32cd62c7e943a4021d398cea1975703cb7a5",
+      "repetition": 2,
+      "task_id": "C-J3",
+      "tools": {
+        "all": 51,
+        "list_files": 1,
+        "read_file": 15,
+        "replace_text": 18,
+        "terminal": 15,
+        "write_file": 2
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 607360,
+        "input_tokens": 654039,
+        "output_tokens": 12510,
+        "reasoning_output_tokens": 4483
+      },
+      "variant": "rtk",
+      "wall_seconds": 285.5069488749723,
+      "workspace_manifest_sha256": "660000ebaa3c37234c44217d723505ad3fbcb411222079cc7ec4178565fd365b"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 10,
+        "route_passthrough": 1,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 227
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 10
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 223
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.41984",
+        "output": "1.08825",
+        "uncached_input": "1.4106"
+      },
+      "correct_repair": true,
+      "credits": "2.91869",
+      "id": "trial-031",
+      "language": "rust",
+      "maximum_visible_response_bytes": 8189,
+      "operational_complete": true,
+      "patch_sha256": "46679a39e266ca792065047c16483aa51f218f29ded3a46c60c788b603ae9eda",
+      "repetition": 2,
+      "task_id": "C-R2",
+      "tools": {
+        "all": 20,
+        "list_files": 1,
+        "read_file": 5,
+        "replace_text": 3,
+        "terminal": 11
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 167936,
+        "input_tokens": 196148,
+        "output_tokens": 4353,
+        "reasoning_output_tokens": 2348
+      },
+      "variant": "rtk",
+      "wall_seconds": 122.02162574999966,
+      "workspace_manifest_sha256": "613b42a615a3c5fb0a31901a91b6e3be4d73dd20da32327962c4ba57fd3602fd"
+    },
+    {
+      "captures": {
+        "commands": 9,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 9,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 227
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 10
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 223
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.58784",
+        "output": "0.97025",
+        "uncached_input": "1.49145"
+      },
+      "correct_repair": true,
+      "credits": "3.04954",
+      "id": "trial-032",
+      "language": "rust",
+      "maximum_visible_response_bytes": 16136,
+      "operational_complete": true,
+      "patch_sha256": "b2d181820b65e516330c989e1e44920b0a7e004f47bc953376120d217333a54b",
+      "repetition": 2,
+      "task_id": "C-R2",
+      "tools": {
+        "all": 21,
+        "list_files": 1,
+        "read_file": 7,
+        "replace_text": 4,
+        "terminal": 9
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 235136,
+        "input_tokens": 264965,
+        "output_tokens": 3881,
+        "reasoning_output_tokens": 1555
+      },
+      "variant": "raw",
+      "wall_seconds": 117.55034916696604,
+      "workspace_manifest_sha256": "75234a598c3a3a8642facb314dfc9ab6f778dddebefdfb1fdba77aeb9709c7c5"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 11,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 226
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 10
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 223
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.49184",
+        "output": "0.89775",
+        "uncached_input": "1.167"
+      },
+      "correct_repair": true,
+      "credits": "2.55659",
+      "id": "trial-033",
+      "language": "rust",
+      "maximum_visible_response_bytes": 7832,
+      "operational_complete": true,
+      "patch_sha256": "8152af326727fd44e24883e36564c10044826138c29b8e0fefff5e2dd37ba1ec",
+      "repetition": 2,
+      "task_id": "C-R2",
+      "tools": {
+        "all": 24,
+        "list_files": 1,
+        "read_file": 8,
+        "replace_text": 4,
+        "terminal": 11
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 196736,
+        "input_tokens": 220076,
+        "output_tokens": 3591,
+        "reasoning_output_tokens": 1399
+      },
+      "variant": "mini",
+      "wall_seconds": 108.75641070801066,
+      "workspace_manifest_sha256": "2018edcd08a7fa02db2d9d2e90d2ece9b83f254699f0985b7a630f2ba1ab5c53"
+    },
+    {
+      "captures": {
+        "commands": 7,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 7,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 21
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 8
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 18
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.56992",
+        "output": "1.49225",
+        "uncached_input": "1.75965"
+      },
+      "correct_repair": true,
+      "credits": "3.82182",
+      "id": "trial-034",
+      "language": "rust",
+      "maximum_visible_response_bytes": 18238,
+      "operational_complete": true,
+      "patch_sha256": "c91bdc250ebaf4e6c408e913752a9794df4cd905c1d3a688d2ff3d4b6dcf8f8a",
+      "repetition": 2,
+      "task_id": "C-R3",
+      "tools": {
+        "all": 18,
+        "list_files": 1,
+        "read_file": 7,
+        "replace_text": 3,
+        "terminal": 7
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 227968,
+        "input_tokens": 263161,
+        "output_tokens": 5969,
+        "reasoning_output_tokens": 3177
+      },
+      "variant": "raw",
+      "wall_seconds": 142.70386249996955,
+      "workspace_manifest_sha256": "2a500eb2e1ea96c19fe048094a9a89fb3c9b90467448bf5a8db0bf2507bb210e"
+    },
+    {
+      "captures": {
+        "commands": 7,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 7,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 21
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 8
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 18
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.66496",
+        "output": "1.26325",
+        "uncached_input": "1.5089"
+      },
+      "correct_repair": true,
+      "credits": "3.43711",
+      "id": "trial-035",
+      "language": "rust",
+      "maximum_visible_response_bytes": 14263,
+      "operational_complete": true,
+      "patch_sha256": "c29280ada9d8a91ca8c4d9293c2c9347ce2e40d806b9ecf2434009ecc3d41cb3",
+      "repetition": 2,
+      "task_id": "C-R3",
+      "tools": {
+        "all": 19,
+        "list_files": 1,
+        "read_file": 8,
+        "replace_text": 3,
+        "terminal": 7
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 265984,
+        "input_tokens": 296162,
+        "output_tokens": 5053,
+        "reasoning_output_tokens": 2269
+      },
+      "variant": "mini",
+      "wall_seconds": 123.94386112503707,
+      "workspace_manifest_sha256": "c4b4f981234e08f64b7d50fe663e7aee6f1949167b32914eae471604326f822e"
+    },
+    {
+      "captures": {
+        "commands": 8,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 8,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 21
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 8
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 18
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.42944",
+        "output": "1.0595",
+        "uncached_input": "1.1035"
+      },
+      "correct_repair": true,
+      "credits": "2.59244",
+      "id": "trial-036",
+      "language": "rust",
+      "maximum_visible_response_bytes": 16921,
+      "operational_complete": true,
+      "patch_sha256": "cb43b966c0eb3046a6f8f4a5da2eab526673f2b338c35294ec5ba25c8d52f8f2",
+      "repetition": 2,
+      "task_id": "C-R3",
+      "tools": {
+        "all": 16,
+        "list_files": 1,
+        "read_file": 5,
+        "replace_text": 2,
+        "terminal": 8
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 171776,
+        "input_tokens": 193846,
+        "output_tokens": 4238,
+        "reasoning_output_tokens": 1732
+      },
+      "variant": "rtk",
+      "wall_seconds": 104.32284612499643,
+      "workspace_manifest_sha256": "597c0f266efe524da63e4b1347aa0af76bcdc0425892151193d0e5e88203f22d"
+    },
+    {
+      "captures": {
+        "commands": 12,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 12,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 301
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 1,
+          "passed": false,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 293
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.79456",
+        "output": "1.06225",
+        "uncached_input": "1.7241"
+      },
+      "correct_repair": false,
+      "credits": "3.58091",
+      "id": "trial-037",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 21512,
+      "operational_complete": true,
+      "patch_sha256": "4f4f3de3a25b6414b61d2548addeb081d3f3723aa5d76d27d7a7d045dd25c7cf",
+      "repetition": 3,
+      "task_id": "C-J2",
+      "tools": {
+        "all": 34,
+        "list_files": 1,
+        "read_file": 19,
+        "replace_text": 1,
+        "terminal": 12,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 317824,
+        "input_tokens": 352306,
+        "output_tokens": 4249,
+        "reasoning_output_tokens": 1540
+      },
+      "variant": "raw",
+      "wall_seconds": 112.24550504202489,
+      "workspace_manifest_sha256": "6ee9926105cef3c029e5eda9be5fdeef6e3bd57c635609cf171cf6f0bbf8698d"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 11,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 301
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 1,
+          "passed": false,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 293
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.75616",
+        "output": "0.9595",
+        "uncached_input": "1.5679"
+      },
+      "correct_repair": false,
+      "credits": "3.28356",
+      "id": "trial-038",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 21572,
+      "operational_complete": true,
+      "patch_sha256": "f5b6e11a15c68014c157d73a9cbd2f272ab701641e7ff316c56fbb32aa4eb399",
+      "repetition": 3,
+      "task_id": "C-J2",
+      "tools": {
+        "all": 27,
+        "list_files": 1,
+        "read_file": 13,
+        "replace_text": 1,
+        "terminal": 11,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 302464,
+        "input_tokens": 333822,
+        "output_tokens": 3838,
+        "reasoning_output_tokens": 1526
+      },
+      "variant": "mini",
+      "wall_seconds": 103.97793641703902,
+      "workspace_manifest_sha256": "2e5fd5d7cb36baff3941cd232902408b99c1cc5f6f5a59c49d0edc01ef242134"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 9,
+        "route_passthrough": 2,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 299
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 1,
+          "passed": false,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 293
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.65056",
+        "output": "0.85",
+        "uncached_input": "1.5094"
+      },
+      "correct_repair": false,
+      "credits": "3.00996",
+      "id": "trial-039",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 21438,
+      "operational_complete": true,
+      "patch_sha256": "b65e88c895a3610c63cbd59e3149067377b7160b4685f5fe7181dcf9f5da744d",
+      "repetition": 3,
+      "task_id": "C-J2",
+      "tools": {
+        "all": 27,
+        "list_files": 1,
+        "read_file": 13,
+        "replace_text": 1,
+        "terminal": 11,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 260224,
+        "input_tokens": 290412,
+        "output_tokens": 3400,
+        "reasoning_output_tokens": 1005
+      },
+      "variant": "rtk",
+      "wall_seconds": 90.09095304098446,
+      "workspace_manifest_sha256": "ab0f330974ed5ccebc695504cd4e6207bf6d1d51516bb3c13880ad89e6cb2396"
+    },
+    {
+      "captures": {
+        "commands": 16,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 14,
+        "route_passthrough": 2,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 198
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 7
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 193
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.98432",
+        "output": "1.61175",
+        "uncached_input": "1.6627"
+      },
+      "correct_repair": true,
+      "credits": "4.25877",
+      "id": "trial-040",
+      "language": "rust",
+      "maximum_visible_response_bytes": 10677,
+      "operational_complete": true,
+      "patch_sha256": "c3b3c85403b325b05982fc3c9b65dfb7303b03ab3c54197757d09f5929e3d8f3",
+      "repetition": 3,
+      "task_id": "C-R1",
+      "tools": {
+        "all": 36,
+        "list_files": 1,
+        "read_file": 14,
+        "replace_text": 5,
+        "terminal": 16
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 393728,
+        "input_tokens": 426982,
+        "output_tokens": 6447,
+        "reasoning_output_tokens": 2948
+      },
+      "variant": "rtk",
+      "wall_seconds": 182.865212625009,
+      "workspace_manifest_sha256": "f1ba7dbac05404b7be3a254883360d70906d8d14665b17e8060f1d8c58f87e8d"
+    },
+    {
+      "captures": {
+        "commands": 17,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 17,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 197
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 7
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 193
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.57536",
+        "output": "1.78575",
+        "uncached_input": "2.13075"
+      },
+      "correct_repair": true,
+      "credits": "5.49186",
+      "id": "trial-041",
+      "language": "rust",
+      "maximum_visible_response_bytes": 31610,
+      "operational_complete": true,
+      "patch_sha256": "b8a84dcbc58d379f9f2dd4c3f5658218aac68b2638b1f3f3e4254aee4287e0fa",
+      "repetition": 3,
+      "task_id": "C-R1",
+      "tools": {
+        "all": 36,
+        "read_file": 15,
+        "replace_text": 4,
+        "terminal": 17
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 630144,
+        "input_tokens": 672759,
+        "output_tokens": 7143,
+        "reasoning_output_tokens": 3408
+      },
+      "variant": "raw",
+      "wall_seconds": 202.0032500840025,
+      "workspace_manifest_sha256": "87192ca24961e8e3295872012e692a3e8068471ce2041ec0bb653092002c35c9"
+    },
+    {
+      "captures": {
+        "commands": 20,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 20,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 197
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 7
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 193
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.17216",
+        "output": "1.89175",
+        "uncached_input": "1.8494"
+      },
+      "correct_repair": true,
+      "credits": "4.91331",
+      "id": "trial-042",
+      "language": "rust",
+      "maximum_visible_response_bytes": 26384,
+      "operational_complete": true,
+      "patch_sha256": "66cb4e8aac2db10a479a11c8290cdd42564cab6219f1220f46a0b6573c69eec7",
+      "repetition": 3,
+      "task_id": "C-R1",
+      "tools": {
+        "all": 38,
+        "list_files": 1,
+        "read_file": 9,
+        "replace_text": 8,
+        "terminal": 20
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 468864,
+        "input_tokens": 505852,
+        "output_tokens": 7567,
+        "reasoning_output_tokens": 3290
+      },
+      "variant": "mini",
+      "wall_seconds": 210.00548849999905,
+      "workspace_manifest_sha256": "ac1ed0500356004029e97c33c82b1f36b8c7ed67c2f1871b5b67d59b37f5bd12"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 11,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 226
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 10
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 223
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.61376",
+        "output": "0.8585",
+        "uncached_input": "1.62795"
+      },
+      "correct_repair": true,
+      "credits": "3.10021",
+      "id": "trial-043",
+      "language": "rust",
+      "maximum_visible_response_bytes": 16136,
+      "operational_complete": true,
+      "patch_sha256": "374f9d1ccab9521b40a622fd0eaad96cec63c709068852cced469a3f6c5c1deb",
+      "repetition": 3,
+      "task_id": "C-R2",
+      "tools": {
+        "all": 23,
+        "list_files": 1,
+        "read_file": 7,
+        "replace_text": 4,
+        "terminal": 11
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 245504,
+        "input_tokens": 278063,
+        "output_tokens": 3434,
+        "reasoning_output_tokens": 954
+      },
+      "variant": "raw",
+      "wall_seconds": 104.18409970903303,
+      "workspace_manifest_sha256": "35a8ede53f8e1bad821436da1165a7bf94806e371f46860d66e4d5b44df4dc11"
+    },
+    {
+      "captures": {
+        "commands": 13,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 13,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 227
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 10
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 223
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.51072",
+        "output": "1.051",
+        "uncached_input": "1.25975"
+      },
+      "correct_repair": true,
+      "credits": "2.82147",
+      "id": "trial-044",
+      "language": "rust",
+      "maximum_visible_response_bytes": 10734,
+      "operational_complete": true,
+      "patch_sha256": "e471573f818409be32d87a2fadff95c984400b4d46769700f90045be2a66eb94",
+      "repetition": 3,
+      "task_id": "C-R2",
+      "tools": {
+        "all": 24,
+        "read_file": 8,
+        "replace_text": 3,
+        "terminal": 13
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 204288,
+        "input_tokens": 229483,
+        "output_tokens": 4204,
+        "reasoning_output_tokens": 1845
+      },
+      "variant": "mini",
+      "wall_seconds": 122.62524408299942,
+      "workspace_manifest_sha256": "eaba9d4bd2a14d9205525f648c4a947eb25856e0b274e910a56ab4a0f53a8c71"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 10,
+        "route_passthrough": 1,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 226
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 10
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 223
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.55712",
+        "output": "1.0345",
+        "uncached_input": "1.325"
+      },
+      "correct_repair": true,
+      "credits": "2.91662",
+      "id": "trial-045",
+      "language": "rust",
+      "maximum_visible_response_bytes": 8713,
+      "operational_complete": true,
+      "patch_sha256": "be235efcf7216c764246e8e407d39cc778ee5bf4bd157867aaba78a9193329bd",
+      "repetition": 3,
+      "task_id": "C-R2",
+      "tools": {
+        "all": 22,
+        "list_files": 1,
+        "read_file": 7,
+        "replace_text": 3,
+        "terminal": 11
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 222848,
+        "input_tokens": 249348,
+        "output_tokens": 4138,
+        "reasoning_output_tokens": 2140
+      },
+      "variant": "rtk",
+      "wall_seconds": 131.53420491702855,
+      "workspace_manifest_sha256": "92e573c743f2434751e8576adbc382e9e5d48e01d22cf6505e2af92b74f83136"
+    },
+    {
+      "captures": {
+        "commands": 12,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 12,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 675
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 661
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.61248",
+        "output": "3.26825",
+        "uncached_input": "3.6956"
+      },
+      "correct_repair": true,
+      "credits": "8.57633",
+      "id": "trial-046",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 23046,
+      "operational_complete": true,
+      "patch_sha256": "7e7ac947321d2707aa649fad126939c2b991f8dcc1267d6de4aa12eee940dd74",
+      "repetition": 3,
+      "task_id": "C-J3",
+      "tools": {
+        "all": 51,
+        "list_files": 1,
+        "read_file": 12,
+        "replace_text": 25,
+        "terminal": 12,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 644992,
+        "input_tokens": 718904,
+        "output_tokens": 13073,
+        "reasoning_output_tokens": 4089
+      },
+      "variant": "mini",
+      "wall_seconds": 286.11754220799776,
+      "workspace_manifest_sha256": "6180d8a665e30ed5b8cad539263eb255f455c5f6557fa989477da6aeb4f69acb"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 9,
+        "route_passthrough": 2,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 673
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 661
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.48704",
+        "output": "3.32425",
+        "uncached_input": "2.0816"
+      },
+      "correct_repair": true,
+      "credits": "6.89289",
+      "id": "trial-047",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 8820,
+      "operational_complete": true,
+      "patch_sha256": "1e97cedb35c4260c4766918f588b34c9edd73421fa4eabff7d1d339d54ed0111",
+      "repetition": 3,
+      "task_id": "C-J3",
+      "tools": {
+        "all": 56,
+        "list_files": 1,
+        "read_file": 20,
+        "replace_text": 23,
+        "terminal": 11,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 594816,
+        "input_tokens": 636448,
+        "output_tokens": 13297,
+        "reasoning_output_tokens": 4892
+      },
+      "variant": "rtk",
+      "wall_seconds": 310.03755354200257,
+      "workspace_manifest_sha256": "ad3206d0cbf8851bbe03e2d398881b074feb4461b241c9060a3527f51e36f346"
+    },
+    {
+      "captures": {
+        "commands": 14,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 14,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 673
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 661
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.19232",
+        "output": "3.116",
+        "uncached_input": "2.52205"
+      },
+      "correct_repair": true,
+      "credits": "6.83037",
+      "id": "trial-048",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 8807,
+      "operational_complete": true,
+      "patch_sha256": "a64ee3557f4ffb0d968a5b8d2b839ef48fe9cc8569f51eca0d1d2075d1d33836",
+      "repetition": 3,
+      "task_id": "C-J3",
+      "tools": {
+        "all": 53,
+        "list_files": 1,
+        "read_file": 16,
+        "replace_text": 20,
+        "terminal": 14,
+        "write_file": 2
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 476928,
+        "input_tokens": 527369,
+        "output_tokens": 12464,
+        "reasoning_output_tokens": 3813
+      },
+      "variant": "raw",
+      "wall_seconds": 281.1511007499648,
+      "workspace_manifest_sha256": "16f9d8ac8dc84974c5b24abce803c48d01fe6f05a24fc020e98e460851a33083"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 8,
+        "route_passthrough": 3,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 320
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 295
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.90976",
+        "output": "1.53175",
+        "uncached_input": "2.46045"
+      },
+      "correct_repair": true,
+      "credits": "4.90196",
+      "id": "trial-049",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 23045,
+      "operational_complete": true,
+      "patch_sha256": "0852a590947a6d67cd350271a407abf6da1355cbb2732f3aae8e28938ec31507",
+      "repetition": 3,
+      "task_id": "C-J1",
+      "tools": {
+        "all": 32,
+        "list_files": 1,
+        "read_file": 12,
+        "replace_text": 7,
+        "terminal": 11,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 363904,
+        "input_tokens": 413113,
+        "output_tokens": 6127,
+        "reasoning_output_tokens": 3614
+      },
+      "variant": "rtk",
+      "wall_seconds": 155.60540824994678,
+      "workspace_manifest_sha256": "ece3cf5a27d63c69ee9d4fdec501f25b6b7795364c4e8f7a666f8b4ef327ea8b"
+    },
+    {
+      "captures": {
+        "commands": 12,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 12,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 329
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 295
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.96",
+        "output": "1.508",
+        "uncached_input": "2.8696"
+      },
+      "correct_repair": true,
+      "credits": "5.3376",
+      "id": "trial-050",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 37148,
+      "operational_complete": true,
+      "patch_sha256": "0fc4fad811280251dd911cdd48c136e5e97ef2f2c500be16b451c5dc896a854a",
+      "repetition": 3,
+      "task_id": "C-J1",
+      "tools": {
+        "all": 33,
+        "list_files": 1,
+        "read_file": 12,
+        "replace_text": 7,
+        "terminal": 12,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 384000,
+        "input_tokens": 441392,
+        "output_tokens": 6032,
+        "reasoning_output_tokens": 3782
+      },
+      "variant": "raw",
+      "wall_seconds": 148.49786783300806,
+      "workspace_manifest_sha256": "3ec12a4f8fe4d2593b296dc9ca4408f7dffbcb36e1f3dd08e00d74d517797980"
+    },
+    {
+      "captures": {
+        "commands": 11,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 11,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 321
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 295
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "1.08992",
+        "output": "1.64075",
+        "uncached_input": "2.2347"
+      },
+      "correct_repair": true,
+      "credits": "4.96537",
+      "id": "trial-051",
+      "language": "javascript",
+      "maximum_visible_response_bytes": 25642,
+      "operational_complete": true,
+      "patch_sha256": "128291bd1de4fb374b7b343ea1797e976a0b7fe7af6a0b36522473957d3f1328",
+      "repetition": 3,
+      "task_id": "C-J1",
+      "tools": {
+        "all": 29,
+        "list_files": 1,
+        "read_file": 11,
+        "replace_text": 5,
+        "terminal": 11,
+        "write_file": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 435968,
+        "input_tokens": 480662,
+        "output_tokens": 6563,
+        "reasoning_output_tokens": 4122
+      },
+      "variant": "mini",
+      "wall_seconds": 169.68115508300252,
+      "workspace_manifest_sha256": "3906d32b3bc80759afcb76ab67b7d44095217cf1ff902899868944fda276f410"
+    },
+    {
+      "captures": {
+        "commands": 8,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_mini-record": 8,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 22
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 8
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 18
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.48928",
+        "output": "1.56825",
+        "uncached_input": "1.9311"
+      },
+      "correct_repair": true,
+      "credits": "3.98863",
+      "id": "trial-052",
+      "language": "rust",
+      "maximum_visible_response_bytes": 16832,
+      "operational_complete": true,
+      "patch_sha256": "f79996999c2c25713f6dc361308bcfdc3b099e9a067129326010efef40e8b40d",
+      "repetition": 3,
+      "task_id": "C-R3",
+      "tools": {
+        "all": 19,
+        "list_files": 1,
+        "read_file": 7,
+        "replace_text": 3,
+        "terminal": 8
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 195712,
+        "input_tokens": 234334,
+        "output_tokens": 6273,
+        "reasoning_output_tokens": 3481
+      },
+      "variant": "mini",
+      "wall_seconds": 153.0875687499647,
+      "workspace_manifest_sha256": "df7d8c7070b21a24c211703276af78c1dfdb7bd96fba421b86f9bd68db6b888c"
+    },
+    {
+      "captures": {
+        "commands": 9,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_native": 9,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 21
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 8
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 18
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.52992",
+        "output": "1.3575",
+        "uncached_input": "1.3235"
+      },
+      "correct_repair": true,
+      "credits": "3.21092",
+      "id": "trial-053",
+      "language": "rust",
+      "maximum_visible_response_bytes": 13194,
+      "operational_complete": true,
+      "patch_sha256": "e5fd778f76a0282c69bfba5040366f66f93f61e9843f6594544a03cd83bd5551",
+      "repetition": 3,
+      "task_id": "C-R3",
+      "tools": {
+        "all": 22,
+        "list_files": 1,
+        "read_file": 7,
+        "replace_text": 5,
+        "terminal": 9
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 211968,
+        "input_tokens": 238438,
+        "output_tokens": 5430,
+        "reasoning_output_tokens": 2850
+      },
+      "variant": "rtk",
+      "wall_seconds": 144.36414479202358,
+      "workspace_manifest_sha256": "bcccc5f5919108314dbe108a8e9dd5d63b9b18a5be110f91acea477cfd24cc41"
+    },
+    {
+      "captures": {
+        "commands": 8,
+        "incomplete": 0,
+        "output_limit": 0,
+        "route_raw": 8,
+        "timed_out": 0
+      },
+      "checks": {
+        "candidate_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 20
+            }
+          ],
+          "timed_out": false
+        },
+        "hidden": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 8
+            }
+          ],
+          "timed_out": false
+        },
+        "pristine_baseline": {
+          "exit_code": 0,
+          "passed": true,
+          "present": true,
+          "test_counts": [
+            {
+              "failed": 0,
+              "passed": 18
+            }
+          ],
+          "timed_out": false
+        }
+      },
+      "components": {
+        "cached_input": "0.45152",
+        "output": "0.8805",
+        "uncached_input": "1.2345"
+      },
+      "correct_repair": true,
+      "credits": "2.56652",
+      "id": "trial-054",
+      "language": "rust",
+      "maximum_visible_response_bytes": 14144,
+      "operational_complete": true,
+      "patch_sha256": "4a14cca87d59fed5b1372cd49f3fdda4cc06a1c344d25df5cce5a3d08723b376",
+      "repetition": 3,
+      "task_id": "C-R3",
+      "tools": {
+        "all": 15,
+        "list_files": 1,
+        "read_file": 4,
+        "replace_text": 2,
+        "terminal": 8
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 180608,
+        "input_tokens": 205298,
+        "output_tokens": 3522,
+        "reasoning_output_tokens": 1338
+      },
+      "variant": "raw",
+      "wall_seconds": 91.81044579204172,
+      "workspace_manifest_sha256": "b6ede2b06fc9a9c6cdf0fbfaa803eb67875f476a25afe9ecab510dc6a58937dc"
+    }
+  ]
+}

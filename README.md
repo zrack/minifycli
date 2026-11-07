@@ -164,9 +164,8 @@ pristine original tests and held-out regressions.
 
 Mini used **2,852,536 reported input-plus-output tokens**, compared with
 3,231,491 for raw output and 3,712,751 for RTK. That is **23.17% less than RTK**,
-including cached input. It met the locally registered usage gate, with a lower
-total in both language groups. The decision is a **limited continuation** of
-the compressor experiment.
+including cached input. It met the earlier locally registered usage gate, with
+a lower total in both language groups, and justified the confirmation run below.
 
 This does not establish lower bills or a diagnostic advantage. Mini's uncached
 input-plus-output proxy was **8.93% higher** than RTK's; RTK also returned less
@@ -178,6 +177,36 @@ See the [results and decision](docs/evaluation/debugging-sprint/results.md),
 [method and limits](docs/evaluation/debugging-sprint/method.md), and
 [reproduction tools](evaluation/debugging/README.md). The Rust binary is
 unchanged at v0.2.0; the debugging harness uses existing Codex CLI sign-in.
+
+## Fixed-filter cost confirmation
+
+The confirmation ran **54 fresh sessions** on six new, structurally harder bugs,
+with three attempts per task and treatment. MinifyCLI and RTK binary hashes and
+filters stayed fixed. Whole-session usage was priced with cached input counted
+at its published discounted rate.
+
+| Output mode | Registered all-check repairs | Standard-rate credits, all attempts |
+| --- | ---: | ---: |
+| Raw | 15/18 | 84.18843 |
+| MinifyCLI | 15/18 | 81.30541 |
+| RTK | 15/18 | 79.65146 |
+
+Mini cost **2.08% more than RTK** in this run. The paired task-cluster interval
+for its cost ratio was **0.920–1.114**, spanning both lower and higher cost.
+It failed the prospective expansion criteria. The decision is to **maintain the
+released utility and stop broad compressor expansion**.
+
+One hidden token-shape requirement was stricter than the task prompt made
+explicit. All modes repaired its rendered output; a separate rendering-only
+sensitivity gives 18/18 each and leaves the cost ranking unchanged. The reported
+credits apply published Standard rates to observed usage; they are not an
+attributed bill, subscription cost or USD charge.
+
+See the [confirmation results and limitations](docs/evaluation/cost-confirmation/results.md),
+[registered protocol](evaluation/confirmation/protocol.md),
+[independent audit](docs/evaluation/cost-confirmation/validation.json), and
+[reproduction guide](evaluation/confirmation/README.md). The Rust binary remains
+v0.2.0.
 
 ## Development
 

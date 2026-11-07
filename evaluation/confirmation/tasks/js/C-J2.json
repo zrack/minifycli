@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "id": "C-J2",
+  "title": "Image alt text loses escapes and decoded entities",
+  "repository": {
+    "url": "https://github.com/markdown-it/markdown-it",
+    "license": "MIT"
+  },
+  "base_commit": "5915b84a676632c6a350081aed5dee0d74e434f9",
+  "oracle_commit": "974e2d7f3bf1356123032a68c831735c5891ec05",
+  "prompt": "Image descriptions lose some characters while ordinary inline text keeps them. For example, '![a \\* b](/u)' should render with alt text 'a * b', and '![a &amp; b](/u)' should retain the ampersand (escaped once as &amp; in HTML). Mixed emphasized text, escapes and entities inside the same description should remain in order. Repair image description processing while preserving token metadata, emphasis handling, entity escaping and the surrounding inline text. Add regression tests; avoid changing the public renderer contract.",
+  "baseline_command": [
+    "npm",
+    "run",
+    "test:markdown-it"
+  ],
+  "hidden_command": [
+    "node",
+    "evaluation/confirmation/tasks/js/C-J2-hidden.mjs",
+    "WORKSPACE"
+  ],
+  "assets": {
+    "hidden_test": "evaluation/confirmation/tasks/js/C-J2-hidden.mjs",
+    "dependency_spec": "evaluation/confirmation/tasks/js/markdown-dependencies.json",
+    "dependencies_lockfile": "evaluation/confirmation/tasks/js/markdown-dependencies-lock.json",
+    "licenses": [
+      "evaluation/confirmation/tasks/js/MARKDOWN-IT-LICENSE"
+    ]
+  },
+  "reference_source": "https://github.com/markdown-it/markdown-it/commit/974e2d7f3bf1356123032a68c831735c5891ec05",
+  "upstream_test_paths": [
+    "test/markdown-it/misc.test.mjs"
+  ],
+  "production_globs": [
+    "src/**/*.ts"
+  ],
+  "hardness_evidence": {
+    "criterion": "at least 20 meaningful changed production lines across at least two functions",
+    "upstream_changed_functions": [
+      "text_join",
+      "join_alt"
+    ],
+    "families": [
+      "escaped punctuation in nested image children",
+      "decoded entities with HTML re-escaping",
+      "mixed emphasis plus text segment coalescing"
+    ],
+    "production_files": [
+      "src/rules_core/text_join.ts"
+    ],
+    "meaningful_changed_production_lines": 22
+  },
+  "setup": {
+    "node_version": "v26.12.1",
+    "npm_version": "11.20.0",
+    "build": "Native Node TypeScript stripping; tests and hidden runner import src directly, no dist build",
+    "baseline_scope": "Original upstream test:markdown-it script (functional and pathological tests), excluding packaging/lint/CommonMark standalone suite",
+    "deps": "Exact minimal runtime/test dependency lock; original source/package manifest unchanged",
+    "solver_export": "Only buggy source snapshot and prepared node_modules; no Git upstream history, oracle, task metadata or held-out assertions",
+    "instructions_found": []
+  },
+  "evaluation": {
+    "production_globs": [
+      "src/**/*.ts"
+    ],
+    "protected_test_globs": [
+      "test/**",
+      "package.json",
+      "package-lock.json",
+      "tsconfig*.json"
+    ]
+  },
+  "hidden_test_counts": {
+    "total": 9,
+    "note": "Checks stop at first failing assertion; total denotes registered held-out assertions, not observed partial score."
+  }
+}

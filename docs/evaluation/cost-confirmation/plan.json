@@ -1,0 +1,1722 @@
+{
+  "actual_billed": false,
+  "bootstrap_resamples": 20000,
+  "bootstrap_seed": 20261107,
+  "cleanup_disposable_build_products": true,
+  "cli_service_tier": "default",
+  "codex": "codex",
+  "codex_sha256": "508388df35319042107560d095b271a98a512f59a542848c908b23ed1bad4b44",
+  "codex_version": "codex-cli 0.166.0-alpha.6",
+  "command_timeout_seconds": 90,
+  "cost_gate": {
+    "all_leave_one_task_out_below_one": true,
+    "bootstrap_upper_below": "1",
+    "both_languages_below_one": true,
+    "correctness_no_lower_than": [
+      "raw",
+      "rtk"
+    ],
+    "maximum_cost_per_success_ratio": "0.9",
+    "maximum_total_ratio": "0.9",
+    "minimum_task_wins": 4
+  },
+  "cost_model": {
+    "actual_billed": false,
+    "fetched_at": "2026-11-06T22:24:33Z",
+    "measure": "published-rate-credit-calculation",
+    "model": "gpt-6.1-sol",
+    "notes": [
+      "Input tokens include cached input; subtract cached input before applying the uncached rate.",
+      "Output tokens already include reasoning. Do not add reasoning again.",
+      "Codex has no separate cache-write charge under this card.",
+      "Standard speed is configured explicitly; Fast and Ultrafast controls are disabled.",
+      "This prices observed usage at the published Standard credit card. It is not an invoice or an attributed subscription charge.",
+      "Included subscription usage and contractual or legacy Enterprise billing may differ. No USD conversion is assumed."
+    ],
+    "per_million_tokens": {
+      "cached_input": "2.5",
+      "output": "250",
+      "uncached_input": "50"
+    },
+    "schema": 1,
+    "service_tier": "standard",
+    "source_url": "https://learn.chatgpt.com/docs/pricing#token-rates",
+    "speed_source_url": "https://learn.chatgpt.com/docs/agent-configuration/speed",
+    "unit": "credits"
+  },
+  "dependency_tree_sha256": {
+    "C-J1": "9ad8cc3664c43d3ff162f0e2347b85f89819d886866ae53d6306cb1ae055a67d",
+    "C-J2": "9ad8cc3664c43d3ff162f0e2347b85f89819d886866ae53d6306cb1ae055a67d",
+    "C-J3": "45b238793ad53ebed7dd45490ca6a418132cec8c4301cd41740de53b338e8a56",
+    "C-R1": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "C-R2": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "C-R3": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  "fast_mode": false,
+  "host_platform": "macOS-26.6-arm64-arm-64bit-Mach-O",
+  "implementation_sha256": {
+    "evaluation/confirmation/analyze.py": "d68b4d3699585927e1fc8bb393d1aa6bd4022870bb05ff4abf2337b68912826a",
+    "evaluation/confirmation/costs.py": "e250db879a93bb14a5e2d6c021163b555eeaabcf39bd084eccd6f0494e315781",
+    "evaluation/confirmation/evaluate.py": "0f55a53265e620bd7aea8032dea008298b415712db5c135d35b5601ce97ed0c7",
+    "evaluation/confirmation/grade.py": "cadb0d798a062dcb2631adff52a3cdefd3ec0bbe5ad75ab4372eaaebc285ab95",
+    "evaluation/confirmation/mcp_server.py": "c61e5708b6b9a57aac8f28d408214d04626be2e48329d9f3532819003aeee90a",
+    "evaluation/confirmation/protocol.md": "bca5787b0454fc0e8bc3b93fe34025ecde4266069892b89454e1e76c2d56c877",
+    "evaluation/confirmation/rates/codex-standard-2026-11-06.json": "09cd97d3dd4d36a7dcbf4d4c11b7bdd49c848f613abd602bbadc8c89aa7f860b",
+    "evaluation/confirmation/run.py": "7845b7442b192a016cb52d07fd5329a2bde103a4ff8ff35b31e4fb490bbd9f85",
+    "evaluation/confirmation/solver_prompt.txt": "1853576fe663a90bad40e8f81472a50906c6d0e32225620c59bc3fce4fc28fe3",
+    "evaluation/confirmation/tasks/js/C-J1-hidden.mjs": "430ff01b89f20191f212c39cd648f35cb4655b4e40db71a1593adb3d20d8f6ec",
+    "evaluation/confirmation/tasks/js/C-J1.json": "8d0344728f5e5a0823dd1fc3dd2c8855c5aec7290c098ca4b0bfacdec21b8031",
+    "evaluation/confirmation/tasks/js/C-J2-hidden.mjs": "bb455fd68d3942fb1116c4b79fb6421b452b14c3f762768f589ec4dfe8338389",
+    "evaluation/confirmation/tasks/js/C-J2.json": "8b02bd6e488bb1a115a8181edd98460ace46c273f0e7fb856c54f4d9d161f6b7",
+    "evaluation/confirmation/tasks/js/C-J3-hidden.cjs": "08ca29b5cef31ec8b7b47d9b4a0e854f7636209d957c6313333c0efce5973c81",
+    "evaluation/confirmation/tasks/js/C-J3.json": "7e0e0ac5b021272eee7ddcd3c17322fa6caf74880738452128c7ba2779888dda",
+    "evaluation/confirmation/tasks/js/MARKDOWN-IT-LICENSE": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
+    "evaluation/confirmation/tasks/js/POSTCSS-LICENSE": "5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8",
+    "evaluation/confirmation/tasks/js/README.md": "56b293d193bfb6560ab337341c5d78c4af35fd7b811cfec7a1aa7deac3e9dfea",
+    "evaluation/confirmation/tasks/js/markdown-dependencies-lock.json": "e6969d46ccf1583cb7be03398d9629e0347206e5c5a2e9edac6a8d851b67b5a1",
+    "evaluation/confirmation/tasks/js/markdown-dependencies.json": "99abf4e84fc6ec97531d04801ebaae0dcc52fd702a35b34a1bd3da7b559a2f78",
+    "evaluation/confirmation/tasks/js/postcss-dependencies-lock.json": "a25462ba45c7bf37b0bb536e3f2683d27dd79d19b4cdb8fb9f038bed82479c90",
+    "evaluation/confirmation/tasks/js/postcss-dependencies.json": "068c95be8438f27f482308222e5ae6bb4573bf1005bb27fcc198ade9fd6dddcb",
+    "evaluation/confirmation/tasks/js/qualification.json": "38acc6b45764294b02d4e4c69f536870a50d426a0e6f0aa51b35be5a0bc7235b",
+    "evaluation/confirmation/tasks/js/rejected-candidates.json": "4d19b947740708eb00816da172cde58fb1dc805d408a759bd897e790f5b48091",
+    "evaluation/confirmation/tasks/rust/C-R1-Cargo.lock": "8544e6d7a3b31478c33c9dbbefd73281cd6287f4f04c943b60789e51d7ac3716",
+    "evaluation/confirmation/tasks/rust/C-R1-hidden.rs": "2bb192beee38bd40ca00ede2b5b0aaebe462fddaa6b203c5e90f2682a0d3b854",
+    "evaluation/confirmation/tasks/rust/C-R1.json": "85560a584327a74ebc36cf596307c3204d88840a3deaa0ab73e8a577a3c5f255",
+    "evaluation/confirmation/tasks/rust/C-R2-Cargo.lock": "5c2622a718a136ab27a191b0b10e9694fdc572746afd39ab116e09ae87f9a257",
+    "evaluation/confirmation/tasks/rust/C-R2-hidden.rs": "e546c5893c67c714775cadcbb2b1635d75fad78969085433c215afc0b0389eb8",
+    "evaluation/confirmation/tasks/rust/C-R2.json": "155a9fed56bc494c55290f74b1e8fad21b21f0ba6d3607767ec45cce46dff25d",
+    "evaluation/confirmation/tasks/rust/C-R3-Cargo.lock": "71522171c9248901295b78d3d1af94abbe03c576f3bab23924369fc94460710b",
+    "evaluation/confirmation/tasks/rust/C-R3-base-portability.patch": "156e5835023e70784c3e2b75f425068c45396f1786397025d61b22c1893562b6",
+    "evaluation/confirmation/tasks/rust/C-R3-hidden.rs": "ecec8e9db27f93024e909cb4deafde4fea53c7e5452ea9f8807d6de38c1e5837",
+    "evaluation/confirmation/tasks/rust/C-R3-oracle-portability.patch": "f10427da796821af84084204d5db644d052f4cac540f591bd58d505c1c8a5091",
+    "evaluation/confirmation/tasks/rust/C-R3.json": "45df66a6576e6ee6cf9750d046e7961303353cf10e3e4ba356c8df98e4240a07",
+    "evaluation/confirmation/tasks/rust/README.md": "772134e33f85247e39fc698296ce34e899478ca8a6dfe5a4a2edade5af005e27",
+    "evaluation/confirmation/tasks/rust/licenses/glob-APACHE.txt": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "evaluation/confirmation/tasks/rust/licenses/glob-MIT.txt": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+    "evaluation/confirmation/tasks/rust/licenses/winnow-MIT.txt": "cb5aedb296c5246d1f22e9099f925a65146f9f0d6b4eebba97fd27a6cdbbab2d",
+    "evaluation/confirmation/tasks/rust/qualification.json": "1b46dacd90bb39e026a0f8f3c8348f0b434aedcbb79234790bf09a8bd8ce4462",
+    "evaluation/confirmation/tasks/rust/run_hidden.py": "e5540af19b50111fcf3382e4d6bb2e2bb40c845d8bf3d05d61da8d25e22e1783",
+    "evaluation/debugging/evaluate.py": "ca8005c413802948f44a43be6328ebec85ee7e522bbfe540c7ad65ee17537ced",
+    "evaluation/debugging/mcp_server.py": "41e0e38e6883c453b23009d66ddc580dd0731aade9bcb3f90c719a76e1bdc994",
+    "evaluation/debugging/run_sprint.py": "71adaba597b1a8f8692e87194f5190632141c8bb230cbdfcc82c9ea78c3ec5ae",
+    "evaluation/debugging/terminal.py": "d3729a1e14b14534856f4b181f4f8218c522d6814a6def0c77355c2fd008eb10",
+    "evaluation/tests/test_confirmation_analysis.py": "e39f6c62a173c34edbc9fdb675a4e8ab2860abd63249749e9c05cf85a7a3cee4",
+    "evaluation/tests/test_confirmation_costs.py": "f13dd06de0d5a9fc5ca19783e9e3b6e1dd2e72546d1ba0201bde48ad23dcebc3",
+    "evaluation/tests/test_confirmation_evaluate.py": "1c6f9f5041792008b34b9de6d70db82902b060645bb511ad95236d4a93800d54",
+    "evaluation/tests/test_confirmation_mcp.py": "37baffad1a9281c9beba85640363cbb44f90a60db52aa22496c2855af120e6b8",
+    "evaluation/tests/test_confirmation_runner.py": "00016ad9156932ba606a2f1bdc6b04d4f03b840fd514d81aabe268cf5218b4ae"
+  },
+  "machine": "arm64",
+  "max_actions": 90,
+  "mini": "target/release/mini",
+  "mini_sha256": "31548331c875e38dc37cb7d7b385a86a81a5eda3200225db5760bb5037dedb64",
+  "minimum_free_bytes": 4294967296,
+  "model": "gpt-6.1-sol",
+  "prior_plan_sha256": "4878a80b6b723648c76312ab5b09d61e72ab9ed2c60d8dc0077a1e24af2ac44b",
+  "protocol_sha256": "bca5787b0454fc0e8bc3b93fe34025ecde4266069892b89454e1e76c2d56c877",
+  "python": "python3",
+  "rate_card_file_sha256": "09cd97d3dd4d36a7dcbf4d4c11b7bdd49c848f613abd602bbadc8c89aa7f860b",
+  "reasoning_effort": "ultra",
+  "recovery_enabled": true,
+  "registered_utc": "2026-11-06T23:00:33.192662+00:00",
+  "repetition_blocks": [
+    [
+      "C-J2",
+      "C-J3",
+      "C-J1",
+      "C-R3",
+      "C-R1",
+      "C-R2"
+    ],
+    [
+      "C-J2",
+      "C-R1",
+      "C-J1",
+      "C-J3",
+      "C-R2",
+      "C-R3"
+    ],
+    [
+      "C-J2",
+      "C-R1",
+      "C-R2",
+      "C-J3",
+      "C-J1",
+      "C-R3"
+    ]
+  ],
+  "repetitions": 3,
+  "rtk": ".tools/rtk-1.1.0/bin/rtk",
+  "rtk_sha256": "f79cb2b5c49a58cb746d7478cc0e7eb5aebad593519df5d74ce7dbc1929737db",
+  "schema": 1,
+  "seed": 20261107,
+  "service_tier": "standard",
+  "session_timeout_seconds": 900,
+  "soft_deadline_seconds": 720,
+  "source_files": {
+    "C-J1": {
+      ".editorconfig": "baccb24e4a5a530792d059faf1cca4bb53e5cdcb9c830fc8140ff825947ed05d",
+      ".gitattributes": "fd3cf3b51ed60f9094d05c828e3bf075d50e50ef6f820032d5eae690d3536576",
+      ".github/ISSUE_TEMPLATE/bug_report.md": "8791ca79dabd21fd216484641cf8f96a3c7d12100f884ea2197737390e327168",
+      ".github/ISSUE_TEMPLATE/change_proposal.md": "a92b9176efd12f9f9947df7ffa0177a6860646a611b137e217fbf9560c620ae9",
+      ".github/funding.json": "233bb507ae7b30e83fea1a82c34c82b6327b28134e0e1d878665e707cd53a080",
+      ".github/workflows/ci.yml": "40c6e59383464014cccce3091c334103bf4bfd32da41cbae58e7bb134a574020",
+      ".github/workflows/track-ref-pathological.yml": "36adcdb64272d3e621d5ea2bae9f04b77541c33ec9ebb3bfc7148bac75b15f2a",
+      ".gitignore": "acda8a359743cd716a88cfcc4bc68b2231ef752e65dce4579e8935c5a1108b87",
+      "CHANGELOG.md": "168310fe14d2cb0a802cadea9ac5c19b10c989b1c7c829a89970e585a7b69dfc",
+      "CONTRIBUTING.md": "186d4f18554565238fd61d8c3c157e4279e3a34c6013aa1b15da5a1d0010d048",
+      "LICENSE": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
+      "README.md": "4be181f1920ecce286589cdf3863fac8dedd0aa674a54fb8a7d299978b9701fa",
+      "benchmark/benchmark.mjs": "34d20e0fb573acd2c02ca8ea0ef43633a9976664514659b29e6dbaf717ee4428",
+      "benchmark/extra/package-lock.json": "0c68a21fd77f3f3959d4c6ca8b63ec0c5dd14e492cc8fafb53bf0e5cbf18f963",
+      "benchmark/extra/package.json": "0eaf8d62c79684e0f93b1dd3890ee2d3aad122661b03ac94475dbf0d6fc4bfa9",
+      "benchmark/implementations/commonmark-reference/index.mjs": "dd9ee4bf5cb52d635d24437d2fcdc61a3f4bdceec61a64cdd6d952ea4a72ad37",
+      "benchmark/implementations/current-commonmark/index.mjs": "b2c16373808839679c1652353b3f0ed67776a8e983fe47b87de9db4acfc522a7",
+      "benchmark/implementations/current/index.mjs": "3e262f100290ecf6ae9689dfdd9d9245ad47979ebcd344cc5a664e978367250c",
+      "benchmark/implementations/markdown-it-2.2.1-commonmark/index.mjs": "6135c401f6bba6a9bd49b790fdfccddfda0def84c1e91e24858e3906f276e29b",
+      "benchmark/implementations/marked/index.mjs": "bc1d429a9b7d2c1cb91fcc842920b96c3bc6fe6f8207ce6921016474d59c01c0",
+      "benchmark/profile.mjs": "8716d3807478adafa2df25ce86dc84db7bfee72ff1309d62d05ea702f30b53b7",
+      "benchmark/samples/README.md": "acd2624282801aa38fc679f51597ec45a382df3621a5d20f482b6d680081b051",
+      "benchmark/samples/block-bq-flat.md": "06989410659fc8039e8b1146ccbd3cacc4a27bcc89e68b7d5e3f6b7f39bef82d",
+      "benchmark/samples/block-bq-nested.md": "44919d8c0809746292f9d321db5ac836408fc9f3bb63f16128049745c3e386cc",
+      "benchmark/samples/block-code.md": "bedd8bb92b0478d2d6353ffd05ef50ff84ba0d2bbf835544a223bfe2c5631378",
+      "benchmark/samples/block-fences.md": "0b05d11c5f98829c24ef6501560f819e6f9ce7e5dcf4732351827fdfd4b18e4d",
+      "benchmark/samples/block-heading.md": "567d5750aebc8a1cc3ba357c3f2b3bb7fc8ae36aab849b985b7c08b19d8b31e4",
+      "benchmark/samples/block-hr.md": "4841266ca7e2b79b223cb22afc1cc08ce17f9ec05a2a67dbdd12fa10cca3bc28",
+      "benchmark/samples/block-html.md": "c2317bc0f69e0b5103ccc0aaee2cd1f556dc5140cd313639fd47e03732eb40bd",
+      "benchmark/samples/block-lheading.md": "a75c6204e4921281b0ea10fb15489c58f7c253492bac85b8a4ad2fb5ed0bb3ab",
+      "benchmark/samples/block-list-flat.md": "a6acfd7fb5908db6b68ca835c3dbdb6adeff4d79918db4fbdbcc71219ebb209a",
+      "benchmark/samples/block-list-nested.md": "0966d4f0381919ad0fbbda1393cec3a6e8d74ecf16903dd08879185b3cd26f06",
+      "benchmark/samples/block-ref-flat.md": "97d79884e2a94d2b0644d4bd5f588ff1a431227fde152699daf28c711342d49d",
+      "benchmark/samples/block-ref-list.md": "2274c9d61f959005082252c9b1888594ed20ddb283c71b1ca95154b69c45e48f",
+      "benchmark/samples/block-ref-nested.md": "9997be8f757bfeb8fe85077aa958e011fffc5d9d4656547e346da31f73dce437",
+      "benchmark/samples/block-tables.md": "7b6b2bf1eb3640124288933740a2e46e9395ad5fc956efa0507e0405e4548c87",
+      "benchmark/samples/inline-autolink.md": "4730dc2aa527737ef2d82d325dc2357b1a0ce0492e2ffb654f308c3ee69c64dc",
+      "benchmark/samples/inline-backticks.md": "f8118c2e1a20277a932652ae3f1eae33751abce10a0889083010b5a2069b5361",
+      "benchmark/samples/inline-em-flat.md": "1007068bb558c98a46ae1c3e9830ae39c3ff184cb5b1a346f225313cfa473a5e",
+      "benchmark/samples/inline-em-nested.md": "047aa1380d3f0a93d7281f8074ae06ad0d0b1e63e7bec9973ff174162f1735bd",
+      "benchmark/samples/inline-em-worst.md": "f9a7a5c97aea0cb4167f56960f437495195b220103b5a75b61344a66b20b290c",
+      "benchmark/samples/inline-entity.md": "b94c9930f4e09918c344bb4b13448544f38439fab960d1cf5300f8afb6674da4",
+      "benchmark/samples/inline-escape.md": "fdb75d7916062598ba48206bb43546bb2ce3ed2d4200b9bab7292312f56a16a4",
+      "benchmark/samples/inline-html.md": "dc4cbd9eea0b58e2c27700bc43d03fd2643f354e534777a08d62652ca8e99c7a",
+      "benchmark/samples/inline-links-flat.md": "a3c0f2bb030c7d1ea92035ff4c53b7af85624f9a3c2ac3ae2585a9ed81104955",
+      "benchmark/samples/inline-links-nested.md": "f14204673581dfe7caf3535216acf8f7f08e155b226253790460550f126d2ff0",
+      "benchmark/samples/inline-newlines.md": "a0c9519d2f93cc6284dcc18264b1ab5a76acaa27e3dab0062045f469df32a57c",
+      "benchmark/samples/lorem1.txt": "5ee469b3c3ebd95b3ae8659e08bf9d414120f38ad9020252164ca13a163347aa",
+      "benchmark/samples/rawtabs.md": "eec9fba1de450e37f8c362398c35e52b41f7f8f5f0388a45d3c31ceaee0dbb60",
+      "bin/markdown-it.mjs": "d8b76b94b812fb4e5c81e3feeddc9a6bf983f5557316bf7d9d4276ee4116ab02",
+      "docs/architecture.md": "e449055c890d26e1f88ed1db867a969983381573a87d177e29daff274996a31f",
+      "docs/authors.md": "b01b9ffca91f272d136ed7d64a6392c37ffab43de9f1f6a6f78422675a04913f",
+      "docs/benchmark.md": "7aff0e8eaa53532c9651cd379ffd603ca09534e14ddfb89bad639653681f6f42",
+      "docs/development.md": "b569fec3e69990a437fef4d44310fccdfd9ac4bc7ebfcd0ac9ebec5774c5b50b",
+      "docs/examples/document_post_processing.md": "738ffd804b76b686bd23e4df686114294d28d6592180caef712a9b0a061f9c04",
+      "docs/examples/renderer_rules.md": "fd515c528b13ff4c9f35080f2a9819ffc4fc2ddb518637bfebf0acadaaac984a",
+      "docs/examples/text_decoration.md": "ea06b2822e9a2f07604b10ba9b0d6d017b204567c3e8a67336929de601db8350",
+      "docs/migration/migration_v15.md": "e63695281d95af2dc7d3ec9250d24f15d5fb3ba4ca3f60d32bcd14bd283ff025",
+      "docs/migration/migration_v4.md": "89b1eb75563f11339d3bdf4a5ef5c9128f33ce56a85b9774067f04a44717e98c",
+      "docs/migration/migration_v5.md": "b0b8e2d42f72c0ca432498a984f9a8e8f6d1c5f399727441cc77c1b802f0148e",
+      "docs/references.md": "56f4f282fba4d68e216e096ca77fcda5c2c5f83b2040212d4f813fa1705d1d24",
+      "docs/safety.md": "919d983dabee61d00ccb0da302944a16c212f8c950ce60ab9fb5081fd45dbb62",
+      "docs/syntax_plugins.md": "6ee379c24267c451bc1f2a9b639d607c62d495e8839cb966f9315369f34cce8b",
+      "docs/usage.md": "d8e328b4c6e7dea0b23f2e2ddf5d2c5c017771cfc7315c2774fda783061aafae",
+      "eslint.config.mjs": "6d27a48148691fb749f7fef54831d73ca560e012947bd554dfab600759e866fb",
+      "package-lock.json": "60cb18d600352d2cca3d0d6ee11f40ea9159231a0dec720ea684e1bc0eb5f08a",
+      "package.json": "7f2870760c52b1b409d15c590225da59f596041f82d133a1e0d5e1e07739d1a2",
+      "src/common/html_blocks.ts": "5bbdf4ab71bd31461b29d47da1077c600ba941c3e53d74f8d50ce31ac45546a5",
+      "src/common/html_re.ts": "826729add35acb2eb25e03e74cc785df8600f4c597df62b82388736bcd8dff14",
+      "src/common/utils.ts": "4bb332d3efdd019695640d641051357178466a97163184c92d8dc2d1862f7bab",
+      "src/external.d.ts": "b268962d7073e8120ac2ae4b99ee6e9d487c7aacfb9f6be36eab52841d7dbeee",
+      "src/helpers/index.ts": "d4e29f110662a7aeeaf8b121dd1d470c817bcf606f0b8d9c8221974ad86feded",
+      "src/helpers/parse_link_destination.ts": "0bc772e5f4c705177a859363bdc4d46c8f1f317d94f3aeeb9ae07f964f4dfd78",
+      "src/helpers/parse_link_label.ts": "2ec0c78e7d3d7881286ccda2f32eecf35590c7d341d257b58accc7c0afaf16c7",
+      "src/helpers/parse_link_title.ts": "5d20ad387a20fe886247f393c41183d6c34c1b491792c7bd9afb6d1f49b02e3a",
+      "src/index.ts": "a3e93fd66c66b5133850e441640a999d71c0115defd8683536591d6cd1ec277b",
+      "src/markdownit.ts": "c0e3fd4f07e78ae6a06b6ca789e26d13929927b9dcb68fb54d5d38058440a127",
+      "src/package.json": "5a065fe7d8eab2a582f428e11c2ea63aaf70607a54f69cfd5c711b5c53d91b32",
+      "src/parser_block.ts": "8e3896aea6a734a5d3e965c9b84778286e61804371306405b5669f967049c1e0",
+      "src/parser_core.ts": "67cd77c5c7a93612166c6b600dba51c5d0151a81466660a969a0309e63e62ddd",
+      "src/parser_inline.ts": "82b68bf9612bb44bddecaa4e00b291e2be0dfbfd9929888e54da578a5f40b138",
+      "src/presets/commonmark.ts": "c93548ad55b35aabee8e87db0832f636ea313477ca35dbdd3613fcdeb4fb8022",
+      "src/presets/default.ts": "276e5e8a6338b10010e16a69531267327f4b27ffecfeb8ed9c6442c5bdfb78d6",
+      "src/presets/zero.ts": "dff837d983937b5eb97e525d3d7053b03fd4eb655f20c000d280efed441ee3e7",
+      "src/renderer.ts": "c5cfd080c1fffc0406ec8bb78a29cbbabfd9b897e055ab2bf7240a4b78863044",
+      "src/ruler.ts": "02130907f619f4a9cbb205df020c7b9df87f703d7556d7de147b7ab1ff25b4ae",
+      "src/rules_block/blockquote.ts": "093ca982d862aecc4b3ee3b824760f86d67aaa24d99f9561bfd527f319603e16",
+      "src/rules_block/code.ts": "c8532a31209253150e349fcd41af2345827a7fbe107521204718dc6551474c61",
+      "src/rules_block/fence.ts": "2517f6a88ac90e6e31661a54410d38b31d51496ebf9b16fa5e3a97d20b1a612c",
+      "src/rules_block/heading.ts": "29289c64c7d453565deb382624dde24c702ddc13bb72699c298047b3ab9f7c00",
+      "src/rules_block/hr.ts": "313c5f75b04da9b7dbb08f6e8b2048ae28773895c15c707abfc6aadf159c4703",
+      "src/rules_block/html_block.ts": "9f35204127449ab01afe8e7577d3d596840bd46e6b9ddd7241f00c185afa3fef",
+      "src/rules_block/lheading.ts": "0895bde6405c06ebc17a0b3f019d140ef9689e0fa52df6f823bbe3ff6f053b80",
+      "src/rules_block/list.ts": "ab669ef793b0f7e8cb0e00a6cfef0aef625dd9e33339ccabcc1ee2a13025cbf3",
+      "src/rules_block/paragraph.ts": "4585a352d95820ceadda46ece88a5a4d4b10eee170660eeed213bbc5ee0b9383",
+      "src/rules_block/reference.ts": "8fd5b9fd98fd6c62e7ad5bc8ca2f8471fa3c1fb63f463913c8d71a30a525c5fc",
+      "src/rules_block/state_block.ts": "cb4ea45b1f77900b1be544010ca0691a83107c66b4c6ce5f3ab4ae697144c39d",
+      "src/rules_block/table.ts": "14abf7febcfbe8a6e1d6659725f6f6eb65510cea11e2ed1c284c11900afd822e",
+      "src/rules_core/block.ts": "d9f9f2c1c4165fc03048004fe155910d5faeaaa79922f1af316c6f804ad7d250",
+      "src/rules_core/inline.ts": "587827ec1b94a9c4f971a6ae91634cdfec62e8440610703d82380fac50c54494",
+      "src/rules_core/linkify.ts": "cacfc9492e46ac184673d6ed3b7ab26ecc86b3622ee75efe5d94dfb9d789af5b",
+      "src/rules_core/normalize.ts": "62e7c5234cd81aaf2f8a5d83bdb64d92bdeffd4238a7daa6e8827ec87f6574b6",
+      "src/rules_core/replacements.ts": "97695c40fe5a3077006e6051120db61da11fbe243b333dc41ed18374a0943fba",
+      "src/rules_core/smartquotes.ts": "b7914ffeb53d2128dac885053a328487a3600582a4301164366f3837b9db0671",
+      "src/rules_core/state_core.ts": "28b20ed9d7340ded82af3235735562353f0f5a0b7b639e0ff74a41a35dbb94df",
+      "src/rules_core/strip_references.ts": "0a7c6c782e51965ccf5613fcb926b26e85ec25ea0ef40f966edb2d2a23050ff2",
+      "src/rules_core/text_join.ts": "8c67fedbab64cfc2cfbf41b5fedb14a7620398a43618b09114f962acf7c035cb",
+      "src/rules_inline/autolink.ts": "b91c4073229f9d023cdaa78adaa88a334dc337f2a1f66505ded94c57b7d5a4dd",
+      "src/rules_inline/backticks.ts": "beed19f1528cf7248fc873f419b2403e7e167a71a7c17d931164f80c4a695573",
+      "src/rules_inline/balance_pairs.ts": "718c282151e66dd02d57897c117be00494e7ab26db191418a22f2b86f5732c42",
+      "src/rules_inline/emphasis.ts": "416b9eb5034d09a044f01abf4e49efdb3a4689f3d4bf7e4068dfb6820e23bef6",
+      "src/rules_inline/entity.ts": "937d40756187b5ac480de2aec4a2c620ef86144757cfd394584a5243c7dde1af",
+      "src/rules_inline/escape.ts": "8ed53cc5e9848c303ffbb536701eee162e3ba92db6312687384f2fd9cd86fcf8",
+      "src/rules_inline/fragments_join.ts": "37f79b2aeae2c085892894fb21bbf016cba50f927d114c6a853ba182675608a2",
+      "src/rules_inline/html_inline.ts": "31beb177968078d7acf39c766d9b87fa51e6b3f26f7ec17479ac2243a8a5a9e2",
+      "src/rules_inline/image.ts": "35816b07e2b319957f21fa8d1d1dac290f4d4d7817928587c5742a2f959d10aa",
+      "src/rules_inline/link.ts": "4ca6a6a5662480c291ff7d36564ba04d77d3ede9cf84e0cce8bd3ccc1f296543",
+      "src/rules_inline/linkify.ts": "95df885173a4de62b837a0d659d72a037e4080db2cc9a87bebcf6beb612bb668",
+      "src/rules_inline/newline.ts": "eb128275c61ed71cc842f0350f90ffa6c086bf85f70b0091fed5046407d2241e",
+      "src/rules_inline/state_inline.ts": "cfb9bf63aa4a3e921d047ccf525a45919268bced13201b7389d7839a94e3ddd9",
+      "src/rules_inline/strikethrough.ts": "54b11a9e3c79abb2e8e80100744956ddd5ded004161cdc6946a3f31ef13ce0aa",
+      "src/rules_inline/text.ts": "d3b0beba00de08f6dde46b1ceb7ab124fc5136763936f06a70558cb36a8c0bc1",
+      "src/token.ts": "7ec1967e14759e56cc736a00d33d14b8dac010000ef6ade082783d9dba6f686c",
+      "src/types.ts": "f64565e75ce8bc62efc14572e9fecb9430fccac64e8c53da492a9f38fc764935",
+      "support/build-dist.mjs": "15aa328fbc5ec37114e856bb927d891af18f86378f9868cfeeced4c5926993dc",
+      "support/build_demo.mjs": "11b7cc999dc8d03b182b99e88e8ea2c66235fbaf1814e5359f717f1e23662f69",
+      "support/demo_template/README.md": "072f301233e18a6f108ab189659fddce0226ce247f2d83a8c21fbfaad47d397c",
+      "support/demo_template/index.css": "d479e8dd8b9982769131a968c7d5440f35bfad121d8fc0f948342954449ea898",
+      "support/demo_template/index.html": "4da16f37f704e986a13308dd6c0ba20f5c6e95db8db5561ac06799127637b105",
+      "support/demo_template/index.mjs": "eb6c0f5f5e9823db471b6597bf5367a3218705b4617c5af05bbc8350de69cc93",
+      "support/demo_template/sample.md": "3fbe15466848b7fb452a279e9accc2c6efc44474da1992b18471ec695ecf5186",
+      "support/specsplit.mjs": "9339496ceb342ac46919cd1b2b8e2063d67e5b3f2cd957c292e7dc4a850bdb49",
+      "support/track-ref-pathological.json": "87e0884e2d3fc8798e2f09c65c39ae8ecfa317617739a396ab155c2ab07726dd",
+      "support/track-ref-pathological.mjs": "13acc63302d70bcfacefdc0a6c559cd89f7c0d24611289f14e398295d781bd61",
+      "support/typedoc_condensed_theme/condensed_theme.css": "7ae878fa88a6e531c95c3e3b4a97fd10cfd3e0b3de32c59799570fc2f3cab7cc",
+      "support/typedoc_condensed_theme/condensed_theme_plugin.mjs": "048e0302df8e77f4fec69900afc2d7074d83dada2cd23a8f5cae6502ee057cd9",
+      "test/build/build.test.mjs": "0fdedcae4806d13a93144e9bec9ecc5bdeed7e1d70c73b9d1bd07822d33fe814",
+      "test/build/types.cts": "c8dd428bac8ef3fa27609d15aac0f1f6d9a4534ff2445f1f9884d454c843a996",
+      "test/build/types.mts": "31fa70bf3b76e1da4672d20bed1e831bfd06316eef95b108505506bcfbfbdf1f",
+      "test/cmspec/commonmark.test.mjs": "bc45a27915d4bc63d981cdffef8822718306b56c77323f08f2f25da93353708f",
+      "test/fixtures/commonmark/bad.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test/fixtures/commonmark/good.txt": "648f30b5270a2f218c6198fb7f19ca64b2eb3306d4e6cd4a314f3878a21a0e65",
+      "test/fixtures/commonmark/spec.txt": "257c41ad946f7a1414a499aca402a1aa8fdac3678532266611348c1cf54f4b80",
+      "test/fixtures/markdown-it/commonmark_extras.txt": "2372e035c8423996bab55c5c75aea61f47986976b74e093d58facb7021c1afba",
+      "test/fixtures/markdown-it/fatal.txt": "5d1d6981973344c15b199165e7d0bb9bde44c8f72f12e1bc02f02c9d5362045e",
+      "test/fixtures/markdown-it/linkify.txt": "6651054d51c49492921ff401371c79a130f2632225bfd70c3d064f1f060b355f",
+      "test/fixtures/markdown-it/normalize.txt": "03b139696159bdb03d49040a85d435e94a8b52e994bb32d1b1d3c805c21d7cfa",
+      "test/fixtures/markdown-it/proto.txt": "2a93fd3bbf7d10d1e56e849d4cf55e07250430530f3d6bf0d2b278085ae8df2c",
+      "test/fixtures/markdown-it/smartquotes.txt": "15e4c2c138bd6a7427a1ca4ef03ca76b8fa8d5329b340472069dea41a32c7d82",
+      "test/fixtures/markdown-it/strikethrough.txt": "dc875d186bc55db0e02909a3e90b72171602331e8cc24d5177b586d09592d675",
+      "test/fixtures/markdown-it/tables.txt": "81b5b1bc2956d478e715bf68e1ba7851bc45469674899cb9e4180ad7f020bf29",
+      "test/fixtures/markdown-it/typographer.txt": "baea97d5211dee4031ce99313f76d05751c433d05c98e65eb8b398d2113a2c22",
+      "test/fixtures/markdown-it/xss.txt": "8333c873487c0e470dab14f673e0c5064670ae440bb453f5a42ed6f57c80bf21",
+      "test/helpers.mjs": "332918e6c1cf2cf9b9aba7a918a834af5886e88aad1640ba8d0f922f879be7a4",
+      "test/markdown-it/markdown-it.test.mjs": "f2a859521bdc79584ce3daf6641bb908e1757226f9d30de13ab93e5377b4ba89",
+      "test/markdown-it/misc.test.mjs": "bd39814f6e7f184eef4b6b882d732926819471f30c8652c3a748321c225f3052",
+      "test/markdown-it/pathological.test.mjs": "7416fd60b5f3c148f1faa9631aeb07c169acfb588a0bac7e53e1a39f7ff929f7",
+      "test/markdown-it/ruler.test.mjs": "88bc15df5a11657d419586c1d05b3ec1ac4cf0112e77019991bf891659c986fb",
+      "test/markdown-it/token.test.mjs": "289fef19205f4b5a4a6ce48bfc00bf8abc9046cd1fc6524c5f5d98cb33aad176",
+      "test/markdown-it/utils.test.mjs": "2e9957589a594e167c8cb27a9e23bc0cafde872f1356cb38dde9ad30bb664ca5",
+      "tsconfig.json": "dd96fc5097fff21e1df982226acad92f09710ec8268e689b1e5c31822cd0909c",
+      "typedoc.config.mjs": "63b4a73c05969a1464fc7f3d8e6685d39dfb2b34729e2e973d1c078671ecac4a"
+    },
+    "C-J2": {
+      ".editorconfig": "baccb24e4a5a530792d059faf1cca4bb53e5cdcb9c830fc8140ff825947ed05d",
+      ".gitattributes": "fd3cf3b51ed60f9094d05c828e3bf075d50e50ef6f820032d5eae690d3536576",
+      ".github/ISSUE_TEMPLATE/bug_report.md": "8b489f3ed19cc5c81ed14c91ae6759ce55b90e91b98c380b9b5c2b2be2ceefa2",
+      ".github/ISSUE_TEMPLATE/development-question.md": "8bcd89de9840d7a1314dd804e53b77217c61af91ce10c9eeac824ce391c132ed",
+      ".github/ISSUE_TEMPLATE/feature_request.md": "42c03db8a83ef43bdbcd6ff31dec740bc9d9ca0bfcc18db5fb8f7e2da806a637",
+      ".github/ISSUE_TEMPLATE/question.md": "4ca53c788bcfcb2a6983f58d4767ff094d2bf70a438eda1f9857c4a4bd69bb08",
+      ".github/funding.json": "233bb507ae7b30e83fea1a82c34c82b6327b28134e0e1d878665e707cd53a080",
+      ".github/workflows/ci.yml": "40c6e59383464014cccce3091c334103bf4bfd32da41cbae58e7bb134a574020",
+      ".github/workflows/track-ref-pathological.yml": "36adcdb64272d3e621d5ea2bae9f04b77541c33ec9ebb3bfc7148bac75b15f2a",
+      ".gitignore": "acda8a359743cd716a88cfcc4bc68b2231ef752e65dce4579e8935c5a1108b87",
+      "CHANGELOG.md": "a52f00bf760b7c264b4bddcdfc3360fe206306b04c26e36e34587c0212dfc1b2",
+      "CONTRIBUTING.md": "e1d9dbeac82ef178067b85ffa72147c72f9c9597bad9fc89f08e711ad11742c3",
+      "LICENSE": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
+      "README.md": "6d45b0ba073d3b6816291146423a69100ec4aba4c888713de48e32fb41e784fd",
+      "benchmark/benchmark.mjs": "34d20e0fb573acd2c02ca8ea0ef43633a9976664514659b29e6dbaf717ee4428",
+      "benchmark/extra/package-lock.json": "0c68a21fd77f3f3959d4c6ca8b63ec0c5dd14e492cc8fafb53bf0e5cbf18f963",
+      "benchmark/extra/package.json": "0eaf8d62c79684e0f93b1dd3890ee2d3aad122661b03ac94475dbf0d6fc4bfa9",
+      "benchmark/implementations/commonmark-reference/index.mjs": "dd9ee4bf5cb52d635d24437d2fcdc61a3f4bdceec61a64cdd6d952ea4a72ad37",
+      "benchmark/implementations/current-commonmark/index.mjs": "b2c16373808839679c1652353b3f0ed67776a8e983fe47b87de9db4acfc522a7",
+      "benchmark/implementations/current/index.mjs": "3e262f100290ecf6ae9689dfdd9d9245ad47979ebcd344cc5a664e978367250c",
+      "benchmark/implementations/markdown-it-2.2.1-commonmark/index.mjs": "6135c401f6bba6a9bd49b790fdfccddfda0def84c1e91e24858e3906f276e29b",
+      "benchmark/implementations/marked/index.mjs": "bc1d429a9b7d2c1cb91fcc842920b96c3bc6fe6f8207ce6921016474d59c01c0",
+      "benchmark/profile.mjs": "8716d3807478adafa2df25ce86dc84db7bfee72ff1309d62d05ea702f30b53b7",
+      "benchmark/samples/README.md": "e8739b723b9b850b4093526e85da1ccbba6743dd55628fcf9316ad6c0ba834d6",
+      "benchmark/samples/block-bq-flat.md": "06989410659fc8039e8b1146ccbd3cacc4a27bcc89e68b7d5e3f6b7f39bef82d",
+      "benchmark/samples/block-bq-nested.md": "44919d8c0809746292f9d321db5ac836408fc9f3bb63f16128049745c3e386cc",
+      "benchmark/samples/block-code.md": "bedd8bb92b0478d2d6353ffd05ef50ff84ba0d2bbf835544a223bfe2c5631378",
+      "benchmark/samples/block-fences.md": "0b05d11c5f98829c24ef6501560f819e6f9ce7e5dcf4732351827fdfd4b18e4d",
+      "benchmark/samples/block-heading.md": "567d5750aebc8a1cc3ba357c3f2b3bb7fc8ae36aab849b985b7c08b19d8b31e4",
+      "benchmark/samples/block-hr.md": "4841266ca7e2b79b223cb22afc1cc08ce17f9ec05a2a67dbdd12fa10cca3bc28",
+      "benchmark/samples/block-html.md": "c2317bc0f69e0b5103ccc0aaee2cd1f556dc5140cd313639fd47e03732eb40bd",
+      "benchmark/samples/block-lheading.md": "a75c6204e4921281b0ea10fb15489c58f7c253492bac85b8a4ad2fb5ed0bb3ab",
+      "benchmark/samples/block-list-flat.md": "a6acfd7fb5908db6b68ca835c3dbdb6adeff4d79918db4fbdbcc71219ebb209a",
+      "benchmark/samples/block-list-nested.md": "0966d4f0381919ad0fbbda1393cec3a6e8d74ecf16903dd08879185b3cd26f06",
+      "benchmark/samples/block-ref-flat.md": "97d79884e2a94d2b0644d4bd5f588ff1a431227fde152699daf28c711342d49d",
+      "benchmark/samples/block-ref-list.md": "2274c9d61f959005082252c9b1888594ed20ddb283c71b1ca95154b69c45e48f",
+      "benchmark/samples/block-ref-nested.md": "9997be8f757bfeb8fe85077aa958e011fffc5d9d4656547e346da31f73dce437",
+      "benchmark/samples/block-tables.md": "7b6b2bf1eb3640124288933740a2e46e9395ad5fc956efa0507e0405e4548c87",
+      "benchmark/samples/inline-autolink.md": "4730dc2aa527737ef2d82d325dc2357b1a0ce0492e2ffb654f308c3ee69c64dc",
+      "benchmark/samples/inline-backticks.md": "f8118c2e1a20277a932652ae3f1eae33751abce10a0889083010b5a2069b5361",
+      "benchmark/samples/inline-em-flat.md": "1007068bb558c98a46ae1c3e9830ae39c3ff184cb5b1a346f225313cfa473a5e",
+      "benchmark/samples/inline-em-nested.md": "047aa1380d3f0a93d7281f8074ae06ad0d0b1e63e7bec9973ff174162f1735bd",
+      "benchmark/samples/inline-em-worst.md": "f9a7a5c97aea0cb4167f56960f437495195b220103b5a75b61344a66b20b290c",
+      "benchmark/samples/inline-entity.md": "b94c9930f4e09918c344bb4b13448544f38439fab960d1cf5300f8afb6674da4",
+      "benchmark/samples/inline-escape.md": "fdb75d7916062598ba48206bb43546bb2ce3ed2d4200b9bab7292312f56a16a4",
+      "benchmark/samples/inline-html.md": "dc4cbd9eea0b58e2c27700bc43d03fd2643f354e534777a08d62652ca8e99c7a",
+      "benchmark/samples/inline-links-flat.md": "a3c0f2bb030c7d1ea92035ff4c53b7af85624f9a3c2ac3ae2585a9ed81104955",
+      "benchmark/samples/inline-links-nested.md": "f14204673581dfe7caf3535216acf8f7f08e155b226253790460550f126d2ff0",
+      "benchmark/samples/inline-newlines.md": "a0c9519d2f93cc6284dcc18264b1ab5a76acaa27e3dab0062045f469df32a57c",
+      "benchmark/samples/lorem1.txt": "5ee469b3c3ebd95b3ae8659e08bf9d414120f38ad9020252164ca13a163347aa",
+      "benchmark/samples/rawtabs.md": "eec9fba1de450e37f8c362398c35e52b41f7f8f5f0388a45d3c31ceaee0dbb60",
+      "bin/markdown-it.mjs": "d8b76b94b812fb4e5c81e3feeddc9a6bf983f5557316bf7d9d4276ee4116ab02",
+      "docs/4.0_migration.md": "89b1eb75563f11339d3bdf4a5ef5c9128f33ce56a85b9774067f04a44717e98c",
+      "docs/5.0_migration.md": "b0b8e2d42f72c0ca432498a984f9a8e8f6d1c5f399727441cc77c1b802f0148e",
+      "docs/README.md": "14957e0989bbdc607e2ebe5dda0fc3eafb443f10baafe05827ba7f9581eb4b68",
+      "docs/architecture.md": "e449055c890d26e1f88ed1db867a969983381573a87d177e29daff274996a31f",
+      "docs/authors.md": "b01b9ffca91f272d136ed7d64a6392c37ffab43de9f1f6a6f78422675a04913f",
+      "docs/benchmark.md": "7aff0e8eaa53532c9651cd379ffd603ca09534e14ddfb89bad639653681f6f42",
+      "docs/development.md": "b569fec3e69990a437fef4d44310fccdfd9ac4bc7ebfcd0ac9ebec5774c5b50b",
+      "docs/examples/document_post_processing.md": "738ffd804b76b686bd23e4df686114294d28d6592180caef712a9b0a061f9c04",
+      "docs/examples/renderer_rules.md": "fd515c528b13ff4c9f35080f2a9819ffc4fc2ddb518637bfebf0acadaaac984a",
+      "docs/examples/text_decoration.md": "ea06b2822e9a2f07604b10ba9b0d6d017b204567c3e8a67336929de601db8350",
+      "docs/references.md": "56f4f282fba4d68e216e096ca77fcda5c2c5f83b2040212d4f813fa1705d1d24",
+      "docs/safety.md": "0d1f337fc549c335bf19e9c76bb827eb74bff8e047259499ad0cec15f1f6d9d9",
+      "eslint.config.mjs": "6d27a48148691fb749f7fef54831d73ca560e012947bd554dfab600759e866fb",
+      "package-lock.json": "090a7359655b1e5dd54e177188b48b5789bdd559d50f8637a3b90b8054c07616",
+      "package.json": "618e289c25e36082a944282b13eb8180116cce4446b4ba955cbbf599c682ade6",
+      "src/common/html_blocks.ts": "5bbdf4ab71bd31461b29d47da1077c600ba941c3e53d74f8d50ce31ac45546a5",
+      "src/common/html_re.ts": "826729add35acb2eb25e03e74cc785df8600f4c597df62b82388736bcd8dff14",
+      "src/common/utils.ts": "4bb332d3efdd019695640d641051357178466a97163184c92d8dc2d1862f7bab",
+      "src/external.d.ts": "b268962d7073e8120ac2ae4b99ee6e9d487c7aacfb9f6be36eab52841d7dbeee",
+      "src/helpers/index.ts": "d4e29f110662a7aeeaf8b121dd1d470c817bcf606f0b8d9c8221974ad86feded",
+      "src/helpers/parse_link_destination.ts": "0bc772e5f4c705177a859363bdc4d46c8f1f317d94f3aeeb9ae07f964f4dfd78",
+      "src/helpers/parse_link_label.ts": "2ec0c78e7d3d7881286ccda2f32eecf35590c7d341d257b58accc7c0afaf16c7",
+      "src/helpers/parse_link_title.ts": "5d20ad387a20fe886247f393c41183d6c34c1b491792c7bd9afb6d1f49b02e3a",
+      "src/index.ts": "dd0afc824c10d6dd464831552b83226e4e292ef6d78dae869a97f2c3643be85e",
+      "src/markdownit.ts": "0629fe25b4ed5e85e1f18cab1c0d079c7d79fa5873c97353b6386253800bb22b",
+      "src/package.json": "5a065fe7d8eab2a582f428e11c2ea63aaf70607a54f69cfd5c711b5c53d91b32",
+      "src/parser_block.ts": "8e3896aea6a734a5d3e965c9b84778286e61804371306405b5669f967049c1e0",
+      "src/parser_core.ts": "67cd77c5c7a93612166c6b600dba51c5d0151a81466660a969a0309e63e62ddd",
+      "src/parser_inline.ts": "82b68bf9612bb44bddecaa4e00b291e2be0dfbfd9929888e54da578a5f40b138",
+      "src/presets/commonmark.ts": "c93548ad55b35aabee8e87db0832f636ea313477ca35dbdd3613fcdeb4fb8022",
+      "src/presets/default.ts": "276e5e8a6338b10010e16a69531267327f4b27ffecfeb8ed9c6442c5bdfb78d6",
+      "src/presets/zero.ts": "dff837d983937b5eb97e525d3d7053b03fd4eb655f20c000d280efed441ee3e7",
+      "src/renderer.ts": "1bdce82f5f9deaf5d5e224dbe9bc4c832f1007fb139ee8a7dc2e0163ae0fb526",
+      "src/ruler.ts": "3854bbe5cd7ea38a06c942e7a336fddbdea07eb2cb9c0f0e3b25f6cf567d79ed",
+      "src/rules_block/blockquote.ts": "093ca982d862aecc4b3ee3b824760f86d67aaa24d99f9561bfd527f319603e16",
+      "src/rules_block/code.ts": "c8532a31209253150e349fcd41af2345827a7fbe107521204718dc6551474c61",
+      "src/rules_block/fence.ts": "2517f6a88ac90e6e31661a54410d38b31d51496ebf9b16fa5e3a97d20b1a612c",
+      "src/rules_block/heading.ts": "29289c64c7d453565deb382624dde24c702ddc13bb72699c298047b3ab9f7c00",
+      "src/rules_block/hr.ts": "313c5f75b04da9b7dbb08f6e8b2048ae28773895c15c707abfc6aadf159c4703",
+      "src/rules_block/html_block.ts": "9f35204127449ab01afe8e7577d3d596840bd46e6b9ddd7241f00c185afa3fef",
+      "src/rules_block/lheading.ts": "0895bde6405c06ebc17a0b3f019d140ef9689e0fa52df6f823bbe3ff6f053b80",
+      "src/rules_block/list.ts": "ab669ef793b0f7e8cb0e00a6cfef0aef625dd9e33339ccabcc1ee2a13025cbf3",
+      "src/rules_block/paragraph.ts": "4585a352d95820ceadda46ece88a5a4d4b10eee170660eeed213bbc5ee0b9383",
+      "src/rules_block/reference.ts": "8fd5b9fd98fd6c62e7ad5bc8ca2f8471fa3c1fb63f463913c8d71a30a525c5fc",
+      "src/rules_block/state_block.ts": "cb4ea45b1f77900b1be544010ca0691a83107c66b4c6ce5f3ab4ae697144c39d",
+      "src/rules_block/table.ts": "14abf7febcfbe8a6e1d6659725f6f6eb65510cea11e2ed1c284c11900afd822e",
+      "src/rules_core/block.ts": "d9f9f2c1c4165fc03048004fe155910d5faeaaa79922f1af316c6f804ad7d250",
+      "src/rules_core/inline.ts": "587827ec1b94a9c4f971a6ae91634cdfec62e8440610703d82380fac50c54494",
+      "src/rules_core/linkify.ts": "cacfc9492e46ac184673d6ed3b7ab26ecc86b3622ee75efe5d94dfb9d789af5b",
+      "src/rules_core/normalize.ts": "a2798d26295930b1cacdb5a3e495dcf4c7beb06b97615ce302e49aa568d5aca7",
+      "src/rules_core/replacements.ts": "97695c40fe5a3077006e6051120db61da11fbe243b333dc41ed18374a0943fba",
+      "src/rules_core/smartquotes.ts": "b7914ffeb53d2128dac885053a328487a3600582a4301164366f3837b9db0671",
+      "src/rules_core/state_core.ts": "28b20ed9d7340ded82af3235735562353f0f5a0b7b639e0ff74a41a35dbb94df",
+      "src/rules_core/strip_references.ts": "0a7c6c782e51965ccf5613fcb926b26e85ec25ea0ef40f966edb2d2a23050ff2",
+      "src/rules_core/text_join.ts": "0d7d17de6fda2d80f1d22038015131b2bfc52e0ff6679a5621fdc1e2fe9cb313",
+      "src/rules_inline/autolink.ts": "b91c4073229f9d023cdaa78adaa88a334dc337f2a1f66505ded94c57b7d5a4dd",
+      "src/rules_inline/backticks.ts": "beed19f1528cf7248fc873f419b2403e7e167a71a7c17d931164f80c4a695573",
+      "src/rules_inline/balance_pairs.ts": "718c282151e66dd02d57897c117be00494e7ab26db191418a22f2b86f5732c42",
+      "src/rules_inline/emphasis.ts": "416b9eb5034d09a044f01abf4e49efdb3a4689f3d4bf7e4068dfb6820e23bef6",
+      "src/rules_inline/entity.ts": "937d40756187b5ac480de2aec4a2c620ef86144757cfd394584a5243c7dde1af",
+      "src/rules_inline/escape.ts": "8ed53cc5e9848c303ffbb536701eee162e3ba92db6312687384f2fd9cd86fcf8",
+      "src/rules_inline/fragments_join.ts": "37f79b2aeae2c085892894fb21bbf016cba50f927d114c6a853ba182675608a2",
+      "src/rules_inline/html_inline.ts": "31beb177968078d7acf39c766d9b87fa51e6b3f26f7ec17479ac2243a8a5a9e2",
+      "src/rules_inline/image.ts": "35816b07e2b319957f21fa8d1d1dac290f4d4d7817928587c5742a2f959d10aa",
+      "src/rules_inline/link.ts": "4ca6a6a5662480c291ff7d36564ba04d77d3ede9cf84e0cce8bd3ccc1f296543",
+      "src/rules_inline/linkify.ts": "95df885173a4de62b837a0d659d72a037e4080db2cc9a87bebcf6beb612bb668",
+      "src/rules_inline/newline.ts": "eb128275c61ed71cc842f0350f90ffa6c086bf85f70b0091fed5046407d2241e",
+      "src/rules_inline/state_inline.ts": "cfb9bf63aa4a3e921d047ccf525a45919268bced13201b7389d7839a94e3ddd9",
+      "src/rules_inline/strikethrough.ts": "54b11a9e3c79abb2e8e80100744956ddd5ded004161cdc6946a3f31ef13ce0aa",
+      "src/rules_inline/text.ts": "d3b0beba00de08f6dde46b1ceb7ab124fc5136763936f06a70558cb36a8c0bc1",
+      "src/token.ts": "7ec1967e14759e56cc736a00d33d14b8dac010000ef6ade082783d9dba6f686c",
+      "src/types.ts": "7618bc67f90f1fbddb4837bbc5b969a35fba906763fcf4650f5ece938a7ad4f2",
+      "support/build-dist.mjs": "d19302806bfdad144a368361ec3213587a68fe9593162d6e377d509635431475",
+      "support/build_demo.mjs": "11b7cc999dc8d03b182b99e88e8ea2c66235fbaf1814e5359f717f1e23662f69",
+      "support/demo_template/README.md": "072f301233e18a6f108ab189659fddce0226ce247f2d83a8c21fbfaad47d397c",
+      "support/demo_template/index.css": "d479e8dd8b9982769131a968c7d5440f35bfad121d8fc0f948342954449ea898",
+      "support/demo_template/index.html": "4da16f37f704e986a13308dd6c0ba20f5c6e95db8db5561ac06799127637b105",
+      "support/demo_template/index.mjs": "eb6c0f5f5e9823db471b6597bf5367a3218705b4617c5af05bbc8350de69cc93",
+      "support/demo_template/sample.md": "3fbe15466848b7fb452a279e9accc2c6efc44474da1992b18471ec695ecf5186",
+      "support/specsplit.mjs": "9339496ceb342ac46919cd1b2b8e2063d67e5b3f2cd957c292e7dc4a850bdb49",
+      "support/track-ref-pathological.json": "87e0884e2d3fc8798e2f09c65c39ae8ecfa317617739a396ab155c2ab07726dd",
+      "support/track-ref-pathological.mjs": "13acc63302d70bcfacefdc0a6c559cd89f7c0d24611289f14e398295d781bd61",
+      "support/typedoc-oxide-fixes.mjs": "c991e3b5a901876c11a535cd8cd8508b9260284970f5d96d71020fa842567c15",
+      "test/build/build.test.mjs": "0fdedcae4806d13a93144e9bec9ecc5bdeed7e1d70c73b9d1bd07822d33fe814",
+      "test/cmspec/commonmark.test.mjs": "bc45a27915d4bc63d981cdffef8822718306b56c77323f08f2f25da93353708f",
+      "test/fixtures/commonmark/bad.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test/fixtures/commonmark/good.txt": "648f30b5270a2f218c6198fb7f19ca64b2eb3306d4e6cd4a314f3878a21a0e65",
+      "test/fixtures/commonmark/spec.txt": "257c41ad946f7a1414a499aca402a1aa8fdac3678532266611348c1cf54f4b80",
+      "test/fixtures/markdown-it/commonmark_extras.txt": "6b1ee3630681c53b7b22af2354378bbd2dad2e7f2c26b797b275c1039f27fa34",
+      "test/fixtures/markdown-it/fatal.txt": "5d1d6981973344c15b199165e7d0bb9bde44c8f72f12e1bc02f02c9d5362045e",
+      "test/fixtures/markdown-it/linkify.txt": "6651054d51c49492921ff401371c79a130f2632225bfd70c3d064f1f060b355f",
+      "test/fixtures/markdown-it/normalize.txt": "03b139696159bdb03d49040a85d435e94a8b52e994bb32d1b1d3c805c21d7cfa",
+      "test/fixtures/markdown-it/proto.txt": "2a93fd3bbf7d10d1e56e849d4cf55e07250430530f3d6bf0d2b278085ae8df2c",
+      "test/fixtures/markdown-it/smartquotes.txt": "15e4c2c138bd6a7427a1ca4ef03ca76b8fa8d5329b340472069dea41a32c7d82",
+      "test/fixtures/markdown-it/strikethrough.txt": "dc875d186bc55db0e02909a3e90b72171602331e8cc24d5177b586d09592d675",
+      "test/fixtures/markdown-it/tables.txt": "81b5b1bc2956d478e715bf68e1ba7851bc45469674899cb9e4180ad7f020bf29",
+      "test/fixtures/markdown-it/typographer.txt": "baea97d5211dee4031ce99313f76d05751c433d05c98e65eb8b398d2113a2c22",
+      "test/fixtures/markdown-it/xss.txt": "8333c873487c0e470dab14f673e0c5064670ae440bb453f5a42ed6f57c80bf21",
+      "test/helpers.mjs": "332918e6c1cf2cf9b9aba7a918a834af5886e88aad1640ba8d0f922f879be7a4",
+      "test/markdown-it/markdown-it.test.mjs": "f2a859521bdc79584ce3daf6641bb908e1757226f9d30de13ab93e5377b4ba89",
+      "test/markdown-it/misc.test.mjs": "9f6dde8bd4e03f1eba01ff1f57327357b1e70961590e5eeeb866b44fd4ec13e0",
+      "test/markdown-it/pathological.test.mjs": "7416fd60b5f3c148f1faa9631aeb07c169acfb588a0bac7e53e1a39f7ff929f7",
+      "test/markdown-it/ruler.test.mjs": "88bc15df5a11657d419586c1d05b3ec1ac4cf0112e77019991bf891659c986fb",
+      "test/markdown-it/token.test.mjs": "289fef19205f4b5a4a6ce48bfc00bf8abc9046cd1fc6524c5f5d98cb33aad176",
+      "test/markdown-it/utils.test.mjs": "2e9957589a594e167c8cb27a9e23bc0cafde872f1356cb38dde9ad30bb664ca5",
+      "tsconfig.json": "dd96fc5097fff21e1df982226acad92f09710ec8268e689b1e5c31822cd0909c",
+      "typedoc.config.mjs": "39a411bbc62604a40cecf1e6538e5494fb14af74543551930c79bde970a83d34"
+    },
+    "C-J3": {
+      ".devcontainer.json": "9dc1d02ed07d0fbb1e737f92b37c814f480758725c82a971bf331e51cb0aa6bf",
+      ".editorconfig": "a71035eea13b82779da4dd5c7de385f9ec3af700ebc1d623f44f81abf13e8ae8",
+      ".github/CONTRIBUTING.md": "1f780656a17f0827976d50727d8f893c1273ee6c05624559178e8b5d0d9ad0c9",
+      ".github/FUNDING.yml": "cb35216d936fe2c8ed5b278e7bf7db50183faeb088b8b54deabe9e586ad4cd47",
+      ".github/workflows/release.yml": "6ae86c1351c801832aa8f9975956a471a9e3d83129bc705f3440f5457b372489",
+      ".github/workflows/test.yml": "3249180b05b66e56f7a83174fd20fe266b606a1d1111638ada3921cd06f822da",
+      ".gitignore": "d0bbd377b6f01f62b9d48eb52287f5301661d335ebe59d504e91fe8f9cc604da",
+      ".npmignore": "5717f2d1340f8ce976ad2cd4c03832c11130e903cd0b84f9d9cc0111960de161",
+      "CHANGELOG.md": "649e91b5c42a5f4a9bec87591fef56bf6401f24620629f8be82d5b0bbd957541",
+      "LICENSE": "5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8",
+      "README.md": "f31fce3996dd8d418286c12abbe17d92cc1b286ebdbc0fd56a97ab9b81c01478",
+      "docs/CODE_OF_CONDUCT.md": "7dcb3117af344545ea1bbdedd371b41f968eb9d2daff46a52361764d82e8256c",
+      "docs/INCIDENT_RESPONSE.md": "e3002befa50fcbcbe1717b5af75fb2a9ad1aa7b913ad85202c6e0d9b6eb5637f",
+      "docs/README-cn.md": "a08d0397195867a28591aace493b5477c72ec0d0e64582d14ec61fb8f6a36caf",
+      "docs/README.md": "14f95debda13c730ae9c1c6b043f3bb5dd2d128d143040093719b4097a256814",
+      "docs/SECURITY.md": "9c3c9e105e7c916d77e4f1075f0cbb81f59c7798173aba2c3bc0ba8aac931f51",
+      "docs/THREAT_MODEL.md": "fc9834eb74b243ca2918141b91f40b1358a5ae0654bda1e6aa2dfd005d70a9f0",
+      "docs/architecture.md": "446160e8dcdb163d3b2bfafd15b1ca21a4ff3f17c0716e3780be674e5a3509cb",
+      "docs/guidelines/plugin.md": "ffe6c1b4bf0a2cd7f96a529362f25b8db6169696a0ef93ad3772dfdfb75ff728",
+      "docs/guidelines/runner.md": "61feb7ce534ddb7244fc10e87fa8e9bfd4bc357798d57dc01fda7b64034a2bff",
+      "docs/plugins.md": "322306ef0433cbdd4fee9cc47e9c364cc0fead5ffa57f8cc7f242f9560953e00",
+      "docs/source-maps.md": "71830230ed2ced8fb15972293e22f1e429d3619534626e03896b0e9d8fabe671",
+      "docs/syntax.md": "34e4906c3a019ad8aa6d80a022229e659fe7e6023ccd4fc0c3abf79b2376bcb7",
+      "docs/writing-a-plugin.md": "0d61b9d8a0b7722f0a3c86dd5613f7e0ca5ca7a4889d621c66859f4b52970eb7",
+      "eslint.config.mjs": "11cbcf69738decafc78c29fa19560824f3be65e29477607aef822aac32a5b940",
+      "lib/at-rule.d.ts": "17f2922d41ddd032830a91371c948cd9ce903b35c95adca72271a54584f19b0b",
+      "lib/at-rule.js": "33b932bda8f304e9838a70232673326b6c0fd5fa030df35071bf36c127042a0b",
+      "lib/comment.d.ts": "6332f565867cf4a740a70e30f31cefba37ef7cebcf74f22eab8d744fde6d193e",
+      "lib/comment.js": "674385438f42526f2c05c19dfb66fcc521f5cf180ccc85b3215ad5c07ac21a40",
+      "lib/container.d.ts": "2977b7884aedc895a1d0c9c210c7cf3272c29d6959a08a6fa3ff71e0aff08175",
+      "lib/container.js": "0f8aaa013a910e142be706c3d6f54a3ce04751a08df3f17ed3a61bb91f863c39",
+      "lib/css-syntax-error.d.ts": "e16dc2a81595736024a206c7d5c8a39bfe2e6039208ef29981d0d95434ba8fcf",
+      "lib/css-syntax-error.js": "904b4bb371539a6303e4e211f0a8991fde7bc94d8674253d627389ff291d0ec1",
+      "lib/declaration.d.ts": "cc4a4903fb698ca1d961d4c10dce658aa3a479faf40509d526f122b044eaf6a4",
+      "lib/declaration.js": "2ccb78406c7a45aab26fc463a0fe5e3e855caf3ab1ba283616ae867046aa3b54",
+      "lib/document.d.ts": "e392e8fb5b514eafc585601c1d781485aa6dd6a320e75daf1064a4c6918a1b45",
+      "lib/document.js": "f66f02fde48389fe1a361a8f71da7ee0236a49c94cf22378e70ba6a2e9f4fab1",
+      "lib/fromJSON.d.ts": "97bccf79859464fcd23ee7f3f3d00c4287089e420b77ff395068eb2b209c3e22",
+      "lib/fromJSON.js": "95cfc688a45c418f831d433d36b59223ca3e3fba93cda50b0a3cd1aa49f9bdfd",
+      "lib/input.d.ts": "e5bab5f871ef708d52d47b3e5d0aa72a08ee7a152f33931d9a60809711a2a9a3",
+      "lib/input.js": "52358502e6ea455d421d21a98fc0a3be3b974ca624b96f43b318780f3e150bc2",
+      "lib/lazy-result.d.ts": "a039dc21f045919f3cbee2ec13812cc6cc3eebc99dae4be00973230f468d19a6",
+      "lib/lazy-result.js": "16c1305def71004a5feff77b5b4c38f2e9c2148b29460df65c078d12889227dd",
+      "lib/list.d.ts": "3eed76ede2a1a14d7c9bb0a642041282dcc264811139d3dd275c9fe14efc9840",
+      "lib/list.js": "6df35bac40d4c449ae8e9078776e5c17c529337830a01472761902a546032f52",
+      "lib/map-generator.js": "feccbc87472d5d1cc660c2bfd4958cbe5442173f03cbfa518808725f684a313c",
+      "lib/no-work-result.d.ts": "3fbe57af01460e49dcd29df55d6931e1672bc6f1be0fb073d11410bc16f9037d",
+      "lib/no-work-result.js": "11e06a9b30ab844b877f489ad7870e2a319507aed4554a58a757b7dfd7699505",
+      "lib/node.d.ts": "370bde134aa8c2abc926d0e99d3a4d5d5dba65c6ee65459137e4f02670cbf841",
+      "lib/node.js": "61e97369a150990b26c1938b686e82688d6aec46372c82a4c3b1c5a06d5e6c53",
+      "lib/parse.d.ts": "526d4d924f94e938d5c81ec74eb0ada1067a31321dcdd830aee4d66d08bd8bff",
+      "lib/parse.js": "7662c5ad1fd5f97a7c1615f0e5e7bc268e762916bcf6fb7bf9dda45537493764",
+      "lib/parser.js": "5ac73eb5da16ec8f998a1a5aac28b15815c892c2a3957ab06ee8333f8718be6e",
+      "lib/postcss.d.mts": "8d369483f0c2b9ee388129cfdb6a43bc8112b377e86a41884bd06e19ce04f4c1",
+      "lib/postcss.d.ts": "e3cf0611709328b449ec13f8c436712d62003620ce480139fae46ce001c2ee9f",
+      "lib/postcss.js": "8314c843f5dfa922e6f3fb9b8d8bf3e4b0be0d94b08075e1b4f3599f4276fb67",
+      "lib/postcss.mjs": "986ebc2d661a3e93b6e026dd2e1925e18167efdcc963f4043a65e1859974664f",
+      "lib/previous-map.d.ts": "52dcc257df5119fb66d864625112ce5033ac51a4c2afe376a0b299d2f7f76e4a",
+      "lib/previous-map.js": "a4ab645c175790e5461aa2218852f9cdcdb88cc3ec1062eb452086ce00f9cf1c",
+      "lib/processor.d.ts": "f760be449e8562ec5c09bb5187e8e1eabf3c113c0c58cddda53ef8c69f3e2131",
+      "lib/processor.js": "d81bbd7f5b09dae101f7b1e14d12b86757535d4cdb7c95b31cbbe87c7f9059f2",
+      "lib/result.d.ts": "44325ed13294fce6ab825b82947bbeed2611db7dad9d9135260192f375e5a189",
+      "lib/result.js": "b4239438538d41187fc9a572c83bb89b09524301764ebd4f46c71fe31edd04dd",
+      "lib/root.d.ts": "19ee8416e6473ed6c7adb868fa796b5653cf0fa2a337658e677eaa0d134388c3",
+      "lib/root.js": "66bf461dbd984702272d737e8dc86a254b0481ae7934162f4ce0b32d9a19ec76",
+      "lib/rule.d.ts": "46e4a36e8ddbdfb4e7330e11c81c970dc8b218611df9183d39c41c5f8c653b55",
+      "lib/rule.js": "216ca23a33b1a0145c7925daa442a34e33a9ea41c6f3bb58fca7c4fb355e0166",
+      "lib/stringifier.d.ts": "0807e4031561395faa159ca7ff21991d63f3f7df894907ec447d4a62a8e66214",
+      "lib/stringifier.js": "d068c9038a6f7f4b24b9a4252f6c71bde3e84dc8378707ee12d950395d9e074b",
+      "lib/stringify.d.ts": "5ed0ab0fc1719c68007cf670abd22f78c7767a3b9f4465ad5a29a255adc0c939",
+      "lib/stringify.js": "99229cdda200513f88f7fee46004d5c39c1492a73451509e66164d26dff34abc",
+      "lib/symbols.js": "eb8ab8b9648d400ec3e8e37e75dc159734b97ba21137f12da11b4afc2547a1b4",
+      "lib/terminal-highlight.js": "27f1eb6cc633f3947e053c96f16b1754bcffcda2742ecc9a1e11cc2a75d70d9b",
+      "lib/tokenize.js": "ddfcaaa01f5eac9e4e8652044df1401ce6cc70295fd3f9fbb214ca66fb2bec72",
+      "lib/warn-once.js": "5683ff69eeb8e77373a4bd0e0b9da611c7575ee434ba3c458c0552ab4806464a",
+      "lib/warning.d.ts": "1328ab4e442614b28cdb3d4b414cf68325c0da0dca07287a338d0654b7a00261",
+      "lib/warning.js": "a969d1ec8a5025c028278ee037cc21c5c7b8129e80269ea3bd8d831a957474fa",
+      "oxfmt.config.ts": "eb091bc6587ae42fe4d77c3521100dec4ca2ccc64e1e64dadbca6bc9b6ef6127",
+      "package.json": "4b36423703253637aa59ecc3e557eb3b6a35bcb2ed58b31b751a4cf0cfec316b",
+      "patches/yargs@17.7.2.patch": "34652056801bf0e586b0f2ab1a4f464b352d4d3ce0f5b2d51040d171c31843c3",
+      "pnpm-lock.yaml": "8df1b9ae93ab61f30fd7eda7454f508f837c5522be8170dae263d07a73b03bf3",
+      "pnpm-workspace.yaml": "840efaf5fcb35a0350d1ff4857c43f51fc873bf8f7241883f3631746e5076f61",
+      "test/at-rule.test.ts": "0fbe4a2c0b5456fb1eae557ff194130b5adb3a7d9a6534ae1d8ad1537ef13602",
+      "test/comment.test.ts": "4f9948f1045a6d2d0bdd333082c0e9536feff1b5c4eb8d6c062f9caa51a19aa2",
+      "test/container.test.ts": "ec489c83e572c007cfb0e5c4256d743d940c3ed544dacfa8539d0bbe7b8242e8",
+      "test/css-syntax-error.test.ts": "ee31cd58a09bfadb80ad018b66e879910e6bcfafcebfb697856cf6cda66a208d",
+      "test/declaration.test.ts": "52898588c061cb705bc051a2512eb0788e744fa28aae5bbed600e49e3c5d39a5",
+      "test/document.test.ts": "a9db5536769d3047b03dd02034a3843945abde1e601b91950529d724f54c67b7",
+      "test/errors.ts": "ff96ab2547e23a3c32e5b98961054f495d509a4c1c10b606a39060637e3b12e9",
+      "test/fromJSON.test.ts": "cfa3d7350a4af57240d994ef028b1479a581085bb2eab23e983a1bd01e651252",
+      "test/fuzzing/fuzz_parse.dict": "1b74a0aa37749ae0d46ec38b2cfaa670dd9bd35e097423d2755809382057fe57",
+      "test/fuzzing/fuzz_parse.js": "168266b3ed9c3b5228e039289071ff45eeafcb9528475c5392d5dc69940648fc",
+      "test/input.test.ts": "0f5c6088e3116fb3d55fa7adfe6f52f9b3f5b4326e50584bc3cae2ec9bf657f4",
+      "test/integration.js": "1d7dddaf6cf256aefb1603123bb5b0793a98a8f6a785753c879fafab8cb2bf61",
+      "test/lazy-result.test.ts": "3c48039a59283dc078f42ae6cfe16ef383f03cc5a7ea0cb9039298a8d3f1ce83",
+      "test/list.test.ts": "6a2f021b6ca5e0d2f519abe48046c4db49a6f2bb18f953c7b939b46ea9c2bc72",
+      "test/location.test.ts": "dd17a76dba4a6fce293128f6ed2191530bd933854a465d14bd4a88757b308c46",
+      "test/map.test.ts": "6b6b09d99bfe4718ce355e5ba1710c5e7b9a20943c040d9c71b86e7b2b245464",
+      "test/no-work-result.test.ts": "faee546570f98da7069d236a546c723b50aee906357a40595e048c5df9c1696f",
+      "test/node.test.ts": "f27ee760fa86de2b252ab48be8edac4e4d0bb4381a410f81dbc78c1b76a9a042",
+      "test/old-node.js": "99c0bfe246fb470b4d3d45d486e1a10e60b4c52cb630ed3c3276eda922642846",
+      "test/parse.test.ts": "0d4b6f6d2f6d44f0e7eba99f8dc895105790ec52a51a578569fa0402e4c47607",
+      "test/postcss.test.ts": "7d370d9b06b8179cf9aa42bbda9adfd96c41f9d252d9440702c4337b01bfd523",
+      "test/previous-map.test.ts": "cd58d969755eb9056ac04966cbe19d84a50a7f736f27608eedab7615c5bd8f5c",
+      "test/processor.test.ts": "6990c5b3938a6aefc55c17ac75c94a67f907a580c5ae4fe4548e981b39366dce",
+      "test/result.test.ts": "4e50ff0395d7d68031b013316330038ecb5f9224922acc487034b9e39e7458bc",
+      "test/root.test.ts": "234fc9b4c09304da8d08c66a35b977fa5fc7a71bf3464365bd0f377d054cb977",
+      "test/rule.test.ts": "6dacbc23520a5fa9a7452bae25b87287d729ce08fae88243531e8d7898aa92bb",
+      "test/stringifier.test.js": "3fc8749eb23153ee96d786da2651324287e8e8465cc83cbef07ede1f8f2a839f",
+      "test/stringify.test.ts": "5c962d0c9557523cc69d483420b1d65a77ede2fb9195a02928a7a8c476b32c7b",
+      "test/tokenize.test.js": "a14c45cf808454f5dca8741e3e089dad08dfa1028cbbb9be34eb1ebc6bfd9ac2",
+      "test/types.ts": "1802e5fd6062e6ea4564d25fb97e52dde936513ba8f76fd82260f6655245ade7",
+      "test/version.js": "1dd41b3aac1b667bb3fcfd3b9f9ed337edb0c38963beb9f7eac7164f6537e57b",
+      "test/visitor.test.ts": "257c8c4db7016afe9d938a1e945ec79bf446d8f6efde0200fb57e851a82bb7b9",
+      "test/warning.test.ts": "d4b2dd5bc3ffdc51d5a5077b11b0f3c8501288dd88d8432771f26bbe2b09c641",
+      "tsconfig.json": "75caa4367a152eaca73ec3a16254f10a2159f66b6c0dc4863c9217f64153c23f"
+    },
+    "C-R1": {
+      ".clippy.toml": "ce5e91521378337f12e5f1eeec892b64dbe4fec0cdfd9aad57ccc6314a33b6d8",
+      ".git-blame-ignore-revs": "3b82bf459c0b08e3df681c3fe589ced6dcee5376dfb6c8ab15ab82c46f9e529f",
+      ".github/ISSUE_TEMPLATE/bug_report.yml": "85f985568f06613bddf57c0d05a0847bcdf39fe7762f4b762557bb28bdae6bfe",
+      ".github/ISSUE_TEMPLATE/config.yml": "dab2ffff0ba518959658c58a2f11e459ab77c511a7d0bcee0546e624f0c07987",
+      ".github/ISSUE_TEMPLATE/feature_request.yml": "c6027ad24e4072f48db71aa64b472a85caa07e641ac0cdfc6433181ba24f9993",
+      ".github/PULL_REQUEST_TEMPLATE.md": "51a183b13e6d928024ad2cd7a2d6844c5f5950aee9bcd153fefcda34fd915e97",
+      ".github/renovate.json5": "846a6ed5154c98404e9003bf4d31503c5ae618ce80904f8001c7d94386872b07",
+      ".github/settings.yml": "b2d8fdad314c24fc6c53d1e0f4c7f0e8272ddf863ed724e605b2d5c1ad864b3f",
+      ".github/workflows/audit.yml": "ab48c2149d936fe4e46202a8fca3e163e7d40f1e2427ef0ae35c086de8de1d49",
+      ".github/workflows/ci.yml": "96488be6f5f63734d417c1de8cc17df529efb72eb56768c11876c1f3a04119f1",
+      ".github/workflows/committed.yml": "023b26ee90e60aa24d5eaab4ec5df2f52bb2f92be4d13777a37e63e9adbe4cff",
+      ".github/workflows/pre-commit.yml": "706c1077927e91b6b5bdd1f7b1f69611ffab6c1d92280b3c0d6062688e7a8296",
+      ".github/workflows/rust-next.yml": "7ae878c3c3fbdb58e120a95b26db46b05008f6ba87f9570c38e47edf94c703a2",
+      ".github/workflows/spelling.yml": "1891a56eabc5ab6a3e8796b8dca9f7a34ab84d2ba6a8a8eb0423d237a21d3d10",
+      ".gitignore": "c97ecfda4d205190b973232dcfdb0c29748521c2534dd866bcc782f30b086738",
+      ".pre-commit-config.yaml": "45950f27a6045d40130f3b61c829cba9d84e2c46f2ba537409e4de7f8791157e",
+      "CHANGELOG.md": "0bebfc300dae54760ee0dea6f5b6a24e8c41ec41d75cda97454b22278ceea2c7",
+      "CONTRIBUTING.md": "b3e5b4d00ddb9ea463a1cf294d9806de44f041a5d150d4b7f9368949ae8e4448",
+      "COPYRIGHT": "472ecdadaee65c564f323a4fcb3f1ef21a23bd51dddb6d8d336f32122a680cd1",
+      "Cargo.lock": "8544e6d7a3b31478c33c9dbbefd73281cd6287f4f04c943b60789e51d7ac3716",
+      "Cargo.toml": "4ab1327f73eb1572d3f5e898ad31922fcbf82d7a8f63986b0dcb79f3c4b381d6",
+      "LICENSE-MIT": "cb5aedb296c5246d1f22e9099f925a65146f9f0d6b4eebba97fd27a6cdbbab2d",
+      "README.md": "b66d0e430d8a5f5391f1f51b2d7959c3881fca59fdf76a075129591b396c1c62",
+      "_typos.toml": "1a46a4d0a64496096979c047dca1d571c9631c84c227aa37486e60504574cd5a",
+      "assets/bigbuckbunny.mp4": "543a4ad9fef4c9e0004ec9482cb7225c2574b0f889291e8270b1c4d61dbc1ab8",
+      "assets/links.txt": "8bf46ae3d9199da7feec24d71169230a05e8f2b045118b80d483cb6a7d167f37",
+      "assets/small.mp4": "1d720916a831c45454925dea707d477bdd2368bc48f3715bb5464c2707ba9859",
+      "assets/testfile.txt": "34b437386d0461844a2297a483c41fba83274d7909f11af51a38684d9bc545cf",
+      "assets/trace.svg": "215d31bb5033745c1a6e64481933e2daa71f47a66e662c094d2743a68d63d334",
+      "benches/contains_token.rs": "cd1ce72b8e1c92f8bd9539b1933e3337fedbc2e22f98959adb18b1a215f3cd70",
+      "benches/number.rs": "f4b54895ed523c462ce327a5205b0b99591eb7056fe9de9abe3f809eff287386",
+      "committed.toml": "1eca8b79d25c07d0566c38a374bf89b4834ce1aa61d0d8b339f6040d4a0fecb7",
+      "deny.toml": "fcf3b4d8eedca19a7c7a673a06deabe5df2a441c6b550a0ad9ce698f04505378",
+      "examples/arithmetic/bench.rs": "ff0220a18c6004cca8b56583072fbb7290f022cc069f2d24be132f261ac55f18",
+      "examples/arithmetic/main.rs": "aab0793c96add893bbaacea331bc05de8f6b59e47c5bccca67bfd30e924cd790",
+      "examples/arithmetic/parser.rs": "ddb86007e2c6be97acd08788f30a13083e0615bf5314a625d74e6a72d69da43f",
+      "examples/arithmetic/parser_ast.rs": "748d238fac2fe83b6ab9dfad5d6a2bb5f1863f6c2a2757e17271053291da3990",
+      "examples/css/main.rs": "3127f259af57aaaa8363bfa6e0a64c9719173cc1dcc5a293771a2c8a7f31982e",
+      "examples/css/parser.rs": "7175cfdc36d228b3130f0cfc8565063554167998045a07f62644bbd90c2772b2",
+      "examples/custom_error.rs": "5ebf88007ed2ce998fdb16cd4326b1573e83f0c420e2f6561c10b6dd8ebf69a2",
+      "examples/http/bench.rs": "b6d3e9e5833b53ac58f8336617cc42a2f3f4c5e5ce88feb23184fcdbb36843f6",
+      "examples/http/main.rs": "95d3c73953cd76ea462d886ade2ab34e987239bae3abb0349c434fb01b80467d",
+      "examples/http/parser.rs": "55a5894ab8e211a17f2eb9db72503579704d85376a6631a741eede2bfcd4bdbd",
+      "examples/http/parser_streaming.rs": "1300486af4dfcfe9b1b396436ef58927663624b0184b9c70a636e639c09c4552",
+      "examples/ini/bench.rs": "c8fd1aed25ce2878c0f440d765779d7877e83ca202cf071f8f4c57566596bf89",
+      "examples/ini/main.rs": "d771aa8aae11e53f4f5453ac39e10ae3a1de210408dfd31ca7d1ce58d14c3fb9",
+      "examples/ini/parser.rs": "c554286e8f2077f999d607902e7a63ce3945939118bccf830a68b22bfe24c775",
+      "examples/ini/parser_str.rs": "8f5bce75153ae98d5e76f884fec4746a73c44c4fb9a3c4c2efdf77913baf3bec",
+      "examples/iterator.rs": "21fb0480749116407689162f0d3e9957e3e7b6863f9dda08ee01af675409b06e",
+      "examples/json/bench.rs": "9479248ccef46e0741e0eebf9fb3b307b343ba665925481adc4554d8e65f9d39",
+      "examples/json/json.rs": "48cf6c114098113c9767bebe430682f55f7c1a227e6486131ca58c00770711f2",
+      "examples/json/main.rs": "7ab1f6eefd4eb61153cf05991e593fd10827ac09f66af45d3019f94c39c5b84e",
+      "examples/json/parser.rs": "6a49d300a323bfab9deb9221c92c44ea4b5738788077f712cc8d12d082583127",
+      "examples/json/parser_dispatch.rs": "370ae21b2c1f9fe848a8ca0d9f821109ab0995c78575d01a0abe32715429eb41",
+      "examples/json/parser_partial.rs": "4f944c45223161fcbb6025fb8e71306e549ab39bf62d26bcbf85c61d124b18e2",
+      "examples/json_iterator.rs": "070f7ade176b04b70b026b1915601a52fbb462ec0cc7b9d6684d1e0a04c2d031",
+      "examples/ndjson/example.ndjson": "c44c130731008bca76181348d40f46b183577949b5a4d229e0e1a56e1e405e5d",
+      "examples/ndjson/main.rs": "dc92dd5d76b5d43edf947b6455d552f0212e46d59c926d95f97f5d159b14e361",
+      "examples/ndjson/parser.rs": "e10c0940da97def0a9c628916433cb867ea1a8cc6ecc0dff58bc98d13ec47ccd",
+      "examples/s_expression/main.rs": "5a2de0b477807c7d6ab8bb72579f03692e8f5ea89d5b6f3a8342cfdbe4d84b96",
+      "examples/s_expression/parser.rs": "a98fa7a2230d3c2aa77206bed66d7c4167707464bdb790f2ab25d803813589e3",
+      "examples/string/main.rs": "e6362f957d532d41bcd96476e55ac4c253eb04fa25ee88b48d872661a46a5bb5",
+      "examples/string/parser.rs": "111c8b67d9e51eef8b980f4efb9264d76598cb09e820b74f9ea8dfec5176abb4",
+      "fuzz/.gitignore": "ba84141927163adddc9e02d3c7d88651c1b157a27111e74ab8e42f242f9a883f",
+      "fuzz/Cargo.toml": "fcd2fddc8b64b20d0c4f38009f4c4e9105730d13e2baadb6a1e6eae0e6bef1db",
+      "fuzz/fuzz_targets/fuzz_arithmetic.rs": "4d0dee03f1245e18313582ac708d567cfc478651426bbc3a95319cb0138e3654",
+      "proptest-regressions/character/streaming.txt": "509ba742c62b17d93c70b73bfb430532f2c48c0a3eca7599e59446ee3f16a9f3",
+      "proptest-regressions/number/streaming.txt": "67adde48efab7e6e07c7a89fa0b6602528ea531728d4cd2a058e6c8130c3fd4f",
+      "proptest-regressions/stream/tests.txt": "59bb8edc855a487f46007e52be14d33684d8bd0c8f2dcc7a9b119c3114e849c2",
+      "release.toml": "01a769d4f6a748bb75a045f2fe0f755ff689f7658cc9554fe93334cfba303442",
+      "src/_topic/arithmetic.rs": "94920a9572ed6deac58abb337a7be57b93cf37440f0cc3eaf514cb9ad9b9e077",
+      "src/_topic/error.rs": "69c972c609a91e078ddb4e01da8f3d35f29d8dbcb077614e9b156c033c9f5dd7",
+      "src/_topic/fromstr.rs": "01abdab296cd30067ae5f508b2b21ebe97c0571ace58e7817876eb2110e8d23a",
+      "src/_topic/http.rs": "19b9ec78a031fe5b3086fb34d04d6c13308c50b6e7bfe30229f5b682d3605ac8",
+      "src/_topic/ini.rs": "b2b04d48eac3158f4e26ee9dce748a699d02acaa0b12ae8d54421cad0fdc4ad7",
+      "src/_topic/json.rs": "bde39ee6b1c5fab2d2da480822b737674aed877f92c3f748d6932bec313b5661",
+      "src/_topic/language.rs": "437814054d4a0a19ffccd74ff9189677e6a8e9df45dc395861fc75d5bd23719b",
+      "src/_topic/mod.rs": "7e871bc9f8838ab2b7bf35db6800e17a19bf8132675e305087cb6dd1e841cbec",
+      "src/_topic/partial.rs": "5b795d1a8f2fa5a378c4974f9862acd479392a645b93c5dc4da2c4b1384c0d0d",
+      "src/_topic/performance.rs": "e73a034d6db886bd88f5a48e93b35c60947059a2cf514443ce1b058cf2e617f6",
+      "src/_topic/s_expression.rs": "6ca9a22a5c3344e120421f2ab353a1e822777aebfa1faa0acffc9632f7668cb2",
+      "src/_topic/stream.rs": "5ae58b8a53e7ffe60df4fbe862fbc2319f5c36f798767b7b650dd6441332042b",
+      "src/_topic/why.rs": "5b425ff59f5bb0bbab87e63e4126161819a209fd9b316288ed3c58084012e5d7",
+      "src/_tutorial/chapter_0.rs": "2dd082fa014e8075e13524ce6a9ecf29adc380518764c487729d46e45463dc03",
+      "src/_tutorial/chapter_1.rs": "ba83c8b7cf964314414b0e8f7bd500b1931a974bee48e3e78e9c4f96626983e8",
+      "src/_tutorial/chapter_2.rs": "e2bc77fe8a122ea1f53f77501d0fa73ffc6e9c050a402e4266950b124e05edba",
+      "src/_tutorial/chapter_3.rs": "c7264e2fac45255c5a1b5c891cdcbffff840ee723f254f3e8556d4b794c438cd",
+      "src/_tutorial/chapter_4.rs": "d3a937b7305eea326cb16c0cf7b0033866693af6f5aa6ff05d073c0be9c71a73",
+      "src/_tutorial/chapter_5.rs": "f1eb8a17f1b5d35be3f9f2f24838ad5057791538440079fa95c3c665909cf8e0",
+      "src/_tutorial/chapter_6.rs": "2deec40067e1d5cef944d3773adaa0fcd17746abbcd489de6fadd874d45a9af7",
+      "src/_tutorial/chapter_7.rs": "fd8bac691a830bf49b56ddbcf4df64ba3eaef5d67740862d00e0741b590596ed",
+      "src/_tutorial/mod.rs": "b69bb758ffcfbc1fa0c698ffc11d840ea6de3f8fa402ef8e170f3a0d6c3e190a",
+      "src/ascii/mod.rs": "6addc47e35a78506ec73f6406bc13a52fd8a2a24c6194a4f257a52b1d9927477",
+      "src/ascii/tests.rs": "173317e7c65ad486a95df930c18bbd8a43da2cf0545ea142c40b4dfa418e3b85",
+      "src/binary/bits/mod.rs": "3e5dbb33039225ff879be9478920fadcd6857661fed10394ba9bcf52410062ef",
+      "src/binary/bits/tests.rs": "1ce1707a8ab2300d601f67fb3cb9c4b8ba7528564477e65ff25d8542c3e0f6e7",
+      "src/binary/mod.rs": "764da25df5ef13728050bdf38b347c78f528a9dc9013e3999ac09421e96da529",
+      "src/binary/tests.rs": "bc8c383d345e9d63f09d3edb6e4ff76b8e6d422f2359f7e7b2b29c56082d3b93",
+      "src/combinator/branch.rs": "4111b409191755a6fd94c1cbd3b9d6ed9f955a2f04cfa2d316106cd55612f9b6",
+      "src/combinator/core.rs": "632201f917e732b80c8dbe88c43f33e868df5261449b22b18e60424a795e0f45",
+      "src/combinator/mod.rs": "03d3864d577c615b89d0266877090ee67422f83301ee130833c5dff8ff88767e",
+      "src/combinator/multi.rs": "7a7acdbb667617627c1af7fb601bf1ec48df589e89744023ea32ce0eff1e4eaa",
+      "src/combinator/parser.rs": "cb7761454ec3b874b2434e3b9cbc89232cd9b7e8c8f6c1c71c0a3ef12fa28809",
+      "src/combinator/sequence.rs": "f913aec935bbdb1fd496e76dbc14d697d8e7e48c163856e062c5ded2f3170905",
+      "src/combinator/tests.rs": "9e9765024fa58adb3455bfc3815b923c3f93acf123ab1ef3a22d5ee832e50a7c",
+      "src/error.rs": "2b4f4bf06b93832e00c0a1ea9297a5214a4adcca270861803707d4f7d608712a",
+      "src/lib.rs": "3436ea3a7ca6375c49a62c674ad348b3601eb5d969b7376aeb19d395a24d2c63",
+      "src/macros.rs": "321af97e0315ca11164064cadbca2a8c0a55bcf605d101d5a6a4f4bca66eedf6",
+      "src/parser.rs": "d5b78627d5a3912bb708def980097c4e0dcc4f96838ea0ec3f8666f1164abb65",
+      "src/stream/impls.rs": "99f69fdb8c32ad1f759bcc414ebfd2428eac5997887ce2b6946a2fcfcd174082",
+      "src/stream/mod.rs": "403326cdfb73dbe1d418c4e6dd8de259e970b0e8263e86a0d9bdf64219308f84",
+      "src/stream/tests.rs": "e351ea68ba3fbeaeeac147ac7c186d8ee3a17ff09c78c016dd294eb0719d54f2",
+      "src/token/mod.rs": "fc130a361abe66a3e324f8bbfc25990b6f4d92f5105a1ca915fa66efd7254c9b",
+      "src/token/tests.rs": "65819246fac1c10abe4abeeb79e30fb03b06a9a5ef6fde3edec003ad1f034f78",
+      "src/trace/internals.rs": "725fd32f904fee0b61188e816bd42da3d42ffff43cbb4077d9324acfd96fd409",
+      "src/trace/mod.rs": "c63934ae83d80f6d6c1be0b6960fb107d67f42c1fdca8a1d680f999cd74c4b5d",
+      "tests/testsuite/custom_errors.rs": "70ef64792a71d444b8228a8ac10518ee80dfb827f04a6a0ca4820db8fbff1cc9",
+      "tests/testsuite/float.rs": "d82150021dd24a2e9db7c125bba85084d700a629fe7b9c9e235410a06ae17c33",
+      "tests/testsuite/fnmut.rs": "064430a56f10994689a934e669859e2d84a723bf6bdcc0e72673f04ffab6211f",
+      "tests/testsuite/issues.rs": "0c6d20e9cae576ba81636d597fab17f4cfa85e1b5cfa509a016c4bb8b61cca52",
+      "tests/testsuite/main.rs": "ab6e2b9cce09f25acb6db29440739511589bcdf30aae7304a3b9de7a1621a1c2",
+      "tests/testsuite/multiline.rs": "d26e542c14d688e6ac1dcdd33997288b48925a5643f133b4edd070a163e45337",
+      "tests/testsuite/overflow.rs": "4e8298b1a437915de85b0bebc6ba9755eef9e6e3eb1d7900dc727ad3b512d228",
+      "tests/testsuite/reborrow_fold.rs": "1630bdf24a065169dd2a40285cb7a0dffa03d8bf7d2d5dcf9f1286c92e9f6df5",
+      "tests/testsuite/utf8.rs": "741e3ad5605ee135b3af12f7fd1f3bd0e0ed8ed5b1660ff5ed3e1ce0e68a8b5e",
+      "third_party/nativejson-benchmark/LINK": "244d2760e6e66e683bd1e2ac458c1421c158e00b664b622bc6ee72d6b6ac880e",
+      "third_party/nativejson-benchmark/data/canada.json": "f83b3b354030d5dd58740c68ac4fecef64cb730a0d12a90362a7f23077f50d78"
+    },
+    "C-R2": {
+      ".clippy.toml": "c686a8b532b0261d71845fbc1ea23d8aabe889c013e882b1e1f3b55cebef2668",
+      ".git-blame-ignore-revs": "3b82bf459c0b08e3df681c3fe589ced6dcee5376dfb6c8ab15ab82c46f9e529f",
+      ".github/ISSUE_TEMPLATE/bug_report.yml": "85f985568f06613bddf57c0d05a0847bcdf39fe7762f4b762557bb28bdae6bfe",
+      ".github/ISSUE_TEMPLATE/config.yml": "dab2ffff0ba518959658c58a2f11e459ab77c511a7d0bcee0546e624f0c07987",
+      ".github/ISSUE_TEMPLATE/feature_request.yml": "c6027ad24e4072f48db71aa64b472a85caa07e641ac0cdfc6433181ba24f9993",
+      ".github/PULL_REQUEST_TEMPLATE.md": "eeb67b6141a9e6c0e5a75353f18ea7b32b6bf4418c58dce7522b0012110e6b76",
+      ".github/renovate.json5": "1266ffe435f4f6bd0ecd28c78ecd4b7294dddf6a923ecef1c8754b74b1110efb",
+      ".github/settings.yml": "3f641ad376bf04525e6c0540973d7e48fb69ff4d8f0044be21a4fd249f31eab6",
+      ".github/workflows/audit.yml": "4cce3b0e5bae9535b4820ca28dc8004507390b285a4b55844c7fb34028aa90cd",
+      ".github/workflows/ci.yml": "563ee26b8a7e2da3a0d5e964c876114f4c0d918b81a4cfd916cd1603aa8880b0",
+      ".github/workflows/committed.yml": "631a0d4b391e167a45451ba858969a4f6bdc06d27423bbfebb98b91dbc8573ba",
+      ".github/workflows/pre-commit.yml": "caa59eb7172c8437bd9f88027f6c871873532b760cfa7d2de311888dcd8edb76",
+      ".github/workflows/rust-next.yml": "e0e54729f5aafd57a962884db114173b124b3a177401e3df4a6bc16ad47060de",
+      ".github/workflows/spelling.yml": "3ff47b8456ec561eaf78bfe2eb793470a794ce945fc4f55c2f793178fc8e5491",
+      ".gitignore": "c97ecfda4d205190b973232dcfdb0c29748521c2534dd866bcc782f30b086738",
+      ".pre-commit-config.yaml": "899d7b8933deeb5e7fc0049333c649ca0a890d9fbf2d16ef3c7012814a52edd8",
+      "CHANGELOG.md": "b64fda68f9eaa0f976ee32e24e19bac48f36d02e83cd94c293c0aa3e09513a26",
+      "CONTRIBUTING.md": "f841dfbe2c4b3da632493cb9ca46729abfde1fd68a4b9dab4a08928325bc1bb9",
+      "COPYRIGHT": "472ecdadaee65c564f323a4fcb3f1ef21a23bd51dddb6d8d336f32122a680cd1",
+      "Cargo.lock": "5c2622a718a136ab27a191b0b10e9694fdc572746afd39ab116e09ae87f9a257",
+      "Cargo.toml": "414b83b0739fd7bc0ff8aa7d2c90b76ece4d23a7bb135be555d30aaff45f6c68",
+      "LICENSE-MIT": "cb5aedb296c5246d1f22e9099f925a65146f9f0d6b4eebba97fd27a6cdbbab2d",
+      "README.md": "0b7e4cad5ef0cbb47dc1c1c34ff3b5d090aaba2cc3b3c5401539e5c4a22b7938",
+      "_typos.toml": "6a04a3832d7229a775ef0622305c445108d787e385516764ccaf5f52bc540d01",
+      "assets/bigbuckbunny.mp4": "543a4ad9fef4c9e0004ec9482cb7225c2574b0f889291e8270b1c4d61dbc1ab8",
+      "assets/links.txt": "8bf46ae3d9199da7feec24d71169230a05e8f2b045118b80d483cb6a7d167f37",
+      "assets/small.mp4": "1d720916a831c45454925dea707d477bdd2368bc48f3715bb5464c2707ba9859",
+      "assets/testfile.txt": "34b437386d0461844a2297a483c41fba83274d7909f11af51a38684d9bc545cf",
+      "assets/trace.svg": "c7d01381b7c5bb0c5fef9935eb9e28b6cf16065ff37c6db78f35f12a37921550",
+      "benches/contains_token.rs": "20e765de27f0ad9bf549e250bdb67d73714d23bc10bb67be240a258dcf8b6ed7",
+      "benches/find_slice.rs": "4853142ad538403b17c5f2d486b958a11628039b5366925927e61743ea462c48",
+      "benches/iter.rs": "6a6c316e0bc28e31ac861d5f33c5d9976a3fa8e0221828dbb7ba197ba27685e9",
+      "benches/next_slice.rs": "78968522a84d357d3f7d5962749bb37766b1235a12cadfce7f015759c91a4688",
+      "benches/number.rs": "f4b54895ed523c462ce327a5205b0b99591eb7056fe9de9abe3f809eff287386",
+      "committed.toml": "1eca8b79d25c07d0566c38a374bf89b4834ce1aa61d0d8b339f6040d4a0fecb7",
+      "deny.toml": "22e6b7853093357473fbb491027c941c854531c8710a08f42bf6c39443723d8e",
+      "examples/arithmetic/bench.rs": "a162e4f91ce2ed19b5b53f79d77c92eb52278f0788da9af8fee3ee62cebfe0a9",
+      "examples/arithmetic/main.rs": "66212042c1810c3fe06e6b6b225ecde4a66f4cc378ef1ea4c7533e1420d7e257",
+      "examples/arithmetic/parser.rs": "9630411e61c96df6eb86641cf4c1c381c43a920779badaae2ca6aed49eaf826c",
+      "examples/arithmetic/parser_ast.rs": "853e79366d0ed7995465c7657d335c386ddf1171e8417de674d8d2ad6f5c7c20",
+      "examples/arithmetic/parser_lexer.rs": "e7d746867c6b0fb3d9c70c6e2778cbabebb15d052926b3989f35ada82bdd2b15",
+      "examples/css/main.rs": "06647d68a57f8ef47198bda81dd88b2e123e70c7e1a79a0109a759ead1212904",
+      "examples/css/parser.rs": "ee0c553b9e68729a311f00cb49366cda96731d5d69d4d7454160371e01ab30e4",
+      "examples/custom_error.rs": "b6fca4f4db0c61f9d941e36aa53d4035d11b5e47d2e6e12d4639dcdd9a59fef3",
+      "examples/http/bench.rs": "b6d3e9e5833b53ac58f8336617cc42a2f3f4c5e5ce88feb23184fcdbb36843f6",
+      "examples/http/main.rs": "ae6fbf6b7083e73b3bd29cb63094f0aace6f7834c90504fa1f3abdca87d81826",
+      "examples/http/parser.rs": "3ece9ff3349cfb3c89c0bb7ddc915ce679139cece3cc0ff929fbd41b05d30c5e",
+      "examples/http/parser_streaming.rs": "979df0482e516037128b7b02a6b4c08ac3b36603955289bba772d011019d543e",
+      "examples/ini/bench.rs": "430ef9276fb284f93e50ba87c6b1a3e4cfd2b4e6cc5f4d76bbc0d40a26112299",
+      "examples/ini/main.rs": "b3b6d508a6e8fa99e34fb400a625d346da6eeeea909ad5e365636acd1a8a354f",
+      "examples/ini/parser.rs": "78e8576cd53ef1f7d37169e4e5558aeaad7701841978cdf19f2e0e79d86a9f06",
+      "examples/ini/parser_str.rs": "61497ca84ab2e4e945bd249d8dc67816fdb646c06b8c2456b74ef88933d96487",
+      "examples/iterator.rs": "7794f6fa5306e53024b9b1686f67df355efb9404cee2b2e7de3b6af5d0d3bfcc",
+      "examples/json/bench.rs": "01061b696d94952e0f9cf2e7bb4bb2cae6cf1069e36d9fadfed4379e8502762f",
+      "examples/json/json.rs": "fd9fa5e4b76ba1f7d9180ae8127751d2c665892ad6d1c95f4eba16ceca6ff576",
+      "examples/json/main.rs": "d4857f9e58d0795ea6c9f33b271eca1f7b2aac13102c9eb723b630fa99fc2adb",
+      "examples/json/parser.rs": "a971afb90ca2279c62c8013ae3e1b84e7c73c668cb05288686d992e39a06d15b",
+      "examples/json/parser_dispatch.rs": "16b0199212e774cfd8cc838096fd75c511991eacdb8804b88dd8a0be1c6210db",
+      "examples/json/parser_partial.rs": "27e220649adc86179ddf57c44d6809754654c450cae355e6a875cc1a6346a379",
+      "examples/json_iterator.rs": "619720c801603ae6d8285b3aa682198c7126575ee143c3b59e0873208a6fddf3",
+      "examples/ndjson/example.ndjson": "c44c130731008bca76181348d40f46b183577949b5a4d229e0e1a56e1e405e5d",
+      "examples/ndjson/main.rs": "aaffe73971ea5e3f5aff7e40a5d091e77a95e5e5be997f8f840b9dc934c3b45d",
+      "examples/ndjson/parser.rs": "ca03480022822a7a76f06daab99880e5a05651e70824810a9a51fb4be08ccf32",
+      "examples/s_expression/main.rs": "5a2de0b477807c7d6ab8bb72579f03692e8f5ea89d5b6f3a8342cfdbe4d84b96",
+      "examples/s_expression/parser.rs": "9fbd4d6e836e4c4d8724a39592579243f805bfddd72883cca91ec9c51eedf1ca",
+      "examples/string/main.rs": "5537748a97de502ba5965f70fc6b9dcb66a4c051e88dbe5dfe604ce1bc0cae35",
+      "examples/string/parser.rs": "735a7cd220f058d398feb826b1ff9a7301bfded0fc7800f13f721e031a1725f8",
+      "fuzz/.gitignore": "ba84141927163adddc9e02d3c7d88651c1b157a27111e74ab8e42f242f9a883f",
+      "fuzz/Cargo.toml": "fcd2fddc8b64b20d0c4f38009f4c4e9105730d13e2baadb6a1e6eae0e6bef1db",
+      "fuzz/fuzz_targets/fuzz_arithmetic.rs": "3460db9d2548b1dc5b6058ad75955610e6b58a627e421a8497f70bf69468233b",
+      "proptest-regressions/character/streaming.txt": "509ba742c62b17d93c70b73bfb430532f2c48c0a3eca7599e59446ee3f16a9f3",
+      "proptest-regressions/number/streaming.txt": "67adde48efab7e6e07c7a89fa0b6602528ea531728d4cd2a058e6c8130c3fd4f",
+      "proptest-regressions/stream/tests.txt": "59bb8edc855a487f46007e52be14d33684d8bd0c8f2dcc7a9b119c3114e849c2",
+      "release.toml": "2698d84ae4b7ddd3045afeecf6eed823128d2cc750831f98fb25d3d38fec7d24",
+      "src/_topic/arithmetic.rs": "28d61dd492b308209d534c54813ea48ac1862a39196527042180de7718f915d0",
+      "src/_topic/error.rs": "98fad96735246bd12757c596926f65757b2942564a8cccc159f74715631defc7",
+      "src/_topic/fromstr.rs": "01abdab296cd30067ae5f508b2b21ebe97c0571ace58e7817876eb2110e8d23a",
+      "src/_topic/http.rs": "19b9ec78a031fe5b3086fb34d04d6c13308c50b6e7bfe30229f5b682d3605ac8",
+      "src/_topic/ini.rs": "b2b04d48eac3158f4e26ee9dce748a699d02acaa0b12ae8d54421cad0fdc4ad7",
+      "src/_topic/json.rs": "bde39ee6b1c5fab2d2da480822b737674aed877f92c3f748d6932bec313b5661",
+      "src/_topic/language.rs": "5853c47cb42c58d8554afffd970c7810d2a84ba774942764ff5520f997601538",
+      "src/_topic/mod.rs": "2e7ee6ee1e2b39874ae37120ee40a4a55baa0536701c1ee62777bbf5b86a4ac6",
+      "src/_topic/nom.rs": "339da8f021d5f45aa87b365a9351328afdbec68d1ae72ad2b9b88310b8d9c39f",
+      "src/_topic/partial.rs": "4777cedfbe8437a547114da346f6cd350d8e77ae62e2ed32d50636e9acbf876e",
+      "src/_topic/performance.rs": "115b636769c307bd80ecc5b89ffad47877352bc93ef47bf664093d3d7a2562cc",
+      "src/_topic/s_expression.rs": "6ca9a22a5c3344e120421f2ab353a1e822777aebfa1faa0acffc9632f7668cb2",
+      "src/_topic/stream.rs": "223eb71d61fac0a7fc07a432688f991fa76ec4707a64a81e0bdcca98132dd304",
+      "src/_topic/why.rs": "9c3d0b943776f061bbd4a2faa2603d6f03ad3767fdb7c31883f65a212be2eba4",
+      "src/_tutorial/chapter_0.rs": "dbda2c50ccfc3bc04c798a57d7019ec93a99954327a733a7f48449da8c2ceba5",
+      "src/_tutorial/chapter_1.rs": "d96b372e2542939972ef22e852e2f413d7322792ce569cc59e4167ffcf8177ae",
+      "src/_tutorial/chapter_2.rs": "149465c97a0b65ed90534455d3c4e6256a80610020aad7519cdf8df1ff7f8d1d",
+      "src/_tutorial/chapter_3.rs": "f644c0fa752de95cc9b936a62737c89e59e00ad9a21fe93c75d52b599e16e020",
+      "src/_tutorial/chapter_4.rs": "9c94695afef4b24c066a68baa09f4bb7b3421c77c59bdf090f38b8b1fad82b7e",
+      "src/_tutorial/chapter_5.rs": "7321beb11338245a5bc0b321518fc7454c6b209c3f516c289dacd0eaa66362b7",
+      "src/_tutorial/chapter_6.rs": "4243644675ba7295bd4e25f4afdc45c06c1f2c04c4d0572089dc561a79811a12",
+      "src/_tutorial/chapter_7.rs": "218ed0f56eeec0b7bdd060fbee4382df41932fe6b17f653e7ffc34879d7b6d25",
+      "src/_tutorial/chapter_8.rs": "efa2d44ec3d35316288e33a9f5003f03b979756ecae928a16ff9e71c84092a9a",
+      "src/_tutorial/mod.rs": "afba818d7d1c8309bee5399dc8f695d93b08e93f406734d41e7e66c019b43c53",
+      "src/ascii/mod.rs": "3f290eccb4a4507dc6ce503766b20526827af8fab44048db1650f8529d0e0729",
+      "src/ascii/tests.rs": "f5b364c0d37a5c47214119877e90b7cae6e66e856a5ca907376ce3f4a8dc02a9",
+      "src/binary/bits/mod.rs": "b15ba4dfbb150cb15c6e30c46f1179c7a13bd957f516db430b7490de53e72b21",
+      "src/binary/bits/tests.rs": "8bec85198e1f897cd64d7b64131221cd3cc26a561a64e924da93bb2919030286",
+      "src/binary/mod.rs": "1720840f4818d6bc2a5e9c0fcef97a57cf9a88b2cc4654e8b4ddd7865858d012",
+      "src/binary/tests.rs": "4a082c68f2356da97a699246f586e9c5ab584a3c600d9d68883de1450fde2f3b",
+      "src/combinator/branch.rs": "0a154e7814a2eb3f0cbc53f4646c54811a5271705922ed63fd53ccbd21ded86a",
+      "src/combinator/core.rs": "45b133139cc7f2087c60dfc1703cf36fe74c8321c49bdfbb6534e27d3c4a0fd9",
+      "src/combinator/debug/internals.rs": "3573d767ffdd93398a6f13799584f1ce9d3ef2854f9cb761c0318acfeb16e6e4",
+      "src/combinator/debug/mod.rs": "ac7c9035154fb15a4c66321286f066fc6a77cf9de954066bfc274cfe7eb76054",
+      "src/combinator/mod.rs": "7649320afa55204811e89ff45bfb819b219bf5a4bdae486257a7d4284bf984bf",
+      "src/combinator/multi.rs": "4c52b2a9e34a1c16466d2bbfd75fca04b9b295ab157a75809ca09b783c297044",
+      "src/combinator/parser.rs": "399c1a86fa862970d7c5d24d0d8ffa932326522396ff276c06cd312b05ed61bc",
+      "src/combinator/sequence.rs": "cc1dd9b562dcdb13da6842596852990d0ec16dc203ba65e1430ec3f38ad014b3",
+      "src/combinator/tests.rs": "1628a20bda345fa95cc0839d883dfe45f2506885d05ddb3fd2697a15f9033dfb",
+      "src/error.rs": "9d3b2ec7a3424c5b7d415290c99cf70506baddc78a08d84fb2c17ece2b16d264",
+      "src/lib.rs": "ce86bae1ebbec21a6bc6ae3de4424dec8757a24645d61c74e6f7b1e6d59f46ea",
+      "src/macros/dispatch.rs": "6a82b6f3472a58d114e2b40443d7177d326f9b9b7b25d1370b4867838e0e1e80",
+      "src/macros/mod.rs": "9faebae01ea216cda6160cc306ca4a5f531344aa65a628973c0825d0f53b3fb3",
+      "src/macros/seq.rs": "ce6c5b19ac595e7cc7c828290b9217a4a620807a84ae5c0678e41f28549aed39",
+      "src/macros/test.rs": "af979e4b176cb04971d1adf9d02e84dcadd19589632365eb18a27e6c48c5c8d1",
+      "src/parser.rs": "a7b72f472a1b56fdc2db6806c880044728687d794bf9727aa0399b98cd4be896",
+      "src/stream/impls.rs": "fd3ad050853d5e36528276ac223aa5f953d686fd724703a90633e141365ca876",
+      "src/stream/mod.rs": "30150cd098de4ab8c112fb6a64b0352b02303d9b0b09897e3238699927dffaa2",
+      "src/stream/tests.rs": "ff6b23e887340b5fc9e6d0bbe8c8933dc9af60d159df9167cc606c613724ff34",
+      "src/token/mod.rs": "8167df0ab75893949121f375f1b1c32c4a7d0d971a05840c6ccccdbbb42a014f",
+      "src/token/tests.rs": "8ed623f84f757b7fcd24f06ede8ef09e5b9d4eb95bd5cdb424235d486c443324",
+      "tests/testsuite/custom_errors.rs": "bf03a2b0a98ba571fd482efa27425a66a367c80fafe511bdc9ddfe180cba7bc3",
+      "tests/testsuite/delete_me.rs": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/testsuite/float.rs": "551f2468f2b2e82dda6e9808d250dbef18ae8d10654a3a155c331b4dad210ebd",
+      "tests/testsuite/fnmut.rs": "e92419400538ec521b691f00faa7a6971b87a7f27ee29915d42c0a327302a7fb",
+      "tests/testsuite/issues.rs": "9bc11894682d7b7e889edab2c46f1b05491d9b6788ab78d7f57fca3b1aa44458",
+      "tests/testsuite/main.rs": "af011251d3330300bd0c58c76bc789126e37d3182370035218985a43d55f5246",
+      "tests/testsuite/multiline.rs": "b2009d058bcaf2eaed2e97df1a4d47c50ef7465e213b8ee57009a39f04337f19",
+      "tests/testsuite/overflow.rs": "9872adfcb2077867b30afce2da92ba3635c17f34f683bba998e464d93798e06b",
+      "tests/testsuite/reborrow_fold.rs": "ac8bcf637732a482faf732c5ca3208e40c530e77de1c700d1994ddd38e1b8688",
+      "tests/testsuite/utf8.rs": "efbe6c2ba7b32263c4c64b1ce5cdd380d0865f1ba57598774e1a8801046a481b",
+      "third_party/nativejson-benchmark/LINK": "244d2760e6e66e683bd1e2ac458c1421c158e00b664b622bc6ee72d6b6ac880e",
+      "third_party/nativejson-benchmark/data/canada.json": "f83b3b354030d5dd58740c68ac4fecef64cb730a0d12a90362a7f23077f50d78"
+    },
+    "C-R3": {
+      ".gitignore": "c1e953ee360e77de57f7b02f1b7880bd6a3dc22d1a69e953c2ac2c52cc52d247",
+      ".travis.yml": "0cc37e3a32ace4b140d789efee0c33136ff097db82213146293d09aa8222dee8",
+      "Cargo.lock": "71522171c9248901295b78d3d1af94abbe03c576f3bab23924369fc94460710b",
+      "Cargo.toml": "36dfffb37a8f74e72ecf838ae8bae596ce7469e27aceface6cddba9481c57637",
+      "LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "LICENSE-MIT": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+      "README.md": "84d8a089c663ac2236eb10d133f97f8026cb955b405d49f8e022be80f027c4cc",
+      "src/lib.rs": "1bb8f70186f0cda2789e8344f56ecda2dcb5d63895710d50aa8f68198876bdd0",
+      "tests/glob-std.rs": "f208d96c60be6d61ce4fe1b640a877eb1f245605a9df31201b47bbb16c669dca"
+    }
+  },
+  "study": "fixed-filter-cost-confirmation",
+  "tasks": [
+    {
+      "assets": {
+        "baseline_lockfile": "evaluation/confirmation/tasks/rust/C-R1-Cargo.lock",
+        "hidden_runner": "evaluation/confirmation/tasks/rust/run_hidden.py",
+        "hidden_test": "evaluation/confirmation/tasks/rust/C-R1-hidden.rs",
+        "licenses": [
+          "evaluation/confirmation/tasks/rust/licenses/winnow-MIT.txt"
+        ]
+      },
+      "base_commit": "8ff218f7d339f128267da8e724cd920151cb4020",
+      "base_tree": "0730d72787e4d66c0ac4a9801942b4124da916f0",
+      "baseline_command": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--lib"
+      ],
+      "evaluation": {
+        "inline_test_handling": "Restore all registered cfg(test) items/blocks; do not assume a single EOF test module",
+        "production_globs": [
+          "src/*.rs",
+          "src/**/*.rs"
+        ],
+        "protected_test_globs": [
+          "src/**/tests.rs",
+          "src/**/test.rs",
+          "tests/**"
+        ]
+      },
+      "hardness": {
+        "count_method": "Added plus removed nonblank production lines containing an identifier or digit, excluding comment-only lines and pure punctuation; original upstream production diff, excluding test modules. This is a structural proxy, not observed solver difficulty.",
+        "edge_case_families": [
+          "recoverable normal-parser failure after consumption",
+          "complete versus partial streams",
+          "recognition versus transformation; committed/incomplete failure controls"
+        ],
+        "functions": [
+          "streaming_escaped_internal",
+          "complete_escaped_internal",
+          "streaming_escaped_transform_internal",
+          "complete_escaped_transform_internal"
+        ],
+        "meaningful_changed_lexical_lines": 30,
+        "rule_registered_before_comparative_runs": ">=20 meaningful changed production lines across >=2 functions, OR >=40 meaningful stateful-algorithm lines and >=3 edge-case families",
+        "structurally_qualified": true
+      },
+      "hidden_command": [
+        "python3",
+        "evaluation/confirmation/tasks/rust/run_hidden.py",
+        "C-R1",
+        "WORKSPACE"
+      ],
+      "hidden_test_counts": {
+        "expected_base_failed": 4,
+        "total": 7
+      },
+      "historical_test_evidence": "The correction commit adds no new upstream regression assertions; held-out behavioral regressions were written and qualified before comparative solver outcomes.",
+      "id": "C-R1",
+      "oracle_commit": "97728b3ae287f57366a814436bd82b0040785d05",
+      "oracle_tree": "b8cba2940b80e5a0a5038b9ce96b9d783fc06ebd",
+      "prompt": "An escaped-text parser loses input when its normal-content parser consumes a prefix and then returns a recoverable failure. For example, a normal parser that accepts alphabetic text only when followed by '!' should leave the input consisting of 'a', a backslash, 'n', and ';' untouched when that terminator is missing; the escape layer should stop with an empty result and the full remainder. Instead, it consumes the prefix and escape. Fix this for recognition and transformation on both complete and partial streams. Preserve successful parsing, committed failures, and incomplete-input behavior. Add regression coverage.",
+      "reference_source": "https://github.com/winnow-rs/winnow/commit/97728b3ae287f57366a814436bd82b0040785d05",
+      "repository": {
+        "license": "MIT",
+        "url": "https://github.com/winnow-rs/winnow"
+      },
+      "schema": 1,
+      "setup": {
+        "dependency_lock": "Upstream Cargo.lock, copied unchanged to the registered source; historical dev dependencies fetched once before all checks",
+        "instructions_found": [],
+        "platform": "aarch64-apple-darwin qualified",
+        "runtime_dependencies": "none with default features",
+        "target_isolation": "Distinct Cargo target per exported source; delete own build products after each trial/evaluation stage, retaining frozen source and receipts",
+        "toolchain_tested": "rustc 1.99.1 / cargo 1.99.1"
+      },
+      "title": "Backtracking consumes input inside escaped parsers",
+      "upstream_test_paths": [
+        "src/ascii/tests.rs"
+      ]
+    },
+    {
+      "assets": {
+        "baseline_lockfile": "evaluation/confirmation/tasks/rust/C-R2-Cargo.lock",
+        "hidden_runner": "evaluation/confirmation/tasks/rust/run_hidden.py",
+        "hidden_test": "evaluation/confirmation/tasks/rust/C-R2-hidden.rs",
+        "licenses": [
+          "evaluation/confirmation/tasks/rust/licenses/winnow-MIT.txt"
+        ]
+      },
+      "base_commit": "4399c7e191f93bbeddf2a1164287d1feefc97f21",
+      "base_tree": "84075d84e0d59d444a4f0855159a5f14f7ef4c16",
+      "baseline_command": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--lib"
+      ],
+      "evaluation": {
+        "inline_test_handling": "Restore all registered cfg(test) items/blocks; do not assume a single EOF test module",
+        "production_globs": [
+          "src/*.rs",
+          "src/**/*.rs"
+        ],
+        "protected_test_globs": [
+          "src/**/tests.rs",
+          "src/**/test.rs",
+          "tests/**"
+        ]
+      },
+      "hardness": {
+        "count_method": "Added plus removed nonblank production lines containing an identifier or digit, excluding comment-only lines and pure punctuation; original upstream production diff, excluding test modules. This is a structural proxy, not observed solver difficulty.",
+        "edge_case_families": [
+          "runtime complete versus partial state",
+          "zero-minimum versus one-minimum and bounded ranges",
+          "empty, unterminated, delimited, and multibyte input"
+        ],
+        "functions": [
+          "take_till",
+          "take_while",
+          "take_till0",
+          "take_till1"
+        ],
+        "meaningful_changed_lexical_lines": 99,
+        "rule_registered_before_comparative_runs": ">=20 meaningful changed production lines across >=2 functions, OR >=40 meaningful stateful-algorithm lines and >=3 edge-case families",
+        "structurally_qualified": true
+      },
+      "hidden_command": [
+        "python3",
+        "evaluation/confirmation/tasks/rust/run_hidden.py",
+        "C-R2",
+        "WORKSPACE"
+      ],
+      "hidden_test_counts": {
+        "expected_base_failed": 6,
+        "total": 10
+      },
+      "historical_test_evidence": "The correction commit adds no new upstream regression assertions; held-out behavioral regressions were written and qualified before comparative solver outcomes.",
+      "id": "C-R2",
+      "oracle_commit": "eded0f272b54211a3deb307d886e6da64abc3766",
+      "oracle_tree": "ff6f46bfd2b2227a66f794b73ab34122e41f44b2",
+      "prompt": "A Partial stream remains treated as incomplete by take_till after StreamIsPartial::complete() marks it complete. On complete input 'abc', taking zero or more or one or more tokens until ';' should consume 'abc' and succeed even without a delimiter. Empty complete input should succeed with a zero minimum and return a recoverable error with a one-token minimum. Fix the inconsistent state handling while preserving partial-stream requests for more input, bounded ranges, delimiters, Unicode, and returned remainders. Add regression coverage.",
+      "reference_source": "https://github.com/winnow-rs/winnow/commit/eded0f272b54211a3deb307d886e6da64abc3766",
+      "repository": {
+        "license": "MIT",
+        "url": "https://github.com/winnow-rs/winnow"
+      },
+      "schema": 1,
+      "setup": {
+        "dependency_lock": "Upstream Cargo.lock, copied unchanged to the registered source; historical dev dependencies fetched once before all checks",
+        "instructions_found": [],
+        "platform": "aarch64-apple-darwin qualified",
+        "runtime_dependencies": "none with default features",
+        "target_isolation": "Distinct Cargo target per exported source; delete own build products after each trial/evaluation stage, retaining frozen source and receipts",
+        "toolchain_tested": "rustc 1.99.1 / cargo 1.99.1"
+      },
+      "title": "Completed streams still request more input in take_till",
+      "upstream_test_paths": [
+        "src/token/tests.rs"
+      ]
+    },
+    {
+      "assets": {
+        "baseline_lockfile": "evaluation/confirmation/tasks/rust/C-R3-Cargo.lock",
+        "hidden_runner": "evaluation/confirmation/tasks/rust/run_hidden.py",
+        "hidden_test": "evaluation/confirmation/tasks/rust/C-R3-hidden.rs",
+        "licenses": [
+          "evaluation/confirmation/tasks/rust/licenses/glob-MIT.txt",
+          "evaluation/confirmation/tasks/rust/licenses/glob-APACHE.txt"
+        ]
+      },
+      "base_commit": "3ed4935eec5f2ea4030f5225965e9f3ca34c8ee5",
+      "base_tree": "7adecc5cb353d921ebf75330e054d1cf20f6efca",
+      "baseline_command": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--lib"
+      ],
+      "compatibility": {
+        "patches": {
+          "base": {
+            "asset": "evaluation/confirmation/tasks/rust/C-R3-base-portability.patch",
+            "sha256": "156e5835023e70784c3e2b75f425068c45396f1786397025d61b22c1893562b6"
+          },
+          "oracle": {
+            "asset": "evaluation/confirmation/tasks/rust/C-R3-oracle-portability.patch",
+            "sha256": "f10427da796821af84084204d5db644d052f4cac540f591bd58d505c1c8a5091"
+          }
+        },
+        "production_prefix_unchanged": true,
+        "purpose": "Replace the /root directory and access-control assumption in test_iteration_errors with a private temporary unreadable directory; same permission-denied assertions, no skips, no production changes"
+      },
+      "evaluation": {
+        "inline_test_handling": "Restore the registered EOF #[cfg(test)] mod test suffix including the portability fixture",
+        "production_globs": [
+          "src/lib.rs"
+        ],
+        "protected_test_globs": []
+      },
+      "hardness": {
+        "count_method": "Added plus removed nonblank production lines containing an identifier or digit, excluding comment-only lines and pure punctuation; original upstream production diff, excluding test modules. This is a structural proxy, not observed solver difficulty.",
+        "edge_case_families": [
+          "full component boundaries versus suffixes within a component",
+          "hidden components at the root and below visible directories",
+          "separator policy, explicit hidden names, and multibyte components"
+        ],
+        "functions": [
+          "matches_with",
+          "matches_from"
+        ],
+        "meaningful_changed_lexical_lines": 78,
+        "rule_registered_before_comparative_runs": ">=20 meaningful changed production lines across >=2 functions, OR >=40 meaningful stateful-algorithm lines and >=3 edge-case families",
+        "structurally_qualified": true
+      },
+      "hidden_command": [
+        "python3",
+        "evaluation/confirmation/tasks/rust/run_hidden.py",
+        "C-R3",
+        "WORKSPACE"
+      ],
+      "hidden_test_counts": {
+        "expected_base_failed": 4,
+        "total": 8
+      },
+      "id": "C-R3",
+      "oracle_commit": "398e0935167b0a75d2d955cae4c9750869ca6972",
+      "oracle_tree": "6e268a465feae279152b003188f5ca139db1aeee",
+      "prompt": "Recursive glob matching violates component boundaries and hidden-file settings. '**/.*' should match '.abc' and 'abc/.abc', but must not match 'ab.c' or 'abc/ab.c'. When require_literal_leading_dot is enabled, '**/*' must not match '.cache' or descend through 'dir/.cache/file'. Fix these inconsistencies while preserving explicitly requested hidden names, the option-off behavior, Unicode path components, recursive empty matches, and literal separator requirements. Add regression coverage and keep the registered portable suite passing.",
+      "reference_source": "https://github.com/rust-lang/glob/commit/398e0935167b0a75d2d955cae4c9750869ca6972",
+      "repository": {
+        "license": "MIT OR Apache-2.0",
+        "url": "https://github.com/rust-lang/glob"
+      },
+      "schema": 1,
+      "setup": {
+        "dependency_lock": "Upstream Cargo.lock, copied unchanged to the registered source; historical dev dependencies fetched once before all checks",
+        "instructions_found": [],
+        "platform": "Unix as an unprivileged user",
+        "runtime_dependencies": "none with default features",
+        "target_isolation": "Distinct Cargo target per exported source; delete own build products after each trial/evaluation stage, retaining frozen source and receipts",
+        "toolchain_tested": "rustc 1.99.1 / cargo 1.99.1"
+      },
+      "title": "Recursive wildcards cross component and hidden-file boundaries",
+      "upstream_test_paths": [
+        "src/lib.rs"
+      ]
+    },
+    {
+      "assets": {
+        "dependencies_lockfile": "evaluation/confirmation/tasks/js/markdown-dependencies-lock.json",
+        "dependency_spec": "evaluation/confirmation/tasks/js/markdown-dependencies.json",
+        "hidden_test": "evaluation/confirmation/tasks/js/C-J1-hidden.mjs",
+        "licenses": [
+          "evaluation/confirmation/tasks/js/MARKDOWN-IT-LICENSE"
+        ]
+      },
+      "base_commit": "7b9a6a3a630187e6f9b18fe66b66804bc9ac1122",
+      "baseline_command": [
+        "npm",
+        "run",
+        "test:markdown-it"
+      ],
+      "evaluation": {
+        "production_globs": [
+          "src/**/*.ts"
+        ],
+        "protected_test_globs": [
+          "test/**",
+          "package.json",
+          "package-lock.json",
+          "tsconfig*.json"
+        ]
+      },
+      "hardness_evidence": {
+        "criterion": "at least 40 meaningful changed production lines in a stateful algorithm with at least three edge-case families",
+        "families": [
+          "unsuccessful link/image lookahead must not change subsequent tokenization",
+          "narrowed label ranges and runs crossing their endpoint",
+          "code-span/link precedence with heterogeneous backtick run lengths"
+        ],
+        "meaningful_changed_production_lines": 58,
+        "state_files": [
+          "src/rules_inline/backticks.ts",
+          "src/rules_inline/state_inline.ts"
+        ],
+        "upstream_changed_functions": [
+          "backtick",
+          "buildLastRuns"
+        ]
+      },
+      "hidden_command": [
+        "node",
+        "evaluation/confirmation/tasks/js/C-J1-hidden.mjs",
+        "WORKSPACE"
+      ],
+      "hidden_test_counts": {
+        "note": "Checks stop at first failing assertion; total denotes registered held-out assertions, not observed partial score.",
+        "total": 10
+      },
+      "id": "C-J1",
+      "oracle_commit": "5e9b1cc8309d09a9df0f53ae32f811da6ad5c23d",
+      "production_globs": [
+        "src/**/*.ts"
+      ],
+      "prompt": "Parsing an unfinished link or image label can change how later inline code is rendered. For example, '[foo `bar` baz`' should render as '<p>[foo <code>bar</code> baz`</p>\\n', and the corresponding unfinished image case should preserve its code span too. Also keep a code span from consuming a closing marker beyond the current label boundary: '[`](``)' should remain a link whose visible label is a literal backtick. Correct these inconsistent inline results while preserving normal code spans, link precedence, different backtick-run lengths and ordinary Markdown behavior. Add regression tests.",
+      "reference_source": "https://github.com/markdown-it/markdown-it/commit/5e9b1cc8309d09a9df0f53ae32f811da6ad5c23d",
+      "repository": {
+        "license": "MIT",
+        "url": "https://github.com/markdown-it/markdown-it"
+      },
+      "schema": 1,
+      "setup": {
+        "baseline_scope": "Original upstream test:markdown-it script (functional and pathological tests), excluding packaging/lint/CommonMark standalone suite",
+        "build": "Native Node TypeScript stripping; tests and hidden runner import src directly, no dist build",
+        "deps": "Exact minimal runtime/test dependency lock; original source/package manifest unchanged",
+        "instructions_found": [],
+        "node_version": "v26.12.1",
+        "npm_version": "11.20.0",
+        "solver_export": "Only buggy source snapshot and prepared node_modules; no Git upstream history, oracle, task metadata or held-out assertions"
+      },
+      "title": "Code spans change after unsuccessful link/image lookahead",
+      "upstream_test_paths": [
+        "test/fixtures/markdown-it/commonmark_extras.txt"
+      ]
+    },
+    {
+      "assets": {
+        "dependencies_lockfile": "evaluation/confirmation/tasks/js/markdown-dependencies-lock.json",
+        "dependency_spec": "evaluation/confirmation/tasks/js/markdown-dependencies.json",
+        "hidden_test": "evaluation/confirmation/tasks/js/C-J2-hidden.mjs",
+        "licenses": [
+          "evaluation/confirmation/tasks/js/MARKDOWN-IT-LICENSE"
+        ]
+      },
+      "base_commit": "5915b84a676632c6a350081aed5dee0d74e434f9",
+      "baseline_command": [
+        "npm",
+        "run",
+        "test:markdown-it"
+      ],
+      "evaluation": {
+        "production_globs": [
+          "src/**/*.ts"
+        ],
+        "protected_test_globs": [
+          "test/**",
+          "package.json",
+          "package-lock.json",
+          "tsconfig*.json"
+        ]
+      },
+      "hardness_evidence": {
+        "criterion": "at least 20 meaningful changed production lines across at least two functions",
+        "families": [
+          "escaped punctuation in nested image children",
+          "decoded entities with HTML re-escaping",
+          "mixed emphasis plus text segment coalescing"
+        ],
+        "meaningful_changed_production_lines": 22,
+        "production_files": [
+          "src/rules_core/text_join.ts"
+        ],
+        "upstream_changed_functions": [
+          "text_join",
+          "join_alt"
+        ]
+      },
+      "hidden_command": [
+        "node",
+        "evaluation/confirmation/tasks/js/C-J2-hidden.mjs",
+        "WORKSPACE"
+      ],
+      "hidden_test_counts": {
+        "note": "Checks stop at first failing assertion; total denotes registered held-out assertions, not observed partial score.",
+        "total": 9
+      },
+      "id": "C-J2",
+      "oracle_commit": "974e2d7f3bf1356123032a68c831735c5891ec05",
+      "production_globs": [
+        "src/**/*.ts"
+      ],
+      "prompt": "Image descriptions lose some characters while ordinary inline text keeps them. For example, '![a \\* b](/u)' should render with alt text 'a * b', and '![a &amp; b](/u)' should retain the ampersand (escaped once as &amp; in HTML). Mixed emphasized text, escapes and entities inside the same description should remain in order. Repair image description processing while preserving token metadata, emphasis handling, entity escaping and the surrounding inline text. Add regression tests; avoid changing the public renderer contract.",
+      "reference_source": "https://github.com/markdown-it/markdown-it/commit/974e2d7f3bf1356123032a68c831735c5891ec05",
+      "repository": {
+        "license": "MIT",
+        "url": "https://github.com/markdown-it/markdown-it"
+      },
+      "schema": 1,
+      "setup": {
+        "baseline_scope": "Original upstream test:markdown-it script (functional and pathological tests), excluding packaging/lint/CommonMark standalone suite",
+        "build": "Native Node TypeScript stripping; tests and hidden runner import src directly, no dist build",
+        "deps": "Exact minimal runtime/test dependency lock; original source/package manifest unchanged",
+        "instructions_found": [],
+        "node_version": "v26.12.1",
+        "npm_version": "11.20.0",
+        "solver_export": "Only buggy source snapshot and prepared node_modules; no Git upstream history, oracle, task metadata or held-out assertions"
+      },
+      "title": "Image alt text loses escapes and decoded entities",
+      "upstream_test_paths": [
+        "test/markdown-it/misc.test.mjs"
+      ]
+    },
+    {
+      "assets": {
+        "dependencies_lockfile": "evaluation/confirmation/tasks/js/postcss-dependencies-lock.json",
+        "dependency_spec": "evaluation/confirmation/tasks/js/postcss-dependencies.json",
+        "hidden_test": "evaluation/confirmation/tasks/js/C-J3-hidden.cjs",
+        "licenses": [
+          "evaluation/confirmation/tasks/js/POSTCSS-LICENSE"
+        ]
+      },
+      "base_commit": "2421312ffea96ba77b35ce24a1b2d9c2e22b5e83",
+      "baseline_command": [
+        "npm",
+        "run",
+        "unit"
+      ],
+      "evaluation": {
+        "production_globs": [
+          "lib/**/*.js"
+        ],
+        "protected_test_globs": [
+          "test/**",
+          "package.json",
+          "pnpm-lock.yaml",
+          "tsconfig*.json"
+        ]
+      },
+      "hardness_evidence": {
+        "criterion": "at least 20 meaningful changed production lines across at least two functions",
+        "families": [
+          "deep AST stringify/clone/walk",
+          "structured JSON roundtrip and custom serialization",
+          "plugin visitor passes and subclass traversal overrides"
+        ],
+        "meaningful_changed_production_lines": 407,
+        "production_files": [
+          "lib/container.js",
+          "lib/fromJSON.js",
+          "lib/lazy-result.js",
+          "lib/node.js",
+          "lib/stringifier.js"
+        ],
+        "upstream_changed_functions": [
+          "Container.walk",
+          "fromJSON",
+          "LazyResult traversal",
+          "Node.clone",
+          "Node.toJSON",
+          "Stringifier.stringify"
+        ]
+      },
+      "hidden_command": [
+        "node",
+        "evaluation/confirmation/tasks/js/C-J3-hidden.cjs",
+        "WORKSPACE"
+      ],
+      "hidden_test_counts": {
+        "note": "Checks stop at first failing assertion; total denotes registered held-out assertions, not observed partial score.",
+        "total": 8
+      },
+      "id": "C-J3",
+      "oracle_commit": "d1518afd5a88f42728b30b87f8917210f363f9f1",
+      "production_globs": [
+        "lib/**/*.js"
+      ],
+      "prompt": "Valid deeply nested stylesheets fail with 'Maximum call stack size exceeded' during normal AST operations. A stylesheet consisting of 'a{' repeated 6000 times, then 'color:red', then 6000 closing braces should round-trip through parsing/stringification, cloning and the toJSON/fromJSON APIs, and walking it should visit all 6001 nodes. A normal declaration plugin must also be able to change the innermost value without overflowing. Fix the supported traversal paths consistently while preserving ordinary node order, metadata, custom properties with toJSON methods, subclass overrides and visitor revisit semantics. Add regression coverage; changing global runtime stack limits is not an acceptable repair.",
+      "reference_source": "https://github.com/postcss/postcss/commit/d1518afd5a88f42728b30b87f8917210f363f9f1",
+      "repository": {
+        "license": "MIT",
+        "url": "https://github.com/postcss/postcss"
+      },
+      "schema": 1,
+      "setup": {
+        "baseline_scope": "Original upstream unit script; excludes release/build/lint/size/type-only/integration packaging scripts",
+        "build": "CommonJS production source; original uvu suite loads TypeScript tests via pinned ts-node transpile-only; no source build",
+        "deps": "Exact minimal runtime/unit-test lock, source and original package manifest unchanged",
+        "environment_reason": "The unchanged UVU runner enables FORCE_COLOR internally; explicit color tests compare picocolors output. Unset NO_COLOR equally in all variants/evaluation so the original full suite remains valid.",
+        "environment_unset": [
+          "NO_COLOR"
+        ],
+        "instructions_found": [],
+        "node_version": "v26.12.1",
+        "npm_version": "11.20.0",
+        "solver_export": "Only buggy source snapshot plus prepared node_modules; no upstream Git history, oracle, metadata or held-out assertions"
+      },
+      "title": "Deeply nested CSS overflows multiple AST traversal operations",
+      "upstream_test_paths": [
+        "test/node.test.ts",
+        "test/parse.test.ts",
+        "test/stringifier.test.js",
+        "test/visitor.test.ts"
+      ]
+    }
+  ],
+  "tool_environment": {
+    "CARGO_HOME": "${MINIFYCLI_ROOT}/.tools/cargo",
+    "HOME": "${USER_HOME}",
+    "PATH": "${MINIFYCLI_ROOT}/.tools/cargo/bin:${BASE_PATH}",
+    "RUSTUP_HOME": "${MINIFYCLI_ROOT}/.tools/rustup"
+  },
+  "tool_versions": {
+    "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+    "node": "v26.12.1",
+    "npm": "11.20.0",
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)"
+  },
+  "trials": [
+    {
+      "id": "trial-001",
+      "repetition": 1,
+      "task_id": "C-J2",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-002",
+      "repetition": 1,
+      "task_id": "C-J2",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-003",
+      "repetition": 1,
+      "task_id": "C-J2",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-004",
+      "repetition": 1,
+      "task_id": "C-J3",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-005",
+      "repetition": 1,
+      "task_id": "C-J3",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-006",
+      "repetition": 1,
+      "task_id": "C-J3",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-007",
+      "repetition": 1,
+      "task_id": "C-J1",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-008",
+      "repetition": 1,
+      "task_id": "C-J1",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-009",
+      "repetition": 1,
+      "task_id": "C-J1",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-010",
+      "repetition": 1,
+      "task_id": "C-R3",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-011",
+      "repetition": 1,
+      "task_id": "C-R3",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-012",
+      "repetition": 1,
+      "task_id": "C-R3",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-013",
+      "repetition": 1,
+      "task_id": "C-R1",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-014",
+      "repetition": 1,
+      "task_id": "C-R1",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-015",
+      "repetition": 1,
+      "task_id": "C-R1",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-016",
+      "repetition": 1,
+      "task_id": "C-R2",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-017",
+      "repetition": 1,
+      "task_id": "C-R2",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-018",
+      "repetition": 1,
+      "task_id": "C-R2",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-019",
+      "repetition": 2,
+      "task_id": "C-J2",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-020",
+      "repetition": 2,
+      "task_id": "C-J2",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-021",
+      "repetition": 2,
+      "task_id": "C-J2",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-022",
+      "repetition": 2,
+      "task_id": "C-R1",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-023",
+      "repetition": 2,
+      "task_id": "C-R1",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-024",
+      "repetition": 2,
+      "task_id": "C-R1",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-025",
+      "repetition": 2,
+      "task_id": "C-J1",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-026",
+      "repetition": 2,
+      "task_id": "C-J1",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-027",
+      "repetition": 2,
+      "task_id": "C-J1",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-028",
+      "repetition": 2,
+      "task_id": "C-J3",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-029",
+      "repetition": 2,
+      "task_id": "C-J3",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-030",
+      "repetition": 2,
+      "task_id": "C-J3",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-031",
+      "repetition": 2,
+      "task_id": "C-R2",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-032",
+      "repetition": 2,
+      "task_id": "C-R2",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-033",
+      "repetition": 2,
+      "task_id": "C-R2",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-034",
+      "repetition": 2,
+      "task_id": "C-R3",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-035",
+      "repetition": 2,
+      "task_id": "C-R3",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-036",
+      "repetition": 2,
+      "task_id": "C-R3",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-037",
+      "repetition": 3,
+      "task_id": "C-J2",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-038",
+      "repetition": 3,
+      "task_id": "C-J2",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-039",
+      "repetition": 3,
+      "task_id": "C-J2",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-040",
+      "repetition": 3,
+      "task_id": "C-R1",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-041",
+      "repetition": 3,
+      "task_id": "C-R1",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-042",
+      "repetition": 3,
+      "task_id": "C-R1",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-043",
+      "repetition": 3,
+      "task_id": "C-R2",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-044",
+      "repetition": 3,
+      "task_id": "C-R2",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-045",
+      "repetition": 3,
+      "task_id": "C-R2",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-046",
+      "repetition": 3,
+      "task_id": "C-J3",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-047",
+      "repetition": 3,
+      "task_id": "C-J3",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-048",
+      "repetition": 3,
+      "task_id": "C-J3",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-049",
+      "repetition": 3,
+      "task_id": "C-J1",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-050",
+      "repetition": 3,
+      "task_id": "C-J1",
+      "variant": "raw"
+    },
+    {
+      "id": "trial-051",
+      "repetition": 3,
+      "task_id": "C-J1",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-052",
+      "repetition": 3,
+      "task_id": "C-R3",
+      "variant": "mini"
+    },
+    {
+      "id": "trial-053",
+      "repetition": 3,
+      "task_id": "C-R3",
+      "variant": "rtk"
+    },
+    {
+      "id": "trial-054",
+      "repetition": 3,
+      "task_id": "C-R3",
+      "variant": "raw"
+    }
+  ],
+  "ultrafast_mode": false,
+  "usage_primary": "published Standard credits: ((input-cached)*50 + cached*2.5 + output*250)/1e6; all attempts including unsuccessful repairs",
+  "view_note": "Only local executable and environment paths are parameterized; canonical private registration and public-view hashes are distinct.",
+  "workers": 3
+}

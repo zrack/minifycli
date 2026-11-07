@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "excluded_before_comparative_runs": [
+    {
+      "repository": "https://github.com/npm/node-semver",
+      "oracle_commit": "bea6028694a75e840f48b288ac019e9644cfe6e8",
+      "reason": "13 meaningful changed production lines; below confirmation hardness threshold. Rejected before model comparisons; no solver outcomes viewed."
+    }
+  ]
+}
