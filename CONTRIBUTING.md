@@ -2,13 +2,12 @@
 
 MinifyCLI should make command output smaller without hiding what a developer needs to act on. A matcher that cannot confidently recognize a format should return the original output.
 
-## Maintenance scope
+## Contributions
 
-MinifyCLI is in maintenance mode. Contributions should address reproducible bugs
-in existing behavior, security or compatibility issues, documentation, or related
-regression coverage. Feature expansion and product pivots are paused; see the
-[roadmap](ROADMAP.md) for the current scope and conditions for reconsideration.
-Preserve the evaluation tooling and published study evidence.
+Bug reports, reproducible fixes, compatibility improvements, documentation, and
+regression coverage are welcome. For new behavior, describe the user workflow
+and discuss the proposed scope. See the [roadmap](ROADMAP.md) for project
+priorities. Preserve the evaluation tooling and published study evidence.
 
 ## Set up
 
@@ -26,7 +25,7 @@ Captured Cargo/Node output is replayed from `tests/fixtures/real/`; Node is not
 required to run those regression tests. See each fixture directory's README for
 capture provenance and synthetic edge cases.
 
-## Fix an existing matcher
+## Add or change a matcher
 
 1. Add a small, representative fixture or unit test for the output format.
 2. Keep parsing in `src/matchers/`, separate from command execution.

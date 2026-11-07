@@ -2,15 +2,6 @@
 
 [![CI](https://github.com/zrack/minifycli/actions/workflows/ci.yml/badge.svg)](https://github.com/zrack/minifycli/actions/workflows/ci.yml)
 
-**Status: maintenance mode (v0.2.0).** Work is limited to bug fixes, security and
-compatibility updates, and documentation. New features, broad matcher expansion,
-and speculative pivots are paused. No feature release is scheduled.
-
-The [cost confirmation](docs/evaluation/cost-confirmation/results.md) did not
-establish a cost or correctness advantage over RTK. The evaluation tooling,
-fixtures, protocols, results, and audits remain available for reproduction and
-reuse. See the [roadmap and maintenance policy](ROADMAP.md).
-
 Less terminal noise in your coding agent's context.
 
 MinifyCLI runs a command and compresses recognized output before returning it to your terminal or coding agent. It removes passing test chatter, trims redundant Git diff metadata, and groups numbered search matches by file. Unknown output passes through unchanged.
@@ -149,73 +140,19 @@ Run `cargo run --locked --release --example benchmark` to reproduce the measurem
 
 Since v0.1.1, individual checkmark-prefixed JavaScript test lines are retained because they cannot reliably be distinguished from application logs. This deliberately reduces compression in favor of retaining diagnostics. See [release history](CHANGELOG.md).
 
-## v0.2 evaluation pilot
+## Evaluation tooling
 
-The [evaluation harness](evaluation/run_pilot.py) compares raw output, MinifyCLI, and the pinned RTK OSS 1.1.0 comparator on two frozen repositories: the v0.1.1 MinifyCLI Rust baseline and an independent TypeScript application. The Rust arm is explicitly a self-pilot. The registered convenience sample does not establish production workload savings or generalization across Rust applications.
+The repository includes tools for capturing command output, replaying filters,
+checking diagnostic preservation, and evaluating debugging tasks. Pinned task
+definitions, fixtures, protocols, grading utilities, and audits are available for
+reproduction and reuse.
 
-In the pilot's 13 common ordinary native-command cases, MinifyCLI reduced `o200k_base` output tokens by **11.22%**, versus **26.07%** for RTK OSS. Both matched expected statuses and passed the registered fact checks; all three output variants scored 6/6 on a small label-blinded comprehension check. RTK reduced more tokens in aggregate, with case-level exceptions in the [results and limits](docs/evaluation/pilot-results.md).
+- [Output evaluation harness](evaluation/run_pilot.py)
+- [Debugging-task reproduction guide](evaluation/debugging/README.md)
+- [Confirmation and audit tooling](evaluation/confirmation/README.md)
 
-The method distinguishes shared-capture filtering from native wrapper execution. RTK's named stdin filters do not cover every command, and native wrappers can change arguments or run additional commands. Unsupported adapters remain visible instead of being treated as successful compression. Command outcomes and bounded diagnostic checks are separate from autonomous agent-task success, retries, or API charges.
-
-Token measurements use the named `o200k_base` and `cl100k_base` encodings through pinned `tiktoken==0.14.0`. These are local evaluation tools, not dependencies of the Rust binary, and the evaluator does not call a model API. Raw captures and repository snapshots stay local and ignored by Git; reviewed aggregate metrics and sanitized provenance are the shareable outputs.
-
-- [Pilot method](docs/evaluation/method.md)
-- [Repository selection and registered case scope](docs/evaluation/repository-selection.md)
-- [RTK artifact and adapter provenance](docs/evaluation/rtk-provenance.md)
-- [Pilot results and limitations](docs/evaluation/pilot-results.md)
-
-## Independent debugging sprint
-
-The next evaluation ran **36 fresh coding-agent sessions** on six historical bugs
-in Lexopt, Humantime and Picomatch, with two attempts per task and treatment.
-Raw output, Mini and RTK each produced **12/12 correct repairs**, verified against
-pristine original tests and held-out regressions.
-
-Mini used **2,852,536 reported input-plus-output tokens**, compared with
-3,231,491 for raw output and 3,712,751 for RTK. That is **23.17% less than RTK**,
-including cached input. It met the earlier locally registered usage gate, with
-a lower total in both language groups, and justified the confirmation run below.
-
-This does not establish lower bills or a diagnostic advantage. Mini's uncached
-input-plus-output proxy was **8.93% higher** than RTK's; RTK also returned less
-terminal output. The agents took different paths, so this does not isolate
-compression's effect. At that stage, broader matcher expansion was deferred
-pending the confirmation below, which established the current maintenance decision.
-
-See the [results and decision](docs/evaluation/debugging-sprint/results.md),
-[method and limits](docs/evaluation/debugging-sprint/method.md), and
-[reproduction tools](evaluation/debugging/README.md). The Rust binary is
-unchanged at v0.2.0; the debugging harness uses existing Codex CLI sign-in.
-
-## Fixed-filter cost confirmation
-
-The confirmation ran **54 fresh sessions** on six new, structurally harder bugs,
-with three attempts per task and treatment. MinifyCLI and RTK binary hashes and
-filters stayed fixed. Whole-session usage was priced with cached input counted
-at its published discounted rate.
-
-| Output mode | Registered all-check repairs | Standard-rate credits, all attempts |
-| --- | ---: | ---: |
-| Raw | 15/18 | 84.18843 |
-| MinifyCLI | 15/18 | 81.30541 |
-| RTK | 15/18 | 79.65146 |
-
-Mini cost **2.08% more than RTK** in this run. The paired task-cluster interval
-for its cost ratio was **0.920–1.114**, spanning both lower and higher cost.
-It failed the prospective expansion criteria. The decision is to **maintain the
-released utility and stop broad compressor expansion**.
-
-One hidden token-shape requirement was stricter than the task prompt made
-explicit. All modes repaired its rendered output; a separate rendering-only
-sensitivity gives 18/18 each and leaves the cost ranking unchanged. The reported
-credits apply published Standard rates to observed usage; they are not an
-attributed bill, subscription cost or USD charge.
-
-See the [confirmation results and limitations](docs/evaluation/cost-confirmation/results.md),
-[registered protocol](evaluation/confirmation/protocol.md),
-[independent audit](docs/evaluation/cost-confirmation/validation.json), and
-[reproduction guide](evaluation/confirmation/README.md). The Rust binary remains
-v0.2.0.
+Raw captures and repository snapshots stay local and ignored by Git. Evaluation
+dependencies are separate from the Rust binary.
 
 ## Development
 
@@ -228,8 +165,8 @@ cargo build --release --locked
 
 The release binary is `target/release/mini`. CI runs formatting, Clippy, tests, and a release build on macOS and Linux.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) to report a bug or contribute a maintenance
-fix within the [roadmap's scope](ROADMAP.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md) to report a bug or contribute an improvement,
+and the [roadmap](ROADMAP.md) for project priorities.
 
 ## License
 
