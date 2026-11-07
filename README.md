@@ -2,6 +2,15 @@
 
 [![CI](https://github.com/zrack/minifycli/actions/workflows/ci.yml/badge.svg)](https://github.com/zrack/minifycli/actions/workflows/ci.yml)
 
+**Status: maintenance mode (v0.2.0).** Work is limited to bug fixes, security and
+compatibility updates, and documentation. New features, broad matcher expansion,
+and speculative pivots are paused. No feature release is scheduled.
+
+The [cost confirmation](docs/evaluation/cost-confirmation/results.md) did not
+establish a cost or correctness advantage over RTK. The evaluation tooling,
+fixtures, protocols, results, and audits remain available for reproduction and
+reuse. See the [roadmap and maintenance policy](ROADMAP.md).
+
 Less terminal noise in your coding agent's context.
 
 MinifyCLI runs a command and compresses recognized output before returning it to your terminal or coding agent. It removes passing test chatter, trims redundant Git diff metadata, and groups numbered search matches by file. Unknown output passes through unchanged.
@@ -170,8 +179,8 @@ a lower total in both language groups, and justified the confirmation run below.
 This does not establish lower bills or a diagnostic advantage. Mini's uncached
 input-plus-output proxy was **8.93% higher** than RTK's; RTK also returned less
 terminal output. The agents took different paths, so this does not isolate
-compression's effect. Broader matcher expansion should wait for confirmation of
-the mechanism and its cost implications.
+compression's effect. At that stage, broader matcher expansion was deferred
+pending the confirmation below, which established the current maintenance decision.
 
 See the [results and decision](docs/evaluation/debugging-sprint/results.md),
 [method and limits](docs/evaluation/debugging-sprint/method.md), and
@@ -219,7 +228,8 @@ cargo build --release --locked
 
 The release binary is `target/release/mini`. CI runs formatting, Clippy, tests, and a release build on macOS and Linux.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) to add a matcher or report a format that should remain unchanged.
+See [CONTRIBUTING.md](CONTRIBUTING.md) to report a bug or contribute a maintenance
+fix within the [roadmap's scope](ROADMAP.md).
 
 ## License
 
