@@ -1,15 +1,16 @@
-# Independent debugging sprint
+# Independent debugging sprint method
 
-The sprint asks whether MinifyCLI deserves further compressor development after
-the v0.2 command-output pilot favored RTK. It compares actual repairs rather
-than inferring debugging quality from output size.
+This directory documents the execution and grading of six historical debugging
+tasks using raw command output, MinifyCLI 0.2.0 and RTK OSS 1.1.0. Its public
+artifacts retain source pins, regression fixtures, session metadata and
+reproduction instructions.
 
-The [registered protocol](../../../evaluation/debugging/protocol.md) fixes the
-decision gates, correctness checks, recovery policy and budgets. The
-[public plan](plan.json) is a parameterized view of the canonical private plan;
-[registration](registration.json) records both hashes. Only local executable
-and environment paths are parameterized. The canonical plan was locally registered on
-November 6, 2026, before comparative sessions started.
+The [original registered protocol](../../../evaluation/debugging/protocol.md)
+contains the historical analysis definitions, correctness checks, recovery
+policy and budgets. The [public plan](plan.json) is a parameterized view of the
+canonical private plan; [registration](registration.json) records both hashes.
+Only local executable and environment paths are parameterized. The canonical
+plan was locally registered on November 6, 2026, before sessions started.
 
 ## Six historical tasks, three upstream repositories
 
@@ -25,75 +26,65 @@ November 6, 2026, before comparative sessions started.
 Exact commits, source-derived prompts, held-out fixtures and licenses are in the
 [Rust](../../../evaluation/debugging/tasks/rust/README.md) and
 [JavaScript](../../../evaluation/debugging/tasks/js/README.md) task packages.
-These are independent upstream projects, not six independent repositories.
+These are three upstream projects, rather than six independent repositories.
 Two tasks share Lexopt; three share Picomatch, and J1/J2 share a base commit.
-R3 is an easier boundary fix. This small parser-library sample is deliberately
-finite and does not represent every application or noisy build workflow.
+R3 is a small boundary fix. This finite parser-library sample does not represent
+every application or build workflow.
 
 ## Sessions and grading
 
-Each task has two fresh attempts per treatment, totaling 36 sessions. Solvers
-receive the buggy source and the same symptom/tool instructions, with no
-upstream Git history, oracle patches, held-out assertions or other sessions.
-One coding model and reasoning setting are fixed across every run:
-`gpt-6.1-sol`, `ultra`, copied from the user's existing CLI configuration.
-The CLI version is `0.166.0-alpha.6`. This identifies the requested model alias,
-not a separately exposed immutable backend snapshot.
+Each task has two fresh attempts per command-output variant, totaling 36
+sessions. Solvers receive the buggy source and the same symptom/tool
+instructions, with no upstream Git history, oracle patches, held-out assertions
+or other sessions. Every run requests `gpt-6.1-sol` and `ultra` reasoning,
+copied from the existing CLI configuration. The CLI version is
+`0.166.0-alpha.6`. This identifies the requested model alias, rather than a
+separately exposed immutable backend snapshot.
 
 Ordering uses seed `20261106` and balanced rotations. The seed controls order,
 not model sampling. Three triples can run concurrently. Every session has ten
-minutes, 60 tool actions, and a 90-second command limit. Workspaces start with
+minutes, 60 tool actions and a 90-second command limit. Workspaces start with
 no compiled targets or lint cache. Full-suite runs before and after edits are
 requested. There is no human coaching or hidden-test feedback.
 
-After collection ends, the fixed evaluator freezes each patch and tests fresh
-copies. It runs the candidate's suite, restores pristine original tests and
-manifests around the changed production code, then runs the original suite and
-held-out regressions. Rust's inline test modules are restored without erasing
-production repairs. A repair succeeds only when production changed and all
-three checks pass. Merely deleting a test cannot satisfy the held-out checks.
+After collection ends, the evaluator grades each frozen patch in fresh copies.
+It runs the candidate's suite, restores pristine original tests and manifests
+around the changed production code, then runs the original suite and held-out
+regressions. Rust's inline test modules are restored without erasing production
+repairs. A repair meets the registered checks only when production changed and
+all three checks pass. Deleting a test cannot satisfy the held-out checks.
 
-## Treatments and measurement
+## Command execution and records
 
-The binaries are MinifyCLI 0.2.0 and the same pinned Apache-only RTK OSS 1.1.0
-used in the earlier pilot. RTK's optional engine is absent. RTK uses validated
-native adapters or explicit official argv passthrough. Recall/tee is enabled
-with task-local storage; native recovery exists for supported Cargo paths but
+The binaries are MinifyCLI 0.2.0 and the pinned Apache-only RTK OSS 1.1.0 used
+in the earlier pilot. RTK's optional engine is absent. RTK uses validated native
+adapters or explicit official argv passthrough. Recall/tee is enabled with
+task-local storage; native recovery exists for supported Cargo paths, while
 the pinned npm wrapper does not provide it. Mini records child streams for
-countable recovery. All treatments can retrieve their saved displayed output.
-These are different native recovery semantics, not a claim that every wrapper
-archives identical raw streams.
+recovery. Every variant can retrieve its saved displayed output. The recorded
+recovery mechanisms have different stream and retention semantics.
 
-Primary resources are actual CLI-reported input plus output tokens over the
-whole session, including cached input and all source reads, edits, tests,
-recovery and final messages. Reasoning is a subset of output and is not added
-twice. Cached input is reported separately. Uncached input plus output is an
-additional usage proxy, not an API bill. Standard Codex instructions and tool
-scaffolding are included in usage. Reference tokenization of tool output, if
-reported, is a separate measure.
+The collector retains session-level telemetry, command statuses, tool-call
+records and completeness flags. The original protocol defines those fields
+and their counting rules. All task attempts remain in the archive, including
+errors, missing records and protocol deviations where present. The reviewed
+[metrics](metrics.json), [execution receipts](execution.json),
+[validation](validation.json) and [reference-volume metadata](tool-volume.json)
+provide the preserved measurements.
 
-The primary corpus keeps all task attempts, including incorrect repairs.
-Unsupported command adapters, timeouts, missing usage and protocol deviations
-remain explicit. A success-only subset is secondary. Wall time includes cold
-startup, compilation and contention from concurrent runs; it cannot establish
-isolated wrapper overhead. Tests run offline on macOS/Apple Silicon using
-Rust 1.99.1, Node 26.12.1 and npm 11.20.0 with pinned test dependencies. Model
-inference uses the existing Codex sign-in; the harness creates no API key.
+Tests run offline on macOS/Apple Silicon using Rust 1.99.1, Node 26.12.1 and
+npm 11.20.0 with pinned test dependencies. Model inference uses the existing
+Codex sign-in; the harness creates no API key. The
+[reproduction guide](../../../evaluation/debugging/README.md) describes setup,
+registration, collection, separate grading and analysis interfaces.
 
-The MCP tools enforce benchmark path and command limits, with native shell,
+The MCP tools enforce workspace path and command limits, with native shell,
 apps, plugins, memory, web and multi-agent tools disabled. This is a reviewed
-public-code workload, not a hostile-code security sandbox. Explicit arm labels
-are removed from tool bookkeeping, but output formatting and recovery behavior
-can reveal the wrapper. Historical tasks may exist in training data.
-
-## Investment decision
-
-Continue compressor expansion only for either a repeated, output-attributed
-repair advantage on at least two tasks, or at least 20% lower total usage than
-RTK with no lower correctness than raw and RTK and an advantage in both
-language groups. Missing coverage makes the decision inconclusive. These are
-investment thresholds, not significance tests. A complete tie fails the gate.
+public-code workload rather than a hostile-code security sandbox. Explicit
+variant labels are removed from tool bookkeeping, but output formatting and
+recovery behavior can reveal the wrapper. Historical tasks may exist in
+training data.
 
 Raw transcripts, source copies, patches, native recall databases and grading
-logs remain private. Reviewed metrics, hashes, fixtures and methods can be
-shared without publishing those local artifacts.
+logs remain private. Public artifacts preserve reviewed metadata, hashes,
+fixtures and methods.

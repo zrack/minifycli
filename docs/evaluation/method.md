@@ -88,7 +88,7 @@ The primary filter comparison is **stdout only** for raw, Mini, and RTK. Stderr
 is excluded equally because RTK's official `pipe` interface accepts one stream
 and has no original-exit-status parameter. An RTK named filter is used only
 where the registered original format matches that adapter. Missing adapters
-remain null; they are not reported as native RTK achieving zero savings.
+remain null, with coverage reported separately.
 Status/log adapters that expect RTK-specific formats are not applied to
 incompatible human-readable captures.
 
@@ -127,8 +127,8 @@ the observer, and native product work. They are observational timings, not an
 isolated CPU-overhead benchmark. No memory metric is inferred from cumulative
 process resource counters.
 
-Ordinary and controlled cases are aggregated separately. Primary Mini/RTK
-comparisons use the exact intersection of supported case IDs and paired trial
+Ordinary and controlled cases are aggregated separately. Paired measurements
+use the exact intersection of supported case IDs and paired trial
 positions. Full-coverage Mini results and each tool's support counts remain
 available separately. Reduction is `(sum(raw) - sum(output)) / sum(raw)`;
 percentages are never averaged. Empty-input cases still contribute any output

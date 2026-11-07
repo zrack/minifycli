@@ -1,9 +1,9 @@
-# Fixed-filter cost confirmation
+# Debugging confirmation method
 
 This confirmation uses six new historical defects and 54 fresh coding-agent
-sessions: three attempts per task for raw output, MinifyCLI and RTK. It tests
-whether the earlier whole-token difference survives correct pricing of cached
-input and a more demanding task set.
+sessions: three attempts per task for each output mode. It evaluates production
+repairs on a pinned task corpus with fixed wrapper versions and recorded tool
+interactions.
 
 The [protocol](../../../evaluation/confirmation/protocol.md), [parameterized
 plan](plan.json) and [local registration receipt](registration.json) were fixed
@@ -37,7 +37,7 @@ Output style can reveal the treatment, so masking is incomplete.
 | Task | Upstream | Historical repair | Meaningful production changes |
 | --- | --- | --- | ---: |
 | C-R1 | Winnow | Restore backtracking after a consuming parser fails | 30 lines across four functions |
-| C-R2 | Winnow | Correct complete/partial stream handling in bounded scanning | 99 lines across dispatch and helpers |
+| C-R2 | Winnow | Correct complete/partial stream handling in token scanning | 99 lines across dispatch and helpers |
 | C-R3 | glob | Correct recursive wildcard component and hidden-file boundaries | 78 lines across two functions |
 | C-J1 | markdown-it | Preserve inline-code state across unsuccessful lookahead | 58 lines in a stateful parser |
 | C-J2 | markdown-it | Preserve nested image-description token semantics | 22 lines across helper and traversal |
@@ -63,33 +63,20 @@ enables color internally and tests color behavior. No baseline tests are silentl
 skipped. All six upstream repairs also passed the new evaluator's candidate,
 restored baseline and held-out checks before comparative collection.
 
-## Priced model usage
+## Usage records
 
-The frozen [rate card](../../../evaluation/confirmation/rates/codex-standard-2026-11-06.json)
-uses the official November 6, 2026 Standard Codex rates for GPT-6.1 Sol: 50
-credits per million uncached input tokens, 2.5 per million cached input tokens,
-and 250 per million output tokens. [Official pricing](https://learn.chatgpt.com/docs/pricing#token-rates),
-[speed and billing distinctions](https://learn.chatgpt.com/docs/agent-configuration/speed).
+Capture the CLI's aggregate input, cached input, and output telemetry over the
+complete session, including reads, edits, tests, retries, recovery, repeated
+context, and final responses. Cached input is a subset of input; reasoning is a
+subset of output. Neither is counted twice. Keep every attempt and distinguish
+missing final telemetry from zero usage.
 
-For aggregate CLI input `I`, cached input `C` and output `O`:
+The original analysis definitions, exact calculator, and frozen
+[rate card](../../../evaluation/confirmation/rates/codex-standard-2026-11-06.json)
+remain available with the reproduction tooling. Recorded usage is not an
+attributed account deduction, subscription charge, or invoice.
 
-```
-Standard credits = [(I - C) × 50 + C × 2.5 + O × 250] / 1,000,000
-```
-
-Use exact Decimal arithmetic. Cached input is already within input, and reasoning
-is already within output. There is no separate cache-write charge under this
-Codex card. Count the complete session once, including reads, edits, tests,
-retries, recovery, repeated context and final responses. Failed repairs retain
-their costs. Cost per correct repair divides the cost of all attempts by correct
-repairs; it does not discard failed-attempt spending.
-
-This is reported usage priced at an official rate card. It is not an attributed
-credit deduction, subscription charge or USD invoice. Included allowances and
-contractual billing can differ. Shared account balances cannot attribute one
-session's cost. Missing final usage remains unknown, never zero.
-
-## Limits, grading and decision
+## Limits and grading
 
 Each session allows 90 tool actions. After 12 minutes the server rejects new
 workspace actions; an in-flight command can finish within its 90-second limit.
@@ -105,7 +92,7 @@ explicit. Local test execution is offline; inference uses existing Codex sign-in
 Post-collection review found one material task-specification limitation: C-J2's
 held-out token-shape check requires adjacent text tokens to be coalesced as in
 the upstream repair, although the solver prompt did not explicitly request that
-shape. Keep the registered grades and all attempt costs, and report a separate
+shape. Keep the registered grades and every attempt, and report a separate
 rendering-only sensitivity. The [results](results.md) and
 [repair review](repair-review.json) distinguish this fixture requirement from
 the rendered image-description behavior.
@@ -118,14 +105,7 @@ after macOS offloaded an older harness file during setup. Exact checked-in bytes
 were restored with original placeholders backed up; no comparative run started
 during that setup failure, and both comparator binary hashes remain unchanged.
 
-Report all 54 attempts, both language groups, every task/repetition, successful-
-only sensitivity, leave-one-task-out ratios and a 20,000-resample paired task-
-cluster bootstrap retaining all three repetitions. The interval is a finite-
-sample stability check with six dependent convenience tasks, not population proof.
-
-The prospective investment rule requires complete evidence, no lower correctness
-than either raw or RTK, a cost-ratio interval upper limit below one, at least 10%
-lower total and per-correct-repair cost than RTK, advantages in both language
-groups and at least four task totals, and an advantage after omitting any one
-task. Otherwise hold broad compressor expansion; do not turn a noisy lower point
-estimate into a claim of confirmed savings.
+The saved records cover all 54 attempts, task and repetition identities, both
+language groups, and secondary analysis queries. The original protocol and
+machine-readable evidence retain the exact registered definitions. The
+[artifact overview](results.md) links grading records and the independent audit.

@@ -6,8 +6,8 @@
 - Add `--replay DIR` to apply current filters to original captured bytes without executing a command, preserving the recorded failure context, line-clipping option, and exit status.
 - Reject replay of incomplete, cancelled, spilled, malformed, length-inconsistent, or symlink-backed records. Bound replay reads per stream with `--max-buffer`; record-file lengths are integrity checks, not cryptographic authentication.
 - Add API and CLI regressions for recording exclusivity, private permissions, binary streams, invalid UTF-8 argv, deleted-executable replay, statistics separation, cancellation, and spill behavior.
-- Add a registered two-repository evaluation harness with a Rust self-pilot, an independent TypeScript application, pinned RTK OSS 1.1.0 adapters, and local tokenizer measurements using `o200k_base` and `cl100k_base`. Shared-capture transformation and independent native executions are distinct comparisons.
-- Evaluation results are reported separately in `docs/evaluation/pilot-results.md`; the harness and registration do not themselves establish savings, full diagnostic fidelity, or agent-task success.
+- Add a registered two-repository evaluation harness with pinned repository snapshots, captured-output replay, diagnostic checks, and local tokenizer measurements using `o200k_base` and `cl100k_base`.
+- Preserve reproduction instructions, validation records, and evaluation artifacts in `docs/evaluation/`.
 
 ## 0.1.1 — 2026-11-06
 
